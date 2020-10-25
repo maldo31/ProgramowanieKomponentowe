@@ -22,8 +22,12 @@ public class SudokuBoard {
         }
     }
 
+
+
     private boolean checkCell(int row, int column) {
         int active = board[row][column];
+        int subrow = row - row % 3;
+        int subcol = col - col % 3;
         for (int i = 0; i < 9; i++) {
             if (active == board[row][i]) {
                 if (column != i) {
@@ -38,6 +42,19 @@ public class SudokuBoard {
                 }
             }
         }
+       for (int i = 0; i<3;i++){
+           for(int j=;i<3;j++){
+               if(active=board[subrow+i][subcol+j]){
+                   if(subrow+i!=row){
+                       if(subcol+j!=column){
+                           return false;
+                       }
+                   }
+               }
+           }
+       }
+
+
 
         return true;
     }
