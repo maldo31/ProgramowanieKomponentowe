@@ -17,8 +17,36 @@ class SudokuBoardTest {
         sudokuBoard.fillBoard();
         int[][] testBoard = sudokuBoard.getCopyOfBoard();
 
-        
-    }
+        //Sprawdz wiersze
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                for(int j2=0; j2<9; j2++){
+                    if(testBoard[i][j] == testBoard[i][j2]){
+                        fail("Error in row " + i);
+                    }
+                }
+            }
+        }
+
+        //Sprawdz kolumny
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                for(int i2=0; i2<9; i2++){
+                    if(testBoard[i][j] == testBoard[i2][j]){
+                        fail("Error in column " + i);
+                    }
+                }
+            }
+        }
+/*
+        //Sprawdz kwadrat 3x3
+        for(int i=0; i<3; i++){
+            for (int j=0; j<3; j++){
+
+                    fail("Error in 3x3 cell which starts at" );
+            }
+        }*/
+   }
 
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
     @Test
@@ -26,26 +54,38 @@ class SudokuBoardTest {
         int[][] testBoard1 = new int[9][9];
         int[][] testBoard2 = new int[9][9];
 
-        int pom=0;
+        boolean same=true;
 
         sudokuBoard.fillBoard();
         testBoard1 = sudokuBoard.getCopyOfBoard();
+
         sudokuBoard.fillBoard();
         testBoard2 = sudokuBoard.getCopyOfBoard();
 
+
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
-                if(testBoard1[i][j]==testBoard2[i][j]){
-                    pom = 1;
+                System.out.print(testBoard1[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+
+        System.out.print("\n\n");
+
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                System.out.print(testBoard2[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+/*
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                if(testBoard1[i][j]!=testBoard2[i][j]){
+                    same=false;
                 }
-                System.out.print(pom);
             }
         }
-        if (pom==1){
-            System.out.print("Układ liczb nie jest inny");
-        }
-        else {
-            System.out.print("Układ liczb jest inny");
-        }
+        assertTrue(!same);*/
     }
 }
