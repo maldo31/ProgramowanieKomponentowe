@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class SudokuBoard {
-    private int[][] board = new int[9][9];
+    private static int[][] board = new int[9][9];
 
     public int[][] getCopyOfBoard() {
         int[][] copiedBoard = new int[9][9];
@@ -13,7 +13,7 @@ public class SudokuBoard {
         return copiedBoard;
     }
 
-    public void showBoard() {
+    public static void showBoard() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 System.out.print(board[i][j] + " ");
@@ -22,9 +22,7 @@ public class SudokuBoard {
         }
     }
 
-
-
-    private boolean checkCell(int row, int column) {
+    private static boolean checkCell(int row, int column) {
         int active = board[row][column];
         int subrow = row - row % 3;
         int subcol = column - column % 3;
@@ -53,11 +51,31 @@ public class SudokuBoard {
                }
            }
        }
-
-
-
         return true;
     }
+
+    public static void fillBoard(){
+        Random random = new Random();
+        boolean flag;
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                if(board[i][j]==0){
+                    flag = checkCell(i, j);
+                    if (flag == false){
+                        board[i][j] = random.nextInt(9);
+                    }
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        showBoard();
+        fillBoard();
+        System.out.print("Przerwa\n\n");
+        showBoard();
+    }
+
 }
 
 
