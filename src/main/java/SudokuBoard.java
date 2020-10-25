@@ -1,7 +1,18 @@
 import java.util.Random;
 
 public class SudokuBoard {
-    int[][] board = new int[9][9];
+    private int[][] board = new int[9][9];
+
+    public int[][] getCopyOfBoard(){
+        int[][] copiedBoard = new int[9][9];
+        for (int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                copiedBoard[i][j] = board[i][j];
+            }
+        }
+        return copiedBoard;
+    }
+    
     public void showBoard(){
         for(int i=0; i< 9; i++){
             for(int j=0; j<9; j++){
@@ -9,7 +20,9 @@ public class SudokuBoard {
             }
             System.out.print("\n");
         }
-    }}
+    }
+
+}
 
 
 
