@@ -70,14 +70,8 @@ public class SudokuBoard {
                     do {
                         if (checkCell(i, j) == true) {
                             valid=true;
-                            showBoard();
-                            System.out.print("-------------------\n\n");
                             break;
                         }
-                        System.out.print("+\n\n");
-
-                        System.out.print(randomDigits[i * 9 +j]+"\n");
-                        System.out.print(board[i][j]+"\n");
 
                         board[i][j] = board[i][j] % 9 + 1;
                     } while (randomDigits[i * 9 +j] != board[i][j]);
@@ -86,11 +80,8 @@ public class SudokuBoard {
                     while (board[i][j] != randomDigits[i * 9 +j]) {
                         if (checkCell(i, j) == true) {
                             valid=true;
-                            showBoard();
-                            System.out.print("-------------------\n\n");
                             break;
                         }
-                        System.out.print("/\n\n");
                         board[i][j] = board[i][j] % 9 + 1;
 
                     }
@@ -109,16 +100,9 @@ public class SudokuBoard {
                         j = 8;
                     }
                 }
-                //showBoard();
-                //System.out.print("-------------------\n\n");
             }
         }
     }
-
-
-
-        //}
-
 
     public static void main(String[] args) {
         showBoard();
