@@ -38,14 +38,27 @@ class SudokuBoardTest {
                 }
             }
         }
-/*
-        //Sprawdz kwadrat 3x3
-        for(int i=0; i<3; i++){
-            for (int j=0; j<3; j++){
 
-                    fail("Error in 3x3 cell which starts at" );
+        //Sprawdz kwadrat 3x3
+        int active;
+        for(int row=0; row<3; row++){
+            for(int column=0; column<3; column++){
+                active = testBoard[row][column];
+                int subrow = row - row%3;
+                int subcol = column - column%3;
+                for(int i=0; i<3; i++){
+                    for(int j=0; j<3; j++){
+                        if(active == testBoard[subrow + i][subcol + j]){
+                            if (subrow + i != row){
+                                if (subcol + j==column){
+                                    fail("Error in 3x3 cell which starts at [" + row + "] [" + column + "]");
+                                }
+                            }
+                        }
+                    }
+                }
             }
-        }*/
+        }
    }
 
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
@@ -58,27 +71,9 @@ class SudokuBoardTest {
 
         sudokuBoard.fillBoard();
         testBoard1 = sudokuBoard.getCopyOfBoard();
-
         sudokuBoard.fillBoard();
         testBoard2 = sudokuBoard.getCopyOfBoard();
 
-
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                System.out.print(testBoard1[i][j] + " ");
-            }
-            System.out.print("\n");
-        }
-
-        System.out.print("\n\n");
-
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                System.out.print(testBoard2[i][j] + " ");
-            }
-            System.out.print("\n");
-        }
-/*
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
                 if(testBoard1[i][j]!=testBoard2[i][j]){
@@ -86,6 +81,6 @@ class SudokuBoardTest {
                 }
             }
         }
-        assertTrue(!same);*/
+        assertTrue(!same);
     }
 }
