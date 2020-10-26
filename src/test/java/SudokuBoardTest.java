@@ -70,7 +70,7 @@ class SudokuBoardTest {
             }
         }
 
-        if(flaga==true){
+        if(flaga){
             System.out.print("Nie wykryto bledu");
         }
    }
@@ -78,10 +78,8 @@ class SudokuBoardTest {
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
     @Test
     public void repeatFillBoardTest(){
-        int[][] testBoard1 = new int[9][9];
-        int[][] testBoard2 = new int[9][9];
-
-        boolean same=true;
+        int[][] testBoard1;
+        int[][] testBoard2;
 
         sudokuBoard.fillBoard();
         testBoard1 = sudokuBoard.getCopyOfBoard();
