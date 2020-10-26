@@ -22,6 +22,8 @@ public class SudokuBoard {
         }
     }
 
+
+
     private static boolean checkCell(int row, int column) {
         int active = board[row][column];
         int subrow = row - row % 3;
@@ -54,58 +56,67 @@ public class SudokuBoard {
         return true;
     }
 
-    public static void fillBoard(){
+    public static void fillBoard() {
+        int[] randomDigits = new int[81];
+
         Random random = new Random();
-        boolean flag;
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                //if(board[i][j]==0){
-                    flag = checkCell(i, j);
-                    int k=0;
-                    int randomDigit = 1+random.nextInt(9);
-                    int[] digits = new int[10];
-                    int s=0;
-                    while(randomDigit<10){
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                boolean valid=false;
+                if (randomDigits[i * 9 +j] == 0) {
+                    randomDigits[i * 9 +j]= 1 + random.nextInt(9);
+                    board[i][j] = randomDigits[i * 9 +j];
 
-                        digits[s]=randomDigit;
-
-                        randomDigit=randomDigit+1;
-                        s++;
-
-                    }
-                    int l=0;
-                    while(s<9){
-                        digits[s]=1+l;
-
-                        l++;
-                        s++;
-                    }
-                    System.out.print("||||||||||||||||||||||||||||\n");
-                    do{
-                        board[i][j] = digits[k];
-                        System.out.print("-------------"+k+"----------\n");
-                        showBoard();
-                        k++;
-                        ;
-                    }
-                    while(checkCell(i,j) ==false && k<10);
-                    if (k==10){
-                        if(j>0){
-                            j=j-2;
+                    do {
+                        if (checkCell(i, j) == true) {
+                            valid=true;
+                            showBoard();
+                            System.out.print("-------------------\n\n");
+                            break;
                         }
-                        else {
+                        System.out.print("+\n\n");
 
-                            if(i>1){
-                                i=i-1;
-                            }
+                        System.out.print(randomDigits[i * 9 +j]+"\n");
+                        System.out.print(board[i][j]+"\n");
 
+                        board[i][j] = board[i][j] % 9 + 1;
+                    } while (randomDigits[i * 9 +j] != board[i][j]);
+                } else {
+                    board[i][j] = board[i][j] % 9 + 1;
+                    while (board[i][j] != randomDigits[i * 9 +j]) {
+                        if (checkCell(i, j) == true) {
+                            valid=true;
+                            showBoard();
+                            System.out.print("-------------------\n\n");
+                            break;
                         }
-                    }
-
+                        System.out.print("/\n\n");
+                        board[i][j] = board[i][j] % 9 + 1;
 
                     }
                 }
+                if (!valid){
+                    board[i][j]=0;
+                    randomDigits[i * 9 +j]=0;
+                    if (j > 0) {
+
+                        j = j - 2;
+
+                    }
+                    else if (j == 0) {
+
+                        i = i - 1;
+                        j = 8;
+                    }
+                }
+                //showBoard();
+                //System.out.print("-------------------\n\n");
             }
+        }
+    }
+
+
+
         //}
 
 
@@ -114,6 +125,7 @@ public class SudokuBoard {
         fillBoard();
         System.out.print("Przerwa\n\n");
         showBoard();
+
     }
 
 }
