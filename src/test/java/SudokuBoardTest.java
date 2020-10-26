@@ -16,14 +16,6 @@ class SudokuBoardTest {
         int[][] testBoard = sudokuBoard.getCopyOfBoard();
         boolean flaga = true;
 
-        /*//Pokazana tablica
-            Należy usunąć
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                System.out.print(testBoard[i][j] + " ");
-            }
-            System.out.print("\n");
-        }*/
         //Sprawdz wiersze
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
@@ -36,13 +28,13 @@ class SudokuBoardTest {
             }
         }
 
-
         //Sprawdz kolumny
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
                 for(int j2=j+1; j2<9; j2++){
                     if(testBoard[i][j] == testBoard[i][j2]){
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
+                        flaga = false;
                     }
                 }
             }
@@ -61,7 +53,7 @@ class SudokuBoardTest {
                             if (subrow + i != row){
                                 if (subcol + j==column){
                                     System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: ["+row+"] ["+column+"]");
-                                    flaga =false;
+                                    flaga = false;
                                 }
                             }
                         }
