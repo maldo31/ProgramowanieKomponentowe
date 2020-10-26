@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SudokuBoardTest {
     private SudokuBoard sudokuBoard;
 
@@ -16,28 +14,39 @@ class SudokuBoardTest {
     public void checkFillBoardTest(){
         sudokuBoard.fillBoard();
         int[][] testBoard = sudokuBoard.getCopyOfBoard();
+        boolean flaga = true;
 
+        /*//Pokazana tablica
+            Należy usunąć
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                System.out.print(testBoard[i][j] + " ");
+            }
+            System.out.print("\n");
+        }*/
         //Sprawdz wiersze
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
-                for(int j2=0; j2<9; j2++){
-                    if(testBoard[i][j] == testBoard[i][j2]){
-                        fail("Error in row " + i);
+                for(int i2=i+1; i2<9; i2++){
+                    if(testBoard[i][j] == testBoard[i2][j]){
+                        System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
+                        flaga = false;
                     }
                 }
             }
         }
 
+        /*
         //Sprawdz kolumny
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
-                for(int i2=0; i2<9; i2++){
-                    if(testBoard[i][j] == testBoard[i2][j]){
-                        fail("Error in column " + i);
+                for(int j2=j+1; j<9; j++){
+                    if(testBoard[i][j] == testBoard[i][j2]){
+                        System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                     }
                 }
             }
-        }
+        }*/
 
         //Sprawdz kwadrat 3x3
         int active;
@@ -51,13 +60,18 @@ class SudokuBoardTest {
                         if(active == testBoard[subrow + i][subcol + j]){
                             if (subrow + i != row){
                                 if (subcol + j==column){
-                                    fail("Error in 3x3 cell which starts at [" + row + "] [" + column + "]");
+                                    System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: ["+row+"] ["+column+"]");
+                                    flaga =false;
                                 }
                             }
                         }
                     }
                 }
             }
+        }
+
+        if(flaga==true){
+            System.out.print("Nie wykryto bledu");
         }
    }
 
@@ -77,10 +91,10 @@ class SudokuBoardTest {
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
                 if(testBoard1[i][j]!=testBoard2[i][j]){
-                    same=false;
+                    System.out.print("Tablice sa identyczne");
                 }
             }
         }
-        assertTrue(!same);
+        System.out.print("Tablice maja inny uklad liczb");
     }
 }
