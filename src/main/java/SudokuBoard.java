@@ -1,5 +1,13 @@
 import java.util.Random;
 
+/*
+    //Sprawdzanie czy wtyczka checkstyle działa
+    //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
+    for(int i=0;i<1;i++){
+    System.out.print("Test");
+    }
+*/
+
 public class SudokuBoard {
     private int[][] board = new int[9][9];
 
@@ -40,11 +48,11 @@ public class SudokuBoard {
                 }
             }
         }
-       for (int i = 0; i<3;i++){
-           for(int j=0;j<3;j++){
-               if(active == board[subrow + i][subcol + j]){
-                   if(subrow+i!=row){
-                       if(subcol+j!=column){
+       for (int i = 0; i < 3; i++) {
+           for (int j = 0;j < 3; j++) {
+               if (active == board [subrow + i][subcol + j]) {
+                   if (subrow + i != row) {
+                       if (subcol + j != column) {
                            return false;
                        }
                    }
@@ -60,39 +68,37 @@ public class SudokuBoard {
         Random random = new Random();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                boolean valid=false;
-                if (randomDigits[i * 9 +j] == 0) {
-                    randomDigits[i * 9 +j]= 1 + random.nextInt(9);
-                    board[i][j] = randomDigits[i * 9 +j];
+                boolean valid = false;
+                if (randomDigits[i * 9 + j] == 0) {
+                    randomDigits[i * 9 + j] = 1 + random.nextInt(9);
+                    board[i][j] = randomDigits[i * 9 + j];
 
                     do {
                         if (checkCell(i, j) == true) {
-                            valid=true;
+                            valid = true;
                             break;
                         }
 
                         board[i][j] = board[i][j] % 9 + 1;
-                    } while (randomDigits[i * 9 +j] != board[i][j]);
+                    } while (randomDigits[i * 9 + j] != board[i][j]);
                 } else {
                     board[i][j] = board[i][j] % 9 + 1;
-                    while (board[i][j] != randomDigits[i * 9 +j]) {
+                    while (board[i][j] != randomDigits[i * 9 + j]) {
                         if (checkCell(i, j) == true) {
-                            valid=true;
+                            valid = true;
                             break;
                         }
                         board[i][j] = board[i][j] % 9 + 1;
 
                     }
                 }
-                if (!valid){
-                    board[i][j]=0;
-                    randomDigits[i * 9 +j]=0;
+                if (!valid) {
+                    board[i][j] = 0;
+                    randomDigits[i * 9 + j] = 0;
                     if (j > 0) {
 
                         j = j - 2;
-
-                    }
-                    else if (j == 0) {
+                    } else if (j == 0) {
 
                         i = i - 1;
                         j = 8;
