@@ -1,4 +1,6 @@
-import java.util.Random;
+package sudoku;
+
+
 
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
@@ -24,13 +26,13 @@ public class SudokuBoard {
     public void showBoard() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.print(board[i][j] + " ");
+                System.out.print( get(i,j)+ " ");
             }
             System.out.print("\n");
         }
     }
 
-    private boolean checkCell(int row, int column) {
+    public boolean checkCell(int row, int column) {
         int active = board[row][column];
         int subrow = row - row % 3;
         int subcol = column - column % 3;
@@ -70,51 +72,11 @@ public class SudokuBoard {
         this.board[row][column] = value;
     }
 
-    public void fillBoard() {
-        int[] randomDigits = new int[81];
-
-        Random random = new Random();
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                boolean valid = false;
-                if (randomDigits[i * 9 + j] == 0) {
-                    randomDigits[i * 9 + j] = 1 + random.nextInt(9);
-                    set(i,j,randomDigits[i * 9 + j]);
-
-                    do {
-                        if (checkCell(i, j) == true) {
-                            valid = true;
-                            break;
-                        }
-
-                        set(i,j,get(i,j) % 9 + 1);
-                    } while (randomDigits[i * 9 + j] != get(i,j));
-                } else {
-                    set(i,j,get(i,j) % 9 + 1);
-                    while (get(i,j) != randomDigits[i * 9 + j]) {
-                        if (checkCell(i, j) == true) {
-                            valid = true;
-                            break;
-                        }
-                        set(i,j,get(i,j) % 9 + 1);
-
-                    }
-                }
-                if (!valid) {
-                    board[i][j] = 0;
-                    randomDigits[i * 9 + j] = 0;
-                    if (j > 0) {
-
-                        j = j - 2;
-                    } else if (j == 0) {
-
-                        i = i - 1;
-                        j = 7;
-                    }
-                }
-            }
-        }
+    public void solveGame(){
+        board.solve(this);
     }
+
+
 }
 
 

@@ -1,7 +1,9 @@
+package sudoku;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class SudokuBoardTest {
+
+public class SudokuBoardTest {
     private SudokuBoard sudokuBoard;
 
     @BeforeEach
