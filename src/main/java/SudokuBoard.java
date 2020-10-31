@@ -62,6 +62,14 @@ public class SudokuBoard {
         return true;
     }
 
+    public int get(int row, int column) {
+        return board[row][column];
+    }
+
+    public void set(int row, int column, int value) {
+        this.board[row][column] = value;
+    }
+
     public void fillBoard() {
         int[] randomDigits = new int[81];
 
@@ -71,7 +79,7 @@ public class SudokuBoard {
                 boolean valid = false;
                 if (randomDigits[i * 9 + j] == 0) {
                     randomDigits[i * 9 + j] = 1 + random.nextInt(9);
-                    board[i][j] = randomDigits[i * 9 + j];
+                    set(i,j,randomDigits[i * 9 + j]);
 
                     do {
                         if (checkCell(i, j) == true) {
@@ -79,16 +87,16 @@ public class SudokuBoard {
                             break;
                         }
 
-                        board[i][j] = board[i][j] % 9 + 1;
-                    } while (randomDigits[i * 9 + j] != board[i][j]);
+                        set(i,j,get(i,j) % 9 + 1);
+                    } while (randomDigits[i * 9 + j] != get(i,j));
                 } else {
-                    board[i][j] = board[i][j] % 9 + 1;
-                    while (board[i][j] != randomDigits[i * 9 + j]) {
+                    set(i,j,get(i,j) % 9 + 1);
+                    while (get(i,j) != randomDigits[i * 9 + j]) {
                         if (checkCell(i, j) == true) {
                             valid = true;
                             break;
                         }
-                        board[i][j] = board[i][j] % 9 + 1;
+                        set(i,j,get(i,j) % 9 + 1);
 
                     }
                 }
