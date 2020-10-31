@@ -26,7 +26,7 @@ public class SudokuBoard {
     public void showBoard() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.print( get(i,j)+ " ");
+                System.out.print(get(i,j) + " ");
             }
             System.out.print("\n");
         }
@@ -72,9 +72,7 @@ public class SudokuBoard {
         this.board[row][column] = value;
     }
 
-    public void solveGame(){
-        board.solve(this);
-    }
+    SudokuSolver solveGame = new BacktrackingSudokuSolver();
 
 
 }

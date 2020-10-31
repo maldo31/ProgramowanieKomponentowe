@@ -1,4 +1,5 @@
 package sudoku;
+
 import java.util.Random;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {

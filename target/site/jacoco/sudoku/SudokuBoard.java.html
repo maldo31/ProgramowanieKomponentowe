@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sudoku</a> &gt; <a href="index.source.html" class="el_package">sudoku</a> &gt; <span class="el_source">SudokuBoard.java</span></div><h1>SudokuBoard.java</h1><pre class="source lang-java linenums">package sudoku;
+
+
+
+/*
+    //Sprawdzanie czy wtyczka checkstyle działa
+    //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
+    for(int i=0;i&lt;1;i++){
+    System.out.print(&quot;Test&quot;);
+    }
+*/
+
+<span class="fc" id="L13">public class SudokuBoard {</span>
+<span class="fc" id="L14">    private int[][] board = new int[9][9];</span>
+
+    public int[][] getCopyOfBoard() {
+<span class="fc" id="L17">        int[][] copiedBoard = new int[9][9];</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            for (int j = 0; j &lt; 9; j++) {</span>
+<span class="fc" id="L20">                copiedBoard[i][j] = board[i][j];</span>
+            }
+        }
+<span class="fc" id="L23">        return copiedBoard;</span>
+    }
+
+    public void showBoard() {
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">            for (int j = 0; j &lt; 9; j++) {</span>
+<span class="nc" id="L29">                System.out.print(get(i,j) + &quot; &quot;);</span>
+            }
+<span class="nc" id="L31">            System.out.print(&quot;\n&quot;);</span>
+        }
+<span class="nc" id="L33">    }</span>
+
+    public boolean checkCell(int row, int column) {
+<span class="fc" id="L36">        int active = board[row][column];</span>
+<span class="fc" id="L37">        int subrow = row - row % 3;</span>
+<span class="fc" id="L38">        int subcol = column - column % 3;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (active == board[row][i]) {</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                if (column != i) {</span>
+<span class="fc" id="L42">                    return false;</span>
+                }
+            }
+        }
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (active == board[i][column]) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                if (row != i) {</span>
+<span class="fc" id="L49">                    return false;</span>
+                }
+            }
+        }
+<span class="fc bfc" id="L53" title="All 2 branches covered.">       for (int i = 0; i &lt; 3; i++) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">           for (int j = 0;j &lt; 3; j++) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">               if (active == board [subrow + i][subcol + j]) {</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">                   if (subrow + i != row) {</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">                       if (subcol + j != column) {</span>
+<span class="fc" id="L58">                           return false;</span>
+                       }
+                   }
+               }
+           }
+       }
+<span class="fc" id="L64">        return true;</span>
+    }
+
+    public int get(int row, int column) {
+<span class="fc" id="L68">        return board[row][column];</span>
+    }
+
+    public void set(int row, int column, int value) {
+<span class="fc" id="L72">        this.board[row][column] = value;</span>
+<span class="fc" id="L73">    }</span>
+
+<span class="fc" id="L75">    SudokuSolver solveGame = new BacktrackingSudokuSolver();</span>
+
+
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
