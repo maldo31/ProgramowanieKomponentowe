@@ -101,7 +101,7 @@ public class SudokuBoard {
                     } else if (j == 0) {
 
                         i = i - 1;
-                        j = 8;
+                        j = 7;
                     }
                 }
             }
