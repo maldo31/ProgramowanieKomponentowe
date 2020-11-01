@@ -12,6 +12,11 @@ package sudoku;
 
 public class SudokuBoard {
     private int[][] board = new int[9][9];
+    public void solveGame() {
+        SudokuSolver board = new BacktrackingSudokuSolver();
+        board.solve(this);
+    }
+
 
     public int[][] getCopyOfBoard() {
         int[][] copiedBoard = new int[9][9];
@@ -72,7 +77,7 @@ public class SudokuBoard {
         this.board[row][column] = value;
     }
 
-    SudokuSolver solveGame = new BacktrackingSudokuSolver();
+
 
 
 }
