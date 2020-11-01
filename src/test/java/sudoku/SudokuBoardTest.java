@@ -14,9 +14,10 @@ public class SudokuBoardTest {
     //Test sprawdzający czy wypełniona tablica jest zgodna z zasadami Sudoku
     @Test
     public void checkFillBoardTest(){
-
+        sudokuBoard.solveGame();
         int[][] testBoard = sudokuBoard.getCopyOfBoard();
-        SudokuBoard.solveGame();
+
+
         boolean flaga = true;
 
         //Sprawdz wiersze

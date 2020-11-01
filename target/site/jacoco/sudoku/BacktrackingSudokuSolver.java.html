@@ -3,53 +3,54 @@
 import java.util.Random;
 
 <span class="fc" id="L5">public class BacktrackingSudokuSolver implements SudokuSolver {</span>
-    public void solve(final SudokuBoard board) {
-        {
-<span class="fc" id="L8">            int[] randomDigits = new int[81];</span>
 
-<span class="fc" id="L10">            Random random = new Random();</span>
-<span class="fc bfc" id="L11" title="All 2 branches covered.">            for (int i = 0; i &lt; 9; i++) {</span>
-<span class="fc bfc" id="L12" title="All 2 branches covered.">                for (int j = 0; j &lt; 9; j++) {</span>
-<span class="fc" id="L13">                    boolean valid = false;</span>
-<span class="fc bfc" id="L14" title="All 2 branches covered.">                    if (randomDigits[i * 9 + j] == 0) {</span>
-<span class="fc" id="L15">                        randomDigits[i * 9 + j] = 1 + random.nextInt(9);</span>
-<span class="fc" id="L16">                        board.set(i,j,randomDigits[i * 9 + j]);</span>
+    public void solve(SudokuBoard board) {
+        {
+<span class="fc" id="L9">            int[] randomDigits = new int[81];</span>
+
+<span class="fc" id="L11">            Random random = new Random();</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">                for (int j = 0; j &lt; 9; j++) {</span>
+<span class="fc" id="L14">                    boolean valid = false;</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">                    if (randomDigits[i * 9 + j] == 0) {</span>
+<span class="fc" id="L16">                        randomDigits[i * 9 + j] = 1 + random.nextInt(9);</span>
+<span class="fc" id="L17">                        board.set(i,j,randomDigits[i * 9 + j]);</span>
 
                         do {
-<span class="fc bfc" id="L19" title="All 2 branches covered.">                            if (board.checkCell(i, j) == true) {</span>
-<span class="fc" id="L20">                                valid = true;</span>
-<span class="fc" id="L21">                                break;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                            if (board.checkCell(i, j) == true) {</span>
+<span class="fc" id="L21">                                valid = true;</span>
+<span class="fc" id="L22">                                break;</span>
                             }
 
-<span class="fc" id="L24">                            board.set(i,j,board.get(i,j) % 9 + 1);</span>
-<span class="fc bfc" id="L25" title="All 2 branches covered.">                        } while (randomDigits[i * 9 + j] != board.get(i,j));</span>
+<span class="fc" id="L25">                            board.set(i,j,board.get(i,j) % 9 + 1);</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                        } while (randomDigits[i * 9 + j] != board.get(i,j));</span>
                     } else {
-<span class="fc" id="L27">                        board.set(i,j,board.get(i,j) % 9 + 1);</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">                        while (board.get(i,j) != randomDigits[i * 9 + j]) {</span>
-<span class="fc bfc" id="L29" title="All 2 branches covered.">                            if (board.checkCell(i, j) == true) {</span>
-<span class="fc" id="L30">                                valid = true;</span>
-<span class="fc" id="L31">                                break;</span>
+<span class="fc" id="L28">                        board.set(i,j,board.get(i,j) % 9 + 1);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                        while (board.get(i,j) != randomDigits[i * 9 + j]) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                            if (board.checkCell(i, j) == true) {</span>
+<span class="fc" id="L31">                                valid = true;</span>
+<span class="fc" id="L32">                                break;</span>
                             }
-<span class="fc" id="L33">                            board.set(i,j,board.get(i,j) % 9 + 1);</span>
+<span class="fc" id="L34">                            board.set(i,j,board.get(i,j) % 9 + 1);</span>
 
                         }
                     }
-<span class="fc bfc" id="L37" title="All 2 branches covered.">                    if (!valid) {</span>
-<span class="fc" id="L38">                        board.set(i,j,0);</span>
-<span class="fc" id="L39">                        randomDigits[i * 9 + j] = 0;</span>
-<span class="pc bpc" id="L40" title="1 of 2 branches missed.">                        if (j &gt; 0) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">                    if (!valid) {</span>
+<span class="fc" id="L39">                        board.set(i,j,0);</span>
+<span class="fc" id="L40">                        randomDigits[i * 9 + j] = 0;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                        if (j &gt; 0) {</span>
 
-<span class="fc" id="L42">                            j = j - 2;</span>
-<span class="nc bnc" id="L43" title="All 2 branches missed.">                        } else if (j == 0) {</span>
+<span class="fc" id="L43">                            j = j - 2;</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">                        } else if (j == 0) {</span>
 
-<span class="nc" id="L45">                            i = i - 1;</span>
-<span class="nc" id="L46">                            j = 7;</span>
+<span class="fc" id="L46">                            i = i - 1;</span>
+<span class="fc" id="L47">                            j = 7;</span>
                         }
                     }
                 }
             }
         }
 
-<span class="fc" id="L53">    }</span>
+<span class="fc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

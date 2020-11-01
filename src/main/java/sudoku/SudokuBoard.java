@@ -11,7 +11,8 @@ package sudoku;
 */
 
 public class SudokuBoard {
-    private int[][] board = new int[9][9];
+    private final int[][] board = new int[9][9];
+
     public void solveGame() {
         SudokuSolver solver = new BacktrackingSudokuSolver();
         solver.solve(this);
