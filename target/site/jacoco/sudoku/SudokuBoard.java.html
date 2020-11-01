@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sudoku</a> &gt; <a href="index.source.html" class="el_package">sudoku</a> &gt; <span class="el_source">SudokuBoard.java</span></div><h1>SudokuBoard.java</h1><pre class="source lang-java linenums">package sudoku;
-
-
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sudoku</a> &gt; <a href="index.source.html" class="el_package">sudoku</a> &gt; <span class="el_source">SudokuBoard.java</span></div><h1>SudokuBoard.java</h1><pre class="source lang-java linenums">package sudoku;
 
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
@@ -10,46 +8,48 @@
     }
 */
 
-<span class="fc" id="L13">public class SudokuBoard {</span>
-<span class="fc" id="L14">    private final int[][] board = new int[9][9];</span>
+<span class="fc" id="L11">public class SudokuBoard {</span>
+<span class="fc" id="L12">    int size = 9;</span>
+<span class="fc" id="L13">    private final int[][] board = new int[size][size];</span>
 
     public void solveGame() {
-<span class="fc" id="L17">        SudokuSolver solver = new BacktrackingSudokuSolver();</span>
-<span class="fc" id="L18">        solver.solve(this);</span>
-<span class="fc" id="L19">    }</span>
-
+<span class="fc" id="L16">        SudokuSolver solver = new BacktrackingSudokuSolver();</span>
+<span class="fc" id="L17">        solver.solve(this);</span>
+<span class="fc" id="L18">    }</span>
 
     public int[][] getCopyOfBoard() {
-<span class="fc" id="L23">        int[][] copiedBoard = new int[9][9];</span>
-<span class="fc bfc" id="L24" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
-<span class="fc bfc" id="L25" title="All 2 branches covered.">            for (int j = 0; j &lt; 9; j++) {</span>
-<span class="fc" id="L26">                copiedBoard[i][j] = board[i][j];</span>
+<span class="fc" id="L21">        int[][] copiedBoard = new int[9][9];</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L24">                copiedBoard[i][j] = board[i][j];</span>
             }
         }
-<span class="fc" id="L29">        return copiedBoard;</span>
+<span class="fc" id="L27">        return copiedBoard;</span>
     }
 
+    /*
     public void showBoard() {
-<span class="nc bnc" id="L33" title="All 2 branches missed.">        for (int i = 0; i &lt; 9; i++) {</span>
-<span class="nc bnc" id="L34" title="All 2 branches missed.">            for (int j = 0; j &lt; 9; j++) {</span>
-<span class="nc" id="L35">                System.out.print(get(i,j) + &quot; &quot;);</span>
+        for (int i = 0; i &lt; size; i++) {
+            for (int j = 0; j &lt; size; j++) {
+                System.out.print(get(i,j) + &quot; &quot;);
             }
-<span class="nc" id="L37">            System.out.print(&quot;\n&quot;);</span>
+            System.out.print(&quot;\n&quot;);
         }
-<span class="nc" id="L39">    }</span>
+    }
+     */
 
     public boolean checkCell(int row, int column) {
 <span class="fc" id="L42">        int active = board[row][column];</span>
 <span class="fc" id="L43">        int subrow = row - row % 3;</span>
 <span class="fc" id="L44">        int subcol = column - column % 3;</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
 <span class="fc bfc" id="L46" title="All 2 branches covered.">            if (active == board[row][i]) {</span>
 <span class="fc bfc" id="L47" title="All 2 branches covered.">                if (column != i) {</span>
 <span class="fc" id="L48">                    return false;</span>
                 }
             }
         }
-<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
 <span class="fc bfc" id="L53" title="All 2 branches covered.">            if (active == board[i][column]) {</span>
 <span class="fc bfc" id="L54" title="All 2 branches covered.">                if (row != i) {</span>
 <span class="fc" id="L55">                    return false;</span>
@@ -77,9 +77,6 @@
     public void set(int row, int column, int value) {
 <span class="fc" id="L78">        this.board[row][column] = value;</span>
 <span class="fc" id="L79">    }</span>
-
-
-
 
 }
 
