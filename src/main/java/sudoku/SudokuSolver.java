@@ -1,5 +1,5 @@
 package sudoku;
 
 public interface SudokuSolver {
-    public void solve(SudokuBoard board);
+    public boolean solve(SudokuBoard board);
 }

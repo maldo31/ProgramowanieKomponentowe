@@ -1,12 +1,41 @@
 package sudoku;
-
-import java.util.Random;
+import java.util.*;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
+    private static final int UNASSIGNED = 0;
+    public boolean solve(SudokuBoard board) {
+        Random random = new Random();
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (board.get(row, col) == UNASSIGNED) {
+                    int value =1 + random.nextInt(9);
+                    for (int number = 1; number <= 9; number++) {
 
-    public void solve(SudokuBoard board) {
-        {
-            int size = 9;
+                        if (board.checkCell(row, col, value)) {
+                            board.set(row, col, value);
+                            if (solve(board)) {
+                                return true;
+                            } else {
+                                board.set(row, col, UNASSIGNED);
+                            }
+                        }
+
+                        value++;
+                        if (value>9){
+                            value=1;
+                        }
+                    }
+                    return false;
+                }
+            }
+
+        }
+        board.showBoard();
+        return true;
+    }
+}
+        /*
+            int size = board.size;
             int[] randomDigits = new int[size * size];
 
             Random random = new Random();
@@ -45,6 +74,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                     }
                 }
             }
-        }
-    }
-}
+        }   */
+
+

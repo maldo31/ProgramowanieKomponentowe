@@ -9,7 +9,7 @@ package sudoku;
 */
 
 public class SudokuBoard {
-    int size = 9;
+    public int size = 9;
     private final int[][] board = new int[size][size];
 
     public void solveGame() {
@@ -27,7 +27,7 @@ public class SudokuBoard {
         return copiedBoard;
     }
 
-    /*
+
     public void showBoard() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -36,21 +36,20 @@ public class SudokuBoard {
             System.out.print("\n");
         }
     }
-     */
 
-    public boolean checkCell(int row, int column) {
-        int active = board[row][column];
+
+    public boolean checkCell(int row, int column, int value) {
         int subrow = row - row % 3;
         int subcol = column - column % 3;
         for (int i = 0; i < size; i++) {
-            if (active == board[row][i]) {
+            if (value == board[row][i]) {
                 if (column != i) {
                     return false;
                 }
             }
         }
         for (int i = 0; i < size; i++) {
-            if (active == board[i][column]) {
+            if (value == board[i][column]) {
                 if (row != i) {
                     return false;
                 }
@@ -58,7 +57,7 @@ public class SudokuBoard {
         }
        for (int i = 0; i < 3; i++) {
            for (int j = 0;j < 3; j++) {
-               if (active == board [subrow + i][subcol + j]) {
+               if (value == board [subrow + i][subcol + j]) {
                    if (subrow + i != row) {
                        if (subcol + j != column) {
                            return false;

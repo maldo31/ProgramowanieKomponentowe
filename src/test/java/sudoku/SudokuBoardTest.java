@@ -11,6 +11,7 @@ public class SudokuBoardTest {
         sudokuBoard = new SudokuBoard();
     }
 
+
     //Test sprawdzający czy wypełniona tablica jest zgodna z zasadami Sudoku
     @Test
     public void checkFillBoardTest(){
@@ -69,6 +70,9 @@ public class SudokuBoardTest {
         if(flaga){
             System.out.print("Nie wykryto bledu");
         }
+        if(!flaga){
+            sudokuBoard.showBoard();
+        }
    }
 
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
@@ -90,5 +94,8 @@ public class SudokuBoardTest {
             }
         }
         System.out.print("Tablice maja inny uklad liczb");
+
     }
+
+
 }
