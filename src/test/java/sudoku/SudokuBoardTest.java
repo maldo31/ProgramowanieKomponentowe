@@ -14,7 +14,7 @@ public class SudokuBoardTest {
 
     //Test sprawdzający czy wypełniona tablica jest zgodna z zasadami Sudoku
     @Test
-    public void checkFillBoardTest(){
+    public void checkFillBoardTest() {
         sudokuBoard.solveGame();
         int[][] testBoard = sudokuBoard.getCopyOfBoard();
 
@@ -22,10 +22,10 @@ public class SudokuBoardTest {
         boolean flaga = true;
 
         //Sprawdz wiersze
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                for(int i2=i+1; i2<9; i2++){
-                    if(testBoard[i][j] == testBoard[i2][j]){
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                for (int i2 = i + 1; i2 < 9; i2++) {
+                    if (testBoard[i][j] == testBoard[i2][j]) {
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                         flaga = false;
                     }
@@ -34,10 +34,10 @@ public class SudokuBoardTest {
         }
 
         //Sprawdz kolumny
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                for(int j2=j+1; j2<9; j2++){
-                    if(testBoard[i][j] == testBoard[i][j2]){
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                for (int j2 = j + 1; j2 < 9; j2++) {
+                    if (testBoard[i][j] == testBoard[i][j2]) {
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                         flaga = false;
                     }
@@ -47,17 +47,17 @@ public class SudokuBoardTest {
 
         //Sprawdz kwadrat 3x3
         int active;
-        for(int row=0; row<3; row++){
-            for(int column=0; column<3; column++){
+        for (int row = 0; row < 3; row++) {
+            for (int column = 0; column < 3; column++) {
                 active = testBoard[row][column];
-                int subrow = row - row%3;
-                int subcol = column - column%3;
-                for(int i=0; i<3; i++){
-                    for(int j=0; j<3; j++){
-                        if(active == testBoard[subrow + i][subcol + j]){
-                            if (subrow + i != row){
-                                if (subcol + j==column){
-                                    System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: ["+row+"] ["+column+"]");
+                int subrow = row - row % 3;
+                int subcol = column - column % 3;
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        if (active == testBoard[subrow + i][subcol + j]) {
+                            if (subrow + i != row) {
+                                if (subcol + j == column) {
+                                    System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: [" + row + "] [" + column + "]");
                                     flaga = false;
                                 }
                             }
@@ -67,17 +67,17 @@ public class SudokuBoardTest {
             }
         }
 
-        if(flaga){
+        if (flaga) {
             System.out.print("Nie wykryto bledu");
         }
-        if(!flaga){
+        if (!flaga) {
             sudokuBoard.showBoard();
         }
-   }
+    }
 
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
     @Test
-    public void repeatFillBoardTest(){
+    public void repeatFillBoardTest() {
         int[][] testBoard1;
         int[][] testBoard2;
 
@@ -85,17 +85,22 @@ public class SudokuBoardTest {
         testBoard1 = sudokuBoard.getCopyOfBoard();
         sudokuBoard.solveGame();
         testBoard2 = sudokuBoard.getCopyOfBoard();
-
-        for(int i=0; i<9; i++){
-            for(int j=0; j<9; j++){
-                if(testBoard1[i][j]!=testBoard2[i][j]){
-                    System.out.print("Tablice sa identyczne");
+        boolean flag = false;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (testBoard1[i][j] != testBoard2[i][j]) {
+                    flag = true;
                 }
             }
         }
-        System.out.print("Tablice maja inny uklad liczb");
+        if (flag) {
+            System.out.print("Tablice maja inny uklad liczb");
+
+        }
+        else{
+            System.out.print("Tablice są identyczne");
+        }
+
 
     }
-
-
 }

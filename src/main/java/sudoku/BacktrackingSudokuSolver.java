@@ -3,7 +3,16 @@ import java.util.*;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
     private static final int UNASSIGNED = 0;
-    public boolean solve(SudokuBoard board) {
+    public boolean solve(SudokuBoard board,int num) {
+        /*if(board.get(board.size-1,board.size-1)!=0) {
+            for (int row = 0; row < 9; row++) {
+                    for (int col = 0; col < 9; col++) {
+                        board.set(row, col, 0);
+                    }
+                }
+            }
+
+         */
         Random random = new Random();
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
@@ -13,7 +22,51 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
                         if (board.checkCell(row, col, value)) {
                             board.set(row, col, value);
-                            if (solve(board)) {
+                            if (solve(board,1)) {
+                                return true;
+                            } else {
+                                board.set(row, col, UNASSIGNED);
+                            }
+                        }
+
+                        value++;
+                        if (value>9){
+                            value=1;
+                        }
+                    }
+                    return false;
+                }
+            }
+
+        }
+
+        return true;
+    }
+    public boolean solve(SudokuBoard board) {
+        /*if(board.get(board.size-1,board.size-1)!=0) {
+            for (int row = 0; row < 9; row++) {
+                    for (int col = 0; col < 9; col++) {
+                        board.set(row, col, 0);
+                    }
+                }
+            }
+
+         */
+        Random random = new Random();
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                board.set(row, col, 0);
+            }
+        }
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (board.get(row, col) == UNASSIGNED) {
+                    int value =1 + random.nextInt(9);
+                    for (int number = 1; number <= 9; number++) {
+
+                        if (board.checkCell(row, col, value)) {
+                            board.set(row, col, value);
+                            if (solve(board,1)) {
                                 return true;
                             } else {
                                 board.set(row, col, UNASSIGNED);
