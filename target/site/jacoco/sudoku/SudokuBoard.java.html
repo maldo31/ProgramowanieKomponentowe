@@ -27,56 +27,55 @@
 <span class="fc" id="L27">        return copiedBoard;</span>
     }
 
-    /*
-    public void showBoard() {
-        for (int i = 0; i &lt; size; i++) {
-            for (int j = 0; j &lt; size; j++) {
-                System.out.print(get(i,j) + &quot; &quot;);
-            }
-            System.out.print(&quot;\n&quot;);
-        }
-    }
-     */
 
-    public boolean checkCell(int row, int column) {
-<span class="fc" id="L42">        int active = board[row][column];</span>
-<span class="fc" id="L43">        int subrow = row - row % 3;</span>
-<span class="fc" id="L44">        int subcol = column - column % 3;</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (active == board[row][i]) {</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">                if (column != i) {</span>
-<span class="fc" id="L48">                    return false;</span>
+    public void showBoard() {
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L34">                System.out.print(get(i,j) + &quot; &quot;);</span>
+            }
+<span class="fc" id="L36">            System.out.print(&quot;\n&quot;);</span>
+        }
+<span class="fc" id="L38">    }</span>
+
+
+    public boolean checkCell(int row, int column, int value) {
+<span class="fc" id="L42">        int subrow = row - row % 3;</span>
+<span class="fc" id="L43">        int subcol = column - column % 3;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">            if (value == board[row][i]) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                if (column != i) {</span>
+<span class="fc" id="L47">                    return false;</span>
                 }
             }
         }
-<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (active == board[i][column]) {</span>
-<span class="fc bfc" id="L54" title="All 2 branches covered.">                if (row != i) {</span>
-<span class="fc" id="L55">                    return false;</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            if (value == board[i][column]) {</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                if (row != i) {</span>
+<span class="fc" id="L54">                    return false;</span>
                 }
             }
         }
-<span class="fc bfc" id="L59" title="All 2 branches covered.">       for (int i = 0; i &lt; 3; i++) {</span>
-<span class="fc bfc" id="L60" title="All 2 branches covered.">           for (int j = 0;j &lt; 3; j++) {</span>
-<span class="fc bfc" id="L61" title="All 2 branches covered.">               if (active == board [subrow + i][subcol + j]) {</span>
-<span class="fc bfc" id="L62" title="All 2 branches covered.">                   if (subrow + i != row) {</span>
-<span class="pc bpc" id="L63" title="1 of 2 branches missed.">                       if (subcol + j != column) {</span>
-<span class="fc" id="L64">                           return false;</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">       for (int i = 0; i &lt; 3; i++) {</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">           for (int j = 0;j &lt; 3; j++) {</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">               if (value == board [subrow + i][subcol + j]) {</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">                   if (subrow + i != row) {</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">                       if (subcol + j != column) {</span>
+<span class="fc" id="L63">                           return false;</span>
                        }
                    }
                }
            }
        }
-<span class="fc" id="L70">        return true;</span>
+<span class="fc" id="L69">        return true;</span>
     }
 
     public int get(int row, int column) {
-<span class="fc" id="L74">        return board[row][column];</span>
+<span class="fc" id="L73">        return board[row][column];</span>
     }
 
     public void set(int row, int column, int value) {
-<span class="fc" id="L78">        this.board[row][column] = value;</span>
-<span class="fc" id="L79">    }</span>
+<span class="fc" id="L77">        this.board[row][column] = value;</span>
+<span class="fc" id="L78">    }</span>
 
 }
 

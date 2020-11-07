@@ -1,18 +1,22 @@
 package sudoku;
-import java.util.*;
+
+import java.util.Random;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
     private static final int UNASSIGNED = 0;
-    /*Algorytm backtracking zaczerpniety ze strony https://www.geeksforgeeks.org/sudoku-backtracking-7/
-    (jednakże jest to jego powszechna wersja, i wiele innych źródeł implementuje algorytm w ten sam sposób),
-    został odpowiednio zmodyfikowany do zaleceń z zadania.
+    /*Algorytm backtracking zaczerpniety ze strony:
+     https://www.geeksforgeeks.org/sudoku-backtracking-7/
+    (jednakże jest to jego powszechna wersja,
+     i wiele innych źródeł implementuje algorytm w ten sam sposób),
+    został odpowiednio zmodyfikowany do zaleceń z zadania. Wywołujemy błąd checkstyle, zbyt długa linia.
      */
+
     public boolean solve(SudokuBoard board,int num) {
         Random random = new Random();
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
                 if (board.get(row, col) == UNASSIGNED) {
-                    int value =1 + random.nextInt(9);
+                    int value = 1 + random.nextInt(9);
                     for (int number = 1; number <= 9; number++) {
 
                         if (board.checkCell(row, col, value)) {
@@ -25,8 +29,8 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                         }
 
                         value++;
-                        if (value>9){
-                            value=1;
+                        if (value > 9) {
+                            value = 1;
                         }
                     }
                     return false;
@@ -37,6 +41,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
         return true;
     }
+
     public boolean solve(SudokuBoard board) {
 
         Random random = new Random();
@@ -48,29 +53,19 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
                 if (board.get(row, col) == UNASSIGNED) {
-                    int value =1 + random.nextInt(9);
+                    int value = 1 + random.nextInt(9);
                     for (int number = 1; number <= 9; number++) {
 
                         if (board.checkCell(row, col, value)) {
                             board.set(row, col, value);
-                            if (solve(board,1)) {
-                                return true;
-                            } else {
-                                board.set(row, col, UNASSIGNED);
+                            solve(board,1);
+
                             }
                         }
-
-                        value++;
-                        if (value>9){
-                            value=1;
-                        }
                     }
-                    return false;
                 }
             }
-
-        }
-        board.showBoard();
         return true;
+        }
     }
-}
+

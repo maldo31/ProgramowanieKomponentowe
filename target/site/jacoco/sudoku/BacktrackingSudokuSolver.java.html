@@ -3,49 +3,70 @@
 import java.util.Random;
 
 <span class="fc" id="L5">public class BacktrackingSudokuSolver implements SudokuSolver {</span>
+    private static final int UNASSIGNED = 0;
+    /*Algorytm backtracking zaczerpniety ze strony:
+     https://www.geeksforgeeks.org/sudoku-backtracking-7/
+    (jednakże jest to jego powszechna wersja,
+     i wiele innych źródeł implementuje algorytm w ten sam sposób),
+    został odpowiednio zmodyfikowany do zaleceń z zadania. Wywołujemy błąd checkstyle, zbyt długa linia.
+     */
 
-    public void solve(SudokuBoard board) {
-        {
-<span class="fc" id="L9">            int size = board.size;</span>
-<span class="fc" id="L10">            int[] randomDigits = new int[size * size];</span>
+    public boolean solve(SudokuBoard board,int num) {
+<span class="fc" id="L15">        Random random = new Random();</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">                if (board.get(row, col) == UNASSIGNED) {</span>
+<span class="fc" id="L19">                    int value = 1 + random.nextInt(9);</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                    for (int number = 1; number &lt;= 9; number++) {</span>
 
-<span class="fc" id="L12">            Random random = new Random();</span>
-<span class="fc bfc" id="L13" title="All 2 branches covered.">            for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L14" title="All 2 branches covered.">                for (int j = 0; j &lt; size; j++) {</span>
-<span class="fc" id="L15">                    boolean valid = false;</span>
-<span class="fc bfc" id="L16" title="All 2 branches covered.">                    if (randomDigits[i * size + j] == 0) {</span>
-<span class="fc" id="L17">                        randomDigits[i * size + j] = 1 + random.nextInt(size);</span>
-<span class="fc" id="L18">                        board.set(i,j,randomDigits[i * size + j]);</span>
-                        do {
-<span class="fc bfc" id="L20" title="All 2 branches covered.">                            if (board.checkCell(i, j) == true) {</span>
-<span class="fc" id="L21">                                valid = true;</span>
-<span class="fc" id="L22">                                break;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">                        if (board.checkCell(row, col, value)) {</span>
+<span class="fc" id="L23">                            board.set(row, col, value);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                            if (solve(board,1)) {</span>
+<span class="fc" id="L25">                                return true;</span>
+                            } else {
+<span class="fc" id="L27">                                board.set(row, col, UNASSIGNED);</span>
                             }
-<span class="fc" id="L24">                            board.set(i,j,board.get(i,j) % size + 1);</span>
-<span class="fc bfc" id="L25" title="All 2 branches covered.">                        } while (randomDigits[i * size + j] != board.get(i,j));</span>
-                    } else {
-<span class="fc" id="L27">                        board.set(i,j,board.get(i,j) % size + 1);</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">                        while (board.get(i,j) != randomDigits[i * size + j]) {</span>
-<span class="fc bfc" id="L29" title="All 2 branches covered.">                            if (board.checkCell(i, j) == true) {</span>
-<span class="fc" id="L30">                                valid = true;</span>
-<span class="fc" id="L31">                                break;</span>
-                            }
-<span class="fc" id="L33">                            board.set(i,j,board.get(i,j) % size + 1);</span>
+                        }
+
+<span class="fc" id="L31">                        value++;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">                        if (value &gt; 9) {</span>
+<span class="fc" id="L33">                            value = 1;</span>
                         }
                     }
-<span class="fc bfc" id="L36" title="All 2 branches covered.">                    if (!valid) {</span>
-<span class="fc" id="L37">                        board.set(i,j,0);</span>
-<span class="fc" id="L38">                        randomDigits[i * size + j] = 0;</span>
-<span class="pc bpc" id="L39" title="1 of 2 branches missed.">                        if (j &gt; 0) {</span>
-<span class="fc" id="L40">                            j = j - 2;</span>
-<span class="nc bnc" id="L41" title="All 2 branches missed.">                        } else if (j == 0) {</span>
-<span class="nc" id="L42">                            i = i - 1;</span>
-<span class="nc" id="L43">                            j = 7;</span>
+<span class="fc" id="L36">                    return false;</span>
+                }
+            }
+
+        }
+
+<span class="fc" id="L42">        return true;</span>
+    }
+
+    public boolean solve(SudokuBoard board) {
+
+<span class="fc" id="L47">        Random random = new Random();</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
+<span class="fc" id="L50">                board.set(row, col, 0);</span>
+            }
+        }
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">                if (board.get(row, col) == UNASSIGNED) {</span>
+<span class="fc" id="L56">                    int value = 1 + random.nextInt(9);</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                    for (int number = 1; number &lt;= 9; number++) {</span>
+
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">                        if (board.checkCell(row, col, value)) {</span>
+<span class="fc" id="L60">                            board.set(row, col, value);</span>
+<span class="fc" id="L61">                            solve(board,1);</span>
+
+                            }
                         }
                     }
                 }
             }
+<span class="fc" id="L68">        return true;</span>
         }
-<span class="fc" id="L49">    }</span>
-}
+    }
+
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
