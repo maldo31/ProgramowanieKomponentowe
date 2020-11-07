@@ -21,7 +21,7 @@ class BacktrackingSudokuSolverTest {
 
         solver.solve(sudokuBoard);
 
-        int[][] testBoard = sudokuBoard.getCopyOfBoard();
+        SudokuField[][] testBoard = sudokuBoard.getCopyOfBoard();
 
 
             boolean flaga = true;
@@ -54,12 +54,12 @@ class BacktrackingSudokuSolverTest {
             int active;
             for (int row = 0; row < 3; row++) {
                 for (int column = 0; column < 3; column++) {
-                    active = testBoard[row][column];
+                    active = testBoard[row][column].getFieldValue();
                     int subrow = row - row % 3;
                     int subcol = column - column % 3;
                     for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 3; j++) {
-                            if (active == testBoard[subrow + i][subcol + j]) {
+                            if (active == testBoard[subrow + i][subcol + j].getFieldValue()) {
                                 if (subrow + i != row) {
                                     if (subcol + j == column) {
                                         System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: [" + row + "] [" + column + "]");

@@ -16,7 +16,7 @@ public class SudokuBoardTest {
     @Test
     public void checkFillBoardTest() {
         sudokuBoard.solveGame();
-        int[][] testBoard = sudokuBoard.getCopyOfBoard();
+        SudokuField[][] testBoard = sudokuBoard.getCopyOfBoard();
 
 
         boolean flaga = true;
@@ -49,12 +49,12 @@ public class SudokuBoardTest {
         int active;
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
-                active = testBoard[row][column];
+                active = testBoard[row][column].getFieldValue();
                 int subrow = row - row % 3;
                 int subcol = column - column % 3;
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 3; j++) {
-                        if (active == testBoard[subrow + i][subcol + j]) {
+                        if (active == testBoard[subrow + i][subcol + j].getFieldValue()) {
                             if (subrow + i != row) {
                                 if (subcol + j == column) {
                                     System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: [" + row + "] [" + column + "]");
@@ -78,8 +78,8 @@ public class SudokuBoardTest {
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
     @Test
     public void repeatFillBoardTest() {
-        int[][] testBoard1;
-        int[][] testBoard2;
+        SudokuField[][] testBoard1;
+        SudokuField[][] testBoard2;
 
         sudokuBoard.solveGame();
         testBoard1 = sudokuBoard.getCopyOfBoard();
