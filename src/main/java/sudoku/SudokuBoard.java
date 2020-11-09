@@ -91,7 +91,31 @@ public class SudokuBoard {
         this.board[row][column].setFieldValue(value);
     }
 
-
+    public SudokuRow getRow(int rowIndex){
+        SudokuField[] row= new SudokuField[size];
+        for(int column = 0; column < size; column++)
+        {
+            row[column].setFieldValue(this.board[rowIndex][column].getFieldValue());
+        }
+        return new SudokuRow(row);
+    }
+    public SudokuColumn getColumn(int columnIndex){
+        SudokuField[] column= new SudokuField[size];
+        for(int row = 0; row < size; row++)
+        {
+            column[row].setFieldValue(this.board[row][columnIndex].getFieldValue());
+        }
+        return new SudokuColumn(column);
+    }
+    public SudokuBox getBox(int rowIndex, int columnIndex) {
+        SudokuField[] box = new SudokuField[size];
+        for (int row = ((int) rowIndex / 3) * 3; row < (((int) rowIndex / 3) * 3) + 3; row++) {
+            for (int col = ((int) columnIndex / 3) * 3; row < (((int) columnIndex / 3) * 3) + 3; col++) {
+                box[row * 3 + col].setFieldValue(this.board[row][col].getFieldValue());
+            }
+        }
+        return new SudokuBox(box);
+    }
 }
 
 
