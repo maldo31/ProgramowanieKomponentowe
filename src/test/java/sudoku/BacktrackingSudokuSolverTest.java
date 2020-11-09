@@ -37,6 +37,7 @@ class BacktrackingSudokuSolverTest {
                     }
                 }
             }
+            sudokuBoard.checkBoard();
 
             //Sprawdz kolumny
             for (int i = 0; i < 9; i++) {
@@ -71,7 +72,7 @@ class BacktrackingSudokuSolverTest {
                     }
                 }
             }
-
+        sudokuBoard.showBoard();
             if (flaga) {
                 System.out.print("Nie wykryto bledu");
             }

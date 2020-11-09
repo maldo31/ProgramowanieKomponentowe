@@ -8,7 +8,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
      https://www.geeksforgeeks.org/sudoku-backtracking-7/
     (jednakże jest to jego powszechna wersja,
      i wiele innych źródeł implementuje algorytm w ten sam sposób),
-    został odpowiednio zmodyfikowany do zaleceń z zadania. Wywołujemy błąd checkstyle, zbyt długa linia.
+    został odpowiednio zmodyfikowany do zaleceń z zadania.
      */
 
     public boolean solve(SudokuBoard board,int num) {
@@ -17,7 +17,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
             for (int col = 0; col < 9; col++) {
                 if (board.get(row, col) == UNASSIGNED) {
                     int value = 1 + random.nextInt(9);
-                    for (int number = 1; number <= 9; number++) {
+                    for (int number = 0; number < 9; number++) {
 
                         if (board.checkCell(row, col, value)) {
                             board.set(row, col, value);
@@ -67,5 +67,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
             }
         return true;
         }
+
     }
 

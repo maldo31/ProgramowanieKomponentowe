@@ -1,6 +1,7 @@
 package sudoku;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class SudokuBoardTest {
@@ -25,7 +26,7 @@ public class SudokuBoardTest {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 for (int i2 = i + 1; i2 < 9; i2++) {
-                    if (testBoard[i][j] == testBoard[i2][j]) {
+                    if (testBoard[i][j].getFieldValue() == testBoard[i2][j].getFieldValue()) {
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                         flaga = false;
                     }
@@ -37,7 +38,7 @@ public class SudokuBoardTest {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 for (int j2 = j + 1; j2 < 9; j2++) {
-                    if (testBoard[i][j] == testBoard[i][j2]) {
+                    if (testBoard[i][j].getFieldValue() == testBoard[i][j2].getFieldValue()) {
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                         flaga = false;
                     }
@@ -103,4 +104,13 @@ public class SudokuBoardTest {
 
 
     }
+
+    @Test
+    void checkBoardTest() {
+        sudokuBoard.solveGame();
+        assertTrue(sudokuBoard.checkBoard());
+
+    }
+
+
 }

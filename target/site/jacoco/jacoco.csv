@@ -1,3 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Sudoku,sudoku,SudokuBoard,0,191,1,29,0,36,1,21,0,7
+Sudoku,sudoku,SudokuBoard,3,405,4,50,3,73,4,34,0,11
+Sudoku,sudoku,SudokuBox,0,4,0,0,0,2,0,1,0,1
+Sudoku,sudoku,SudokuColumn,0,4,0,0,0,2,0,1,0,1
+Sudoku,sudoku,SudokuRow,0,4,0,0,0,2,0,1,0,1
+Sudoku,sudoku,Series,2,88,1,9,1,14,1,6,0,2
+Sudoku,sudoku,SudokuField,10,17,2,2,4,6,3,3,1,3
 Sudoku,sudoku,BacktrackingSudokuSolver,0,145,1,27,0,30,1,16,0,3

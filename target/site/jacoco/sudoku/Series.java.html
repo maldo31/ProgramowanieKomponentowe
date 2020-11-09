@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Series.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sudoku</a> &gt; <a href="index.source.html" class="el_package">sudoku</a> &gt; <span class="el_source">Series.java</span></div><h1>Series.java</h1><pre class="source lang-java linenums">package sudoku;
+
+public class Series {
+<span class="fc" id="L4">    final int size = 9;</span>
+<span class="fc" id="L5">    protected SudokuField[] cellSeries = new SudokuField[size];</span>
+
+<span class="fc" id="L7">    public Series(final SudokuField[] copiedSeries) {</span>
+<span class="fc" id="L8">        this.cellSeries = copiedSeries;</span>
+<span class="fc" id="L9">    }</span>
+
+    public boolean verify() {
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (int i = 0; i &lt; size - 1; i++) {</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">            for (int j = 0; j &lt; size - i - 1; j++) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">                if (cellSeries[j].getFieldValue() &gt; cellSeries[j + 1].getFieldValue()) {</span>
+<span class="fc" id="L15">                    int temp = cellSeries[j].getFieldValue();</span>
+<span class="fc" id="L16">                    cellSeries[j].setFieldValue(cellSeries[j + 1].getFieldValue());</span>
+<span class="fc" id="L17">                    cellSeries[j + 1].setFieldValue(temp);</span>
+                }
+            }
+        }
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        for (int i = 0; i &lt; size - 1; i++) {</span>
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">            if (cellSeries[i].getFieldValue() != i + 1) {</span>
+<span class="nc" id="L23">                return false;</span>
+            }
+        }
+<span class="fc" id="L26">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

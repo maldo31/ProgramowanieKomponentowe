@@ -8,7 +8,7 @@ import java.util.Random;
      https://www.geeksforgeeks.org/sudoku-backtracking-7/
     (jednakże jest to jego powszechna wersja,
      i wiele innych źródeł implementuje algorytm w ten sam sposób),
-    został odpowiednio zmodyfikowany do zaleceń z zadania. Wywołujemy błąd checkstyle, zbyt długa linia.
+    został odpowiednio zmodyfikowany do zaleceń z zadania.
      */
 
     public boolean solve(SudokuBoard board,int num) {
@@ -17,7 +17,7 @@ import java.util.Random;
 <span class="fc bfc" id="L17" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
 <span class="fc bfc" id="L18" title="All 2 branches covered.">                if (board.get(row, col) == UNASSIGNED) {</span>
 <span class="fc" id="L19">                    int value = 1 + random.nextInt(9);</span>
-<span class="fc bfc" id="L20" title="All 2 branches covered.">                    for (int number = 1; number &lt;= 9; number++) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                    for (int number = 0; number &lt; 9; number++) {</span>
 
 <span class="fc bfc" id="L22" title="All 2 branches covered.">                        if (board.checkCell(row, col, value)) {</span>
 <span class="fc" id="L23">                            board.set(row, col, value);</span>
@@ -67,6 +67,7 @@ import java.util.Random;
             }
 <span class="fc" id="L68">        return true;</span>
         }
+
     }
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
