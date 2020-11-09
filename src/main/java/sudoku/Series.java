@@ -1,6 +1,6 @@
 package sudoku;
 
-public class Series {
+public abstract class Series {
     final int size = 9;
     protected SudokuField[] cellSeries = new SudokuField[size];
 
