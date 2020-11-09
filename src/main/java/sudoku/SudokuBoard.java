@@ -121,8 +121,11 @@ public class SudokuBoard {
         boolean valid=true;
         for(int index=0;index<size;index++){
             valid=getRow(index).verify();
+            if(valid==false) break;
             valid=getColumn(index).verify();
+            if(valid==false) break;
             valid=getBox(((int) index/3)*3,(index%3)*3).verify();
+            if(valid==false) break;
 
         }
         return valid;
