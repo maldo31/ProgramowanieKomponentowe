@@ -116,6 +116,18 @@ public class SudokuBoard {
         }
         return new SudokuBox(box);
     }
+
+    private boolean checkBoard(){
+        boolean valid=true;
+        for(int index=0;index<size;index++){
+            valid=getRow(index).verify();
+            valid=getColumn(index).verify();
+            valid=getBox(((int) index/3)*3,(index%3)*3).verify();
+
+        }
+        return valid;
+    }
+
 }
 
 
