@@ -57,29 +57,27 @@ public class SudokuBoard {
         int subcol = column - column % 3;
         for (int i = 0; i < size; i++) {
             if (value == board[row][i].getFieldValue()) {
-                if (column != i) {
+
                     return false;
-                }
+
             }
         }
         for (int i = 0; i < size; i++) {
             if (value == board[i][column].getFieldValue()) {
-                if (row != i) {
+
                     return false;
-                }
+
             }
         }
        for (int i = 0; i < 3; i++) {
            for (int j = 0;j < 3; j++) {
                if (value == board[subrow + i][subcol + j].getFieldValue()) {
-                   if (subrow + i != row) {
-                       if (subcol + j != column) {
                            return false;
-                       }
+
                    }
                }
            }
-       }
+
         return true;
     }
 

@@ -101,6 +101,19 @@ public class SudokuBoardTest {
             System.out.print("Tablice są identyczne");
         }
     }
+    @Test
+    void checkCellBox1() {
+        sudokuBoard.solveGame();
+        sudokuBoard.set(0,0,0);
+        assertFalse(sudokuBoard.checkCell(2,2,0));
+    }
+
+    @Test
+    void checkCellBox2() {
+        sudokuBoard.solveGame();
+        sudokuBoard.set(6,6,0);
+        assertFalse(sudokuBoard.checkCell(7,7,0));
+    }
 
     @Test
     void checkBoardTest() {
@@ -128,9 +141,9 @@ public class SudokuBoardTest {
     @Test
     void checkBoardTestBoxFalse() {
         sudokuBoard.solveGame();
-        int nonvalidvalue;
-        nonvalidvalue=sudokuBoard.get(0,0);
-        sudokuBoard.set(1,1,nonvalidvalue);
+        int nonValidValue;
+        nonValidValue=sudokuBoard.get(0,0);
+        sudokuBoard.set(1,1,nonValidValue);
         assertFalse(sudokuBoard.checkBoard());
 
     }

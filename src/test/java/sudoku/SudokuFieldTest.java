@@ -14,4 +14,13 @@ class SudokuFieldTest {
        field.setFieldValue(12);
        assertTrue(value==field.getFieldValue());
     }
+    @Test
+    void setFieldValueNegative() {
+        SudokuField field = new SudokuField(11);
+        int value;
+        value = field.getFieldValue();
+        field.setFieldValue(-100);
+        assertTrue(value == field.getFieldValue());
+    }
+
 }
