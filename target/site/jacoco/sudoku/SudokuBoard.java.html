@@ -122,7 +122,7 @@ public class SudokuBoard {
 <span class="fc" id="L122">        return new SudokuBox(box);</span>
     }
 
-    protected boolean checkBoard() {
+    private boolean checkBoard() {
 <span class="fc" id="L126">        boolean valid = true;</span>
 <span class="fc bfc" id="L127" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
 <span class="fc" id="L128">            valid = getRow(index).verify();</span>
@@ -141,6 +141,10 @@ public class SudokuBoard {
 
         }
 <span class="fc" id="L143">        return valid;</span>
+    }
+
+    public boolean checkBoardTest() {
+<span class="fc" id="L147">        return checkBoard();</span>
     }
 
 }

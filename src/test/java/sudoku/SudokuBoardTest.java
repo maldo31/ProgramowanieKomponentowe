@@ -109,16 +109,9 @@ public class SudokuBoardTest {
     }
 
     @Test
-    void checkCellBox2() {
-        sudokuBoard.solveGame();
-        sudokuBoard.set(6,6,0);
-        assertFalse(sudokuBoard.checkCell(7,7,0));
-    }
-
-    @Test
     void checkBoardTest() {
         sudokuBoard.solveGame();
-        assertTrue(sudokuBoard.checkBoard());
+        assertTrue(sudokuBoard.checkBoardTest());
 
     }
     @Test
@@ -126,7 +119,7 @@ public class SudokuBoardTest {
         sudokuBoard.solveGame();
         sudokuBoard.set(0,0,1);
         sudokuBoard.set(0,1,1);
-        assertFalse(sudokuBoard.checkBoard());
+        assertFalse(sudokuBoard.checkBoardTest());
 
     }
     @Test
@@ -135,7 +128,7 @@ public class SudokuBoardTest {
         int nonvalidvalue;
         nonvalidvalue=sudokuBoard.get(0,0);
         sudokuBoard.set(1,0,nonvalidvalue);
-        assertFalse(sudokuBoard.checkBoard());
+        assertFalse(sudokuBoard.checkBoardTest());
 
     }
     @Test
@@ -144,8 +137,12 @@ public class SudokuBoardTest {
         int nonValidValue;
         nonValidValue=sudokuBoard.get(0,0);
         sudokuBoard.set(1,1,nonValidValue);
-        assertFalse(sudokuBoard.checkBoard());
+        assertFalse(sudokuBoard.checkBoardTest());
 
+    }
+    @Test
+    void ShowBoardTest() {
+        sudokuBoard.showBoard();
     }
 
 

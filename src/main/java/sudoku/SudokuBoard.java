@@ -122,7 +122,7 @@ public class SudokuBoard {
         return new SudokuBox(box);
     }
 
-    protected boolean checkBoard() {
+    private boolean checkBoard() {
         boolean valid = true;
         for (int index = 0;index < size;index++) {
             valid = getRow(index).verify();
@@ -141,6 +141,10 @@ public class SudokuBoard {
 
         }
         return valid;
+    }
+
+    public boolean checkBoardTest() {
+        return checkBoard();
     }
 
 }
