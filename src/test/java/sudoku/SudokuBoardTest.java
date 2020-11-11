@@ -2,6 +2,7 @@ package sudoku;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 public class SudokuBoardTest {
@@ -107,4 +108,34 @@ public class SudokuBoardTest {
         assertTrue(sudokuBoard.checkBoard());
 
     }
+    @Test
+    void checkBoardTestRowFalse() {
+        sudokuBoard.solveGame();
+        sudokuBoard.set(0,0,1);
+        sudokuBoard.set(0,1,1);
+        assertFalse(sudokuBoard.checkBoard());
+
+    }
+    @Test
+    void checkBoardTestCoulumnFalse() {
+        sudokuBoard.solveGame();
+        int nonvalidvalue;
+        nonvalidvalue=sudokuBoard.get(0,0);
+        sudokuBoard.set(1,0,nonvalidvalue);
+        assertFalse(sudokuBoard.checkBoard());
+
+    }
+    @Test
+    void checkBoardTestBoxFalse() {
+        sudokuBoard.solveGame();
+        int nonvalidvalue;
+        nonvalidvalue=sudokuBoard.get(0,0);
+        sudokuBoard.set(1,1,nonvalidvalue);
+        assertFalse(sudokuBoard.checkBoard());
+
+    }
+
+
+
+
 }

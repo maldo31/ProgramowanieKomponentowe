@@ -10,142 +10,139 @@
 
 public class SudokuBoard {
 <span class="fc" id="L12">    public final int size = 9;</span>
-    //private final int[][] board = new int[size][size];
-<span class="fc" id="L14">    private SudokuField[][] board = new SudokuField[size][size];</span>
+<span class="fc" id="L13">    private SudokuField[][] board = new SudokuField[size][size];</span>
 
-<span class="fc" id="L16">    public SudokuBoard() {</span>
-<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
-<span class="fc" id="L19">                this.board[i][j] = new SudokuField();</span>
+<span class="fc" id="L15">    public SudokuBoard() {</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L18">                this.board[i][j] = new SudokuField();</span>
             }
         }
-<span class="fc" id="L22">    }</span>
+<span class="fc" id="L21">    }</span>
 
     public void solveGame() {
-<span class="fc" id="L25">        SudokuSolver solver = new BacktrackingSudokuSolver();</span>
-<span class="fc" id="L26">        solver.solve(this);</span>
-<span class="fc" id="L27">    }</span>
+<span class="fc" id="L24">        SudokuSolver solver = new BacktrackingSudokuSolver();</span>
+<span class="fc" id="L25">        solver.solve(this);</span>
+<span class="fc" id="L26">    }</span>
 
     public SudokuField[][] getCopyOfBoard() {
-<span class="fc" id="L30">        SudokuField[][] copiedBoard = new SudokuField[9][9];</span>
-<span class="fc bfc" id="L31" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
-<span class="fc" id="L33">                copiedBoard[i][j] = new SudokuField();</span>
+<span class="fc" id="L29">        SudokuField[][] copiedBoard = new SudokuField[9][9];</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L32">                copiedBoard[i][j] = new SudokuField();</span>
             }
         }
-<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L37" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
-<span class="fc" id="L38">                copiedBoard[i][j].setFieldValue(board[i][j].getFieldValue());</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L37">                copiedBoard[i][j].setFieldValue(board[i][j].getFieldValue());</span>
             }
         }
-<span class="fc" id="L41">        return copiedBoard;</span>
+<span class="fc" id="L40">        return copiedBoard;</span>
     }
 
 
     public void showBoard() {
-<span class="fc" id="L46">        System.out.print(&quot;\n&quot;);</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L48" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
-<span class="fc" id="L49">                System.out.print(get(i,j) + &quot; &quot;);</span>
+<span class="fc" id="L45">        System.out.print(&quot;\n&quot;);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L48">                System.out.print(get(i,j) + &quot; &quot;);</span>
             }
-<span class="fc" id="L51">            System.out.print(&quot;\n&quot;);</span>
+<span class="fc" id="L50">            System.out.print(&quot;\n&quot;);</span>
         }
-<span class="fc" id="L53">    }</span>
+<span class="fc" id="L52">    }</span>
 
 
     public boolean checkCell(int row, int column, int value) {
-<span class="fc" id="L57">        int subrow = row - row % 3;</span>
-<span class="fc" id="L58">        int subcol = column - column % 3;</span>
-<span class="fc bfc" id="L59" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L60" title="All 2 branches covered.">            if (value == board[row][i].getFieldValue()) {</span>
-<span class="fc bfc" id="L61" title="All 2 branches covered.">                if (column != i) {</span>
-<span class="fc" id="L62">                    return false;</span>
+<span class="fc" id="L56">        int subrow = row - row % 3;</span>
+<span class="fc" id="L57">        int subcol = column - column % 3;</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">            if (value == board[row][i].getFieldValue()) {</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">                if (column != i) {</span>
+<span class="fc" id="L61">                    return false;</span>
                 }
             }
         }
-<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L67" title="All 2 branches covered.">            if (value == board[i][column].getFieldValue()) {</span>
-<span class="fc bfc" id="L68" title="All 2 branches covered.">                if (row != i) {</span>
-<span class="fc" id="L69">                    return false;</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">            if (value == board[i][column].getFieldValue()) {</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">                if (row != i) {</span>
+<span class="fc" id="L68">                    return false;</span>
                 }
             }
         }
-<span class="fc bfc" id="L73" title="All 2 branches covered.">       for (int i = 0; i &lt; 3; i++) {</span>
-<span class="fc bfc" id="L74" title="All 2 branches covered.">           for (int j = 0;j &lt; 3; j++) {</span>
-<span class="fc bfc" id="L75" title="All 2 branches covered.">               if (value == board[subrow + i][subcol + j].getFieldValue()) {</span>
-<span class="fc bfc" id="L76" title="All 2 branches covered.">                   if (subrow + i != row) {</span>
-<span class="pc bpc" id="L77" title="1 of 2 branches missed.">                       if (subcol + j != column) {</span>
-<span class="fc" id="L78">                           return false;</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">       for (int i = 0; i &lt; 3; i++) {</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">           for (int j = 0;j &lt; 3; j++) {</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">               if (value == board[subrow + i][subcol + j].getFieldValue()) {</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">                   if (subrow + i != row) {</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">                       if (subcol + j != column) {</span>
+<span class="fc" id="L77">                           return false;</span>
                        }
                    }
                }
            }
        }
-<span class="fc" id="L84">        return true;</span>
+<span class="fc" id="L83">        return true;</span>
     }
 
     public int get(int row, int column) {
-<span class="fc" id="L88">        return board[row][column].getFieldValue();</span>
+<span class="fc" id="L87">        return board[row][column].getFieldValue();</span>
     }
 
-
     public void set(int row, int column, int value) {
-
-<span class="fc" id="L94">        this.board[row][column].setFieldValue(value);</span>
-<span class="fc" id="L95">    }</span>
+<span class="fc" id="L91">        this.board[row][column].setFieldValue(value);</span>
+<span class="fc" id="L92">    }</span>
 
     public SudokuRow getRow(int rowIndex) {
-<span class="fc" id="L98">        SudokuField[] row = new SudokuField[size];</span>
-<span class="fc bfc" id="L99" title="All 2 branches covered.">        for (int column = 0; column &lt; size; column++)  {</span>
-<span class="fc" id="L100">            row[column] = new SudokuField();</span>
-<span class="fc" id="L101">            row[column].setFieldValue(this.board[rowIndex][column].getFieldValue());</span>
+<span class="fc" id="L95">        SudokuField[] row = new SudokuField[size];</span>
+<span class="fc bfc" id="L96" title="All 2 branches covered.">        for (int column = 0; column &lt; size; column++)  {</span>
+<span class="fc" id="L97">            row[column] = new SudokuField();</span>
+<span class="fc" id="L98">            row[column].setFieldValue(this.board[rowIndex][column].getFieldValue());</span>
         }
-<span class="fc" id="L103">        return new SudokuRow(row);</span>
+<span class="fc" id="L100">        return new SudokuRow(row);</span>
     }
 
     public SudokuColumn getColumn(int columnIndex) {
-<span class="fc" id="L107">        SudokuField[] column = new SudokuField[size];</span>
-<span class="fc bfc" id="L108" title="All 2 branches covered.">        for (int row = 0; row &lt; size; row++) {</span>
-<span class="fc" id="L109">            column[row] = new SudokuField();</span>
-<span class="fc" id="L110">            column[row].setFieldValue(this.board[row][columnIndex].getFieldValue());</span>
+<span class="fc" id="L104">        SudokuField[] column = new SudokuField[size];</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">        for (int row = 0; row &lt; size; row++) {</span>
+<span class="fc" id="L106">            column[row] = new SudokuField();</span>
+<span class="fc" id="L107">            column[row].setFieldValue(this.board[row][columnIndex].getFieldValue());</span>
         }
-<span class="fc" id="L112">        return new SudokuColumn(column);</span>
+<span class="fc" id="L109">        return new SudokuColumn(column);</span>
     }
 
     public SudokuBox getBox(int rowIndex, int columnIndex) {
-<span class="fc" id="L116">        SudokuField[] box = new SudokuField[size];</span>
-<span class="fc" id="L117">        int boxindex = 0;</span>
-<span class="fc" id="L118">        for (int row = ((int) rowIndex / 3) * 3;</span>
-<span class="fc bfc" id="L119" title="All 2 branches covered.">             row &lt; (((int) rowIndex / 3) * 3) + 3; row++) {</span>
-<span class="fc" id="L120">            for (int col = ((int) columnIndex / 3) * 3;</span>
-<span class="fc bfc" id="L121" title="All 2 branches covered.">                 col &lt; (((int) columnIndex / 3) * 3) + 3; col++) {</span>
-<span class="fc" id="L122">                box[boxindex] = new SudokuField();</span>
-<span class="fc" id="L123">                box[boxindex].setFieldValue(this.board[row][col].getFieldValue());</span>
-<span class="fc" id="L124">                boxindex++;</span>
+<span class="fc" id="L113">        SudokuField[] box = new SudokuField[size];</span>
+<span class="fc" id="L114">        int boxindex = 0;</span>
+<span class="fc" id="L115">        for (int row = ((int) rowIndex / 3) * 3;</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">             row &lt; (((int) rowIndex / 3) * 3) + 3; row++) {</span>
+<span class="fc" id="L117">            for (int col = ((int) columnIndex / 3) * 3;</span>
+<span class="fc bfc" id="L118" title="All 2 branches covered.">                 col &lt; (((int) columnIndex / 3) * 3) + 3; col++) {</span>
+<span class="fc" id="L119">                box[boxindex] = new SudokuField();</span>
+<span class="fc" id="L120">                box[boxindex].setFieldValue(this.board[row][col].getFieldValue());</span>
+<span class="fc" id="L121">                boxindex++;</span>
             }
         }
-<span class="fc" id="L127">        return new SudokuBox(box);</span>
+<span class="fc" id="L124">        return new SudokuBox(box);</span>
     }
 
     protected boolean checkBoard() {
-<span class="fc" id="L131">        boolean valid = true;</span>
-<span class="fc bfc" id="L132" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
-<span class="fc" id="L133">            valid = getRow(index).verify();</span>
-<span class="pc bpc" id="L134" title="1 of 2 branches missed.">            if (valid == false) {</span>
-<span class="nc" id="L135">                break;</span>
+<span class="fc" id="L128">        boolean valid = true;</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
+<span class="fc" id="L130">            valid = getRow(index).verify();</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">            if (valid == false) {</span>
+<span class="fc" id="L132">                break;</span>
             }
-<span class="fc" id="L137">            valid = getColumn(index).verify();</span>
-<span class="pc bpc" id="L138" title="1 of 2 branches missed.">            if (valid == false) {</span>
-<span class="nc" id="L139">                break;</span>
+<span class="fc" id="L134">            valid = getColumn(index).verify();</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">            if (valid == false) {</span>
+<span class="fc" id="L136">                break;</span>
             }
 
-<span class="fc" id="L142">            valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();</span>
-<span class="pc bpc" id="L143" title="1 of 2 branches missed.">            if (valid == false) {</span>
-<span class="nc" id="L144">                break;</span>
+<span class="fc" id="L139">            valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();</span>
+<span class="fc bfc" id="L140" title="All 2 branches covered.">            if (valid == false) {</span>
+<span class="fc" id="L141">                break;</span>
             }
 
         }
-<span class="fc" id="L148">        return valid;</span>
+<span class="fc" id="L145">        return valid;</span>
     }
 
 }

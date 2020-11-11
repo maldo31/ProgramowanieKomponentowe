@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuBoardTest" time="0.036" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuBoardTest" time="0.034" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Sudoku\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Sudoku\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
+    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\maldo\AppData\Local\Temp\surefire13119949572798246668\surefirebooter15483198748474507675.jar C:\Users\maldo\AppData\Local\Temp\surefire13119949572798246668 2020-11-09T21-13-03_052-jvmRun1 surefire17915999615927654289tmp surefire_013474667936101954415tmp"/>
+    <property name="sun.java.command" value="C:\Users\maldo\AppData\Local\Temp\surefire16201507884783153379\surefirebooter4926899855929559188.jar C:\Users\maldo\AppData\Local\Temp\surefire16201507884783153379 2020-11-11T22-02-57_242-jvmRun1 surefire6467020232586572191tmp surefire_011850051193929401641tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Sudoku\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Sudoku\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
+    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\maldo"/>
     <property name="user.language" value="pl"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2020-07-14"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Sudoku"/>
+    <property name="basedir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maldo\AppData\Local\Temp\surefire13119949572798246668\surefirebooter15483198748474507675.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maldo\AppData\Local\Temp\surefire16201507884783153379\surefirebooter4926899855929559188.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -45,7 +45,7 @@
     <property name="java.io.tmpdir" value="C:\Users\maldo\AppData\Local\Temp\"/>
     <property name="idea.version" value="2020.2.3"/>
     <property name="java.version" value="14.0.2"/>
-    <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Sudoku"/>
+    <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -56,11 +56,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="checkBoardTest" classname="sudoku.SudokuBoardTest" time="0.012"/>
-  <testcase name="repeatFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.013">
+  <testcase name="checkBoardTestRowFalse" classname="sudoku.SudokuBoardTest" time="0.01"/>
+  <testcase name="checkBoardTestCoulumnFalse" classname="sudoku.SudokuBoardTest" time="0.006"/>
+  <testcase name="checkBoardTest" classname="sudoku.SudokuBoardTest" time="0.002"/>
+  <testcase name="repeatFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.003">
     <system-out><![CDATA[Tablice maja inny uklad liczb]]></system-out>
   </testcase>
   <testcase name="checkFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.002">
     <system-out><![CDATA[Nie wykryto bledu]]></system-out>
   </testcase>
+  <testcase name="checkBoardTestBoxFalse" classname="sudoku.SudokuBoardTest" time="0.002"/>
 </testsuite>
