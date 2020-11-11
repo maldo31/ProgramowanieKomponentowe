@@ -87,9 +87,7 @@ public class SudokuBoard {
         return board[row][column].getFieldValue();
     }
 
-
     public void set(int row, int column, int value) {
-
         this.board[row][column].setFieldValue(value);
     }
 

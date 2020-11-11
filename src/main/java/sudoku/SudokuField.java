@@ -5,7 +5,6 @@ public class SudokuField {
     private int value;
 
     public SudokuField() {
-
     }
 
     public SudokuField(int value) {

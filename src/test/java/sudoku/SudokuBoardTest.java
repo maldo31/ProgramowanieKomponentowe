@@ -12,13 +12,11 @@ public class SudokuBoardTest {
         sudokuBoard = new SudokuBoard();
     }
 
-
     //Test sprawdzający czy wypełniona tablica jest zgodna z zasadami Sudoku
     @Test
     public void checkFillBoardTest() {
         sudokuBoard.solveGame();
         SudokuField[][] testBoard = sudokuBoard.getCopyOfBoard();
-
 
         boolean flaga = true;
 
@@ -101,8 +99,6 @@ public class SudokuBoardTest {
         else{
             System.out.print("Tablice są identyczne");
         }
-
-
     }
 
     @Test
@@ -111,6 +107,4 @@ public class SudokuBoardTest {
         assertTrue(sudokuBoard.checkBoard());
 
     }
-
-
 }
