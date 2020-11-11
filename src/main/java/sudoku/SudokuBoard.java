@@ -10,7 +10,6 @@ package sudoku;
 
 public class SudokuBoard {
     public final int size = 9;
-    //private final int[][] board = new int[size][size];
     private SudokuField[][] board = new SudokuField[size][size];
 
     public SudokuBoard() {
