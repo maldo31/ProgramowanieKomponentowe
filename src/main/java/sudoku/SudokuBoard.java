@@ -10,6 +10,7 @@ package sudoku;
 
 public class SudokuBoard {
     public final int size = 9;
+    private SudokuSolver solver = new BacktrackingSudokuSolver();
     private SudokuField[][] board = new SudokuField[size][size];
 
     public SudokuBoard() {
@@ -19,10 +20,21 @@ public class SudokuBoard {
             }
         }
     }
+    private SudokuBoard(SudokuSolver solver) {
+        this.solver=solver;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                this.board[i][j] = new SudokuField();
+            }
+        }
+    }
 
     public void solveGame() {
-        SudokuSolver solver = new BacktrackingSudokuSolver();
-        solver.solve(this);
+        SudokuBoard sudoku = new SudokuBoard(this.solver);
+        solver.solve(sudoku);
+        this.board=sudoku.getCopyOfBoard();
+
+
     }
 
     public SudokuField[][] getCopyOfBoard() {
