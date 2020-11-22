@@ -11,7 +11,7 @@ import java.util.Random;
     został odpowiednio zmodyfikowany do zaleceń z zadania.
      */
 
-    public boolean solve(SudokuBoard board,int num) {
+    public boolean solve(SudokuBoard board){
 <span class="fc" id="L15">        Random random = new Random();</span>
 <span class="fc bfc" id="L16" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
 <span class="fc bfc" id="L17" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
@@ -21,7 +21,7 @@ import java.util.Random;
 
 <span class="fc bfc" id="L22" title="All 2 branches covered.">                        if (board.checkCell(row, col, value)) {</span>
 <span class="fc" id="L23">                            board.set(row, col, value);</span>
-<span class="fc bfc" id="L24" title="All 2 branches covered.">                            if (solve(board,1)) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                            if (solve(board)) {</span>
 <span class="fc" id="L25">                                return true;</span>
                             } else {
 <span class="fc" id="L27">                                board.set(row, col, UNASSIGNED);</span>
@@ -42,38 +42,8 @@ import java.util.Random;
 <span class="fc" id="L42">        return true;</span>
     }
 
-    public boolean solve(SudokuBoard board) {
-
-<span class="fc" id="L47">        Random random = new Random();</span>
-<span class="fc bfc" id="L48" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
-<span class="fc" id="L50">                board.set(row, col, 0);</span>
-            }
-        }
-<span class="fc" id="L53">        int value = 1 + random.nextInt(9);</span>
-<span class="fc" id="L54">        board.set(0, 0, value);</span>
-<span class="fc" id="L55">        solve(board,1);</span>
-<span class="fc" id="L56">        return true;</span>
-        /*
-        for (int row = 0; row &lt; 9; row++) {
-            for (int col = 0; col &lt; 9; col++) {
-                if (board.get(row, col) == UNASSIGNED) {
-                    int value = 1 + random.nextInt(9);
-                    for (int number = 1; number &lt;= 9; number++) {
-
-                        if (board.checkCell(row, col, value)) {
-                            board.set(row, col, value);
-                            solve(board,1);
-
-                            }
-                        }
-                    }
-                }
-            }
-        */
-
         }
 
-    }
+
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

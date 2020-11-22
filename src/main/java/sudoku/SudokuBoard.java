@@ -79,16 +79,12 @@ public class SudokuBoard {
         int subcol = column - column % 3;
         for (int i = 0; i < size; i++) {
             if (value == board[row][i].getFieldValue()) {
-
                     return false;
-
             }
         }
         for (int i = 0; i < size; i++) {
             if (value == board[i][column].getFieldValue()) {
-
                     return false;
-
             }
         }
        for (int i = 0; i < 3; i++) {
@@ -114,13 +110,7 @@ public class SudokuBoard {
     public SudokuRow getRow(int rowIndex) {
         List<SudokuField> row = Arrays.asList(new SudokuField[size]);
         for (int column = 0; column < size; column++)  {
-
-            System.out.println("value sudoku field="+board[rowIndex][column].getFieldValue());
             row.set(column,this.board[rowIndex][column]);
-            System.out.println("wiersz="+rowIndex);
-            System.out.println("kolumna"+column);
-            System.out.println(row.get(column).getFieldValue());
-
         }
         return new SudokuRow(row);
     }
@@ -128,11 +118,7 @@ public class SudokuBoard {
     public SudokuColumn getColumn(int columnIndex) {
         List<SudokuField> column = Arrays.asList(new SudokuField[size]);
         for (int row = 0; row < size; row++) {
-            System.out.println("value sudoku field="+this.get(row,columnIndex));
             column.set(row,board[row][columnIndex]);
-            System.out.println("kolumna="+columnIndex);
-            System.out.println("wiersz"+row);
-            System.out.println(column.get(row).getFieldValue());
         }
         return new SudokuColumn(column);
     }
@@ -156,20 +142,23 @@ public class SudokuBoard {
         for (int index = 0;index < size;index++) {
             valid = getRow(index).verify();
             if (valid == false) {
-                System.out.println("Bład w wierszu"+index);
+                System.out.println("Bład w wierszu "+index);
+                showBoard();
 
                 break;
             }
             valid = getColumn(index).verify();
             if (valid == false) {
-                System.out.println("Bład w kolumnie"+index);
-
+                System.out.println("Bład w kolumnie "+index);
+                showBoard();
+                break;
             }
 
             valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();
             if (valid == false) {
-                System.out.println("Bład w kwadracie"+index);
-
+                System.out.println("Bład w kwadracie "+index);
+                showBoard();
+                break;
 
             }
 

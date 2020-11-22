@@ -41,36 +41,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
         return true;
     }
-/*
-    public boolean solve(SudokuBoard board) {
-
-        Random random = new Random();
-        for (int row = 0; row < 9; row++) {
-            for (int col = 0; col < 9; col++) {
-                board.set(row, col, 0);
-            }
-        }
-        int value = 1 + random.nextInt(9);
-        board.set(0, 0, value);
-        solve(board,1);
-        return true;
-
-        for (int row = 0; row < 9; row++) {
-            for (int col = 0; col < 9; col++) {
-                if (board.get(row, col) == UNASSIGNED) {
-                    int value = 1 + random.nextInt(9);
-                    for (int number = 1; number <= 9; number++) {
-
-                        if (board.checkCell(row, col, value)) {
-                            board.set(row, col, value);
-                            solve(board,1);
-
-                            }
-                        }
-                    }
-                }
-            }
-        */
 
         }
 

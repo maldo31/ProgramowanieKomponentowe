@@ -17,7 +17,6 @@ public class SudokuField {
 
     public void setFieldValue(int value) {
         if (value >= -1 && value < 10) {
-            System.out.println("ustawiam wartosc");
             this.value = value;
         } else {
             System.out.print("Błąd, value musi być w zakresie <-1;9>,"
