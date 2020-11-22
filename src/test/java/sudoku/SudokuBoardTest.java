@@ -122,8 +122,8 @@ public class SudokuBoardTest {
     @Test
     void checkBoardTestRowFalse() {
         sudokuBoard.solveGame();
-        sudokuBoard.set(0,0,1);
-        sudokuBoard.set(0,1,1);
+        sudokuBoard.set(0,0,0);
+        sudokuBoard.set(0,1,0);
         assertFalse(sudokuBoard.checkBoardTest());
 
     }

@@ -129,7 +129,12 @@ public class SudokuBoard {
     public SudokuRow getRow(int rowIndex) {
         List<SudokuField> row = Arrays.asList(new SudokuField[size]);
         for (int column = 0; column < size; column++)  {
+            System.out.println("value sudoku field="+board[rowIndex][column].getFieldValue());
             row.set(column,this.board[rowIndex][column]);
+            System.out.println("kolumna="+rowIndex);
+            System.out.println("wiersz"+column);
+            System.out.println(row.get(column).getFieldValue());
+
         }
         return new SudokuRow(row);
     }
@@ -137,7 +142,11 @@ public class SudokuBoard {
     public SudokuColumn getColumn(int columnIndex) {
         List<SudokuField> column = Arrays.asList(new SudokuField[size]);
         for (int row = 0; row < size; row++) {
-            column.set(row,this.board[row][columnIndex]);
+            System.out.println("value sudoku field="+board[row][columnIndex].getFieldValue());
+            column.set(row,board[row][columnIndex]);
+            System.out.println("kolumna="+columnIndex);
+            System.out.println("wiersz"+row);
+            System.out.println(column.get(row).getFieldValue());
         }
         return new SudokuColumn(column);
     }
@@ -161,17 +170,19 @@ public class SudokuBoard {
         for (int index = 0;index < size;index++) {
             valid = getRow(index).verify();
             if (valid == false) {
+                System.out.println("Bład w wierszu"+index);
 
                 break;
             }
             valid = getColumn(index).verify();
             if (valid == false) {
-
+                System.out.println("Bład w kolumnie"+index);
                 break;
             }
 
             valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();
             if (valid == false) {
+                System.out.println("Bład w kwadracie"+index);
 
                 break;
             }
@@ -181,7 +192,7 @@ public class SudokuBoard {
     }
 
     public boolean checkBoardTest() {
-        showBoard();
+
         return checkBoard();
     }
 
