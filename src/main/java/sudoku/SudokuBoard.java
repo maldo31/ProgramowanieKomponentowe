@@ -1,5 +1,9 @@
 package sudoku;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
     //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
@@ -9,6 +13,26 @@ package sudoku;
 */
 
 public class SudokuBoard {
+
+    // Punkt 3
+    // Glowna funkcja do sprawdzenia dzialania tablicy na szybko
+    public static void main(String[] args) {
+        //Stworzenie listy o stałym rozmiarze
+        List<Integer> fixedList = Arrays.asList(new Integer[5]);
+
+        //Settery:
+        fixedList.set(0, 1);
+
+        //Jeśli spróbujemy użyć indexu spoza zakresu uzyskamy błąd:
+        //"ArrayIndexOutOfBoundsException"
+        //fixedList.set(10, 5);
+
+        //W przypadku próby dodania/odjęcia pola do tej tablicy wyskoczy błąd:
+        //"UnsupportedOperationException"
+        //fixedList.add(2);
+        //fixedList.remove(3);
+    }
+
     public final int size = 9;
     private SudokuSolver solver = new BacktrackingSudokuSolver();
     private SudokuField[][] board = new SudokuField[size][size];
@@ -20,8 +44,9 @@ public class SudokuBoard {
             }
         }
     }
+
     private SudokuBoard(SudokuSolver solver) {
-        this.solver=solver;
+        this.solver = solver;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 this.board[i][j] = new SudokuField();
@@ -32,7 +57,7 @@ public class SudokuBoard {
     public void solveGame() {
         SudokuBoard sudoku = new SudokuBoard(this.solver);
         solver.solve(sudoku);
-        this.board=sudoku.getCopyOfBoard();
+        this.board = sudoku.getCopyOfBoard();
 
 
     }
