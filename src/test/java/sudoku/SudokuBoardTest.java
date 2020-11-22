@@ -19,6 +19,7 @@ public class SudokuBoardTest {
         sudokuBoard.solveGame();
         SudokuField[][] testBoard = sudokuBoard.getCopyOfBoard();
 
+
         boolean flaga = true;
 
         //Sprawdz wiersze
@@ -69,6 +70,7 @@ public class SudokuBoardTest {
 
         if (flaga) {
             System.out.print("Nie wykryto bledu");
+            sudokuBoard.showBoard();
         }
         if (!flaga) {
             sudokuBoard.showBoard();
@@ -83,8 +85,10 @@ public class SudokuBoardTest {
 
         sudokuBoard.solveGame();
         testBoard1 = sudokuBoard.getCopyOfBoard();
+        sudokuBoard.showBoard();
         sudokuBoard.solveGame();
         testBoard2 = sudokuBoard.getCopyOfBoard();
+        sudokuBoard.showBoard();
         boolean flag = false;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -111,6 +115,7 @@ public class SudokuBoardTest {
     @Test
     void checkBoardTest() {
         sudokuBoard.solveGame();
+        sudokuBoard.showBoard();
         assertTrue(sudokuBoard.checkBoardTest());
 
     }
@@ -123,11 +128,13 @@ public class SudokuBoardTest {
 
     }
     @Test
-    void checkBoardTestCoulumnFalse() {
+    void checkBoardTestColumnFalse() {
         sudokuBoard.solveGame();
         int nonvalidvalue;
         nonvalidvalue=sudokuBoard.get(0,0);
         sudokuBoard.set(1,0,nonvalidvalue);
+        sudokuBoard.set(2,0,nonvalidvalue);
+        sudokuBoard.showBoard();
         assertFalse(sudokuBoard.checkBoardTest());
 
     }

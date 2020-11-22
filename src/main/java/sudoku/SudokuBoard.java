@@ -161,18 +161,18 @@ public class SudokuBoard {
         for (int index = 0;index < size;index++) {
             valid = getRow(index).verify();
             if (valid == false) {
-                this.showBoard();
+
                 break;
             }
             valid = getColumn(index).verify();
             if (valid == false) {
-                this.showBoard();
+
                 break;
             }
 
             valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();
             if (valid == false) {
-                this.showBoard();
+
                 break;
             }
 
@@ -181,6 +181,7 @@ public class SudokuBoard {
     }
 
     public boolean checkBoardTest() {
+        showBoard();
         return checkBoard();
     }
 
