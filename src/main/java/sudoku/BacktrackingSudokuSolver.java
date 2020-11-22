@@ -11,7 +11,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     został odpowiednio zmodyfikowany do zaleceń z zadania.
      */
 
-    public boolean solve(SudokuBoard board,int num) {
+    public boolean solve(SudokuBoard board){
         Random random = new Random();
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
@@ -21,7 +21,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
                         if (board.checkCell(row, col, value)) {
                             board.set(row, col, value);
-                            if (solve(board,1)) {
+                            if (solve(board)) {
                                 return true;
                             } else {
                                 board.set(row, col, UNASSIGNED);
@@ -41,7 +41,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
         return true;
     }
-
+/*
     public boolean solve(SudokuBoard board) {
 
         Random random = new Random();
@@ -54,7 +54,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         board.set(0, 0, value);
         solve(board,1);
         return true;
-        /*
+
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
                 if (board.get(row, col) == UNASSIGNED) {
@@ -74,5 +74,5 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
         }
 
-    }
+
 

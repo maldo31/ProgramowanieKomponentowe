@@ -127,7 +127,7 @@ public class SudokuBoard {
     }
 
     public SudokuRow getRow(int rowIndex) {
-        List<SudokuField> row = Arrays.asList(new SudokuField[9]);
+        List<SudokuField> row = Arrays.asList(new SudokuField[size]);
         for (int column = 0; column < size; column++)  {
             row.set(column,this.board[rowIndex][column]);
         }
@@ -135,7 +135,7 @@ public class SudokuBoard {
     }
 
     public SudokuColumn getColumn(int columnIndex) {
-        List<SudokuField> column = Arrays.asList(new SudokuField[9]);
+        List<SudokuField> column = Arrays.asList(new SudokuField[size]);
         for (int row = 0; row < size; row++) {
             column.set(row,this.board[row][columnIndex]);
         }
@@ -143,14 +143,13 @@ public class SudokuBoard {
     }
 
     public SudokuBox getBox(int rowIndex, int columnIndex) {
-        SudokuField[] box = new SudokuField[size];
+        List<SudokuField> box = Arrays.asList(new SudokuField[size]);
         int boxindex = 0;
         for (int row = ((int) rowIndex / 3) * 3;
              row < (((int) rowIndex / 3) * 3) + 3; row++) {
             for (int col = ((int) columnIndex / 3) * 3;
                  col < (((int) columnIndex / 3) * 3) + 3; col++) {
-                box[boxindex] = new SudokuField();
-                box[boxindex].setFieldValue(this.board[row][col].getFieldValue());
+                box.set(boxindex,this.board[row][col]);
                 boxindex++;
             }
         }
@@ -162,15 +161,18 @@ public class SudokuBoard {
         for (int index = 0;index < size;index++) {
             valid = getRow(index).verify();
             if (valid == false) {
+                this.showBoard();
                 break;
             }
             valid = getColumn(index).verify();
             if (valid == false) {
+                this.showBoard();
                 break;
             }
 
             valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();
             if (valid == false) {
+                this.showBoard();
                 break;
             }
 

@@ -7,8 +7,8 @@ public abstract class Series {
     final int size = 9;
     List<SudokuField> cellSeries = Arrays.asList(new SudokuField[size]);
 
-    public Series(final SudokuField[] copiedSeries) {
-        this.cellSeries = Arrays.asList(copiedSeries);
+    public Series(final List<SudokuField>copiedSeries) {
+        this.cellSeries = copiedSeries;
     }
 
     public boolean verify() {
