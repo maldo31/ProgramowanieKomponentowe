@@ -1,25 +1,28 @@
 package sudoku;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public abstract class Series {
     final int size = 9;
-    protected SudokuField[] cellSeries = new SudokuField[size];
+    List<SudokuField> cellSeries = Arrays.asList(new SudokuField[size]);
 
     public Series(final SudokuField[] copiedSeries) {
-        this.cellSeries = copiedSeries;
+        this.cellSeries = Arrays.asList(copiedSeries);
     }
 
     public boolean verify() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
-                if (cellSeries[j].getFieldValue() > cellSeries[j + 1].getFieldValue()) {
-                    int temp = cellSeries[j].getFieldValue();
-                    cellSeries[j].setFieldValue(cellSeries[j + 1].getFieldValue());
-                    cellSeries[j + 1].setFieldValue(temp);
+                if (cellSeries.get(j).getFieldValue() > cellSeries.get(j + 1).getFieldValue()) {
+                    int temp = cellSeries.get(j).getFieldValue();
+                    cellSeries.get(j).setFieldValue(cellSeries.get(j + 1).getFieldValue());
+                    cellSeries.get(j + 1).setFieldValue(temp);
                 }
             }
         }
         for (int i = 0; i < size - 1; i++) {
-            if (cellSeries[i].getFieldValue() != i + 1) {
+            if (cellSeries.get(i).getFieldValue() != i + 1) {
                 return false;
             }
         }
