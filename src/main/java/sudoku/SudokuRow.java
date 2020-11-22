@@ -1,7 +1,9 @@
 package sudoku;
 
+import java.util.List;
+
 public class SudokuRow extends Series {
-    public SudokuRow(final SudokuField[] copiedSeries) {
+    public SudokuRow(final List<SudokuField> copiedSeries) {
         super(copiedSeries);
     }
 }

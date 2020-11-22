@@ -127,19 +127,17 @@ public class SudokuBoard {
     }
 
     public SudokuRow getRow(int rowIndex) {
-        SudokuField[] row = new SudokuField[size];
+        List<SudokuField> row = Arrays.asList(new SudokuField[9]);
         for (int column = 0; column < size; column++)  {
-            row[column] = new SudokuField();
-            row[column].setFieldValue(this.board[rowIndex][column].getFieldValue());
+            row.set(column,this.board[rowIndex][column]);
         }
         return new SudokuRow(row);
     }
 
     public SudokuColumn getColumn(int columnIndex) {
-        SudokuField[] column = new SudokuField[size];
+        List<SudokuField> column = Arrays.asList(new SudokuField[9]);
         for (int row = 0; row < size; row++) {
-            column[row] = new SudokuField();
-            column[row].setFieldValue(this.board[row][columnIndex].getFieldValue());
+            column.set(row,this.board[row][columnIndex]);
         }
         return new SudokuColumn(column);
     }
