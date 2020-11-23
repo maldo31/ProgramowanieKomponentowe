@@ -3,7 +3,6 @@ package sudoku;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
     private static final int UNASSIGNED = 0;
@@ -15,7 +14,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
      */
 
     public boolean solve(SudokuBoard board) {
-        Random random = new Random();
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
                 if (board.get(row, col) == UNASSIGNED) {
@@ -51,6 +49,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         for (int number = 1; number < 10; number++) {
             numbers.add(number);
         }
+        //użyto implementacji metody shuffle https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html
         Collections.shuffle(numbers);
         return numbers;
     }

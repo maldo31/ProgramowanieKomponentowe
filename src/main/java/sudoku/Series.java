@@ -1,12 +1,11 @@
 package sudoku;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public abstract class Series {
     final int size = 9;
-    List<SudokuField> cellSeries = Arrays.asList(new SudokuField[size]);
+    List<SudokuField> cellSeries;
 
     public Series(final List<SudokuField> copiedSeries) {
         this.cellSeries = copiedSeries;
@@ -24,6 +23,7 @@ public abstract class Series {
     public boolean verify() {
         List<Integer> copiedValues = copyValues();
         for (int i = 0; i < size; i++) {
+            //użyto implementacji metody containts z https://docs.oracle.com/javase/7/docs/api/java/util/Set.html
             if (copiedValues.contains(i + 1) == false) {
                 return false;
             }

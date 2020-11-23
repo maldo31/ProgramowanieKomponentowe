@@ -14,27 +14,34 @@ import java.util.List;
 
 public class SudokuBoard {
 
-    // Punkt 3
-    // Glowna funkcja do sprawdzenia dzialania tablicy na szybko
-
-
     public final int size = 9;
     private SudokuSolver solver = new BacktrackingSudokuSolver();
-    private SudokuField[][] board = new SudokuField[size][size];
+
+    private List<List<SudokuField>> board;
 
     public SudokuBoard() {
+        board = Arrays.asList(new List[size]);
+        //Tworzymy dwuwymiarowa liste list o stałych wymiarach przy pomocy implementacji list z:
+        // https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-
+        for (int i = 0; i < size; i++) {
+            board.set(i, Arrays.asList(new SudokuField[size]));
+        }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                this.board[i][j] = new SudokuField();
+                this.board.get(i).set(j,new SudokuField());
             }
         }
     }
 
     private SudokuBoard(SudokuSolver solver) {
         this.solver = solver;
+        board = Arrays.asList(new List[size]);
+        for (int i = 0; i < size; i++) {
+            board.set(i, Arrays.asList(new SudokuField[size]));
+        }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                this.board[i][j] = new SudokuField();
+                this.board.get(i).set(j,new SudokuField());
             }
         }
     }
@@ -42,21 +49,26 @@ public class SudokuBoard {
     public void solveGame() {
         SudokuBoard sudoku = new SudokuBoard(this.solver);
         solver.solve(sudoku);
-        this.board = sudoku.getCopyOfBoard();
+        this.board = sudoku.board;
 
 
     }
 
-    public SudokuField[][] getCopyOfBoard() {
-        SudokuField[][] copiedBoard = new SudokuField[9][9];
+    public List<List<SudokuField>> getCopyOfBoard() {
+        List<List<SudokuField>> copiedBoard = new ArrayList<List<SudokuField>>();
+        copiedBoard = Arrays.asList(new List[size]);
+        for (int i = 0; i < size; i++) {
+            copiedBoard.set(i, Arrays.asList(new SudokuField[size]));
+        }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                copiedBoard[i][j] = new SudokuField();
+                copiedBoard.get(i).set(j,new SudokuField());
             }
         }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                copiedBoard[i][j].setFieldValue(board[i][j].getFieldValue());
+                copiedBoard.get(i).get(j).setFieldValue(board.get(i).get(j).getFieldValue());
+
             }
         }
         return copiedBoard;
@@ -78,18 +90,18 @@ public class SudokuBoard {
         int subrow = row - row % 3;
         int subcol = column - column % 3;
         for (int i = 0; i < size; i++) {
-            if (value == board[row][i].getFieldValue()) {
+            if (value == board.get(row).get(i).getFieldValue()) {
                     return false;
             }
         }
         for (int i = 0; i < size; i++) {
-            if (value == board[i][column].getFieldValue()) {
+            if (value == board.get(i).get(column).getFieldValue()) {
                     return false;
             }
         }
        for (int i = 0; i < 3; i++) {
            for (int j = 0;j < 3; j++) {
-               if (value == board[subrow + i][subcol + j].getFieldValue()) {
+               if (value == board.get(subrow + i).get(subcol + j).getFieldValue()) {
                            return false;
 
                    }
@@ -100,17 +112,18 @@ public class SudokuBoard {
     }
 
     public int get(int row, int column) {
-        return board[row][column].getFieldValue();
+        return board.get(row).get(column).getFieldValue();
     }
 
     public void set(int row, int column, int value) {
-        this.board[row][column].setFieldValue(value);
+        this.board.get(row).get(column).setFieldValue(value);
+
     }
 
     public SudokuRow getRow(int rowIndex) {
         List<SudokuField> row = Arrays.asList(new SudokuField[size]);
         for (int column = 0; column < size; column++)  {
-            row.set(column,this.board[rowIndex][column]);
+            row.set(column,this.board.get(rowIndex).get(column));
         }
         return new SudokuRow(row);
     }
@@ -118,7 +131,7 @@ public class SudokuBoard {
     public SudokuColumn getColumn(int columnIndex) {
         List<SudokuField> column = Arrays.asList(new SudokuField[size]);
         for (int row = 0; row < size; row++) {
-            column.set(row,board[row][columnIndex]);
+            column.set(row,this.board.get(row).get(columnIndex));
         }
         return new SudokuColumn(column);
     }
@@ -130,7 +143,7 @@ public class SudokuBoard {
              row < (((int) rowIndex / 3) * 3) + 3; row++) {
             for (int col = ((int) columnIndex / 3) * 3;
                  col < (((int) columnIndex / 3) * 3) + 3; col++) {
-                box.set(boxindex,this.board[row][col]);
+                box.set(boxindex,this.board.get(row).get(col));
                 boxindex++;
             }
         }

@@ -20,7 +20,8 @@ public class SudokuBoardTest {
     @Test
     public void checkFillBoardTest() {
         sudokuBoard.solveGame();
-        SudokuField[][] testBoard = sudokuBoard.getCopyOfBoard();
+
+        List<List<SudokuField>> testBoard = sudokuBoard.getCopyOfBoard();
 
 
         boolean flaga = true;
@@ -29,7 +30,7 @@ public class SudokuBoardTest {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 for (int i2 = i + 1; i2 < 9; i2++) {
-                    if (testBoard[i][j].getFieldValue() == testBoard[i2][j].getFieldValue()) {
+                    if (testBoard.get(i).get(j).getFieldValue() == testBoard.get(i2).get(j).getFieldValue()) {
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                         flaga = false;
                     }
@@ -41,7 +42,7 @@ public class SudokuBoardTest {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 for (int j2 = j + 1; j2 < 9; j2++) {
-                    if (testBoard[i][j].getFieldValue() == testBoard[i][j2].getFieldValue()) {
+                    if (testBoard.get(i).get(j).getFieldValue() == testBoard.get(i).get(j2).getFieldValue()) {
                         System.out.print("Wykryto blad w komorce: [" + i + "] [" + j + "]\n");
                         flaga = false;
                     }
@@ -53,12 +54,12 @@ public class SudokuBoardTest {
         int active;
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
-                active = testBoard[row][column].getFieldValue();
+                active = testBoard.get(row).get(column).getFieldValue();
                 int subrow = row - row % 3;
                 int subcol = column - column % 3;
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 3; j++) {
-                        if (active == testBoard[subrow + i][subcol + j].getFieldValue()) {
+                        if (active == testBoard.get(subrow + i).get(subcol + j).getFieldValue()) {
                             if (subrow + i != row) {
                                 if (subcol + j == column) {
                                     System.out.print("Wykryto blad w kwadracie zaczynajacym sie w: [" + row + "] [" + column + "]");
@@ -83,8 +84,8 @@ public class SudokuBoardTest {
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
     @Test
     public void repeatFillBoardTest() {
-        SudokuField[][] testBoard1;
-        SudokuField[][] testBoard2;
+        List<List<SudokuField>> testBoard1;
+        List<List<SudokuField>> testBoard2;
 
         sudokuBoard.solveGame();
         testBoard1 = sudokuBoard.getCopyOfBoard();
@@ -95,7 +96,7 @@ public class SudokuBoardTest {
         boolean flag = false;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (testBoard1[i][j] != testBoard2[i][j]) {
+                if (testBoard1.get(i).get(j) != testBoard2.get(i).get(j)) {
                     flag = true;
                 }
             }

@@ -3,9 +3,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
-<span class="fc" id="L8">public class BacktrackingSudokuSolver implements SudokuSolver {</span>
+<span class="fc" id="L7">public class BacktrackingSudokuSolver implements SudokuSolver {</span>
     private static final int UNASSIGNED = 0;
     /*Algorytm backtracking zaczerpniety ze strony:
      https://www.geeksforgeeks.org/sudoku-backtracking-7/
@@ -15,44 +14,44 @@ import java.util.Random;
      */
 
     public boolean solve(SudokuBoard board) {
-<span class="fc" id="L18">        Random random = new Random();</span>
-<span class="fc bfc" id="L19" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
-<span class="fc bfc" id="L20" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
-<span class="fc bfc" id="L21" title="All 2 branches covered.">                if (board.get(row, col) == UNASSIGNED) {</span>
-<span class="fc" id="L22">                    int value = randomValues().get(0);</span>
-<span class="fc bfc" id="L23" title="All 2 branches covered.">                    for (int number = 0; number &lt; 9; number++) {</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">                if (board.get(row, col) == UNASSIGNED) {</span>
+<span class="fc" id="L20">                    int value = randomValues().get(0);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">                    for (int number = 0; number &lt; 9; number++) {</span>
 
-<span class="fc bfc" id="L25" title="All 2 branches covered.">                        if (board.checkCell(row, col, value)) {</span>
-<span class="fc" id="L26">                            board.set(row, col, value);</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">                            if (solve(board)) {</span>
-<span class="fc" id="L28">                                return true;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">                        if (board.checkCell(row, col, value)) {</span>
+<span class="fc" id="L24">                            board.set(row, col, value);</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">                            if (solve(board)) {</span>
+<span class="fc" id="L26">                                return true;</span>
                             } else {
-<span class="fc" id="L30">                                board.set(row, col, UNASSIGNED);</span>
+<span class="fc" id="L28">                                board.set(row, col, UNASSIGNED);</span>
                             }
                         }
 
-<span class="fc" id="L34">                        value++;</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">                        if (value &gt; 9) {</span>
-<span class="fc" id="L36">                            value = 1;</span>
+<span class="fc" id="L32">                        value++;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">                        if (value &gt; 9) {</span>
+<span class="fc" id="L34">                            value = 1;</span>
                         }
                     }
-<span class="fc" id="L39">                    return false;</span>
+<span class="fc" id="L37">                    return false;</span>
                 }
             }
 
         }
 
 
-<span class="fc" id="L46">        return true;</span>
+<span class="fc" id="L44">        return true;</span>
     }
 
     private List&lt;Integer&gt; randomValues() {
-<span class="fc" id="L50">        List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (int number = 1; number &lt; 10; number++) {</span>
-<span class="fc" id="L52">            numbers.add(number);</span>
+<span class="fc" id="L48">        List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        for (int number = 1; number &lt; 10; number++) {</span>
+<span class="fc" id="L50">            numbers.add(number);</span>
         }
-<span class="fc" id="L54">        Collections.shuffle(numbers);</span>
-<span class="fc" id="L55">        return numbers;</span>
+        //użyto implementacji metody shuffle https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html
+<span class="fc" id="L53">        Collections.shuffle(numbers);</span>
+<span class="fc" id="L54">        return numbers;</span>
     }
 
         }
