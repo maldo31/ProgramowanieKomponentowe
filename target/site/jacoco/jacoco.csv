@@ -3,6 +3,6 @@ Sudoku,sudoku,SudokuBoard,0,449,0,50,0,84,0,38,0,13
 Sudoku,sudoku,SudokuBox,0,4,0,0,0,2,0,1,0,1
 Sudoku,sudoku,SudokuColumn,0,4,0,0,0,2,0,1,0,1
 Sudoku,sudoku,SudokuRow,0,4,0,0,0,2,0,1,0,1
-Sudoku,sudoku,Series,0,62,0,6,0,15,0,6,0,3
+Sudoku,sudoku,Series,0,60,0,6,0,15,0,6,0,3
 Sudoku,sudoku,SudokuField,0,27,0,4,0,10,0,6,0,4
-Sudoku,sudoku,BacktrackingSudokuSolver,0,71,0,14,0,17,0,9,0,2
+Sudoku,sudoku,BacktrackingSudokuSolver,0,92,0,16,0,22,0,11,0,3

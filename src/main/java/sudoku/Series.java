@@ -2,7 +2,6 @@ package sudoku;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public abstract class Series {
@@ -24,11 +23,11 @@ public abstract class Series {
 
     public boolean verify() {
         List<Integer> copiedValues = copyValues();
-        Collections.sort(copiedValues);
-        for (int i = 0; i < size - 1; i++) {
-            if (copiedValues.get(i) != i + 1) {
+        for (int i = 0; i < size; i++) {
+            if (copiedValues.contains(i + 1) == false) {
                 return false;
             }
+
         }
         return true;
     }

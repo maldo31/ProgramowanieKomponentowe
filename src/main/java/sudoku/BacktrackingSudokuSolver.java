@@ -1,5 +1,8 @@
 package sudoku;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
@@ -16,7 +19,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
                 if (board.get(row, col) == UNASSIGNED) {
-                    int value = 1 + random.nextInt(9);
+                    int value = randomValues().get(0);
                     for (int number = 0; number < 9; number++) {
 
                         if (board.checkCell(row, col, value)) {
@@ -39,7 +42,17 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
 
         }
 
+
         return true;
+    }
+
+    private List<Integer> randomValues() {
+        List<Integer> numbers = new ArrayList<>();
+        for (int number = 1; number < 10; number++) {
+            numbers.add(number);
+        }
+        Collections.shuffle(numbers);
+        return numbers;
     }
 
         }
