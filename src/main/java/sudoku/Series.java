@@ -24,7 +24,7 @@ public abstract class Series {
         List<Integer> copiedValues = copyValues();
         for (int i = 0; i < size; i++) {
             //użyto implementacji metody containts z https://docs.oracle.com/javase/7/docs/api/java/util/Set.html
-            if (copiedValues.contains(i + 1) == false) {
+            if (!copiedValues.contains(i + 1)) {
                 return false;
             }
 

@@ -151,37 +151,35 @@ public class SudokuBoard {
     }
 
     private boolean checkBoard() {
-<span class="fc" id="L154">        boolean valid = true;</span>
-<span class="fc bfc" id="L155" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
-<span class="fc" id="L156">            valid = getRow(index).verify();</span>
-<span class="fc bfc" id="L157" title="All 2 branches covered.">            if (valid == false) {</span>
-<span class="fc" id="L158">                System.out.println(&quot;Bład w wierszu &quot; + index);</span>
-<span class="fc" id="L159">                showBoard();</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
 
-<span class="fc" id="L161">                break;</span>
-            }
-<span class="fc" id="L163">            valid = getColumn(index).verify();</span>
-<span class="fc bfc" id="L164" title="All 2 branches covered.">            if (valid == false) {</span>
-<span class="fc" id="L165">                System.out.println(&quot;Bład w kolumnie &quot; + index);</span>
-<span class="fc" id="L166">                showBoard();</span>
-<span class="fc" id="L167">                break;</span>
+<span class="fc bfc" id="L156" title="All 2 branches covered.">            if (!getRow(index).verify()) {</span>
+<span class="fc" id="L157">                System.out.println(&quot;Bład w wierszu &quot; + index);</span>
+<span class="fc" id="L158">                showBoard();</span>
+
+<span class="fc" id="L160">                return false;</span>
             }
 
-<span class="fc" id="L170">            valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();</span>
-<span class="fc bfc" id="L171" title="All 2 branches covered.">            if (valid == false) {</span>
-<span class="fc" id="L172">                System.out.println(&quot;Bład w kwadracie &quot; + index);</span>
-<span class="fc" id="L173">                showBoard();</span>
-<span class="fc" id="L174">                break;</span>
+<span class="fc bfc" id="L163" title="All 2 branches covered.">            if (!getColumn(index).verify()) {</span>
+<span class="fc" id="L164">                System.out.println(&quot;Bład w kolumnie &quot; + index);</span>
+<span class="fc" id="L165">                showBoard();</span>
+<span class="fc" id="L166">                return false;</span>
+            }
+
+<span class="fc bfc" id="L169" title="All 2 branches covered.">            if (!getBox(((int) index / 3) * 3,(index % 3) * 3).verify()) {</span>
+<span class="fc" id="L170">                System.out.println(&quot;Bład w kwadracie &quot; + index);</span>
+<span class="fc" id="L171">                showBoard();</span>
+<span class="fc" id="L172">                return false;</span>
 
             }
 
         }
-<span class="fc" id="L179">        return valid;</span>
+<span class="fc" id="L177">        return true;</span>
     }
 
     public boolean checkBoardTest() {
 
-<span class="fc" id="L184">        return checkBoard();</span>
+<span class="fc" id="L182">        return checkBoard();</span>
     }
 
 }

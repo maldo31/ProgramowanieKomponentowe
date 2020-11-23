@@ -24,7 +24,7 @@ public abstract class Series {
 <span class="fc" id="L24">        List&lt;Integer&gt; copiedValues = copyValues();</span>
 <span class="fc bfc" id="L25" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
             //użyto implementacji metody containts z https://docs.oracle.com/javase/7/docs/api/java/util/Set.html
-<span class="fc bfc" id="L27" title="All 2 branches covered.">            if (copiedValues.contains(i + 1) == false) {</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">            if (!copiedValues.contains(i + 1)) {</span>
 <span class="fc" id="L28">                return false;</span>
             }
 

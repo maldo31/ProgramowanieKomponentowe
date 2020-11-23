@@ -151,32 +151,28 @@ public class SudokuBoard {
     }
 
     private boolean checkBoard() {
-        boolean valid = true;
         for (int index = 0;index < size;index++) {
-            valid = getRow(index).verify();
-            if (valid == false) {
+
+            if (!getRow(index).verify()) {
                 System.out.println("Bład w wierszu " + index);
                 showBoard();
-
-                break;
+                return false;
             }
-            valid = getColumn(index).verify();
-            if (valid == false) {
+
+            if (!getColumn(index).verify()) {
                 System.out.println("Bład w kolumnie " + index);
                 showBoard();
-                break;
+                return false;
             }
 
-            valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();
-            if (valid == false) {
+            if (!getBox(((int) index / 3) * 3,(index % 3) * 3).verify()) {
                 System.out.println("Bład w kwadracie " + index);
                 showBoard();
-                break;
-
+                return false;
             }
 
         }
-        return valid;
+        return true;
     }
 
     public boolean checkBoardTest() {
