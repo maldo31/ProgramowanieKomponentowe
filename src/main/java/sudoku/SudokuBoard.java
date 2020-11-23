@@ -142,21 +142,21 @@ public class SudokuBoard {
         for (int index = 0;index < size;index++) {
             valid = getRow(index).verify();
             if (valid == false) {
-                System.out.println("Bład w wierszu "+index);
+                System.out.println("Bład w wierszu " + index);
                 showBoard();
 
                 break;
             }
             valid = getColumn(index).verify();
             if (valid == false) {
-                System.out.println("Bład w kolumnie "+index);
+                System.out.println("Bład w kolumnie " + index);
                 showBoard();
                 break;
             }
 
             valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();
             if (valid == false) {
-                System.out.println("Bład w kwadracie "+index);
+                System.out.println("Bład w kwadracie " + index);
                 showBoard();
                 break;
 

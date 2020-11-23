@@ -11,7 +11,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     został odpowiednio zmodyfikowany do zaleceń z zadania.
      */
 
-    public boolean solve(SudokuBoard board){
+    public boolean solve(SudokuBoard board) {
         Random random = new Random();
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {

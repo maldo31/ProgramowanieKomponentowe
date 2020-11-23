@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sudoku</a> &gt; <a href="index.source.html" class="el_package">sudoku</a> &gt; <span class="el_source">SudokuBoard.java</span></div><h1>SudokuBoard.java</h1><pre class="source lang-java linenums">package sudoku;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sudoku</a> &gt; <a href="index.source.html" class="el_package">sudoku</a> &gt; <span class="el_source">SudokuBoard.java</span></div><h1>SudokuBoard.java</h1><pre class="source lang-java linenums">package sudoku;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -142,21 +142,21 @@ public class SudokuBoard {
 <span class="fc bfc" id="L142" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
 <span class="fc" id="L143">            valid = getRow(index).verify();</span>
 <span class="fc bfc" id="L144" title="All 2 branches covered.">            if (valid == false) {</span>
-<span class="fc" id="L145">                System.out.println(&quot;Bład w wierszu &quot;+index);</span>
+<span class="fc" id="L145">                System.out.println(&quot;Bład w wierszu &quot; + index);</span>
 <span class="fc" id="L146">                showBoard();</span>
 
 <span class="fc" id="L148">                break;</span>
             }
 <span class="fc" id="L150">            valid = getColumn(index).verify();</span>
 <span class="fc bfc" id="L151" title="All 2 branches covered.">            if (valid == false) {</span>
-<span class="fc" id="L152">                System.out.println(&quot;Bład w kolumnie &quot;+index);</span>
+<span class="fc" id="L152">                System.out.println(&quot;Bład w kolumnie &quot; + index);</span>
 <span class="fc" id="L153">                showBoard();</span>
 <span class="fc" id="L154">                break;</span>
             }
 
 <span class="fc" id="L157">            valid = getBox(((int) index / 3) * 3,(index % 3) * 3).verify();</span>
 <span class="fc bfc" id="L158" title="All 2 branches covered.">            if (valid == false) {</span>
-<span class="fc" id="L159">                System.out.println(&quot;Bład w kwadracie &quot;+index);</span>
+<span class="fc" id="L159">                System.out.println(&quot;Bład w kwadracie &quot; + index);</span>
 <span class="fc" id="L160">                showBoard();</span>
 <span class="fc" id="L161">                break;</span>
 

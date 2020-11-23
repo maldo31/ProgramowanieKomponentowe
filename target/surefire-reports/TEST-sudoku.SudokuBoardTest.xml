@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuBoardTest" time="0.091" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuBoardTest" time="0.13" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
-    <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\New\an_pn_1145_03\target\test-classes;D:\New\an_pn_1145_03\target\classes;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -13,50 +13,50 @@
     <property name="os.name" value="Windows 10"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="PL"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\maldo\AppData\Local\Temp\surefire7642761932655423274\surefirebooter688939080210857689.jar C:\Users\maldo\AppData\Local\Temp\surefire7642761932655423274 2020-11-22T23-48-50_015-jvmRun1 surefire18055490788269169733tmp surefire_015611855955577600495tmp"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="D:\openjdk\jdk-14.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\MaciekDate\AppData\Local\Temp\surefire2700399625187922781\surefirebooter5983946501352725406.jar C:\Users\MaciekDate\AppData\Local\Temp\surefire2700399625187922781 2020-11-23T01-43-16_128-jvmRun1 surefire10786287653677649599tmp surefire_05624768882469197098tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
+    <property name="surefire.test.class.path" value="D:\New\an_pn_1145_03\target\test-classes;D:\New\an_pn_1145_03\target\classes;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\maldo"/>
-    <property name="user.language" value="pl"/>
+    <property name="user.home" value="C:\Users\MaciekDate"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2020-07-14"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
+    <property name="java.home" value="D:\openjdk\jdk-14.0.2"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03"/>
+    <property name="basedir" value="D:\New\an_pn_1145_03"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maldo\AppData\Local\Temp\surefire7642761932655423274\surefirebooter688939080210857689.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MaciekDate\AppData\Local\Temp\surefire2700399625187922781\surefirebooter5983946501352725406.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
-    <property name="user.name" value="maldo"/>
+    <property name="user.name" value="MaciekDate"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="file.encoding" value="Cp1250"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\maldo\.m2\repository"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\MaciekDate\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\maldo\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\MACIEK~1\AppData\Local\Temp\"/>
     <property name="idea.version" value="2020.2.3"/>
     <property name="java.version" value="14.0.2"/>
-    <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03"/>
+    <property name="user.dir" value="D:\New\an_pn_1145_03"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Python\Scripts\;C:\Python\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\maldo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\MKVToolNix;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\apache-maven-3.6.3\bin;C:\msys64\usr\bin;C:\Program Files\Java\jdk-14.0.2\bin;C:\Users\maldo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\JetBrains\CLion 2019.3.3\bin;;;."/>
+    <property name="java.library.path" value="D:\openjdk\jdk-14.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MaciekDate\AppData\Local\Microsoft\WindowsApps;C:\Users\MaciekDate\AppData\Local\GitHubDesktop\bin;D:\Programs\PyCharm 2020.2.3\bin;;D:\Programs\CLion 2020.2.4\bin;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="ShowBoardTest" classname="sudoku.SudokuBoardTest" time="0.01">
+  <testcase name="ShowBoardTest" classname="sudoku.SudokuBoardTest" time="0.02">
     <system-out><![CDATA[
 0 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 0 
@@ -69,84 +69,84 @@
 0 0 0 0 0 0 0 0 0 
 ]]></system-out>
   </testcase>
-  <testcase name="checkBoardTestRowFalse" classname="sudoku.SudokuBoardTest" time="0.019">
+  <testcase name="checkBoardTestRowFalse" classname="sudoku.SudokuBoardTest" time="0.041">
     <system-out><![CDATA[Bład w wierszu 0
 
-1 1 5 6 8 2 4 9 7 
-8 2 7 3 4 9 1 5 6 
-4 9 6 5 1 7 3 2 8 
-9 1 2 4 3 8 6 7 5 
-3 5 8 7 2 6 9 1 4 
-6 7 4 9 5 1 2 8 3 
-5 4 9 1 7 3 8 6 2 
-7 8 1 2 6 4 5 3 9 
-2 6 3 8 9 5 7 4 1 
+1 1 3 7 9 8 4 5 2 
+8 7 9 5 2 4 1 3 6 
+2 4 5 6 1 3 8 7 9 
+5 8 1 9 7 2 3 6 4 
+7 9 2 3 4 6 5 8 1 
+4 3 6 8 5 1 9 2 7 
+3 1 7 2 8 9 6 4 5 
+6 2 4 1 3 5 7 9 8 
+9 5 8 4 6 7 2 1 3 
 ]]></system-out>
   </testcase>
-  <testcase name="checkBoardTestColumnFalse" classname="sudoku.SudokuBoardTest" time="0.012">
+  <testcase name="checkBoardTestColumnFalse" classname="sudoku.SudokuBoardTest" time="0.01">
     <system-out><![CDATA[Bład w kolumnie 0
 
-4 6 1 7 8 5 9 3 2 
-4 5 9 1 2 3 4 8 6 
-4 2 3 4 9 6 7 5 1 
-6 7 8 3 4 9 1 2 5 
-2 9 4 5 6 1 3 7 8 
-1 3 5 2 7 8 6 4 9 
-9 8 7 6 3 2 5 1 4 
-5 4 2 9 1 7 8 6 3 
-3 1 6 8 5 4 2 9 7 
+3 9 1 7 6 2 8 4 5 
+3 8 2 9 1 4 3 6 7 
+3 6 7 8 3 5 9 1 2 
+6 2 8 5 4 7 1 9 3 
+7 1 3 6 8 9 2 5 4 
+9 4 5 3 2 1 6 7 8 
+1 3 4 2 5 6 7 8 9 
+8 5 9 1 7 3 4 2 6 
+2 7 6 4 9 8 5 3 1 
 ]]></system-out>
   </testcase>
-  <testcase name="checkBoardTest" classname="sudoku.SudokuBoardTest" time="0.006"/>
-  <testcase name="repeatFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.006">
+  <testcase name="checkBoardTest" classname="sudoku.SudokuBoardTest" time="0.018"/>
+  <testcase name="repeatFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.007">
     <system-out><![CDATA[
-5 7 2 9 1 4 6 3 8 
-9 1 4 6 8 3 2 5 7 
-3 6 8 2 5 7 4 1 9 
-6 8 9 1 2 5 3 7 4 
-7 2 3 8 4 6 1 9 5 
-1 4 5 3 7 9 8 6 2 
-2 9 6 7 3 8 5 4 1 
-8 5 7 4 6 1 9 2 3 
-4 3 1 5 9 2 7 8 6 
+8 9 7 3 4 5 6 1 2 
+5 1 3 6 8 2 9 7 4 
+6 2 4 7 9 1 5 3 8 
+9 3 5 8 1 4 2 6 7 
+7 4 6 5 2 3 8 9 1 
+1 8 2 9 6 7 3 4 5 
+2 5 9 1 7 6 4 8 3 
+3 6 1 4 5 8 7 2 9 
+4 7 8 2 3 9 1 5 6 
 
-3 7 6 8 5 9 1 2 4 
-4 2 5 1 3 6 7 8 9 
-8 9 1 2 4 7 3 6 5 
-9 5 2 4 1 3 6 7 8 
-7 1 3 9 6 8 4 5 2 
-6 8 4 7 2 5 9 3 1 
-1 3 8 6 9 2 5 4 7 
-2 6 9 5 7 4 8 1 3 
-5 4 7 3 8 1 2 9 6 
+2 9 3 1 8 4 5 6 7 
+6 1 4 9 5 7 2 8 3 
+5 8 7 2 3 6 4 9 1 
+9 2 5 3 6 8 1 7 4 
+3 4 6 5 7 1 9 2 8 
+8 7 1 4 2 9 6 3 5 
+7 3 9 6 4 5 8 1 2 
+4 6 8 7 1 2 3 5 9 
+1 5 2 8 9 3 7 4 6 
 Tablice maja inny uklad liczb]]></system-out>
   </testcase>
-  <testcase name="checkFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.003">
+  <testcase name="checkFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.01">
     <system-out><![CDATA[Nie wykryto bledu
-9 6 7 5 1 8 2 3 4 
-3 2 8 6 9 4 5 1 7 
-4 5 1 2 3 7 6 8 9 
-8 9 6 1 2 5 7 4 3 
-7 1 2 9 4 3 8 5 6 
-5 3 4 7 8 6 1 9 2 
-1 7 9 3 5 2 4 6 8 
-2 8 3 4 6 1 9 7 5 
-6 4 5 8 7 9 3 2 1 
+2 9 7 1 3 4 5 6 8 
+3 4 8 6 5 7 9 1 2 
+5 6 1 8 9 2 4 3 7 
+8 2 4 7 6 1 3 9 5 
+6 5 3 4 8 9 7 2 1 
+1 7 9 3 2 5 8 4 6 
+4 1 5 9 7 6 2 8 3 
+7 3 6 2 4 8 1 5 9 
+9 8 2 5 1 3 6 7 4 
 ]]></system-out>
   </testcase>
-  <testcase name="checkBoardTestBoxFalse" classname="sudoku.SudokuBoardTest" time="0.007">
+  <testcase name="checkBoardTestBoxFalse" classname="sudoku.SudokuBoardTest" time="0.004">
     <system-out><![CDATA[Bład w kwadracie 0
 
-9 6 4 7 8 1 5 3 2 
-8 9 5 9 2 3 4 6 7 
-7 3 2 4 5 6 8 1 9 
-1 4 9 2 3 5 6 7 8 
-2 5 7 6 4 8 1 9 3 
-3 8 6 1 7 9 2 4 5 
-4 7 8 3 1 2 9 5 6 
-5 9 1 8 6 7 3 2 4 
-6 2 3 5 9 4 7 8 1 
+7 9 8 1 5 2 3 4 6 
+5 7 4 8 3 6 7 9 2 
+2 3 6 4 7 9 5 8 1 
+4 7 3 6 8 5 2 1 9 
+6 5 9 7 2 1 8 3 4 
+8 2 1 9 4 3 6 7 5 
+3 4 2 5 9 7 1 6 8 
+9 6 7 2 1 8 4 5 3 
+1 8 5 3 6 4 9 2 7 
 ]]></system-out>
   </testcase>
-  <testcase name="checkCellBox1" classname="sudoku.SudokuBoardTest" time="0.001"/>
+  <testcase name="checkCellBox1" classname="sudoku.SudokuBoardTest" time="0.003"/>
 </testsuite>
