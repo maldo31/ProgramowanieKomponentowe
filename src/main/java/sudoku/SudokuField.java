@@ -33,6 +33,7 @@ public class SudokuField {
 
         return new EqualsBuilder()
                 .append(value, that.value)
+                .append(changes, that.changes)
                 .isEquals();
     }
 

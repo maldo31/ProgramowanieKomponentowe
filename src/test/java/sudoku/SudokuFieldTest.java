@@ -41,7 +41,7 @@ class SudokuFieldTest {
     @Test
     void testEquals() {
         SudokuField field = new SudokuField(5);
-        SudokuField field1 = new SudokuField(5);
+        SudokuField field1 = field;
         assertTrue(field.equals(field1));
     }
     @Test
