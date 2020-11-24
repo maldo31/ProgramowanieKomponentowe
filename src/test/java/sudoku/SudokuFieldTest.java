@@ -50,6 +50,29 @@ class SudokuFieldTest {
         SudokuField field1 = new SudokuField(6);
         assertFalse(field.equals(field1));
     }
+    @Test
+    void testEqualsSame() {
+        SudokuField field = new SudokuField(5);
+        assertTrue(field.equals(field));
+    }
+    @Test
+    void testEqualsDiffrentClass() {
+        SudokuField field = new SudokuField(5);
+        assertFalse(field.equals(1));
+    }
+    @Test
+    void testEqualsNull() {
+        SudokuField field = new SudokuField(5);
+        assertFalse(field.equals(null));
+    }
+    @Test
+    void testListeners() {
+        SudokuField field = new SudokuField(5);
+        SudokuFieldListener listener = new SudokuFieldListener();
+        field.addPropertyChangeListener(listener);
+        field.removePropertyChangeListener(listener);
+
+    }
 
 
 }

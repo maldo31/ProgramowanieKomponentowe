@@ -20,12 +20,12 @@ public class SudokuField {
 
     @Override
     public boolean equals(Object o) {
-<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if (this == o) {</span>
-<span class="nc" id="L24">            return true;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L24">            return true;</span>
         }
 
-<span class="pc bpc" id="L27" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="nc" id="L28">            return false;</span>
+<span class="fc bfc" id="L27" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L28">            return false;</span>
         }
 
 <span class="fc" id="L31">        SudokuField that = (SudokuField) o;</span>
@@ -57,8 +57,8 @@ public class SudokuField {
 <span class="fc" id="L57">    }</span>
 
     public void removePropertyChangeListener(PropertyChangeListener listener) {
-<span class="nc" id="L60">        changes.removePropertyChangeListener(listener);</span>
-<span class="nc" id="L61">    }</span>
+<span class="fc" id="L60">        changes.removePropertyChangeListener(listener);</span>
+<span class="fc" id="L61">    }</span>
 
     public int getFieldValue() {
 <span class="fc" id="L64">        return this.value;</span>
