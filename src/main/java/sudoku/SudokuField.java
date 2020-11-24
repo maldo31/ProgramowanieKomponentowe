@@ -15,7 +15,6 @@ public class SudokuField {
     public String toString() {
         return new ToStringBuilder(this)
                 .append("value", value)
-                .append("changes", changes)
                 .toString();
     }
 

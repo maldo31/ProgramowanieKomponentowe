@@ -155,5 +155,17 @@ public class SudokuBoardTest {
     }
 
 
+    @Test
+    void testToString() {
+        sudokuBoard.solveGame();
+        sudokuBoard.toString();
+    }
 
+    @Test
+    void testEquals() {
+    }
+
+    @Test
+    void testHashCode() {
+    }
 }
