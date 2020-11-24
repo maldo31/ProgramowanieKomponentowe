@@ -158,7 +158,7 @@ public class SudokuBoardTest {
     @Test
     void testToString() {
         sudokuBoard.solveGame();
-        sudokuBoard.toString();
+        System.out.println(sudokuBoard.toString());
     }
 
     @Test
