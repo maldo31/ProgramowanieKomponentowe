@@ -22,5 +22,4 @@ class SudokuFieldTest {
         field.setFieldValue(-100);
         assertTrue(value == field.getFieldValue());
     }
-
 }

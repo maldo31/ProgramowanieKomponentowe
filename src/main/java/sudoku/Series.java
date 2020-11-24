@@ -2,6 +2,9 @@ package sudoku;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public abstract class Series {
     final int size = 9;
@@ -9,6 +12,37 @@ public abstract class Series {
 
     public Series(final List<SudokuField> copiedSeries) {
         this.cellSeries = copiedSeries;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("size", size)
+                .append("cellSeries", cellSeries)
+                .toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Series series = (Series) o;
+        return new EqualsBuilder()
+                .append(size, series.size)
+                .append(cellSeries, series.cellSeries)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(size)
+                .append(cellSeries)
+                .toHashCode();
     }
 
     public List<Integer> copyValues() {

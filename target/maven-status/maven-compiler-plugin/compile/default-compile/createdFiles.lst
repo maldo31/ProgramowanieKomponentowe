@@ -1,0 +1,9 @@
+sudoku\SudokuBoard.class
+sudoku\SudokuField.class
+sudoku\BacktrackingSudokuSolver.class
+sudoku\SudokuBox.class
+sudoku\SudokuRow.class
+sudoku\SudokuSolver.class
+sudoku\Series.class
+sudoku\SudokuColumn.class
+sudoku\SudokuFieldListener.class

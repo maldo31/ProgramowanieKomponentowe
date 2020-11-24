@@ -3,7 +3,9 @@ package sudoku;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
     //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
@@ -44,6 +46,43 @@ public class SudokuBoard {
                 this.board.get(i).set(j,new SudokuField());
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("size", size)
+                .append("solver", solver)
+                .append("board", board)
+                .toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        SudokuBoard that = (SudokuBoard) o;
+
+        return new EqualsBuilder()
+                .append(size, that.size)
+                .append(solver, that.solver)
+                .append(board, that.board)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(size)
+                .append(solver)
+                .append(board)
+                .toHashCode();
     }
 
     public void solveGame() {
