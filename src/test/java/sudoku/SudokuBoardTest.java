@@ -162,10 +162,22 @@ public class SudokuBoardTest {
     }
 
     @Test
-    void testEquals() {
+    void testEqualsDiffrentInstance() {
+        SudokuBoard sudoku2 = new SudokuBoard();
+        assertFalse(sudokuBoard.equals(sudoku2));
     }
 
     @Test
-    void testHashCode() {
+    void testEqualsWrongObject() {
+        SudokuField field = new SudokuField();
+        assertFalse(sudokuBoard.equals(field));
+    }
+    @Test
+    void testEqualsSame() {
+        assertTrue(sudokuBoard.equals(sudokuBoard));
+    }
+    @Test
+    void testEqualsNull() {
+        assertFalse(sudokuBoard.equals(null));
     }
 }

@@ -7,7 +7,7 @@ public class SudokuFieldListener implements PropertyChangeListener, java.io.Seri
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        if (9 < (int)evt.getOldValue()) {
+        if (9 < (int)evt.getNewValue()) {
             System.out.println("Nieprawidłowa zmiana pola=" + evt.getPropertyName());
         }
     }

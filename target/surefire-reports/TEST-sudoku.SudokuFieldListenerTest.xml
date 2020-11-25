@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuBoardTest" time="0.14" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuFieldListenerTest" time="0.007" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -56,109 +56,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="ShowBoardTest" classname="sudoku.SudokuBoardTest" time="0.016">
-    <system-out><![CDATA[
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 
-]]></system-out>
-  </testcase>
-  <testcase name="testEqualsWrongObject" classname="sudoku.SudokuBoardTest" time="0.003"/>
-  <testcase name="testToString" classname="sudoku.SudokuBoardTest" time="0.005">
-    <system-out><![CDATA[sudoku.SudokuBoard@390877d2[
-  size=9
-  solver=sudoku.BacktrackingSudokuSolver@1a891add
-  board={{8,1,7,9,2,4,5,3,6},{2,9,3,5,6,1,7,8,4},{4,5,6,3,7,8,9,1,2},{7,8,4,2,3,5,1,6,9},{3,2,9,8,1,6,4,5,7},{1,6,5,4,9,7,3,2,8},{5,3,8,7,4,2,6,9,1},{6,4,2,1,5,9,8,7,3},{9,7,1,6,8,3,2,4,5}}
-]
-]]></system-out>
-  </testcase>
-  <testcase name="checkBoardTestRowFalse" classname="sudoku.SudokuBoardTest" time="0.007">
-    <system-out><![CDATA[Bład w wierszu 0
-
-1 1 9 3 1 6 5 7 2 
-1 6 2 4 7 5 8 3 9 
-3 7 5 8 9 2 1 6 4 
-2 5 3 9 4 8 6 1 7 
-6 9 4 7 5 1 2 8 3 
-7 1 8 6 2 3 9 4 5 
-8 4 6 2 3 9 7 5 1 
-5 2 7 1 6 4 3 9 8 
-9 3 1 5 8 7 4 2 6 
-]]></system-out>
-  </testcase>
-  <testcase name="testEqualsDiffrentInstance" classname="sudoku.SudokuBoardTest" time="0.001"/>
-  <testcase name="checkBoardTestColumnFalse" classname="sudoku.SudokuBoardTest" time="0.021">
-    <system-out><![CDATA[Bład w kolumnie 0
-
-9 4 3 5 8 2 6 1 7 
-9 8 7 9 1 6 2 3 4 
-9 2 1 3 4 7 8 5 9 
-3 1 6 2 5 4 7 9 8 
-2 5 4 7 9 8 1 6 3 
-7 9 8 6 3 1 4 2 5 
-8 7 9 1 2 3 5 4 6 
-1 6 5 4 7 9 3 8 2 
-4 3 2 8 6 5 9 7 1 
-]]></system-out>
-  </testcase>
-  <testcase name="testEqualsNull" classname="sudoku.SudokuBoardTest" time="0.001"/>
-  <testcase name="testEqualsSame" classname="sudoku.SudokuBoardTest" time="0.001"/>
-  <testcase name="checkBoardTest" classname="sudoku.SudokuBoardTest" time="0.021"/>
-  <testcase name="repeatFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.013">
-    <system-out><![CDATA[
-6 2 3 1 4 5 7 8 9 
-7 8 5 2 6 9 1 3 4 
-4 9 1 8 3 7 5 2 6 
-1 3 6 4 2 8 9 5 7 
-2 4 7 9 5 1 3 6 8 
-8 5 9 6 7 3 2 4 1 
-5 6 4 7 9 2 8 1 3 
-9 1 2 3 8 4 6 7 5 
-3 7 8 5 1 6 4 9 2 
-
-4 1 5 2 3 6 7 8 9 
-6 9 7 8 4 1 2 3 5 
-8 2 3 5 9 7 6 4 1 
-7 3 9 1 2 8 4 5 6 
-2 4 6 3 5 9 8 1 7 
-5 8 1 6 7 4 3 9 2 
-9 5 2 4 6 3 1 7 8 
-1 7 4 9 8 2 5 6 3 
-3 6 8 7 1 5 9 2 4 
-Tablice maja inny uklad liczb]]></system-out>
-  </testcase>
-  <testcase name="checkFillBoardTest" classname="sudoku.SudokuBoardTest" time="0.01">
-    <system-out><![CDATA[Nie wykryto bledu
-4 5 2 9 6 3 1 8 7 
-1 3 8 7 2 4 5 9 6 
-9 6 7 8 1 5 2 3 4 
-3 8 9 6 4 1 7 2 5 
-2 7 4 5 8 9 6 1 3 
-5 1 6 2 3 7 8 4 9 
-6 2 3 4 5 8 9 7 1 
-7 4 5 1 9 2 3 6 8 
-8 9 1 3 7 6 4 5 2 
-]]></system-out>
-  </testcase>
-  <testcase name="checkBoardTestBoxFalse" classname="sudoku.SudokuBoardTest" time="0.006">
-    <system-out><![CDATA[Bład w kwadracie 0
-
-6 5 1 7 4 8 2 9 3 
-8 6 7 9 3 2 1 5 6 
-9 2 3 1 5 6 4 7 8 
-3 6 2 4 8 9 7 1 5 
-7 8 4 2 1 5 3 6 9 
-5 1 9 3 6 7 8 4 2 
-4 7 5 8 9 3 6 2 1 
-1 9 8 6 2 4 5 3 7 
-2 3 6 5 7 1 9 8 4 
-]]></system-out>
-  </testcase>
-  <testcase name="checkCellBox1" classname="sudoku.SudokuBoardTest" time="0.002"/>
+  <testcase name="propertyChange" classname="sudoku.SudokuFieldListenerTest" time="0.006"/>
 </testsuite>

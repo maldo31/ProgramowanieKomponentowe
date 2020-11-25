@@ -1,3 +1,4 @@
+sudoku\SeriesTest.class
+sudoku\SudokuFieldTest.class
 sudoku\BacktrackingSudokuSolverTest.class
 sudoku\SudokuBoardTest.class
-sudoku\SudokuFieldTest.class
