@@ -74,10 +74,10 @@ public class SudokuBoardTest {
 
         if (flaga) {
             System.out.print("Nie wykryto bledu");
-            sudokuBoard.showBoard();
+            sudokuBoard.toString();
         }
         if (!flaga) {
-            sudokuBoard.showBoard();
+            sudokuBoard.toString();
         }
     }
 
@@ -89,10 +89,10 @@ public class SudokuBoardTest {
 
         sudokuBoard.solveGame();
         testBoard1 = sudokuBoard.getCopyOfBoard();
-        sudokuBoard.showBoard();
+        sudokuBoard.toString();
         sudokuBoard.solveGame();
         testBoard2 = sudokuBoard.getCopyOfBoard();
-        sudokuBoard.showBoard();
+        sudokuBoard.toString();
         boolean flag = false;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -151,7 +151,7 @@ public class SudokuBoardTest {
     }
     @Test
     void ShowBoardTest() {
-        sudokuBoard.showBoard();
+        sudokuBoard.toString();
     }
 
 

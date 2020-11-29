@@ -78,7 +78,7 @@ class BacktrackingSudokuSolverTest {
                 System.out.print("Nie wykryto bledu");
             }
             if (!flaga) {
-                sudokuBoard.showBoard();
+                sudokuBoard.toString();
             }
         }
 

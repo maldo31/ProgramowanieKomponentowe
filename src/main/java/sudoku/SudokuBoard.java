@@ -119,18 +119,6 @@ public class SudokuBoard implements PropertyChangeListener {
         return copiedBoard;
     }
 
-
-    public void showBoard() {
-        System.out.print("\n");
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print(get(i,j) + " ");
-            }
-            System.out.print("\n");
-        }
-    }
-
-
     public boolean checkCell(int row, int column, int value) {
         int subrow = row - row % 3;
         int subcol = column - column % 3;
