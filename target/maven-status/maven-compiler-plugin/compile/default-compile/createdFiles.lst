@@ -6,4 +6,3 @@ sudoku\SudokuRow.class
 sudoku\SudokuSolver.class
 sudoku\Series.class
 sudoku\SudokuColumn.class
-sudoku\SudokuFieldListener.class

@@ -1,5 +1,7 @@
 package sudoku;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,6 +9,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
     //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
@@ -15,14 +18,15 @@ import org.apache.commons.lang3.builder.ToStringStyle;
     }
 */
 
-public class SudokuBoard {
+public class SudokuBoard implements PropertyChangeListener {
 
     public final int size = 9;
-    private SudokuSolver solver = new BacktrackingSudokuSolver();
+    private SudokuSolver solver;
 
     private List<List<SudokuField>> board;
 
     public SudokuBoard() {
+        this.solver = new BacktrackingSudokuSolver();
         board = Arrays.asList(new List[size]);
         //Tworzymy dwuwymiarowa liste list o stałych wymiarach przy pomocy implementacji list z:
         // https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-
@@ -31,7 +35,7 @@ public class SudokuBoard {
         }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                this.board.get(i).set(j,new SudokuField());
+                this.board.get(i).set(j,new SudokuField(this));
             }
         }
     }
@@ -44,7 +48,7 @@ public class SudokuBoard {
         }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                this.board.get(i).set(j,new SudokuField());
+                this.board.get(i).set(j,new SudokuField(this));
             }
         }
     }
@@ -191,24 +195,21 @@ public class SudokuBoard {
         return new SudokuBox(box);
     }
 
-    private boolean checkBoard() {
+    boolean checkBoard() {
         for (int index = 0;index < size;index++) {
 
             if (!getRow(index).verify()) {
-                System.out.println("Bład w wierszu " + index);
-                showBoard();
+                printMessenge(index);
                 return false;
             }
 
             if (!getColumn(index).verify()) {
-                System.out.println("Bład w kolumnie " + index);
-                showBoard();
+                printMessenge(index);
                 return false;
             }
 
             if (!getBox(((int) index / 3) * 3,(index % 3) * 3).verify()) {
-                System.out.println("Bład w kwadracie " + index);
-                showBoard();
+                printMessenge(index);
                 return false;
             }
 
@@ -216,10 +217,26 @@ public class SudokuBoard {
         return true;
     }
 
+    void printMessenge(int index) {
+        System.out.println("Bład w kwadracie " + index + "\n" + toString());
+    }
+
     public boolean checkBoardTest() {
 
         return checkBoard();
     }
+
+
+        @Override
+        public void propertyChange(PropertyChangeEvent evt) {
+
+            if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
+                System.out.println("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
+            }
+
+
+
+        }
 
 }
 

@@ -67,8 +67,9 @@ class SudokuFieldTest {
     }
     @Test
     void testListeners() {
+
         SudokuField field = new SudokuField(5);
-        SudokuFieldListener listener = new SudokuFieldListener();
+        SudokuBoard listener = new SudokuBoard();
         field.addPropertyChangeListener(listener);
         field.removePropertyChangeListener(listener);
 

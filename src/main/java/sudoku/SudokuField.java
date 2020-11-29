@@ -46,12 +46,14 @@ public class SudokuField {
     }
 
     public SudokuField() {
-        this.addPropertyChangeListener(new SudokuFieldListener());
     }
 
     public SudokuField(int value) {
-        this.addPropertyChangeListener(new SudokuFieldListener());
         this.value = value;
+    }
+
+    public SudokuField(PropertyChangeListener listener) {
+        this.addPropertyChangeListener(listener);
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
