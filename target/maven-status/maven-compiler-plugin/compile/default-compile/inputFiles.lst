@@ -1,8 +1,11 @@
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\SudokuSolver.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\Series.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\BacktrackingSudokuSolver.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\SudokuColumn.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\SudokuField.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\SudokuBox.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\SudokuBoard.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\SudokuRow.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuSolver.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuRow.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuBox.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\BacktrackingSudokuSolver.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuBoardDaoFactory.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuColumn.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\FileSudokuBoardDao.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuField.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\SudokuBoard.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\Dao.java
+D:\New\an_pn_1145_03\src\main\java\sudoku\Series.java
