@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.36">
-<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\Dao.java">
-<error line="9" column="5" severity="error" message="Avoid using finalizer method." source="com.puppycrawl.tools.checkstyle.checks.coding.NoFinalizerCheck"/>
+<file name="D:\New\an_pn_1145_03\src\main\java\sudoku\Dao.java">
 </file>
-<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\src\main\java\sudoku\FileSudokuBoardDao.java">
-<error line="62" column="9" severity="error" message="&apos;}&apos; at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally)." source="RightCurlySame"/>
-<error line="70" column="5" severity="error" message="Avoid using finalizer method." source="com.puppycrawl.tools.checkstyle.checks.coding.NoFinalizerCheck"/>
-<error line="74" column="13" severity="error" message="&apos;}&apos; at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally)." source="RightCurlySame"/>
+<file name="D:\New\an_pn_1145_03\src\main\java\sudoku\FileSudokuBoardDao.java">
 </file>
 </checkstyle>

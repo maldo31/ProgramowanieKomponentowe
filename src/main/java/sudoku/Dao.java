@@ -6,6 +6,10 @@ public interface Dao<T> {
 
     T read();
 
+    /*
+
     void finalize();
+
+     */
 
 }

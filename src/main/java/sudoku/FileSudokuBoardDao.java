@@ -59,23 +59,23 @@ private ObjectInputStream ois;
             if (outputStream != null) {
                 outputStream.close();
                 }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
+    /*
     // Metoda wywołuje się gdy GC napotka obiekt, i stwierdzi brak referencji do niego
     @Override
     public void finalize() {
         try {
         close();
-            }
-        catch (Throwable e) {
+            } catch (Throwable e) {
             e.printStackTrace();
                             }
         }
 
+
+     */
 
 }

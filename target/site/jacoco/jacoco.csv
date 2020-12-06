@@ -8,4 +8,4 @@ Sudoku,sudoku,SudokuField,0,118,0,10,0,35,0,15,0,10
 Sudoku,sudoku,StreamSudokuBoardFactory,0,8,0,0,0,2,0,2,0,2
 Sudoku,sudoku,SudokuBoardDaoFactory,0,17,0,2,0,4,0,3,0,2
 Sudoku,sudoku,BacktrackingSudokuSolver,0,88,0,16,0,21,0,11,0,3
-Sudoku,sudoku,FileSudokuBoardDao,27,67,3,3,13,23,3,5,0,5
+Sudoku,sudoku,FileSudokuBoardDao,35,52,6,0,16,15,4,3,1,3
