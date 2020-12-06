@@ -1,16 +1,14 @@
 package sudoku;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 
-public class FileSudokuBoardDao implements Dao<SudokuBoard> {
+public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
 private String fileName;
-
+private ObjectOutputStream outputStream;
+private FileInputStream fis;
+private ObjectInputStream ois;
     public FileSudokuBoardDao(String fileName) {
         this.fileName = fileName;
     }
@@ -18,7 +16,7 @@ private String fileName;
     @Override
     public void write(SudokuBoard object) {
         try
-                (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName))){
+        {   this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
             outputStream.writeObject(object);
             outputStream.close();
         } catch (IOException e) {
@@ -31,14 +29,26 @@ private String fileName;
     public SudokuBoard read() {
         SudokuBoard object = null;
         try {
-            FileInputStream fis = new FileInputStream(fileName);
-            ObjectInputStream ois = new ObjectInputStream(fis);
+            fis = new FileInputStream(fileName);
+            ois = new ObjectInputStream(fis);
             object = (SudokuBoard) ois.readObject();
             ois.close();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Wystapil wyjatek klasy");
+            e.printStackTrace();
         }
         return object;
+    }
+    @Override
+    public void close(){
+        try {
+            ois.close();
+            fis.close();
+            outputStream.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 
 
