@@ -74,6 +74,11 @@ class SudokuFieldTest {
         field.removePropertyChangeListener(listener);
 
     }
+    @Test
+    void listenerTest() {
+        SudokuBoard sudokuBoard = new SudokuBoard();
+        sudokuBoard.set(0,0,1);
+    }
 
 
 }

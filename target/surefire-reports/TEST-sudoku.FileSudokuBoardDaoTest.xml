@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.FileSudokuBoardDaoTest" time="0.121" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.FileSudokuBoardDaoTest" time="0.124" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\maldo\AppData\Local\Temp\surefire12683698409283946319\surefirebooter6433831998124600414.jar C:\Users\maldo\AppData\Local\Temp\surefire12683698409283946319 2020-12-06T12-14-40_296-jvmRun1 surefire70855698320559877tmp surefire_014723350032032960062tmp"/>
+    <property name="sun.java.command" value="C:\Users\maldo\AppData\Local\Temp\surefire8611555538959185018\surefirebooter3276714439012593924.jar C:\Users\maldo\AppData\Local\Temp\surefire8611555538959185018 2020-12-06T12-33-10_315-jvmRun1 surefire7014528061269227915tmp surefire_017279953541592940754tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\an_pn_1145_03\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maldo\AppData\Local\Temp\surefire12683698409283946319\surefirebooter6433831998124600414.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maldo\AppData\Local\Temp\surefire8611555538959185018\surefirebooter3276714439012593924.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -57,16 +57,100 @@
     <property name="java.class.version" value="58.0"/>
   </properties>
   <testcase name="finalizeTest" classname="sudoku.FileSudokuBoardDaoTest" time="0.003"/>
-  <testcase name="writeReadTest" classname="sudoku.FileSudokuBoardDaoTest" time="0.114">
-    <system-out><![CDATA[sudoku.SudokuBoard@432034a[
+  <testcase name="writeReadTest" classname="sudoku.FileSudokuBoardDaoTest" time="0.102">
+    <system-out><![CDATA[Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
   size=9
-  solver=sudoku.BacktrackingSudokuSolver@4632cfc
-  board={{2,3,4,9,1,5,6,7,8},{5,9,6,3,7,8,1,2,4},{1,7,8,4,2,6,5,9,3},{7,8,5,6,3,9,2,4,1},{3,6,9,1,4,2,7,8,5},{4,2,1,5,8,7,9,3,6},{6,5,2,8,9,3,4,1,7},{8,4,7,2,5,1,3,6,9},{9,1,3,7,6,4,8,5,2}}
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,3,2,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-sudoku.SudokuBoard@2a03d65c[
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
   size=9
-  solver=sudoku.BacktrackingSudokuSolver@6642dc5a
-  board={{2,3,4,9,1,5,6,7,8},{5,9,6,3,7,8,1,2,4},{1,7,8,4,2,6,5,9,3},{7,8,5,6,3,9,2,4,1},{3,6,9,1,4,2,7,8,5},{4,2,1,5,8,7,9,3,6},{6,5,2,8,9,3,4,1,7},{8,4,7,2,5,1,3,6,9},{9,1,3,7,6,4,8,5,2}}
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,3,9,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,9,5,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,9,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,2,5,4,9},{4,2,7,5,8,9,6,3,1},{7,4,6,9,3,5,8,1,2},{3,9,8,2,6,1,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,2,5,4,9},{4,2,7,5,8,9,6,3,1},{7,4,6,9,3,5,8,1,2},{3,9,8,2,6,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.SudokuBoard@7063686f[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,2,5,4,9},{4,2,7,5,8,9,6,3,1},{7,4,6,9,3,5,8,1,2},{3,9,8,2,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+sudoku.SudokuBoard@f3021cb[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@c3177d5
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,2,5,4,9},{4,2,7,5,8,9,6,3,1},{7,4,6,9,3,5,8,1,2},{3,9,8,2,4,1,7,6,5},{5,1,2,7,6,8,3,9,4}}
+]
+sudoku.SudokuBoard@572e6fd9[
+  size=9
+  solver=sudoku.BacktrackingSudokuSolver@7f5eae0f
+  board={{2,3,5,6,9,4,1,7,8},{1,6,4,8,5,7,9,2,3},{8,7,9,1,2,3,4,5,6},{9,5,3,4,1,6,2,8,7},{6,8,1,3,7,2,5,4,9},{4,2,7,5,8,9,6,3,1},{7,4,6,9,3,5,8,1,2},{3,9,8,2,4,1,7,6,5},{5,1,2,7,6,8,3,9,4}}
 ]
 ]]></system-out>
   </testcase>

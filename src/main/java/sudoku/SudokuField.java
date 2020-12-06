@@ -67,16 +67,9 @@ public class SudokuField implements Serializable {
         return this.value;
     }
 
-    public void setFieldValue(int value) {
-        if (value >= -1 && value < 10) {
-            this.value = value;
-        } else {
-            System.out.print("Błąd, value musi być w zakresie <-1;9>,"
-                    + " a jego wartość to=" + value + "\n");
-        }
-    }
 
-    public void setField(int value) {
+
+    public void setFieldValue(int value) {
         if (value >= -1 && value < 10) {
             int oldValue = this.value;
             this.value = value;

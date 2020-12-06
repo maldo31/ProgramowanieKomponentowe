@@ -1,10 +1,11 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Sudoku,sudoku,SudokuBoard,0,570,1,61,0,104,1,47,0,17
+Sudoku,sudoku,SudokuBoard,0,554,1,61,0,100,1,47,0,17
 Sudoku,sudoku,SudokuBox,0,4,0,0,0,2,0,1,0,1
 Sudoku,sudoku,SudokuColumn,0,4,0,0,0,2,0,1,0,1
 Sudoku,sudoku,SudokuRow,0,4,0,0,0,2,0,1,0,1
 Sudoku,sudoku,Series,0,111,0,12,0,30,0,12,0,6
-Sudoku,sudoku,SudokuField,0,126,0,10,0,37,0,15,0,10
-Sudoku,sudoku,SudokuBoardDaoFactory,0,8,0,0,0,2,0,2,0,2
+Sudoku,sudoku,SudokuField,0,118,0,10,0,35,0,15,0,10
+Sudoku,sudoku,StreamSudokuBoardFactory,0,8,0,0,0,2,0,2,0,2
+Sudoku,sudoku,SudokuBoardDaoFactory,0,17,0,2,0,4,0,3,0,2
 Sudoku,sudoku,BacktrackingSudokuSolver,0,88,0,16,0,21,0,11,0,3
-Sudoku,sudoku,FileSudokuBoardDao,9,41,0,0,4,14,0,3,0,3
+Sudoku,sudoku,FileSudokuBoardDao,27,67,3,3,13,23,3,5,0,5
