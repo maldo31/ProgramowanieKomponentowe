@@ -34,6 +34,7 @@ private String fileName;
             FileInputStream fis = new FileInputStream(fileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
             object = (SudokuBoard) ois.readObject();
+            ois.close();
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Wystapil wyjatek klasy");
         }
