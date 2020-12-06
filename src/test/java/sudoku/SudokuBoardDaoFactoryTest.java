@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class SudokuBoardDaoFactoryTest {
-    private SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
+    private SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
 
     @Test
     public void getFileDaoTest(){

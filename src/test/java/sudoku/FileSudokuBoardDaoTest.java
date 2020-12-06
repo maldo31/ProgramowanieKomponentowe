@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FileSudokuBoardDaoTest {
 
-    private SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
+    private SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
     private SudokuBoard sudokuBoard = new SudokuBoard();
 
     private Dao<SudokuBoard> sudokuBoardDaoFile;

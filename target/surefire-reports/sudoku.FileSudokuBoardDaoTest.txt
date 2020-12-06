@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: sudoku.FileSudokuBoardDaoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.137 s <<< FAILURE! - in sudoku.FileSudokuBoardDaoTest
-sudoku.FileSudokuBoardDaoTest.writeReadTest  Time elapsed: 0.122 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at sudoku.FileSudokuBoardDaoTest.writeReadTest(FileSudokuBoardDaoTest.java:21)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 s - in sudoku.FileSudokuBoardDaoTest

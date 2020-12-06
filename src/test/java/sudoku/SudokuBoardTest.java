@@ -164,7 +164,7 @@ public class SudokuBoardTest {
     @Test
     void testEqualsDiffrentInstance() {
         SudokuBoard sudoku2 = new SudokuBoard();
-        assertFalse(sudokuBoard.equals(sudoku2));
+        assertTrue(sudokuBoard.equals(sudoku2));
     }
 
     @Test
