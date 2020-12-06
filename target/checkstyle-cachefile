@@ -1,14 +1,14 @@
-#Sun Dec 06 12:36:51 CET 2020
-configuration*?=3E676495EB8A783A468250244D6501BF32977018
+#Sun Dec 06 12:47:45 CET 2020
+configuration*?=89212EE1DC457D3D2614CFC6344F7C12EC2F795B
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\StreamSudokuBoardFactory.java=1607253847152
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuField.java=1607254514243
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuBox.java=1607253847287
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuColumn.java=1606072821771
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuBoard.java=1607253847274
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\BacktrackingSudokuSolver.java=1607253847124
+D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\Dao.java=1607255227712
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\Series.java=1606492495664
-D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\Dao.java=1607254575366
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuBoardDaoFactory.java=1607253847281
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuRow.java=1606072821777
 D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\SudokuSolver.java=1605000236151
-D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\FileSudokuBoardDao.java=1607254575378
+D\:\\New\\an_pn_1145_03\\src\\main\\java\\sudoku\\FileSudokuBoardDao.java=1607255227671

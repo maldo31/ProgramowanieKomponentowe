@@ -64,7 +64,7 @@ private ObjectInputStream ois;
         }
 
     }
-    /*
+
     // Metoda wywołuje się gdy GC napotka obiekt, i stwierdzi brak referencji do niego
     @Override
     public void finalize() {
@@ -76,6 +76,5 @@ private ObjectInputStream ois;
         }
 
 
-     */
 
 }

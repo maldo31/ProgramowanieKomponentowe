@@ -25,15 +25,11 @@ class FileSudokuBoardDaoTest {
         assertTrue(sudokuBoard.equals(testSudokuBoard));
 
     }
-    /*
+
     @Test
     public void finalizeTest(){
         sudokuBoardDaoFile = factory.getFileDao("test");
         sudokuBoardDaoFile.finalize();
     }
-
-     */
-
-
 
 }
