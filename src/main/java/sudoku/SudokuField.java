@@ -2,12 +2,14 @@ package sudoku;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.io.Serializable;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SudokuField {
+public class SudokuField implements Serializable {
 
     private int value;
     private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
@@ -21,19 +23,14 @@ public class SudokuField {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
+        if (this == o) return true;
 
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (o == null || getClass() != o.getClass()) return false;
 
         SudokuField that = (SudokuField) o;
 
         return new EqualsBuilder()
                 .append(value, that.value)
-                .append(changes, that.changes)
                 .isEquals();
     }
 
@@ -41,7 +38,6 @@ public class SudokuField {
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
                 .append(value)
-                .append(changes)
                 .toHashCode();
     }
 
@@ -69,6 +65,14 @@ public class SudokuField {
     }
 
     public void setFieldValue(int value) {
+        if (value >= -1 && value < 10) {
+            this.value = value;
+        } else {
+            System.out.print("Błąd, value musi być w zakresie <-1;9>,"
+                    + " a jego wartość to=" + value + "\n");
+        }
+    }
+    public void setField(int value) {
         if (value >= -1 && value < 10) {
             int oldValue = this.value;
             this.value = value;

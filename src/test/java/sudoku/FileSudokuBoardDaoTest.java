@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FileSudokuBoardDaoTest {
-    /*
+
     private SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
     private SudokuBoard sudokuBoard = new SudokuBoard();
 
@@ -14,14 +14,18 @@ class FileSudokuBoardDaoTest {
 
     @Test
     public void writeReadTest(){
+        sudokuBoard.solveGame();
         sudokuBoardDaoFile = factory.getFileDao("test");
         sudokuBoardDaoFile.write(sudokuBoard);
         testSudokuBoard = sudokuBoardDaoFile.read();
+        System.out.println(sudokuBoard.toString());
+        System.out.println(testSudokuBoard.toString());
+
 
         assertTrue(sudokuBoard.equals(testSudokuBoard));
 
     }
 
-    */
+
 
 }

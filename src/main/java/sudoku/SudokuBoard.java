@@ -2,6 +2,7 @@ package sudoku;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
     }
 */
 
-public class SudokuBoard implements PropertyChangeListener {
+public class SudokuBoard implements PropertyChangeListener, Serializable {
 
     public final int size = 9;
     private SudokuSolver solver;
@@ -65,19 +66,13 @@ public class SudokuBoard implements PropertyChangeListener {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
+        if (this == o) return true;
 
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (o == null || getClass() != o.getClass()) return false;
 
         SudokuBoard that = (SudokuBoard) o;
 
         return new EqualsBuilder()
-                .append(size, that.size)
-                .append(solver, that.solver)
                 .append(board, that.board)
                 .isEquals();
     }
@@ -85,8 +80,6 @@ public class SudokuBoard implements PropertyChangeListener {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
-                .append(size)
-                .append(solver)
                 .append(board)
                 .toHashCode();
     }

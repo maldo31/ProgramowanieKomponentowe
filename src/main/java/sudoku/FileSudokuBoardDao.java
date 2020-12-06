@@ -18,11 +18,11 @@ private String fileName;
     @Override
     public void write(SudokuBoard object) {
         try
-            (FileOutputStream fos = new FileOutputStream(fileName);
-            ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-            oos.writeObject(object);
+                (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName))){
+            outputStream.writeObject(object);
+            outputStream.close();
         } catch (IOException e) {
-            System.out.println("Wystapil wyjatek");
+            e.printStackTrace();
         }
 
     }
@@ -35,7 +35,7 @@ private String fileName;
             ObjectInputStream ois = new ObjectInputStream(fis);
             object = (SudokuBoard) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Wystapil wyjatek");
+            System.out.println("Wystapil wyjatek klasy");
         }
         return object;
     }

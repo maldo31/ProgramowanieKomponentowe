@@ -1,10 +1,11 @@
 package sudoku;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BacktrackingSudokuSolver implements SudokuSolver {
+public class BacktrackingSudokuSolver implements SudokuSolver, Serializable {
     private static final int UNASSIGNED = 0;
     /*Algorytm backtracking zaczerpniety ze strony:
      https://www.geeksforgeeks.org/sudoku-backtracking-7/
