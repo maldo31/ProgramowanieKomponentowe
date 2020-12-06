@@ -2,13 +2,18 @@ package sudoku;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class SudokuBoardDaoFactoryTest {
-    private SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
-
+    private SudokuBoardDaoFactory factory = StreamSudokuBoardFactory.getSudokuBoardDaoFactory("stream");
+    private SudokuBoardDaoFactory factoryNull = StreamSudokuBoardFactory.getSudokuBoardDaoFactory("strea");
     @Test
-    public void getFileDaoTest(){
+    public void CreateFactoryTest(){
         assertNotNull(factory.getFileDao("test"));
+    }
+    @Test
+    public void NullFactoryTest(){
+        assertNull(factoryNull);
     }
 
 }
