@@ -5,8 +5,8 @@ public abstract class SudokuBoardDaoFactory {
 
     public abstract Dao getFileDao(String fileName);
 
-    public static SudokuBoardDaoFactory getSudokuBoardDaoFactory(String whichFactory){
-        switch(whichFactory){
+    public static SudokuBoardDaoFactory getSudokuBoardDaoFactory(String whichFactory) {
+        switch (whichFactory) {
             case STREAM:
                 return new StreamSudokuBoardFactory();
             default:

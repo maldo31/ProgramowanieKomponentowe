@@ -3,7 +3,6 @@ package sudoku;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
-
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -23,9 +22,13 @@ public class SudokuField implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         SudokuField that = (SudokuField) o;
 
@@ -72,6 +75,7 @@ public class SudokuField implements Serializable {
                     + " a jego wartość to=" + value + "\n");
         }
     }
+
     public void setField(int value) {
         if (value >= -1 && value < 10) {
             int oldValue = this.value;
