@@ -180,4 +180,13 @@ public class SudokuBoardTest {
     void testEqualsNull() {
         assertFalse(sudokuBoard.equals(null));
     }
+
+    @Test
+    public void cloneTest() throws CloneNotSupportedException {
+        BacktrackingSudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
+        sudokuSolver.solve(sudokuBoard);
+        SudokuBoard testSudokuBoard = (SudokuBoard) sudokuBoard.clone();
+
+        assertTrue (sudokuBoard.equals(testSudokuBoard));
+    }
 }

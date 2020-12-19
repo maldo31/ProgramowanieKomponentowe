@@ -80,5 +80,15 @@ class SudokuFieldTest {
         sudokuBoard.set(0,0,1);
     }
 
+     /*
+    @Test
+    public void cloneTest() throws CloneNotSupportedException {
+        SudokuField sudokuField = new SudokuField();
+        SudokuField testSudokuField = (SudokuField) sudokuField.clone();
+
+        assertTrue(sudokuField.equals(testSudokuField));
+    }
+
+     */
 
 }
