@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
     }
 */
 
-public class SudokuBoard implements PropertyChangeListener, Serializable {
+public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
     public final int size = 9;
     private SudokuSolver solver;
@@ -222,6 +222,18 @@ public class SudokuBoard implements PropertyChangeListener, Serializable {
 
 
         }
+
+    @Override
+    protected Object clone() {
+        SudokuBoard sudokuBoard = new SudokuBoard();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                sudokuBoard.set(i, j, get(i, j));
+            }
+        }
+
+        return sudokuBoard;
+    }
 
 }
 

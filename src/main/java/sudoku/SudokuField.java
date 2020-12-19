@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SudokuField implements Serializable, Comparable<SudokuField> {
+public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
 
     private int value;
     private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
@@ -89,4 +89,13 @@ public class SudokuField implements Serializable, Comparable<SudokuField> {
             return -1;
         }
     }
+    /*
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        SudokuField sudokuField = new SudokuField();
+        SudokuField.value = this.value;
+        return sudokuField;
+    }
+    
+     */
 }
