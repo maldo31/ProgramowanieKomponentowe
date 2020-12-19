@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.36">
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\BacktrackingSudokuSolver.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\Dao.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\FileSudokuBoardDao.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\Series.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\StreamSudokuBoardFactory.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuBoard.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuBoardDaoFactory.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuBox.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuColumn.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuField.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuRow.java">
+</file>
+<file name="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\SudokuSolver.java">
+</file>
+</checkstyle>
