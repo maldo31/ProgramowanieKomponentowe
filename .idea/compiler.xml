@@ -7,10 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ModelProject" />
+        <module name="JavaFx" />
         <module name="ViewProject" />
         <module name="javafx" />
         <module name="an_pn_1145_03" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javafx" target="11" />
+      <module name="ViewProject" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
