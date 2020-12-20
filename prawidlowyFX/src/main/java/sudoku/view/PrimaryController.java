@@ -22,8 +22,8 @@ public class PrimaryController {
            SecondaryController secondaryController = new SecondaryController();
            secondaryController.showStage();
         } else {
-            popOutWindow.messageBox("Warning",
-                    "Check if language and level has not been chosen", Alert.AlertType.WARNING);
+            popOutWindow.messageBox("Błąd",
+                    "Nie wybrano poziomiu", Alert.AlertType.WARNING);
         }
     }
     @FXML
@@ -31,8 +31,8 @@ public class PrimaryController {
         try {
             this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
         } catch (NullPointerException e) {
-            popOutWindow.messageBox("Warning",
-                    "Level of difficulty has not been chosen", Alert.AlertType.WARNING);
+            popOutWindow.messageBox("Błąd",
+                    "Nie wybrano poziomu", Alert.AlertType.WARNING);
         }
     }
 }

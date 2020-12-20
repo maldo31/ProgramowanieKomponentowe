@@ -7,22 +7,15 @@ import java.util.Set;
 import sudoku.model.*;
 
 public class DifficultyLevel {
+/// liczba usuniętych pól w zależności od wybranego poziomu
+   public static int easy = 10;
+   public static int medium = 30;
+   public static int hard = 60;
 
-    /*------------------------ FIELDS REGION ------------------------*/
-    public static final int BASIC_LEVEL = 5;
-    public static final int[] MULTIPLIER_LEVEL_ARRAY = {1, 2, 3, 4};
+   private Random rand = new Random();
+   private Set<FieldCoordinates> randomPositions = new HashSet<>();
 
-    private Random rand = new Random();
-    private Set<FieldCoordinates> randomPositions = new HashSet<>();
-
-    /*------------------------ METHODS REGION ------------------------*/
-
-    /**
-     * Method remove certain number of fields.
-     *
-     * @param capacity - integer number of field to remove
-     */
-    private void fillRandomPositionsList(int capacity) {
+   private void fillRandomPositionsList(int capacity) {
         for (int i = 0; i < capacity; i++) {
             boolean isElementAdded = false;
 
@@ -34,33 +27,18 @@ public class DifficultyLevel {
         }
     }
 
-    /**
-     * Method set level of difficulty in game.
-     *
-     * @param sudokuBoard SudokuBoard object
-     * @param level       String that holds value of level
-     * @return {@exception}  UnknownLevelException - own type of exception
-     */
     public SudokuBoard chooseLevel(SudokuBoard sudokuBoard, String level)
             throws EmptyBoardException {
-
-
         switch (level) {
 
             case "Easy": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[1]);
-                break;
+                fillRandomPositionsList(easy);
             }
             case "Medium": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[2]);
-                break;
+                fillRandomPositionsList(medium);
             }
             case "Hard": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[3]);
-                break;
-            }
-            default: {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[0]);
+                fillRandomPositionsList(hard);
             }
         }
 
