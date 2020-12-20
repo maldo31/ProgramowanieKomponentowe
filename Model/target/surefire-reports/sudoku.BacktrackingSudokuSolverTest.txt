@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: sudoku.BacktrackingSudokuSolverTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.279 s - in sudoku.BacktrackingSudokuSolverTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.053 s <<< FAILURE! - in sudoku.BacktrackingSudokuSolverTest
+sudoku.BacktrackingSudokuSolverTest.solve  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.BacktrackingSudokuSolverTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+

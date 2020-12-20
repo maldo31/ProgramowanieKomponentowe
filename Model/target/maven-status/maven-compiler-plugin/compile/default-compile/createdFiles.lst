@@ -1,12 +1,1 @@
-sudoku\SudokuBoard.class
-sudoku\StreamSudokuBoardFactory.class
-sudoku\SudokuField.class
-sudoku\BacktrackingSudokuSolver.class
-sudoku\Dao.class
-sudoku\SudokuBox.class
-sudoku\SudokuRow.class
-sudoku\SudokuSolver.class
-sudoku\FileSudokuBoardDao.class
-sudoku\Series.class
-sudoku\SudokuBoardDaoFactory.class
-sudoku\SudokuColumn.class
+module-info.class

@@ -1,6 +1,0 @@
-sudoku\SeriesTest.class
-sudoku\SudokuBoardDaoFactoryTest.class
-sudoku\FileSudokuBoardDaoTest.class
-sudoku\SudokuFieldTest.class
-sudoku\BacktrackingSudokuSolverTest.class
-sudoku\SudokuBoardTest.class

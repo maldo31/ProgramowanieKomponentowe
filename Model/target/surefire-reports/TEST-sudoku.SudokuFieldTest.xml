@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuFieldTest" time="0.067" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.SudokuFieldTest" time="0.008" tests="10" errors="10" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;"/>
+    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ZADANIE4\an_pn_1145_03-d0d85faae4163c252d6bdf3e772eaa99ad43d068\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,22 +15,23 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\maldo\AppData\Local\Temp\surefire9750284444677743128\surefirebooter1101424870036702650.jar C:\Users\maldo\AppData\Local\Temp\surefire9750284444677743128 2020-12-19T19-30-44_914-jvmRun1 surefire14814444413164282650tmp surefire_04971597343906475011tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire15124379572560112712 2020-12-20T14-58-26_663-jvmRun1 surefire4395840467700235840tmp surefire_013169648469435134833tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;"/>
+    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ZADANIE4\an_pn_1145_03-d0d85faae4163c252d6bdf3e772eaa99ad43d068\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\maldo"/>
     <property name="user.language" value="pl"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jdk.module.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ZADANIE4\an_pn_1145_03-d0d85faae4163c252d6bdf3e772eaa99ad43d068\Model\target\classes;C:\Users\maldo\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar"/>
     <property name="java.version.date" value="2020-07-14"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model"/>
+    <property name="basedir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ZADANIE4\an_pn_1145_03-d0d85faae4163c252d6bdf3e772eaa99ad43d068\Model"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maldo\AppData\Local\Temp\surefire9750284444677743128\surefirebooter1101424870036702650.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M5\surefire-booter-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-api\3.0.0-M5\surefire-api-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.0.0-M5\surefire-logger-api-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.0.0-M4\surefire-shared-utils-3.0.0-M4.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.0.0-M5\surefire-extensions-spi-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ZADANIE4\an_pn_1145_03-d0d85faae4163c252d6bdf3e772eaa99ad43d068\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.0.0-M5\surefire-junit-platform-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\common-java5\3.0.0-M5\common-java5-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-launcher\1.6.2\junit-platform-launcher-1.6.2.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -45,34 +46,55 @@
     <property name="java.io.tmpdir" value="C:\Users\maldo\AppData\Local\Temp\"/>
     <property name="idea.version" value="2020.2.3"/>
     <property name="java.version" value="14.0.2"/>
-    <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model"/>
+    <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ZADANIE4\an_pn_1145_03-d0d85faae4163c252d6bdf3e772eaa99ad43d068\Model"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Python\Scripts\;C:\Python\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\maldo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\MKVToolNix;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\apache-maven-3.6.3\bin;C:\msys64\usr\bin;C:\Program Files\Java\jdk-14.0.2\bin;C:\Users\maldo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\JetBrains\CLion 2019.3.3\bin;;C:\Users\maldo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\maldo\AppData\Local\GitHubDesktop\bin;."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="testEqualsFalse" classname="sudoku.SudokuFieldTest" time="0.001"/>
-  <testcase name="listenerTest" classname="sudoku.SudokuFieldTest" time="0.001"/>
+  <testcase name="testEqualsFalse" classname="sudoku.SudokuFieldTest" time="0.001">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
+  <testcase name="listenerTest" classname="sudoku.SudokuFieldTest" time="0.001">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
   <testcase name="testToString" classname="sudoku.SudokuFieldTest" time="0">
-    <system-out><![CDATA[5
-]]></system-out>
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
   </testcase>
-  <testcase name="testListeners" classname="sudoku.SudokuFieldTest" time="0.001"/>
-  <testcase name="testEqualsDiffrentClass" classname="sudoku.SudokuFieldTest" time="0"/>
-  <testcase name="testEqualsNull" classname="sudoku.SudokuFieldTest" time="0.002"/>
-  <testcase name="testEqualsSame" classname="sudoku.SudokuFieldTest" time="0"/>
-  <testcase name="setFieldValue" classname="sudoku.SudokuFieldTest" time="0.013">
-    <system-out><![CDATA[Błąd, value musi być w zakresie <-1;9>, a jego wartość to=12
-]]></system-out>
+  <testcase name="testListeners" classname="sudoku.SudokuFieldTest" time="0">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
   </testcase>
-  <testcase name="testEquals" classname="sudoku.SudokuFieldTest" time="0.002"/>
-  <testcase name="setFieldValueNegative" classname="sudoku.SudokuFieldTest" time="0.001">
-    <system-out><![CDATA[Błąd, value musi być w zakresie <-1;9>, a jego wartość to=-100
-]]></system-out>
+  <testcase name="testEqualsDiffrentClass" classname="sudoku.SudokuFieldTest" time="0">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
+  <testcase name="testEqualsNull" classname="sudoku.SudokuFieldTest" time="0">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
+  <testcase name="testEqualsSame" classname="sudoku.SudokuFieldTest" time="0.001">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
+  <testcase name="setFieldValue" classname="sudoku.SudokuFieldTest" time="0">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
+  <testcase name="testEquals" classname="sudoku.SudokuFieldTest" time="0">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
+  </testcase>
+  <testcase name="setFieldValueNegative" classname="sudoku.SudokuFieldTest" time="0">
+    <error type="java.lang.reflect.InaccessibleObjectException"><![CDATA[java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+]]></error>
   </testcase>
 </testsuite>

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: sudoku.SudokuBoardDaoFactoryTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in sudoku.SudokuBoardDaoFactoryTest
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in sudoku.SudokuBoardDaoFactoryTest
+sudoku.SudokuBoardDaoFactoryTest.NullFactoryTest  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuBoardDaoFactoryTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuBoardDaoFactoryTest.CreateFactoryTest  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuBoardDaoFactoryTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+

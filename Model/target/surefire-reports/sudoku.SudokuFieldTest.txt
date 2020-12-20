@@ -1,4 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: sudoku.SudokuFieldTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s - in sudoku.SudokuFieldTest
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! - in sudoku.SudokuFieldTest
+sudoku.SudokuFieldTest.testEqualsFalse  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.listenerTest  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.testToString  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.testListeners  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.testEqualsDiffrentClass  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.testEqualsNull  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.testEqualsSame  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.setFieldValue  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.testEquals  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
+sudoku.SudokuFieldTest.setFieldValueNegative  Time elapsed: 0 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make sudoku.SudokuFieldTest() accessible: module ModelProject does not "opens sudoku" to unnamed module @cb644e
+
