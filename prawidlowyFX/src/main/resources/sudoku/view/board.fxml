@@ -12,7 +12,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0"
       prefWidth="561.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="sudoku.view.BoardWindowControl">
+      fx:controller="sudoku.view.SecondaryController">
      >
     <children>
         <GridPane fx:id="sudokuBoardGrid" alignment="CENTER" layoutX="1.0" prefHeight="561.0" prefWidth="561.0">

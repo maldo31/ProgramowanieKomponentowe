@@ -8,30 +8,21 @@ import javafx.scene.control.ComboBox;
 
 public class PrimaryController {
 
-    private enum level {
-        Easy,
-        Medium,
-        Hard
-    }
+    private String level;
     @FXML
     private ComboBox comboBoxSystemDifficult;
     private PopOutWindow popOutWindow = new PopOutWindow();
 
     @FXML
-    private void switchToBoard() throws IOException {
-        App.setRoot("board");
-    }
-    @FXML
     public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
         if (!(level == null)) {
-            App.setRoot("board");
+            App.setRoot("secondary");
         }
     }
     @FXML
     public void onActionButtonConfirmLevel(ActionEvent actionEvent) {
         try {
-
-            level = level.Easy;
+            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
         } catch (NullPointerException e) {
             popOutWindow.messageBox("Warning",
                     "Level of difficulty has not been chosen", Alert.AlertType.WARNING);
