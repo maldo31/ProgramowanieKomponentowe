@@ -8,7 +8,11 @@ import javafx.scene.control.ComboBox;
 
 public class PrimaryController {
 
-    private static String level;
+    private enum level {
+        Easy,
+        Medium,
+        Hard
+    }
     @FXML
     private ComboBox comboBoxSystemDifficult;
     private PopOutWindow popOutWindow = new PopOutWindow();
@@ -26,7 +30,8 @@ public class PrimaryController {
     @FXML
     public void onActionButtonConfirmLevel(ActionEvent actionEvent) {
         try {
-            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
+
+            level = level.Easy;
         } catch (NullPointerException e) {
             popOutWindow.messageBox("Warning",
                     "Level of difficulty has not been chosen", Alert.AlertType.WARNING);
