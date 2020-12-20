@@ -90,12 +90,11 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
         }
     }
 
-    /*
     @Override
     protected Object clone() throws CloneNotSupportedException {
         SudokuField sudokuField = new SudokuField();
-        SudokuField.value = this.value;
+        sudokuField.value = this.value;
         return sudokuField;
     }
-    */
+
 }
