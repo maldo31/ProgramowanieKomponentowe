@@ -8,15 +8,22 @@ import javafx.scene.control.ComboBox;
 
 public class PrimaryController {
 
-    private String level;
+    private static String level;
     @FXML
     private ComboBox comboBoxSystemDifficult;
     private PopOutWindow popOutWindow = new PopOutWindow();
+    public static String getLevel() {
+        return level;
+    }
 
     @FXML
     public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
-        if (!(level == null)) {
-            App.setRoot("secondary");
+        if (!(level == null )) {
+           SecondaryController secondaryController = new SecondaryController();
+           secondaryController.showStage();
+        } else {
+            popOutWindow.messageBox("Warning",
+                    "Check if language and level has not been chosen", Alert.AlertType.WARNING);
         }
     }
     @FXML

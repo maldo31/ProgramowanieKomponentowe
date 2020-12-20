@@ -180,7 +180,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
         return new SudokuBox(box);
     }
 
-    boolean checkBoard() {
+    public boolean checkBoard() {
         for (int index = 0;index < size;index++) {
 
             if (!getRow(index).verify()) {
