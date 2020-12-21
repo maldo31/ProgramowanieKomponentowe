@@ -4,14 +4,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class FieldCoordinates {
+public class CellXY {
 
-    /*------------------------ FIELDS REGION ------------------------*/
     private int axisX;
     private int axisY;
 
-    /*------------------------ METHODS REGION ------------------------*/
-    public FieldCoordinates(int axisX, int axisY) {
+    public CellXY(int axisX, int axisY) {
         this.axisX = axisX;
         this.axisY = axisY;
     }
@@ -42,7 +40,7 @@ public class FieldCoordinates {
             return false;
         }
 
-        FieldCoordinates that = (FieldCoordinates) o;
+        CellXY that = (CellXY) o;
 
         return new EqualsBuilder()
                 .append(axisX, that.axisX)

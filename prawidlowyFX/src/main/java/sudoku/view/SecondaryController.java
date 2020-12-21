@@ -23,7 +23,7 @@ public class SecondaryController implements Initializable {
     private PopOutWindow popOutWindow = new PopOutWindow();
     private SudokuBoard sudokuBoard = new SudokuBoard();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
-    private DifficultyLevel difficultyLevel = new DifficultyLevel();
+    private Level difficultyLevel = new Level();
     public SecondaryController() {
 
         thisStage = new Stage();

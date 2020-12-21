@@ -22,8 +22,8 @@ public class PrimaryController {
            SecondaryController secondaryController = new SecondaryController();
            secondaryController.showStage();
         } else {
-            popOutWindow.messageBox("Błąd",
-                    "Nie wybrano poziomiu", Alert.AlertType.WARNING);
+            popOutWindow.messageBox("Error",
+                    "You must choose a level", Alert.AlertType.WARNING);
         }
     }
     @FXML
@@ -31,8 +31,8 @@ public class PrimaryController {
         try {
             this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
         } catch (NullPointerException e) {
-            popOutWindow.messageBox("Błąd",
-                    "Nie wybrano poziomu", Alert.AlertType.WARNING);
+            popOutWindow.messageBox("Error",
+                    "You must choose a level", Alert.AlertType.WARNING);
         }
     }
 }

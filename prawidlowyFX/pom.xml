@@ -50,6 +50,8 @@
                     <mainClass>sudoku.view.App</mainClass>
                 </configuration>
             </plugin>
+
+
         </plugins>
     </build>
 </project>

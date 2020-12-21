@@ -6,14 +6,14 @@ import java.util.Random;
 import java.util.Set;
 import sudoku.model.*;
 
-public class DifficultyLevel {
+public class Level {
 /// liczba usuniętych pól w zależności od wybranego poziomu
    public int easy = 10;
    public int medium = 30;
    public int hard = 60;
 
    private Random rand = new Random();
-   private Set<FieldCoordinates> randomPositions = new HashSet<>();
+   private Set<CellXY> randomPositions = new HashSet<>();
 
    private void fillRandomPositionsList(int capacity) {
         for (int i = 0; i < capacity; i++) {
@@ -22,7 +22,7 @@ public class DifficultyLevel {
             while (!isElementAdded) {
                 int axisX = rand.nextInt(9);
                 int axisY = rand.nextInt(9);
-                isElementAdded = randomPositions.add(new FieldCoordinates(axisX, axisY));
+                isElementAdded = randomPositions.add(new CellXY(axisX, axisY));
             }
         }
     }
@@ -45,7 +45,7 @@ public class DifficultyLevel {
             }
         }
 
-        for (FieldCoordinates it : randomPositions) {
+        for (CellXY it : randomPositions) {
             sudokuBoard.set(it.getAxisX(), it.getAxisY(), 0);
         }
 
