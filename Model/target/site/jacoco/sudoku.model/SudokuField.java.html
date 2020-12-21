@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SudokuField implements Serializable {
+public class SudokuField implements Serializable, Cloneable, Comparable&lt;SudokuField&gt; {
 
     private int value;
 <span class="fc" id="L14">    private  PropertyChangeSupport changes = new PropertyChangeSupport(this);</span>
@@ -79,5 +79,23 @@ public class SudokuField implements Serializable {
                     + &quot; a jego wartość to=&quot; + value + &quot;\n&quot;);
         }
 <span class="fc" id="L81">    }</span>
+
+    public int compareTo(SudokuField o) {
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        if (this.getFieldValue() == o.getFieldValue()) {</span>
+<span class="nc" id="L85">            return 0;</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">        } else if (this.getFieldValue() &gt; o.getFieldValue()) {</span>
+<span class="nc" id="L87">            return 1;</span>
+        } else {
+<span class="nc" id="L89">            return -1;</span>
+        }
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+<span class="fc" id="L95">        SudokuField sudokuField = new SudokuField();</span>
+<span class="fc" id="L96">        sudokuField.value = this.value;</span>
+<span class="fc" id="L97">        return sudokuField;</span>
+    }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

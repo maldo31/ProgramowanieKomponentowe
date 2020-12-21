@@ -8,9 +8,9 @@ import sudoku.model.*;
 
 public class DifficultyLevel {
 /// liczba usuniętych pól w zależności od wybranego poziomu
-   public static int easy = 10;
-   public static int medium = 30;
-   public static int hard = 60;
+   public int easy = 10;
+   public int medium = 30;
+   public int hard = 60;
 
    private Random rand = new Random();
    private Set<FieldCoordinates> randomPositions = new HashSet<>();
@@ -33,12 +33,15 @@ public class DifficultyLevel {
 
             case "Easy": {
                 fillRandomPositionsList(easy);
+                break;
             }
             case "Medium": {
                 fillRandomPositionsList(medium);
+                break;
             }
             case "Hard": {
                 fillRandomPositionsList(hard);
+                break;
             }
         }
 

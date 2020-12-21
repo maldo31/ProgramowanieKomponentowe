@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
     }
 */
 
-public class SudokuBoard implements PropertyChangeListener, Serializable {
+public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
 <span class="fc" id="L24">    public final int size = 9;</span>
     private SudokuSolver solver;
@@ -180,7 +180,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable {
 <span class="fc" id="L180">        return new SudokuBox(box);</span>
     }
 
-    boolean checkBoard() {
+    public boolean checkBoard() {
 <span class="fc bfc" id="L184" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
 
 <span class="fc bfc" id="L186" title="All 2 branches covered.">            if (!getRow(index).verify()) {</span>
@@ -222,6 +222,18 @@ public class SudokuBoard implements PropertyChangeListener, Serializable {
 
 
 <span class="fc" id="L224">        }</span>
+
+    @Override
+    protected Object clone() {
+<span class="fc" id="L228">        SudokuBoard sudokuBoard = new SudokuBoard();</span>
+<span class="fc bfc" id="L229" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L230" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L231">                sudokuBoard.set(i, j, get(i, j));</span>
+            }
+        }
+
+<span class="fc" id="L235">        return sudokuBoard;</span>
+    }
 
 }
 
