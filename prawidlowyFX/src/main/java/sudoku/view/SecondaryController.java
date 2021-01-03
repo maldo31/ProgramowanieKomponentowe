@@ -31,16 +31,10 @@ public class SecondaryController implements Initializable {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
-//            Locale.setDefault(new Locale("pl_PL"));
-
             loader.setController(this);
-
-//            ResourceBundle bundle = ResourceBundle.getBundle("bundles.langauge");
-//            loader.setResources(bundle);
 
             thisStage.setScene(new Scene(loader.load()));
             thisStage.setTitle("Plansza Sudoku");
-//            thisStage.setTitle(bundle.getString("application.title"));
 
         } catch (IOException e) {
             e.printStackTrace();
