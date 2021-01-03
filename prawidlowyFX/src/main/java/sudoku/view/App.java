@@ -16,11 +16,14 @@ import java.util.ResourceBundle;
 public class App extends Application {
 
     private static Scene scene;
+    private static String language = "pl_PL";
 
     @Override
     public void start(Stage stage) throws IOException {
+        Locale.setDefault(new Locale(language));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setTitle("Sudoku");
+        stage.setTitle(bundle.getString("application_title"));
         stage.setScene(scene);
         stage.show();
     }
@@ -30,7 +33,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        Locale.setDefault(new Locale("pl_PL"));
+        Locale.setDefault(new Locale(language));
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         fxmlLoader.setResources(bundle);
