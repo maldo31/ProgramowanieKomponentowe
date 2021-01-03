@@ -1,22 +1,28 @@
 package sudoku.model;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-import java.io.Serializable;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.io.Serializable;
+
 public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
 
-    private int value;
+    public IntegerProperty value = new SimpleIntegerProperty();
+
     private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
+    public IntegerProperty getValueProperty() {return value; }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)
-                .append("value", value)
+                .append("value", value.getValue())
                 .toString();
     }
 
@@ -48,7 +54,7 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
     }
 
     public SudokuField(int value) {
-        this.value = value;
+        this.value.setValue(value);
     }
 
     public SudokuField(PropertyChangeListener listener) {
@@ -64,15 +70,15 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
     }
 
     public int getFieldValue() {
-        return this.value;
+        return value.get();
     }
 
 
 
     public void setFieldValue(int value) {
         if (value >= -1 && value < 10) {
-            int oldValue = this.value;
-            this.value = value;
+            int oldValue = this.value.getValue();
+            this.value.setValue(value);
             changes.firePropertyChange("value",oldValue,value);
         } else {
             System.out.print("Błąd, value musi być w zakresie <-1;9>,"

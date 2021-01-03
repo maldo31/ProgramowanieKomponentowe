@@ -1,1 +1,13 @@
+sudoku\model\FileSudokuBoardDao.class
+sudoku\model\SudokuBoard.class
+sudoku\model\Series.class
+sudoku\model\BacktrackingSudokuSolver.class
+sudoku\model\SudokuRow.class
+sudoku\model\Dao.class
+sudoku\model\SudokuColumn.class
+sudoku\model\SudokuBoardDaoFactory.class
 module-info.class
+sudoku\model\StreamSudokuBoardFactory.class
+sudoku\model\SudokuBox.class
+sudoku\model\SudokuField.class
+sudoku\model\SudokuSolver.class

@@ -22,6 +22,7 @@ public class Level {
             while (!isElementAdded) {
                 int axisX = rand.nextInt(9);
                 int axisY = rand.nextInt(9);
+                /// Hashshet pozwala pominąc sytuacje gdy usuniemy dwa razy to samo pole
                 isElementAdded = randomPositions.add(new CellXY(axisX, axisY));
             }
         }
