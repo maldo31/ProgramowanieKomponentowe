@@ -17,8 +17,8 @@
             <Font name="System Italic" size="36.0" />
          </font>
       </Text>
-      <Label text="Difficulty Level" />
-      <ComboBox fx:id="comboBoxSystemDifficult" layoutX="250.0" layoutY="60.0" prefWidth="160.0" promptText="Choose Level">
+      <Label text="%difficulty_choice" />
+      <ComboBox fx:id="comboBoxSystemDifficult" layoutX="250.0" layoutY="60.0" prefHeight="25.0" prefWidth="237.0" promptText="%difficulty_bar_choose">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="Easy" />
@@ -27,12 +27,12 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <Button fx:id="buttonConfirmLevel" layoutX="262.0" layoutY="199.0" mnemonicParsing="false" onAction="#onActionButtonConfirmLevel" text="Confirm level">
+      <Button fx:id="buttonConfirmLevel" layoutX="262.0" layoutY="199.0" mnemonicParsing="false" onAction="#onActionButtonConfirmLevel" text="%difficulty_confirm">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="buttonStartGame" layoutX="464.0" layoutY="72.0" mnemonicParsing="false" onAction="#onActionButtonStartGame" prefHeight="117.0" prefWidth="136.0" text="Start">
+      <Button fx:id="buttonStartGame" layoutX="464.0" layoutY="72.0" mnemonicParsing="false" onAction="#onActionButtonStartGame" prefHeight="117.0" prefWidth="136.0" text="%start_prompt">
          <font>
             <Font size="22.0" />
          </font>

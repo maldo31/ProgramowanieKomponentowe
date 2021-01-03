@@ -30,12 +30,11 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-//        Locale.setDefault(new Locale("pl_PL"));
+        Locale.setDefault(new Locale("pl_PL"));
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+        fxmlLoader.setResources(bundle);
         return fxmlLoader.load();
-//        ResourceBundle bundle = ResourceBundle.getBundle(".languages");
-//        fxmlLoader.setResources(bundle);
-
     }
 
     public static void main(String[] args) {
