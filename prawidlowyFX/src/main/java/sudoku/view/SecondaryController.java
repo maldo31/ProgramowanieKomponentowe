@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import sudoku.model.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class SecondaryController implements Initializable {
@@ -30,9 +31,16 @@ public class SecondaryController implements Initializable {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
+//            Locale.setDefault(new Locale("pl_PL"));
+
             loader.setController(this);
+
+//            ResourceBundle bundle = ResourceBundle.getBundle("bundles.langauge");
+//            loader.setResources(bundle);
+
             thisStage.setScene(new Scene(loader.load()));
             thisStage.setTitle("Plansza Sudoku");
+//            thisStage.setTitle(bundle.getString("application.title"));
 
         } catch (IOException e) {
             e.printStackTrace();
