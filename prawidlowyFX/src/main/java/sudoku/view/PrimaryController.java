@@ -1,5 +1,7 @@
 package sudoku.view;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,27 +14,34 @@ public class PrimaryController {
     @FXML
     private ComboBox comboBoxSystemDifficult;
     private PopOutWindow popOutWindow = new PopOutWindow();
+    private static String language = App.getLanguage();
+
     public static String getLevel() {
         return level;
     }
 
     @FXML
     public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
-        if (!(level == null )) {
+        Locale.setDefault(new Locale(language));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+        if (!(level == null)) {
            SecondaryController secondaryController = new SecondaryController();
            secondaryController.showStage();
         } else {
-            popOutWindow.messageBox("Error",
-                    "You must choose a level", Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("error_title"),
+                    bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
         }
     }
+
     @FXML
     public void onActionButtonConfirmLevel(ActionEvent actionEvent) {
+        Locale.setDefault(new Locale(language));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         try {
             this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
         } catch (NullPointerException e) {
-            popOutWindow.messageBox("Error",
-                    "You must choose a level", Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("error_title"),
+                    bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
         }
     }
 }

@@ -25,16 +25,23 @@ public class SecondaryController implements Initializable {
     private SudokuBoard sudokuBoard = new SudokuBoard();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
     private Level difficultyLevel = new Level();
+
+    private static String language = App.getLanguage();
+
     public SecondaryController() {
 
         thisStage = new Stage();
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
+            Locale.setDefault(new Locale(language));
+            ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+            loader.setResources(bundle);
             loader.setController(this);
 
+
             thisStage.setScene(new Scene(loader.load()));
-            thisStage.setTitle("Plansza Sudoku");
+            thisStage.setTitle(bundle.getString("application_title"));
 
         } catch (IOException e) {
             e.printStackTrace();

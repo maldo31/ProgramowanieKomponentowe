@@ -18,25 +18,21 @@ import java.util.ResourceBundle;
 public class App extends Application {
 
     private static Scene scene;
-    public static String language = "pl_PL";
-//    ComboBox<String> languageComboBox;
+    private static String language = "es_ES";
+
+    public static String getLanguage() {
+        return language;
+    }
 
     @Override
     public void start(Stage stage) throws IOException {
-
-//        languageComboBox = new ComboBox<>();
-//        languageComboBox.getItems().addAll(
-//            "Polish",
-//            "English",
-//            "Spanish"
-//        );
 
         Locale.setDefault(new Locale(language));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
 
 
         scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setTitle(bundle.getString("application_title"));
+        stage.setTitle(bundle.getString("application_board_title"));
         stage.setScene(scene);
         stage.show();
     }
