@@ -111,10 +111,10 @@ public class SecondaryController implements Initializable {
     @FXML
     public void onActionButtonSaveGame(ActionEvent actionEvent)  {
         fileChooser = new FileChooser();
-        file = fileChooser.showSaveDialog(thisStage.getOwner());
+        file = fileChooser.showSaveDialog(thisStage);
         SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
         Dao<SudokuBoard> sudokuBoardDaoFile;
-        sudokuBoardDaoFile = factory.getFileDao("test");
+        sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
         sudokuBoardDaoFile.write(sudokuBoard);
 
     }

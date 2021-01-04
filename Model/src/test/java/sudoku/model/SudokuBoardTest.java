@@ -161,12 +161,12 @@ public class SudokuBoardTest {
         System.out.println(sudokuBoard.toString());
     }
 
-    /*@Test
+    @Test
     void testEqualsDiffrentInstance() {
         SudokuBoard sudoku2 = new SudokuBoard();
         assertTrue(sudokuBoard.equals(sudoku2));
     }
-    */
+
     @Test
     void testEqualsWrongObject() {
         SudokuField field = new SudokuField();
@@ -180,7 +180,7 @@ public class SudokuBoardTest {
     void testEqualsNull() {
         assertFalse(sudokuBoard.equals(null));
     }
-    /*
+
     @Test
     public void cloneTest() throws CloneNotSupportedException {
         BacktrackingSudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
@@ -190,5 +190,5 @@ public class SudokuBoardTest {
         assertTrue (sudokuBoard.equals(testSudokuBoard));
     }
 
-     */
+
 }

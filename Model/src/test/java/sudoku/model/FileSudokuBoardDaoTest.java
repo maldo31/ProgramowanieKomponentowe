@@ -2,6 +2,8 @@ package sudoku.model;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class FileSudokuBoardDaoTest {
 
     private SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
@@ -9,7 +11,7 @@ class FileSudokuBoardDaoTest {
 
     private Dao<SudokuBoard> sudokuBoardDaoFile;
     private SudokuBoard testSudokuBoard = new SudokuBoard();
-/*
+
     @Test
     public void writeReadTest(){
         sudokuBoard.solveGame();
@@ -23,7 +25,7 @@ class FileSudokuBoardDaoTest {
         assertTrue(sudokuBoard.equals(testSudokuBoard));
 
     }
-*/
+
     @Test
     public void finalizeTest(){
         sudokuBoardDaoFile = factory.getFileDao("test");
