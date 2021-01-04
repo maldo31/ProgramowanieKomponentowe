@@ -44,4 +44,15 @@ public class PrimaryController {
                     bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
         }
     }
+
+    public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
+        Locale.setDefault(new Locale(language));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+        try {
+            //
+        } catch (NullPointerException e) {
+            popOutWindow.messageBox(bundle.getString("error_title"),
+                    bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
+        }
+    }
 }

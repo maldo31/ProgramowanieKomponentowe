@@ -38,14 +38,8 @@
          </font>
       </Button>
       <ComboBox fx:id="comboBoxLanguageSetting" prefWidth="150.0" promptText="%language_bar_choose">
-         <items>
-            <FXCollections fx:factory="observableArrayList">
-               <String fx:value="%start_prompt" />
-               <String fx:value="English" />
-               <String fx:value="Spanish" />
-            </FXCollections>
-         </items>
       </ComboBox>
+      <Button mnemonicParsing="false" text="%language_change" onAction="#onActionButtonChangeLanguage"/>
 
    </children>
    <padding>
