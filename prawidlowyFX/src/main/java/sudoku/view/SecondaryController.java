@@ -34,15 +34,15 @@ public class SecondaryController implements Initializable {
     private SudokuBoard sudokuBoard = new SudokuBoard();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
     private Level difficultyLevel = new Level();
-<<<<<<< HEAD
+
 
     private static String language = App.getLanguage();
 
-=======
+
     public TextArea textArea;
     private FileChooser fileChooser;
     private File file;
->>>>>>> 38889bd9b350070a016d835404084e95301c2326
+
     public SecondaryController() {
 
         thisStage = new Stage();

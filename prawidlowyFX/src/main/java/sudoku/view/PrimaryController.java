@@ -50,6 +50,7 @@ public class PrimaryController {
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         try {
             //
+
         } catch (NullPointerException e) {
             popOutWindow.messageBox(bundle.getString("error_title"),
                     bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
