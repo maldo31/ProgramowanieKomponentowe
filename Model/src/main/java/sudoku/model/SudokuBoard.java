@@ -27,7 +27,6 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     private SudokuSolver solver;
 
     private List<List<SudokuField>> board;
-
     public SudokuBoard() {
         this.solver = new BacktrackingSudokuSolver();
         board = Arrays.asList(new List[size]);
@@ -222,7 +221,9 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
 
             if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
                 System.out.println("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
+
             }
+
 
 
 
