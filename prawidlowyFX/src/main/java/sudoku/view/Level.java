@@ -1,14 +1,15 @@
 package sudoku.view;
 
 
+import sudoku.model.SudokuBoard;
+
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-import sudoku.model.*;
 
 public class Level {
 /// liczba usuniętych pól w zależności od wybranego poziomu
-   public int easy = 10;
+   public int easy = 1;
    public int medium = 30;
    public int hard = 60;
 
@@ -22,6 +23,7 @@ public class Level {
             while (!isElementAdded) {
                 int axisX = rand.nextInt(9);
                 int axisY = rand.nextInt(9);
+                /// Hashshet pozwala pominąc sytuacje gdy usuniemy dwa razy to samo pole
                 isElementAdded = randomPositions.add(new CellXY(axisX, axisY));
             }
         }

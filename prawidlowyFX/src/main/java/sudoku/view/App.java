@@ -38,6 +38,7 @@ public class App extends Application {
         stage.show();
     }
 
+<<<<<<< HEAD
     private void chooseLanguage(){
 
     }
@@ -45,6 +46,8 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
+=======
+>>>>>>> 38889bd9b350070a016d835404084e95301c2326
 
     private static Parent loadFXML(String fxml) throws IOException {
         Locale.setDefault(new Locale(language));
@@ -57,5 +60,6 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 
 }

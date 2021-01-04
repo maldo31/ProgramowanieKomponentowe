@@ -1,15 +1,17 @@
 package sudoku.model;
 
+import javafx.beans.property.IntegerProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
@@ -25,7 +27,6 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     private SudokuSolver solver;
 
     private List<List<SudokuField>> board;
-
     public SudokuBoard() {
         this.solver = new BacktrackingSudokuSolver();
         board = Arrays.asList(new List[size]);
@@ -144,6 +145,9 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     public int get(int row, int column) {
         return board.get(row).get(column).getFieldValue();
     }
+    public IntegerProperty getProperty(int row, int column) {
+        return board.get(row).get(column).getValueProperty();
+    }
 
     public void set(int row, int column, int value) {
         this.board.get(row).get(column).setFieldValue(value);
@@ -217,7 +221,9 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
 
             if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
                 System.out.println("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
+
             }
+
 
 
 
