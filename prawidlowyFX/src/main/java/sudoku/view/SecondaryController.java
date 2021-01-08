@@ -1,6 +1,10 @@
 package sudoku.view;
 
-
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,13 +19,12 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.*;
+import sudoku.model.BacktrackingSudokuSolver;
+import sudoku.model.Dao;
+import sudoku.model.StreamSudokuBoardFactory;
+import sudoku.model.SudokuBoard;
+import sudoku.model.SudokuBoardDaoFactory;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class SecondaryController implements Initializable {
     private Stage thisStage;
@@ -62,6 +65,7 @@ public class SecondaryController implements Initializable {
             e.printStackTrace();
         }
     }
+
     private void fillGrid() {
         StringConverter<Number> converter = new NumberStringConverter();
         for (int i = 0; i < 9; i++) {
@@ -69,7 +73,8 @@ public class SecondaryController implements Initializable {
                 TextField textField = new TextField();
                 textField.setMinSize(50, 50);
                 textField.setFont(Font.font(18));
-                Bindings.bindBidirectional(textField.textProperty(), sudokuBoard.getProperty(i,j),converter);
+                Bindings.bindBidirectional(textField.textProperty(),
+                        sudokuBoard.getProperty(i,j),converter);
                 if (sudokuBoard.get(i, j) != 0) {
                     textField.setDisable(true);
                     textField.setText(String.valueOf(sudokuBoard.get(i, j)));
@@ -81,7 +86,7 @@ public class SecondaryController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         solver.solve(sudokuBoard);
         try {
             difficultyLevel.chooseLevel(sudokuBoard, PrimaryController.getLevel());
@@ -92,22 +97,22 @@ public class SecondaryController implements Initializable {
         textArea.appendText("Nieprawidłwy Układ");
 
     }
+
     public void showStage() {
         thisStage.showAndWait();
     }
 
     @FXML
     public void onActionButtonCheck(ActionEvent actionEvent) throws IOException {
-
-        if(sudokuBoard.checkBoard()==true) {
+        if (sudokuBoard.checkBoard() == true) {
             textArea.clear();
             textArea.appendText("Układ Prawidłowy");
-        }
-        else {
+        } else {
             textArea.clear();
             textArea.appendText("Układ Nieprawidłowy");
         }
     }
+
     @FXML
     public void onActionButtonSaveGame(ActionEvent actionEvent)  {
         fileChooser = new FileChooser();

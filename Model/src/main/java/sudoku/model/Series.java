@@ -62,7 +62,6 @@ public abstract class Series implements Cloneable {
             if (!copiedValues.contains(i + 1)) {
                 return false;
             }
-
         }
         return true;
     }

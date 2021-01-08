@@ -29,7 +29,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver, Serializable {
                                 board.set(row, col, UNASSIGNED);
                             }
                         }
-
                         value++;
                         if (value > 9) {
                             value = 1;

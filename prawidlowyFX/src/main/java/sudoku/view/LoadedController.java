@@ -1,6 +1,10 @@
 package sudoku.view;
 
-
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,13 +19,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import sudoku.model.BacktrackingSudokuSolver;
+import sudoku.model.Dao;
+import sudoku.model.StreamSudokuBoardFactory;
+import sudoku.model.SudokuBoard;
+import sudoku.model.SudokuBoardDaoFactory;
 
 public class LoadedController implements Initializable {
     private Stage thisStage;
@@ -46,7 +48,7 @@ public class LoadedController implements Initializable {
     public LoadedController(SudokuBoard sudokuBoard) {
 
         thisStage = new Stage();
-        this.sudokuBoard=sudokuBoard;
+        this.sudokuBoard = sudokuBoard;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
             Locale.setDefault(new Locale(language));
@@ -62,6 +64,7 @@ public class LoadedController implements Initializable {
             e.printStackTrace();
         }
     }
+
     private void fillGrid() {
         StringConverter<Number> converter = new NumberStringConverter();
         for (int i = 0; i < 9; i++) {
@@ -69,7 +72,8 @@ public class LoadedController implements Initializable {
                 TextField textField = new TextField();
                 textField.setMinSize(50, 50);
                 textField.setFont(Font.font(18));
-                Bindings.bindBidirectional(textField.textProperty(), sudokuBoard.getProperty(i,j),converter);
+                Bindings.bindBidirectional(textField.textProperty(),
+                        sudokuBoard.getProperty(i,j),converter);
                 if (sudokuBoard.get(i, j) != 0) {
                     textField.setDisable(true);
                     textField.setText(String.valueOf(sudokuBoard.get(i, j)));
@@ -81,27 +85,27 @@ public class LoadedController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         fillGrid();
         textArea.appendText("Sprawdz Uklad");
 
     }
+
     public void showStage() {
         thisStage.showAndWait();
     }
 
     @FXML
     public void onActionButtonCheck(ActionEvent actionEvent) throws IOException {
-
-        if(sudokuBoard.checkBoard()==true) {
+        if (sudokuBoard.checkBoard() == true) {
             textArea.clear();
             textArea.appendText("Układ Prawidłowy");
-        }
-        else {
+        } else {
             textArea.clear();
             textArea.appendText("Układ Nieprawidłowy");
         }
     }
+
     @FXML
     public void onActionButtonSaveGame(ActionEvent actionEvent)  {
         fileChooser = new FileChooser();
