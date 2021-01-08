@@ -16,13 +16,6 @@
       </Text>
       <Label text="%difficulty_choice" />
       <ComboBox fx:id="comboBoxSystemDifficult" layoutX="250.0" layoutY="60.0" prefHeight="25.0" prefWidth="237.0" promptText="%difficulty_bar_choose">
-         <items>
-            <FXCollections fx:factory="observableArrayList">
-               <String fx:value="Easy" />
-               <String fx:value="Medium" />
-               <String fx:value="Hard" />
-            </FXCollections>
-         </items>
       </ComboBox>
       <Button fx:id="buttonStartGame" layoutX="464.0" layoutY="72.0" mnemonicParsing="false" onAction="#onActionButtonStartGame" prefHeight="117.0" prefWidth="136.0" text="%start_prompt">
          <font>
@@ -33,7 +26,6 @@
       </ComboBox>
       <Button mnemonicParsing="false" onAction="#onActionButtonChangeLanguage" text="%language_change" />
       <Button mnemonicParsing="false" onAction="#onActionButtonLoad" text="Load" />
-
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

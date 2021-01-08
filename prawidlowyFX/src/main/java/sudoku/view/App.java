@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 /*
  * JavaFX App
  */
@@ -26,9 +25,8 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         Locale.setDefault(new Locale(language));
 
-
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(load_fxml("primary"), 640, 480);
         stage.setTitle(bundle.getString("application_board_title"));
         stage.setScene(scene);
         stage.show();
@@ -39,10 +37,10 @@ public class App extends Application {
     }
 
     static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        scene.setRoot(load_fxml(fxml));
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
+    private static Parent load_fxml(String fxml) throws IOException {
         Locale.setDefault(new Locale(language));
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");

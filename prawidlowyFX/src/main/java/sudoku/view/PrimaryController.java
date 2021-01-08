@@ -41,6 +41,11 @@ public class PrimaryController {
                 bundle.getString("language_English"),
                 bundle.getString("language_Spanish")
         );
+        comboBoxSystemDifficult.getItems().addAll(
+                bundle.getString("difficulty_easy"),
+                bundle.getString("difficulty_medium"),
+                bundle.getString("difficulty_hard")
+        );
     }
 
     @FXML
@@ -56,8 +61,6 @@ public class PrimaryController {
                     bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
         }
     }
-
-
 
     public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
         Locale.setDefault(new Locale(language));
