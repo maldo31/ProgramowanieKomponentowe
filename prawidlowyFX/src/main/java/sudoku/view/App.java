@@ -21,6 +21,10 @@ public class App extends Application {
         return language;
     }
 
+    public static void setLanguage(String language) {
+        App.language = language;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         Locale.setDefault(new Locale(language));
@@ -30,14 +34,6 @@ public class App extends Application {
         stage.setTitle(bundle.getString("application_board_title"));
         stage.setScene(scene);
         stage.show();
-    }
-
-    private void chooseLanguage(){
-
-    }
-
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(load_fxml(fxml));
     }
 
     private static Parent load_fxml(String fxml) throws IOException {

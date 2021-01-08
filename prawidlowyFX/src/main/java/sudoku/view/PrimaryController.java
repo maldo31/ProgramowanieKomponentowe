@@ -34,6 +34,22 @@ public class PrimaryController {
         return level;
     }
 
+    private void changeLanguage(String lang) {
+        switch (lang) {
+            case "Polish": case "Polski": case "Polaco":
+                App.setLanguage("pl_PL");
+                break;
+            case "English": case "Angielski": case "Inglés":
+                App.setLanguage("en_EN");
+                break;
+            case "Spanish": case "Hiszpański": case "Español":
+                App.setLanguage("es_ES");
+                break;
+            default:
+                break;
+        }
+    }
+
     @FXML
     private void initialize() throws IOException {
         comboBoxLanguageSetting.getItems().addAll(
@@ -53,21 +69,23 @@ public class PrimaryController {
         Locale.setDefault(new Locale(language));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         try {
-            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
+           this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
            SecondaryController secondaryController = new SecondaryController();
            secondaryController.showStage();
         } catch (NullPointerException e) {
-            popOutWindow.messageBox(bundle.getString("error_title"),
-                    bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
+          popOutWindow.messageBox(bundle.getString("error_title"),
+                bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
         }
     }
 
+    @FXML
     public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
         Locale.setDefault(new Locale(language));
-
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         try {
-            //
-
+            String lang =
+                    comboBoxLanguageSetting.getSelectionModel().getSelectedItem().toString();
+                    changeLanguage(lang);
         } catch (NullPointerException e) {
             popOutWindow.messageBox(bundle.getString("error_title"),
                     bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
