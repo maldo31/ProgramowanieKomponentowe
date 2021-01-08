@@ -23,15 +23,25 @@ public class PrimaryController {
     private static String level;
     @FXML
     private ComboBox comboBoxSystemDifficult;
+    @FXML
+    private ComboBox comboBoxLanguageSetting;
     private FileChooser fileChooser;
     private File file;
     private PopOutWindow popOutWindow = new PopOutWindow();
+    private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
     private static String language = App.getLanguage();
 
     public static String getLevel() {
         return level;
     }
-
+    @FXML
+    private void initialize() throws IOException {
+        comboBoxLanguageSetting.getItems().addAll(
+                bundle.getString("language_Polish"),
+                bundle.getString("language_English"),
+                bundle.getString("language_Spanish")
+        );
+    }
     @FXML
     public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
         Locale.setDefault(new Locale(language));
@@ -50,7 +60,7 @@ public class PrimaryController {
 
     public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
         Locale.setDefault(new Locale(language));
-        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+
         try {
             //
 
