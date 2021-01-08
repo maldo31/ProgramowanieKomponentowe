@@ -24,11 +24,6 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <Button fx:id="buttonConfirmLevel" layoutX="262.0" layoutY="199.0" mnemonicParsing="false" onAction="#onActionButtonConfirmLevel" text="%difficulty_confirm">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
       <Button fx:id="buttonStartGame" layoutX="464.0" layoutY="72.0" mnemonicParsing="false" onAction="#onActionButtonStartGame" prefHeight="117.0" prefWidth="136.0" text="%start_prompt">
          <font>
             <Font size="22.0" />
