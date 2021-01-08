@@ -1,8 +1,8 @@
+sudoku\view\PopOutWindow.class
+sudoku\view\SecondaryController.class
+sudoku\view\PrimaryController.class
 module-info.class
 sudoku\view\CellXY.class
 sudoku\view\EmptyBoardException.class
-sudoku\view\PopOutWindow.class
 sudoku\view\App.class
 sudoku\view\Level.class
-sudoku\view\SecondaryController.class
-sudoku\view\PrimaryController.class
