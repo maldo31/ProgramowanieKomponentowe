@@ -1,14 +1,13 @@
 package sudoku.view;
 
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 /*
  * JavaFX App
@@ -44,7 +43,7 @@ public class App extends Application {
         scene = new Scene(load_fxml("primary"), 640, 480);
         stage.setTitle(bundle.getString("application_board_title"));
         stage.setScene(scene);
-        this.stage=stage;
+        this.stage = stage;
         stage.show();
     }
 

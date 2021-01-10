@@ -1,5 +1,10 @@
 package sudoku.view;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,20 +19,16 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.ResourceBundle;
-
+import sudoku.model.BacktrackingSudokuSolver;
+import sudoku.model.Dao;
+import sudoku.model.StreamSudokuBoardFactory;
+import sudoku.model.SudokuBoard;
+import sudoku.model.SudokuBoardDaoFactory;
 
 public class SecondaryController implements Initializable {
     private Stage thisStage;
 
     @FXML
-
     private GridPane sudokuBoardGrid;
 
     private PopOutWindow popOutWindow = new PopOutWindow();
@@ -35,9 +36,8 @@ public class SecondaryController implements Initializable {
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
     private Level difficultyLevel = new Level();
 
-
+    private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
     private static String language;
-
 
     public TextArea textArea;
     private FileChooser fileChooser;
@@ -48,7 +48,7 @@ public class SecondaryController implements Initializable {
         thisStage = new Stage();
 
         try {
-            language=App.getLanguage();
+            language = App.getLanguage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
             Locale.setDefault(new Locale(language));
             ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
@@ -92,7 +92,7 @@ public class SecondaryController implements Initializable {
             e.printStackTrace();
         }
         fillGrid();
-        textArea.appendText("Nieprawidłwy Układ");
+        textArea.appendText(bundle.getString("arrangement_false"));
 
     }
 
@@ -102,12 +102,13 @@ public class SecondaryController implements Initializable {
 
     @FXML
     public void onActionButtonCheck(ActionEvent actionEvent) throws IOException {
+
         if (sudokuBoard.checkBoard() == true) {
             textArea.clear();
-            textArea.appendText("Układ Prawidłowy");
+            textArea.appendText(bundle.getString("arrangement_true"));
         } else {
             textArea.clear();
-            textArea.appendText("Układ Nieprawidłowy");
+            textArea.appendText(bundle.getString("arrangement_false"));
         }
     }
 

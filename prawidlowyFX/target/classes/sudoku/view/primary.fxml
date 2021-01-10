@@ -23,7 +23,7 @@
       <ComboBox fx:id="comboBoxLanguageSetting" prefWidth="150.0" promptText="%language_bar_choose">
       </ComboBox>
       <Button mnemonicParsing="false" onAction="#onActionButtonChangeLanguage" text="%language_change" />
-      <Button mnemonicParsing="false" onAction="#onActionButtonLoad" text="Load" />
+      <Button mnemonicParsing="false" onAction="#onActionButtonLoad" text="%application_load" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
