@@ -6,7 +6,7 @@ import java.util.Set;
 import sudoku.model.SudokuBoard;
 
 public class Level { // liczba usuniętych pól w zależności od wybranego poziomu
-    
+
    public ChoosedLevel choosedLevel;
 
    private Random rand = new Random();
