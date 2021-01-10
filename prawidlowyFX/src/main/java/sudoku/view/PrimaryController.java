@@ -1,9 +1,5 @@
 package sudoku.view;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -14,6 +10,11 @@ import sudoku.model.Dao;
 import sudoku.model.StreamSudokuBoardFactory;
 import sudoku.model.SudokuBoard;
 import sudoku.model.SudokuBoardDaoFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class PrimaryController {
 
@@ -86,7 +87,10 @@ public class PrimaryController {
             String lang =
                     comboBoxLanguageSetting.getSelectionModel().getSelectedItem().toString();
                     changeLanguage(lang);
+
+
         } catch (NullPointerException e) {
+            e.printStackTrace();
             popOutWindow.messageBox(bundle.getString("error_title"),
                     bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
         }
