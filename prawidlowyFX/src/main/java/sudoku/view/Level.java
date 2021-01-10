@@ -1,14 +1,15 @@
 package sudoku.view;
 
+import sudoku.model.SudokuBoard;
+
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-import sudoku.model.SudokuBoard;
 
 public class Level { // liczba usuniętych pól w zależności od wybranego poziomu
-   public int easy = 43;
-   public int medium = 51;
-   public int hard = 58;
+
+
+   public ChoosedLevel choosedLevel;
 
    private Random rand = new Random();
    private Set<CellXY> randomPositions = new HashSet<>();
@@ -30,15 +31,18 @@ public class Level { // liczba usuniętych pól w zależności od wybranego pozi
             throws EmptyBoardException {
         switch (level) {
             case "Easy": case "Łatwy": case "Fácil":  {
-                fillRandomPositionsList(easy);
+                ChoosedLevel choosedLevel = ChoosedLevel.EASY;
+                fillRandomPositionsList(choosedLevel.fieldsToRemove);
                 break;
             }
             case "Medium": case "Średni": case "Medio": {
-                fillRandomPositionsList(medium);
+                ChoosedLevel choosedLevel = ChoosedLevel.MEDIUM;
+                fillRandomPositionsList(choosedLevel.fieldsToRemove);
                 break;
             }
             case "Hard": case "Trudny": case "Difícil": {
-                fillRandomPositionsList(hard);
+                ChoosedLevel choosedLevel = ChoosedLevel.HARD;
+                fillRandomPositionsList(choosedLevel.fieldsToRemove);
                 break;
             }
             default:
