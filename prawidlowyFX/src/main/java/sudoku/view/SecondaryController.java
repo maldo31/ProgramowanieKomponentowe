@@ -1,10 +1,5 @@
 package sudoku.view;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,11 +14,13 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.BacktrackingSudokuSolver;
-import sudoku.model.Dao;
-import sudoku.model.StreamSudokuBoardFactory;
-import sudoku.model.SudokuBoard;
-import sudoku.model.SudokuBoardDaoFactory;
+import sudoku.model.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 
 public class SecondaryController implements Initializable {
@@ -39,7 +36,7 @@ public class SecondaryController implements Initializable {
     private Level difficultyLevel = new Level();
 
 
-    private static String language = App.getLanguage();
+    private static String language;
 
 
     public TextArea textArea;
@@ -51,6 +48,7 @@ public class SecondaryController implements Initializable {
         thisStage = new Stage();
 
         try {
+            language=App.getLanguage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
             Locale.setDefault(new Locale(language));
             ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");

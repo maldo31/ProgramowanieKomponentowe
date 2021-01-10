@@ -18,6 +18,7 @@ public class App extends Application {
     private static Scene scene;
     private static String language = "pl_PL";
 
+
     public static String getLanguage() {
         return language;
     }
@@ -29,6 +30,8 @@ public class App extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+        stage.setTitle(bundle.getString("application_board_title"));
         stage.setScene(scene);
         stage.show();
     }

@@ -67,7 +67,7 @@ public class PrimaryController {
 
     @FXML
     public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
-        Locale.setDefault(new Locale(language));
+
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         try {
            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
@@ -81,7 +81,7 @@ public class PrimaryController {
 
     @FXML
     public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
-        Locale.setDefault(new Locale(language));
+
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         try {
             String lang =
