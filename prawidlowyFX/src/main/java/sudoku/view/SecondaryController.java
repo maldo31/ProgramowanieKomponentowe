@@ -33,7 +33,6 @@ public class SecondaryController implements Initializable {
     private PopOutWindow popOutWindow = new PopOutWindow();
     private SudokuBoard sudokuBoard = new SudokuBoard();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
-    private Level difficultyLevel = new Level();
 
     private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
     private static String language;
@@ -41,6 +40,7 @@ public class SecondaryController implements Initializable {
     public TextArea textArea;
     private FileChooser fileChooser;
     private File file;
+    private ChoosedLevel choosedLevel;
 
     public SecondaryController() {
 
@@ -115,7 +115,23 @@ public class SecondaryController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         solver.solve(sudokuBoard);
         try {
-            difficultyLevel.chooseLevel(sudokuBoard, PrimaryController.getLevel());
+            switch (PrimaryController.getLevel()) {
+                case "Easy": case "Łatwy": case "Fácil":  {
+                    choosedLevel = ChoosedLevel.EASY;
+                    break;
+                }
+                case "Medium": case "Średni": case "Medio": {
+                    choosedLevel = ChoosedLevel.MEDIUM;
+                    break;
+                }
+                case "Hard": case "Trudny": case "Difícil": {
+                    choosedLevel = ChoosedLevel.HARD;
+                    break;
+                }
+                default:
+                    break;
+            }
+            choosedLevel.chooseLevel(sudokuBoard);
         } catch (EmptyBoardException e) {
             e.printStackTrace();
         }
