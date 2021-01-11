@@ -62,13 +62,12 @@ public abstract class Series implements Cloneable {
 <span class="fc bfc" id="L62" title="All 2 branches covered.">            if (!copiedValues.contains(i + 1)) {</span>
 <span class="fc" id="L63">                return false;</span>
             }
-
         }
-<span class="fc" id="L67">        return true;</span>
+<span class="fc" id="L66">        return true;</span>
     }
 
     public List&lt;SudokuField&gt; getSudokuFieldList() {
-<span class="nc" id="L71">        return Collections.unmodifiableList(cellSeries);</span>
+<span class="nc" id="L70">        return Collections.unmodifiableList(cellSeries);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

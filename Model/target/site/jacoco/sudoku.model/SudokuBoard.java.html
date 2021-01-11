@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ModelProject</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">SudokuBoard.java</span></div><h1>SudokuBoard.java</h1><pre class="source lang-java linenums">package sudoku.model;
 
-import javafx.beans.property.IntegerProperty;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javafx.beans.property.IntegerProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
@@ -23,10 +22,11 @@ import java.util.List;
 
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
-<span class="fc" id="L26">    public final int size = 9;</span>
+<span class="fc" id="L25">    public final int size = 9;</span>
     private SudokuSolver solver;
 
     private List&lt;List&lt;SudokuField&gt;&gt; board;
+
 <span class="fc" id="L30">    public SudokuBoard() {</span>
 <span class="fc" id="L31">        this.solver = new BacktrackingSudokuSolver();</span>
 <span class="fc" id="L32">        board = Arrays.asList(new List[size]);</span>
@@ -145,100 +145,96 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     public int get(int row, int column) {
 <span class="fc" id="L146">        return board.get(row).get(column).getFieldValue();</span>
     }
+
     public IntegerProperty getProperty(int row, int column) {
-<span class="nc" id="L149">        return board.get(row).get(column).getValueProperty();</span>
+<span class="nc" id="L150">        return board.get(row).get(column).getValueProperty();</span>
     }
 
     public void set(int row, int column, int value) {
-<span class="fc" id="L153">        this.board.get(row).get(column).setFieldValue(value);</span>
+<span class="fc" id="L154">        this.board.get(row).get(column).setFieldValue(value);</span>
 
-<span class="fc" id="L155">    }</span>
+<span class="fc" id="L156">    }</span>
 
     public SudokuRow getRow(int rowIndex) {
-<span class="fc" id="L158">        List&lt;SudokuField&gt; row = Arrays.asList(new SudokuField[size]);</span>
-<span class="fc bfc" id="L159" title="All 2 branches covered.">        for (int column = 0; column &lt; size; column++)  {</span>
-<span class="fc" id="L160">            row.set(column,this.board.get(rowIndex).get(column));</span>
+<span class="fc" id="L159">        List&lt;SudokuField&gt; row = Arrays.asList(new SudokuField[size]);</span>
+<span class="fc bfc" id="L160" title="All 2 branches covered.">        for (int column = 0; column &lt; size; column++)  {</span>
+<span class="fc" id="L161">            row.set(column,this.board.get(rowIndex).get(column));</span>
         }
-<span class="fc" id="L162">        return new SudokuRow(row);</span>
+<span class="fc" id="L163">        return new SudokuRow(row);</span>
     }
 
     public SudokuColumn getColumn(int columnIndex) {
-<span class="fc" id="L166">        List&lt;SudokuField&gt; column = Arrays.asList(new SudokuField[size]);</span>
-<span class="fc bfc" id="L167" title="All 2 branches covered.">        for (int row = 0; row &lt; size; row++) {</span>
-<span class="fc" id="L168">            column.set(row,this.board.get(row).get(columnIndex));</span>
+<span class="fc" id="L167">        List&lt;SudokuField&gt; column = Arrays.asList(new SudokuField[size]);</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        for (int row = 0; row &lt; size; row++) {</span>
+<span class="fc" id="L169">            column.set(row,this.board.get(row).get(columnIndex));</span>
         }
-<span class="fc" id="L170">        return new SudokuColumn(column);</span>
+<span class="fc" id="L171">        return new SudokuColumn(column);</span>
     }
 
     public SudokuBox getBox(int rowIndex, int columnIndex) {
-<span class="fc" id="L174">        List&lt;SudokuField&gt; box = Arrays.asList(new SudokuField[size]);</span>
-<span class="fc" id="L175">        int boxindex = 0;</span>
-<span class="fc" id="L176">        for (int row = ((int) rowIndex / 3) * 3;</span>
-<span class="fc bfc" id="L177" title="All 2 branches covered.">             row &lt; (((int) rowIndex / 3) * 3) + 3; row++) {</span>
-<span class="fc" id="L178">            for (int col = ((int) columnIndex / 3) * 3;</span>
-<span class="fc bfc" id="L179" title="All 2 branches covered.">                 col &lt; (((int) columnIndex / 3) * 3) + 3; col++) {</span>
-<span class="fc" id="L180">                box.set(boxindex,this.board.get(row).get(col));</span>
-<span class="fc" id="L181">                boxindex++;</span>
+<span class="fc" id="L175">        List&lt;SudokuField&gt; box = Arrays.asList(new SudokuField[size]);</span>
+<span class="fc" id="L176">        int boxindex = 0;</span>
+<span class="fc" id="L177">        for (int row = ((int) rowIndex / 3) * 3;</span>
+<span class="fc bfc" id="L178" title="All 2 branches covered.">             row &lt; (((int) rowIndex / 3) * 3) + 3; row++) {</span>
+<span class="fc" id="L179">            for (int col = ((int) columnIndex / 3) * 3;</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">                 col &lt; (((int) columnIndex / 3) * 3) + 3; col++) {</span>
+<span class="fc" id="L181">                box.set(boxindex,this.board.get(row).get(col));</span>
+<span class="fc" id="L182">                boxindex++;</span>
             }
         }
-<span class="fc" id="L184">        return new SudokuBox(box);</span>
+<span class="fc" id="L185">        return new SudokuBox(box);</span>
     }
 
     public boolean checkBoard() {
-<span class="fc bfc" id="L188" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">        for (int index = 0;index &lt; size;index++) {</span>
 
-<span class="fc bfc" id="L190" title="All 2 branches covered.">            if (!getRow(index).verify()) {</span>
-<span class="fc" id="L191">                printMessenge(index);</span>
-<span class="fc" id="L192">                return false;</span>
+<span class="fc bfc" id="L191" title="All 2 branches covered.">            if (!getRow(index).verify()) {</span>
+<span class="fc" id="L192">                printMessenge(index);</span>
+<span class="fc" id="L193">                return false;</span>
             }
 
-<span class="fc bfc" id="L195" title="All 2 branches covered.">            if (!getColumn(index).verify()) {</span>
-<span class="fc" id="L196">                printMessenge(index);</span>
-<span class="fc" id="L197">                return false;</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">            if (!getColumn(index).verify()) {</span>
+<span class="fc" id="L197">                printMessenge(index);</span>
+<span class="fc" id="L198">                return false;</span>
             }
 
-<span class="fc bfc" id="L200" title="All 2 branches covered.">            if (!getBox(((int) index / 3) * 3,(index % 3) * 3).verify()) {</span>
-<span class="fc" id="L201">                printMessenge(index);</span>
-<span class="fc" id="L202">                return false;</span>
+<span class="fc bfc" id="L201" title="All 2 branches covered.">            if (!getBox(((int) index / 3) * 3,(index % 3) * 3).verify()) {</span>
+<span class="fc" id="L202">                printMessenge(index);</span>
+<span class="fc" id="L203">                return false;</span>
             }
 
         }
-<span class="fc" id="L206">        return true;</span>
+<span class="fc" id="L207">        return true;</span>
     }
 
     void printMessenge(int index) {
-<span class="fc" id="L210">        System.out.println(&quot;Bład w kwadracie &quot; + index + &quot;\n&quot; + toString());</span>
-<span class="fc" id="L211">    }</span>
+<span class="fc" id="L211">        System.out.println(&quot;Bład w kwadracie &quot; + index + &quot;\n&quot; + toString());</span>
+<span class="fc" id="L212">    }</span>
 
     public boolean checkBoardTest() {
 
-<span class="fc" id="L215">        return checkBoard();</span>
+<span class="fc" id="L216">        return checkBoard();</span>
     }
 
 
         @Override
         public void propertyChange(PropertyChangeEvent evt) {
 
-<span class="pc bpc" id="L222" title="1 of 4 branches missed.">            if ((int)(evt.getOldValue()) != 0 &amp;&amp; !checkBoardTest()) {</span>
-<span class="fc" id="L223">                System.out.println(&quot;Wartość &quot; + evt.getNewValue() + &quot; wstawiona nieprawidłowo&quot;);</span>
+<span class="pc bpc" id="L223" title="1 of 4 branches missed.">            if ((int)(evt.getOldValue()) != 0 &amp;&amp; !checkBoardTest()) {</span>
+<span class="fc" id="L224">                System.out.println(&quot;Wartość &quot; + evt.getNewValue() + &quot; wstawiona nieprawidłowo&quot;);</span>
 
             }
-
-
-
-
-<span class="fc" id="L230">        }</span>
+<span class="fc" id="L227">        }</span>
 
     @Override
     protected Object clone() {
-<span class="fc" id="L234">        SudokuBoard sudokuBoard = new SudokuBoard();</span>
-<span class="fc bfc" id="L235" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
-<span class="fc bfc" id="L236" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
-<span class="fc" id="L237">                sudokuBoard.set(i, j, get(i, j));</span>
+<span class="fc" id="L231">        SudokuBoard sudokuBoard = new SudokuBoard();</span>
+<span class="fc bfc" id="L232" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L233" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L234">                sudokuBoard.set(i, j, get(i, j));</span>
             }
         }
-
-<span class="fc" id="L241">        return sudokuBoard;</span>
+<span class="fc" id="L237">        return sudokuBoard;</span>
     }
 
 }

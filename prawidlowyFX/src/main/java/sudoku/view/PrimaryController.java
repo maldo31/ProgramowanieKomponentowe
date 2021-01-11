@@ -1,9 +1,5 @@
 package sudoku.view;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -14,6 +10,11 @@ import sudoku.model.Dao;
 import sudoku.model.StreamSudokuBoardFactory;
 import sudoku.model.SudokuBoard;
 import sudoku.model.SudokuBoardDaoFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class PrimaryController {
 
@@ -37,12 +38,15 @@ public class PrimaryController {
     private void changeLanguage(String lang) {
         switch (lang) {
             case "Polish": case "Polski": case "Polaco":
+                App.setLocale(new Locale("pl","PL"));
                 App.setLanguage("pl_PL");
                 break;
             case "English": case "Angielski": case "Inglés":
+                App.setLocale(new Locale("en","EN"));
                 App.setLanguage("en_EN");
                 break;
             case "Spanish": case "Hiszpański": case "Español":
+                App.setLocale(new Locale("es","ES"));
                 App.setLanguage("es_ES");
                 break;
             default:
@@ -103,5 +107,12 @@ public class PrimaryController {
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         LoadedController loaderController = new LoadedController(sudokuBoard);
         loaderController.showStage();
+    }
+    @FXML
+    private void onActionButtonAuthors(ActionEvent actionEvent) {
+        ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.view.bundle.Authors",App.getLocale());
+        popOutWindow.messageBox(listBundle.getString("copyright"),
+                (listBundle.getObject("1.") + "\n" + listBundle.getObject("2.")),
+                Alert.AlertType.INFORMATION);
     }
 }

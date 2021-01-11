@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.BacktrackingSudokuSolverTest" time="0.288" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.BacktrackingSudokuSolverTest" time="0.26" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire16126222851697650371 2021-01-08T00-03-34_715-jvmRun1 surefire16974734816154773477tmp surefire_011590465547470787485tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire12866132154575501715 2021-01-10T22-51-25_500-jvmRun1 surefire11065324644121873474tmp surefire_03482157274679939833tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -57,292 +57,488 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="solve" classname="sudoku.model.BacktrackingSudokuSolverTest" time="0.194">
+  <testcase name="solve" classname="sudoku.model.BacktrackingSudokuSolverTest" time="0.198">
     <system-out><![CDATA[Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,7,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,7,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,7,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,7,5,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,8,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,8,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,8,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,8,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,4,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,7,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,1,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,6,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,6,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,4,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{9,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,7,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,5,1,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,1,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,5,1,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,5,1,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{4,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,5,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,5},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,5,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,9,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,5,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,5,2,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,5,2,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,7,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,5,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,6,1,3,5,4,2,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,6,1,3,5,4,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,1,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,6,1,3,5,4,7,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,6,1,3,5,4,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,6,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Bład w kwadracie 0
 sudoku.model.SudokuBoard@5fcfca62[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
-  board={{5,7,8,6,2,3,4,1,9},{4,2,6,5,1,9,3,7,8},{9,1,3,4,7,8,5,2,6},{1,9,7,8,3,5,6,4,2},{2,3,5,1,4,6,9,8,7},{6,8,4,7,9,2,1,5,3},{7,4,9,2,6,1,8,3,5},{8,6,1,3,5,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,4,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{9,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,7,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,1,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{4,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,4},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,9,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,5,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,3,1,9,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,3,1,9,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,3,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,3,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,9,1,3,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,9,1,3,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+Wartość 0 wstawiona nieprawidłowo
+Bład w kwadracie 0
+sudoku.model.SudokuBoard@5fcfca62[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@499ef98e
+  board={{6,5,7,3,8,1,2,4,9},{8,9,1,6,4,2,3,5,7},{2,3,4,5,7,9,8,6,1},{3,8,5,9,2,4,7,1,6},{7,1,2,8,6,5,9,3,4},{9,4,6,7,1,3,5,2,8},{1,7,8,2,5,6,4,9,3},{4,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
 Wartość 0 wstawiona nieprawidłowo
 Nie wykryto bledu]]></system-out>
