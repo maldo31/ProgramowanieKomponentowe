@@ -1,5 +1,11 @@
 package sudoku.view;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,14 +21,10 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.ResourceBundle;
+import sudoku.model.BacktrackingSudokuSolver;
+import sudoku.model.Dao;
+import sudoku.model.SudokuBoard;
+import sudoku.model.SudokuBoardDaoFactory;
 
 public class SecondaryController implements Initializable {
     private Stage thisStage;
@@ -62,14 +64,14 @@ public class SecondaryController implements Initializable {
         }
     }
 
-    private void fillGrid(){
-        StringConverter<Number> converter = new NumberStringConverter(){
+    private void fillGrid() {
+        StringConverter<Number> converter = new NumberStringConverter() {
             //Nadpisanie konwertera w celu kontroli wprowadzanych wartości
             @Override
             public Number fromString(String var1) {
                 try {
                     //Kontrola czy wprowadzona wartość jest w zakresie 1-9
-                    if (Integer.parseInt(var1)>9 || Integer.parseInt(var1)<1) {
+                    if (Integer.parseInt(var1) > 9 || Integer.parseInt(var1) < 1) {
                         popOutWindow.messageBox(bundle.getString("wrong_value"),
                                 (bundle.getString("wrong_value_info")),
                                 Alert.AlertType.ERROR);
@@ -125,8 +127,7 @@ public class SecondaryController implements Initializable {
 
     }
 
-    public void showStage(){
-
+    public void showStage() {
         thisStage.showAndWait();
     }
 

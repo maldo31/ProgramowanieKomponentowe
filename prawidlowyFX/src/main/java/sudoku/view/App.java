@@ -1,14 +1,13 @@
 package sudoku.view;
 
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 /*
  * JavaFX App
@@ -25,10 +24,11 @@ public class App extends Application {
         return language;
     }
 
-    public static void setLocale(Locale locale){
-        App.locale=locale;
+    public static void setLocale(Locale locale) {
+        App.locale = locale;
     }
-    public static Locale getLocale(){
+
+    public static Locale getLocale() {
         return App.locale;
     }
 
