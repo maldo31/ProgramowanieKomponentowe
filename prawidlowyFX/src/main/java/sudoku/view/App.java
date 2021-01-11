@@ -49,7 +49,6 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Locale.setDefault(new Locale(language));
-
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         scene = new Scene(load_fxml("primary"), 640, 480);
         stage.setTitle(bundle.getString("application_board_title"));

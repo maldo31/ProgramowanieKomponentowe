@@ -42,8 +42,8 @@ public class PrimaryController {
                 App.setLanguage("pl_PL");
                 break;
             case "English": case "Angielski": case "Inglés":
-                App.setLocale(new Locale("en","EN"));
-                App.setLanguage("en_EN");
+                App.setLocale(new Locale("en","US"));
+                App.setLanguage("en_US");
                 break;
             case "Spanish": case "Hiszpański": case "Español":
                 App.setLocale(new Locale("es","ES"));
