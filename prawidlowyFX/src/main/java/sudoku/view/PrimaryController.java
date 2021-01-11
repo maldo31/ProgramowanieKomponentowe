@@ -73,7 +73,9 @@ public class PrimaryController {
         try {
            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
            SecondaryController secondaryController = new SecondaryController();
+
            secondaryController.showStage();
+
         } catch (NullPointerException e) {
           popOutWindow.messageBox(bundle.getString("error_title"),
                 bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
