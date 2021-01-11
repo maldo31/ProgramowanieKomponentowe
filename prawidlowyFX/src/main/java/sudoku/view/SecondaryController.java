@@ -39,7 +39,6 @@ public class SecondaryController implements Initializable {
     private Level difficultyLevel = new Level();
 
     private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
-    private static String language;
 
     public TextArea textArea;
     private FileChooser fileChooser;
