@@ -87,7 +87,7 @@ public class SecondaryController implements Initializable {
                         }
                     }
                 } catch (ParseException | NumberFormatException var3) {
-                    popOutWindow.messageBox(bundle.getString("wrong_type_info"),
+                    popOutWindow.messageBox(bundle.getString("wrong_type"),
                             (bundle.getString("wrong_type_info")),
                             Alert.AlertType.ERROR);
                     throw new RuntimeException(var3);
