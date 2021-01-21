@@ -25,10 +25,11 @@ public class App extends Application {
         return language;
     }
 
-    public static void setLocale(Locale locale){
-        App.locale=locale;
+    public static void setLocale(Locale locale) {
+        App.locale = locale;
     }
-    public static Locale getLocale(){
+
+    public static Locale getLocale() {
         return App.locale;
     }
 

@@ -35,7 +35,6 @@ public class SecondaryController implements Initializable {
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
     private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
-    private static String language;
 
     public TextArea textArea;
     private FileChooser fileChooser;
@@ -62,14 +61,14 @@ public class SecondaryController implements Initializable {
         }
     }
 
-    private void fillGrid(){
-        StringConverter<Number> converter = new NumberStringConverter(){
+    private void fillGrid() {
+        StringConverter<Number> converter = new NumberStringConverter() {
             //Nadpisanie konwertera w celu kontroli wprowadzanych wartości
             @Override
             public Number fromString(String var1) {
                 try {
                     //Kontrola czy wprowadzona wartość jest w zakresie 1-9
-                    if (Integer.parseInt(var1)>9 || Integer.parseInt(var1)<1) {
+                    if (Integer.parseInt(var1) > 9 || Integer.parseInt(var1) < 1) {
                         popOutWindow.messageBox(bundle.getString("wrong_value"),
                                 (bundle.getString("wrong_value_info")),
                                 Alert.AlertType.ERROR);
@@ -141,8 +140,7 @@ public class SecondaryController implements Initializable {
 
     }
 
-    public void showStage(){
-
+    public void showStage() {
         thisStage.showAndWait();
     }
 

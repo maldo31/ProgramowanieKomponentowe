@@ -110,9 +110,11 @@ public class PrimaryController {
         LoadedController loaderController = new LoadedController(sudokuBoard);
         loaderController.showStage();
     }
+
     @FXML
     private void onActionButtonAuthors(ActionEvent actionEvent) {
-        ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.view.bundle.Authors",App.getLocale());
+        ResourceBundle listBundle =
+                ResourceBundle.getBundle("sudoku.view.bundle.Authors",App.getLocale());
         popOutWindow.messageBox(listBundle.getString("copyright"),
                 (listBundle.getObject("1.") + "\n" + listBundle.getObject("2.")),
                 Alert.AlertType.INFORMATION);
