@@ -4,6 +4,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -21,6 +23,7 @@ import java.util.List;
 
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
+    public  Logger logger = LoggerFactory.getLogger("SampleLogger");
     public final int size = 9;
     private SudokuSolver solver;
 

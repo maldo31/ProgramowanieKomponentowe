@@ -45,16 +45,16 @@ private ObjectInputStream ois;
     @Override
     public void close() {
         try {
-<span class="pc bpc" id="L48" title="1 of 2 branches missed.">            if (ois != null) {</span>
-<span class="nc" id="L49">                ois.close();</span>
-<span class="nc" id="L50">                ois = null;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (ois != null) {</span>
+<span class="fc" id="L49">                ois.close();</span>
+<span class="fc" id="L50">                ois = null;</span>
                 }
-<span class="pc bpc" id="L52" title="1 of 2 branches missed.">            if (fis != null) {</span>
-<span class="nc" id="L53">                fis.close();</span>
-<span class="nc" id="L54">                fis = null;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            if (fis != null) {</span>
+<span class="fc" id="L53">                fis.close();</span>
+<span class="fc" id="L54">                fis = null;</span>
                 }
-<span class="pc bpc" id="L56" title="1 of 2 branches missed.">            if (outputStream != null) {</span>
-<span class="nc" id="L57">                outputStream.close();</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            if (outputStream != null) {</span>
+<span class="fc" id="L57">                outputStream.close();</span>
                 }
 <span class="nc" id="L59">        } catch (IOException e) {</span>
 <span class="nc" id="L60">            e.printStackTrace();</span>
