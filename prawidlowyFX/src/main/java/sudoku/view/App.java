@@ -41,7 +41,6 @@ public class App extends Application {
             scene = new Scene(load_fxml("primary"), 640, 480);
         } catch (IOException e) {
             throw new SceneLoadException(bundle.getString("exception_scene_load"),e);
-            //e.printStackTrace();
         }
 
         stage.setTitle(bundle.getString("application_board_title"));

@@ -1,5 +1,6 @@
 package sudoku.view;
 
+import exception.SceneLoadException;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,7 +46,7 @@ public class SecondaryController implements Initializable {
     private File file;
     private ChoosedLevel choosedLevel;
 
-    public SecondaryController() {
+    public SecondaryController() throws SceneLoadException {
 
         thisStage = new Stage();
 
@@ -61,7 +62,7 @@ public class SecondaryController implements Initializable {
             thisStage.setTitle(bundle.getString("application_title"));
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new SceneLoadException(bundle.getString("exception_scene_load"),e);
         }
     }
 

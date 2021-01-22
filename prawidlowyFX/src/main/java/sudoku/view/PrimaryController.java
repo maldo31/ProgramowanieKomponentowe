@@ -1,5 +1,7 @@
 package sudoku.view;
 
+import exception.LanguageChoiceException;
+import exception.LevelChoiceException;
 import exception.SceneLoadException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -82,35 +84,48 @@ public class PrimaryController {
     }
 
     @FXML
-    public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonStartGame(ActionEvent actionEvent)
+            throws IOException, LevelChoiceException {
         try {
            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
-           SecondaryController secondaryController = new SecondaryController();
+            SecondaryController secondaryController = null;
+            try {
+                secondaryController = new SecondaryController();
+            } catch (SceneLoadException e) {
+                e.printStackTrace();
+            }
 
-           secondaryController.showStage();
+            secondaryController.showStage();
 
         } catch (NullPointerException e) {
+            throw new LevelChoiceException(bundle.getString("exception_level_choice"),e);
+            /*
           popOutWindow.messageBox(bundle.getString("error_title"),
                 bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
+
+             */
         }
     }
 
     @FXML
-    public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
+    public void onActionButtonChangeLanguage(ActionEvent actionEvent)
+            throws LanguageChoiceException {
         try {
             String lang =
                     comboBoxLanguageSetting.getSelectionModel().getSelectedItem().toString();
                     changeLanguage(lang);
 
         } catch (NullPointerException e) {
-            e.printStackTrace();
+            throw new LanguageChoiceException(bundle.getString("exception_language_choice"),e);
+            /*e.printStackTrace();
             popOutWindow.messageBox(bundle.getString("error_title"),
                     bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
+             */
         }
     }
 
     @FXML
-    public void onActionButtonLoad(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonLoad(ActionEvent actionEvent) throws IOException, SceneLoadException {
         fileChooser = new FileChooser();
         file = fileChooser.showOpenDialog(thisStage);
         SudokuBoard sudokuBoard;

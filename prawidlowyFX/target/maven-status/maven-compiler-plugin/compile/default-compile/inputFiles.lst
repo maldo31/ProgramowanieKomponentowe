@@ -6,6 +6,8 @@ D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\sudoku\view\ChoosedLevel.java
 D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\sudoku\view\bundle\Authors_en_US.java
 D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\sudoku\view\SecondaryController.java
 D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\sudoku\view\PopOutWindow.java
+D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\exception\LanguageChoiceException.java
+D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\exception\LevelChoiceException.java
 D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\module-info.java
 D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\exception\SceneLoadException.java
 D:\New\an_pn_1145_03\prawidlowyFX\src\main\java\sudoku\view\bundle\Authors_es_ES.java
