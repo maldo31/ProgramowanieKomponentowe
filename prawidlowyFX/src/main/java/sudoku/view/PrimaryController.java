@@ -1,9 +1,6 @@
 package sudoku.view;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import exception.SceneLoadException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -14,6 +11,11 @@ import sudoku.model.Dao;
 import sudoku.model.StreamSudokuBoardFactory;
 import sudoku.model.SudokuBoard;
 import sudoku.model.SudokuBoardDaoFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class PrimaryController {
 
@@ -38,15 +40,27 @@ public class PrimaryController {
         switch (lang) {
             case "Polish": case "Polski": case "Polaco":
                 App.setLocale(new Locale("pl","PL"));
-                App.setLanguage("pl_PL");
+                try {
+                    App.setLanguage("pl_PL");
+                } catch (SceneLoadException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "English": case "Angielski": case "Inglés":
                 App.setLocale(new Locale("en","US"));
-                App.setLanguage("en_US");
+                try {
+                    App.setLanguage("en_US");
+                } catch (SceneLoadException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "Spanish": case "Hiszpański": case "Español":
                 App.setLocale(new Locale("es","ES"));
-                App.setLanguage("es_ES");
+                try {
+                    App.setLanguage("es_ES");
+                } catch (SceneLoadException e) {
+                    e.printStackTrace();
+                }
                 break;
             default:
                 break;

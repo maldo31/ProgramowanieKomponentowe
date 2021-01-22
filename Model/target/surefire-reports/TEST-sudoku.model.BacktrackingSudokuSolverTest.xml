@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.BacktrackingSudokuSolverTest" time="1.34" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.BacktrackingSudokuSolverTest" time="1.375" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire14755239823800611696 2021-01-22T13-11-35_856-jvmRun1 surefire15633114169736248232tmp surefire_016007825221227272403tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire5211077315331427388 2021-01-22T13-16-47_239-jvmRun1 surefire13811956982792174622tmp surefire_02222479295765617022tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -57,237 +57,209 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="solve" classname="sudoku.model.BacktrackingSudokuSolverTest" time="1.308">
-    <system-out><![CDATA[2021-01-22 13:11:38,448 main DEBUG Initializing configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
-2021-01-22 13:11:38,466 main DEBUG Installed script engines
-2021-01-22 13:11:38,930 main DEBUG Oracle Nashorn Version: 14.0.2, Language: ECMAScript, Threading: Not Thread Safe, Compile: true, Names: {nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript}
-2021-01-22 13:11:38,931 main DEBUG PluginManager 'Core' found 107 plugins
-2021-01-22 13:11:38,931 main DEBUG PluginManager 'Level' found 0 plugins
-2021-01-22 13:11:38,935 main ERROR Error processing element Strategies ([RollingFile: null]): CLASS_NOT_FOUND
-2021-01-22 13:11:38,938 main DEBUG Log4j2 ConfigurationScheduler: No scheduled items
-2021-01-22 13:11:38,941 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
-2021-01-22 13:11:38,954 main TRACE TypeConverterRegistry initializing.
-2021-01-22 13:11:38,954 main DEBUG PluginManager 'TypeConverter' found 23 plugins
-2021-01-22 13:11:38,967 main DEBUG createProperty(name="logDir", value="target/log")
-2021-01-22 13:11:38,967 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
-2021-01-22 13:11:38,972 main DEBUG configureSubstitutor(={logDir=target/log}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml))
-2021-01-22 13:11:38,972 main DEBUG PluginManager 'Lookup' found 13 plugins
-2021-01-22 13:11:38,973 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2021-01-22 13:11:38,979 main DEBUG PatternLayout$Builder(pattern="%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
-2021-01-22 13:11:38,980 main DEBUG PluginManager 'Converter' found 41 plugins
-2021-01-22 13:11:38,981 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
-2021-01-22 13:11:38,992 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n), name="CONSOLE", , Filter=null, )
-2021-01-22 13:11:38,994 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
-2021-01-22 13:11:38,995 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
-2021-01-22 13:11:38,996 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2021-01-22 13:11:38,997 main DEBUG PatternLayout$Builder(pattern="%d{ISO8601} %-5level [%thread] %logger %m%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
-2021-01-22 13:11:39,014 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
-2021-01-22 13:11:39,017 main DEBUG createPolicy(interval="null", modulate="null")
-2021-01-22 13:11:39,018 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
-2021-01-22 13:11:39,019 main DEBUG createPolicy(size="1m")
-2021-01-22 13:11:39,020 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
-2021-01-22 13:11:39,021 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)})
-2021-01-22 13:11:39,022 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
-2021-01-22 13:11:39,025 main DEBUG RollingFileAppender$Builder(fileName="target/log/blog.log", filePattern="target/log/blog.%d{yyyy-MM-dd}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%d{ISO8601} %-5level [%thread] %logger %m%n), name="FILE", , Filter=null, )
-2021-01-22 13:11:39,031 main TRACE New file 'target/log/blog.log' created = false
-2021-01-22 13:11:39,032 main DEBUG Starting RollingFileManager target/log/blog.log
-2021-01-22 13:11:39,032 main DEBUG PluginManager 'FileConverter' found 2 plugins
-2021-01-22 13:11:39,035 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=1970/01/01-01:00:00.000, current=2021/01/22-13:11:39.035, freq=DAILY
-2021-01-22 13:11:39,036 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:11:39.036, freq=DAILY
-2021-01-22 13:11:39,036 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
-2021-01-22 13:11:39,037 main DEBUG createAppenders(={CONSOLE, FILE})
-2021-01-22 13:11:39,037 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
-2021-01-22 13:11:39,039 main DEBUG createLogger(additivity="true", level="DEBUG", name="com.github.gquintana.logging", includeLocation="null", ={}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
-2021-01-22 13:11:39,042 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2021-01-22 13:11:39,042 main DEBUG createAppenderRef(ref="CONSOLE", level="null", Filter=null)
-2021-01-22 13:11:39,043 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2021-01-22 13:11:39,043 main DEBUG createAppenderRef(ref="FILE", level="null", Filter=null)
-2021-01-22 13:11:39,043 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
-2021-01-22 13:11:39,044 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={CONSOLE, FILE}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
-2021-01-22 13:11:39,044 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
-2021-01-22 13:11:39,046 main DEBUG createLoggers(={com.github.gquintana.logging, root})
-2021-01-22 13:11:39,047 main DEBUG Configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] initialized
-2021-01-22 13:11:39,047 main DEBUG Starting configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
-2021-01-22 13:11:39,048 main DEBUG Started configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] OK.
-2021-01-22 13:11:39,048 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@6a12c7a8...
-2021-01-22 13:11:39,048 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
-2021-01-22 13:11:39,049 main TRACE DefaultConfiguration stopping root LoggerConfig.
-2021-01-22 13:11:39,049 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
-2021-01-22 13:11:39,049 main TRACE DefaultConfiguration stopping remaining Appenders.
-2021-01-22 13:11:39,049 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
-2021-01-22 13:11:39,050 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
-2021-01-22 13:11:39,050 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
-2021-01-22 13:11:39,051 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
-2021-01-22 13:11:39,051 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@6a12c7a8 OK
-2021-01-22 13:11:39,110 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@b1f36e5
-2021-01-22 13:11:39,111 main TRACE Reregistering context (1/1): '26ba2a48' org.apache.logging.log4j.core.LoggerContext@52afcdd8
-2021-01-22 13:11:39,111 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48'
-2021-01-22 13:11:39,112 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger'
-2021-01-22 13:11:39,113 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector'
-2021-01-22 13:11:39,115 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*'
-2021-01-22 13:11:39,115 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=*'
-2021-01-22 13:11:39,115 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncAppenders,name=*'
-2021-01-22 13:11:39,116 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncLoggerRingBuffer'
-2021-01-22 13:11:39,116 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*,subtype=RingBuffer'
-2021-01-22 13:11:39,119 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48
-2021-01-22 13:11:39,123 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger
-2021-01-22 13:11:39,125 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector
-2021-01-22 13:11:39,126 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=
-2021-01-22 13:11:39,126 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging
-2021-01-22 13:11:39,128 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE
-2021-01-22 13:11:39,128 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE
-2021-01-22 13:11:39,132 main TRACE Using default SystemClock for timestamps.
-2021-01-22 13:11:39,132 main TRACE Using DummyNanoClock for nanosecond timestamps.
-2021-01-22 13:11:39,133 main DEBUG Reconfiguration complete for context[name=26ba2a48] at URI E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@52afcdd8) with optional ClassLoader: null
-2021-01-22 13:11:39,133 main DEBUG Shutdown hook enabled. Registering a new one.
-2021-01-22 13:11:39,135 main DEBUG LoggerContext[name=26ba2a48, org.apache.logging.log4j.core.LoggerContext@52afcdd8] started OK.
-13:11:39.208 INFO  [main] SudokuBoard - Bład w kwadracie 0
+  <testcase name="solve" classname="sudoku.model.BacktrackingSudokuSolverTest" time="1.338">
+    <system-out><![CDATA[2021-01-22 13:16:49,845 main DEBUG Initializing configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
+2021-01-22 13:16:49,861 main DEBUG Installed script engines
+2021-01-22 13:16:50,327 main DEBUG Oracle Nashorn Version: 14.0.2, Language: ECMAScript, Threading: Not Thread Safe, Compile: true, Names: {nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript}
+2021-01-22 13:16:50,327 main DEBUG PluginManager 'Core' found 107 plugins
+2021-01-22 13:16:50,327 main DEBUG PluginManager 'Level' found 0 plugins
+2021-01-22 13:16:50,331 main ERROR Error processing element Strategies ([RollingFile: null]): CLASS_NOT_FOUND
+2021-01-22 13:16:50,335 main DEBUG Log4j2 ConfigurationScheduler: No scheduled items
+2021-01-22 13:16:50,338 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
+2021-01-22 13:16:50,349 main TRACE TypeConverterRegistry initializing.
+2021-01-22 13:16:50,349 main DEBUG PluginManager 'TypeConverter' found 23 plugins
+2021-01-22 13:16:50,361 main DEBUG createProperty(name="logDir", value="target/log")
+2021-01-22 13:16:50,361 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
+2021-01-22 13:16:50,370 main DEBUG configureSubstitutor(={logDir=target/log}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml))
+2021-01-22 13:16:50,370 main DEBUG PluginManager 'Lookup' found 13 plugins
+2021-01-22 13:16:50,371 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-01-22 13:16:50,378 main DEBUG PatternLayout$Builder(pattern="%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
+2021-01-22 13:16:50,378 main DEBUG PluginManager 'Converter' found 41 plugins
+2021-01-22 13:16:50,379 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2021-01-22 13:16:50,387 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n), name="CONSOLE", , Filter=null, )
+2021-01-22 13:16:50,388 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
+2021-01-22 13:16:50,388 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2021-01-22 13:16:50,388 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-01-22 13:16:50,389 main DEBUG PatternLayout$Builder(pattern="%d{ISO8601} %-5level [%thread] %logger %m%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
+2021-01-22 13:16:50,406 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
+2021-01-22 13:16:50,408 main DEBUG createPolicy(interval="null", modulate="null")
+2021-01-22 13:16:50,409 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2021-01-22 13:16:50,410 main DEBUG createPolicy(size="1m")
+2021-01-22 13:16:50,412 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
+2021-01-22 13:16:50,413 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)})
+2021-01-22 13:16:50,414 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2021-01-22 13:16:50,419 main DEBUG RollingFileAppender$Builder(fileName="target/log/blog.log", filePattern="target/log/blog.%d{yyyy-MM-dd}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%d{ISO8601} %-5level [%thread] %logger %m%n), name="FILE", , Filter=null, )
+2021-01-22 13:16:50,425 main TRACE New file 'target/log/blog.log' created = false
+2021-01-22 13:16:50,425 main DEBUG Starting RollingFileManager target/log/blog.log
+2021-01-22 13:16:50,426 main DEBUG PluginManager 'FileConverter' found 2 plugins
+2021-01-22 13:16:50,428 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=1970/01/01-01:00:00.000, current=2021/01/22-13:16:50.428, freq=DAILY
+2021-01-22 13:16:50,429 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:16:50.429, freq=DAILY
+2021-01-22 13:16:50,429 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2021-01-22 13:16:50,430 main DEBUG createAppenders(={CONSOLE, FILE})
+2021-01-22 13:16:50,430 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2021-01-22 13:16:50,432 main DEBUG createLogger(additivity="true", level="DEBUG", name="com.github.gquintana.logging", includeLocation="null", ={}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
+2021-01-22 13:16:50,436 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-01-22 13:16:50,437 main DEBUG createAppenderRef(ref="CONSOLE", level="null", Filter=null)
+2021-01-22 13:16:50,437 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-01-22 13:16:50,438 main DEBUG createAppenderRef(ref="FILE", level="null", Filter=null)
+2021-01-22 13:16:50,438 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2021-01-22 13:16:50,439 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={CONSOLE, FILE}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
+2021-01-22 13:16:50,441 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2021-01-22 13:16:50,442 main DEBUG createLoggers(={com.github.gquintana.logging, root})
+2021-01-22 13:16:50,444 main DEBUG Configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] initialized
+2021-01-22 13:16:50,444 main DEBUG Starting configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
+2021-01-22 13:16:50,445 main DEBUG Started configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] OK.
+2021-01-22 13:16:50,445 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@6a12c7a8...
+2021-01-22 13:16:50,446 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
+2021-01-22 13:16:50,446 main TRACE DefaultConfiguration stopping root LoggerConfig.
+2021-01-22 13:16:50,446 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
+2021-01-22 13:16:50,446 main TRACE DefaultConfiguration stopping remaining Appenders.
+2021-01-22 13:16:50,447 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2021-01-22 13:16:50,447 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2021-01-22 13:16:50,447 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
+2021-01-22 13:16:50,447 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
+2021-01-22 13:16:50,448 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@6a12c7a8 OK
+2021-01-22 13:16:50,508 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@b1f36e5
+2021-01-22 13:16:50,508 main TRACE Reregistering context (1/1): '26ba2a48' org.apache.logging.log4j.core.LoggerContext@52afcdd8
+2021-01-22 13:16:50,509 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48'
+2021-01-22 13:16:50,509 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger'
+2021-01-22 13:16:50,510 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector'
+2021-01-22 13:16:50,510 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*'
+2021-01-22 13:16:50,511 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=*'
+2021-01-22 13:16:50,513 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncAppenders,name=*'
+2021-01-22 13:16:50,513 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncLoggerRingBuffer'
+2021-01-22 13:16:50,515 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*,subtype=RingBuffer'
+2021-01-22 13:16:50,517 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48
+2021-01-22 13:16:50,522 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger
+2021-01-22 13:16:50,524 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector
+2021-01-22 13:16:50,526 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=
+2021-01-22 13:16:50,526 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging
+2021-01-22 13:16:50,528 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE
+2021-01-22 13:16:50,533 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE
+2021-01-22 13:16:50,537 main TRACE Using default SystemClock for timestamps.
+2021-01-22 13:16:50,537 main TRACE Using DummyNanoClock for nanosecond timestamps.
+2021-01-22 13:16:50,538 main DEBUG Reconfiguration complete for context[name=26ba2a48] at URI E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@52afcdd8) with optional ClassLoader: null
+2021-01-22 13:16:50,538 main DEBUG Shutdown hook enabled. Registering a new one.
+2021-01-22 13:16:50,539 main DEBUG LoggerContext[name=26ba2a48, org.apache.logging.log4j.core.LoggerContext@52afcdd8] started OK.
+13:16:50.623 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,6,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.211 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.213 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.625 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.626 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,2,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.215 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.218 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.627 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.628 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.218 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.220 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.629 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.631 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,5,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,3,7,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.220 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.222 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.631 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.637 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,5,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,3,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.222 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.223 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.637 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.638 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.223 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.225 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.638 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.639 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,5,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.225 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.226 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.639 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.640 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,5,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,2,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.227 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.227 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.641 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.642 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.228 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.228 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.643 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.644 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,3,7,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.229 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.230 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.645 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.645 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,1,5,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,3,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.232 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.232 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.646 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.646 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,1,5,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.233 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.233 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.646 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.647 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,1,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.234 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.234 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.648 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.648 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.235 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.235 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.649 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.649 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,4,3,2,1,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.236 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.236 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.650 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.651 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,4,3,2,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,9,5,4,2,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.237 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.238 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.651 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.652 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@46f041cb[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,4,3,2,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,9,5,4,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.238 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.239 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
-  size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,4,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
-]
-13:11:39.239 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.240 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
-  size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,4,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
-]
-13:11:39.240 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.242 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
-  size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
-]
-13:11:39.242 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.243 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
-  size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{3,6,7,9,5,8,1,2,4},{2,4,5,6,1,3,7,8,9},{8,9,1,4,7,2,3,6,5},{4,1,6,8,3,7,9,5,2},{5,2,3,1,4,9,8,7,6},{7,8,9,2,6,5,4,1,3},{6,3,2,7,8,4,5,9,1},{9,5,8,3,2,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
-]
-13:11:39.243 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.653 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
 Nie wykryto bledu]]></system-out>
     <system-err><![CDATA[Warning: Nashorn engine is planned to be removed from a future JDK release
 ]]></system-err>

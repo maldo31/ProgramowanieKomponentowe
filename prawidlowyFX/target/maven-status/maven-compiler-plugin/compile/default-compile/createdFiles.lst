@@ -1,3 +1,4 @@
+exception\SceneLoadException.class
 sudoku\view\LoadedController.class
 sudoku\view\bundle\Authors_en_US.class
 sudoku\view\PopOutWindow.class

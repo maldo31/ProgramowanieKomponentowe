@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.FileSudokuBoardDaoTest" time="0.295" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.FileSudokuBoardDaoTest" time="0.3" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire14755239823800611696 2021-01-22T13-11-35_856-jvmRun1 surefire15633114169736248232tmp surefire_016007825221227272403tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire5211077315331427388 2021-01-22T13-16-47_239-jvmRun1 surefire13811956982792174622tmp surefire_02222479295765617022tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -57,273 +57,364 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="finalizeTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.003"/>
-  <testcase name="writeReadTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.264">
-    <system-out><![CDATA[13:11:39.298 INFO  [main] SudokuBoard - Bład w kwadracie 0
+  <testcase name="finalizeTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.002"/>
+  <testcase name="writeReadTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.266">
+    <system-out><![CDATA[13:16:50.708 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.298 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.299 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.708 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.709 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,6,3,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.299 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.300 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.710 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.711 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,6,3,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.301 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.302 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.712 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.712 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,3,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,6,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.302 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.304 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.713 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.713 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.304 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.305 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.714 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.715 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,3,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.305 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.306 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.715 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.716 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,7,3,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.307 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.308 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.716 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.717 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,7,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.308 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.309 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.717 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.718 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,4,1,9,3,7,5},{1,3,9,5,2,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,7,3,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.309 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.309 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.718 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.720 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,4,1,9,3,7,5},{1,3,9,5,2,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,7,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.310 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:11:39.310 INFO  [main] SudokuBoard - Bład w kwadracie 0
+13:16:50.720 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.720 INFO  [main] SudokuBoard - Bład w kwadracie 0
 sudoku.model.SudokuBoard@5643052d[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,4,1,9,3,7,5},{1,3,9,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:11:39.312 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-2021-01-22 13:11:39,394 main DEBUG Not in a ServletContext environment, thus not loading WebLookup plugin.
-2021-01-22 13:11:39,395 main DEBUG PluginManager 'Converter' found 41 plugins
-2021-01-22 13:11:39,397 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
-2021-01-22 13:11:39,397 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false-2
-2021-01-22 13:11:39,398 main DEBUG Starting LoggerContext[name=Default, org.apache.logging.log4j.core.LoggerContext@65528bcf]...
-2021-01-22 13:11:39,398 main DEBUG Reconfiguration started for context[name=Default] at URI null (org.apache.logging.log4j.core.LoggerContext@65528bcf) with optional ClassLoader: null
-2021-01-22 13:11:39,398 main DEBUG Using configurationFactory org.apache.logging.log4j.core.config.ConfigurationFactory$Factory@7bb4f09d
-2021-01-22 13:11:39,398 main TRACE Trying to find [log4j2-testDefault.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,399 main TRACE Trying to find [log4j2-testDefault.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,400 main TRACE Trying to find [log4j2-testDefault.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,400 main TRACE Trying to find [log4j2-testDefault.properties] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,400 main TRACE Trying to find [log4j2-testDefault.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,401 main TRACE Trying to find [log4j2-testDefault.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,401 main TRACE Trying to find [log4j2-testDefault.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,402 main TRACE Trying to find [log4j2-testDefault.yml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,402 main TRACE Trying to find [log4j2-testDefault.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,403 main TRACE Trying to find [log4j2-testDefault.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,403 main TRACE Trying to find [log4j2-testDefault.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,403 main TRACE Trying to find [log4j2-testDefault.yaml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,404 main TRACE Trying to find [log4j2-testDefault.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,404 main TRACE Trying to find [log4j2-testDefault.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,405 main TRACE Trying to find [log4j2-testDefault.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,405 main TRACE Trying to find [log4j2-testDefault.json] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,405 main TRACE Trying to find [log4j2-testDefault.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,406 main TRACE Trying to find [log4j2-testDefault.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,406 main TRACE Trying to find [log4j2-testDefault.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,407 main TRACE Trying to find [log4j2-testDefault.jsn] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,407 main TRACE Trying to find [log4j2-testDefault.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,407 main TRACE Trying to find [log4j2-testDefault.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,408 main TRACE Trying to find [log4j2-testDefault.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,408 main TRACE Trying to find [log4j2-testDefault.xml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,408 main TRACE Trying to find [log4j2-test.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,409 main TRACE Trying to find [log4j2-test.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,409 main TRACE Trying to find [log4j2-test.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,409 main TRACE Trying to find [log4j2-test.properties] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,409 main TRACE Trying to find [log4j2-test.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,410 main TRACE Trying to find [log4j2-test.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,410 main TRACE Trying to find [log4j2-test.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,410 main TRACE Trying to find [log4j2-test.yml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,411 main TRACE Trying to find [log4j2-test.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,411 main TRACE Trying to find [log4j2-test.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,411 main TRACE Trying to find [log4j2-test.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,412 main TRACE Trying to find [log4j2-test.yaml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,412 main TRACE Trying to find [log4j2-test.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,412 main TRACE Trying to find [log4j2-test.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,413 main TRACE Trying to find [log4j2-test.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,413 main TRACE Trying to find [log4j2-test.json] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,413 main TRACE Trying to find [log4j2-test.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,414 main TRACE Trying to find [log4j2-test.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,415 main TRACE Trying to find [log4j2-test.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,415 main TRACE Trying to find [log4j2-test.jsn] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,415 main TRACE Trying to find [log4j2-test.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,416 main TRACE Trying to find [log4j2-test.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,416 main TRACE Trying to find [log4j2-test.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,416 main TRACE Trying to find [log4j2-test.xml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,417 main TRACE Trying to find [log4j2Default.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,418 main TRACE Trying to find [log4j2Default.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,418 main TRACE Trying to find [log4j2Default.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,419 main TRACE Trying to find [log4j2Default.properties] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,419 main TRACE Trying to find [log4j2Default.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,420 main TRACE Trying to find [log4j2Default.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,420 main TRACE Trying to find [log4j2Default.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,421 main TRACE Trying to find [log4j2Default.yml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,421 main TRACE Trying to find [log4j2Default.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,422 main TRACE Trying to find [log4j2Default.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,422 main TRACE Trying to find [log4j2Default.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,423 main TRACE Trying to find [log4j2Default.yaml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,423 main TRACE Trying to find [log4j2Default.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,423 main TRACE Trying to find [log4j2Default.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,424 main TRACE Trying to find [log4j2Default.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,424 main TRACE Trying to find [log4j2Default.json] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,425 main TRACE Trying to find [log4j2Default.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,425 main TRACE Trying to find [log4j2Default.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,426 main TRACE Trying to find [log4j2Default.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,426 main TRACE Trying to find [log4j2Default.jsn] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,428 main TRACE Trying to find [log4j2Default.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,430 main TRACE Trying to find [log4j2Default.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,433 main TRACE Trying to find [log4j2Default.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,433 main TRACE Trying to find [log4j2Default.xml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,433 main TRACE Trying to find [log4j2.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,433 main TRACE Trying to find [log4j2.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,436 main TRACE Trying to find [log4j2.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,437 main TRACE Trying to find [log4j2.properties] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,437 main TRACE Trying to find [log4j2.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,440 main TRACE Trying to find [log4j2.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,440 main TRACE Trying to find [log4j2.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,441 main TRACE Trying to find [log4j2.yml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,441 main TRACE Trying to find [log4j2.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,442 main TRACE Trying to find [log4j2.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,442 main TRACE Trying to find [log4j2.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,442 main TRACE Trying to find [log4j2.yaml] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,442 main TRACE Trying to find [log4j2.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,443 main TRACE Trying to find [log4j2.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,443 main TRACE Trying to find [log4j2.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,443 main TRACE Trying to find [log4j2.json] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,443 main TRACE Trying to find [log4j2.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,451 main TRACE Trying to find [log4j2.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,451 main TRACE Trying to find [log4j2.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
-2021-01-22 13:11:39,452 main TRACE Trying to find [log4j2.jsn] using ClassLoader.getSystemResource().
-2021-01-22 13:11:39,453 main TRACE Trying to find [log4j2.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
-2021-01-22 13:11:39,456 main DEBUG Not in a ServletContext environment, thus not loading WebLookup plugin.
-2021-01-22 13:11:39,460 main DEBUG Initializing configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
-2021-01-22 13:11:39,460 main DEBUG Installed script engines
-2021-01-22 13:11:39,471 main DEBUG Oracle Nashorn Version: 14.0.2, Language: ECMAScript, Threading: Not Thread Safe, Compile: true, Names: {nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript}
-2021-01-22 13:11:39,471 main DEBUG PluginManager 'Core' found 107 plugins
-2021-01-22 13:11:39,472 main DEBUG PluginManager 'Level' found 0 plugins
-2021-01-22 13:11:39,475 main ERROR Error processing element Strategies ([RollingFile: null]): CLASS_NOT_FOUND
-2021-01-22 13:11:39,475 main DEBUG Log4j2 ConfigurationScheduler: No scheduled items
-2021-01-22 13:11:39,476 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
-2021-01-22 13:11:39,478 main DEBUG createProperty(name="logDir", value="target/log")
-2021-01-22 13:11:39,479 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
-2021-01-22 13:11:39,479 main DEBUG configureSubstitutor(={logDir=target/log}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml))
-2021-01-22 13:11:39,480 main DEBUG PluginManager 'Lookup' found 13 plugins
-2021-01-22 13:11:39,480 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2021-01-22 13:11:39,481 main DEBUG PatternLayout$Builder(pattern="%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
-2021-01-22 13:11:39,482 main DEBUG PluginManager 'Converter' found 41 plugins
-2021-01-22 13:11:39,483 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
-2021-01-22 13:11:39,483 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n), name="CONSOLE", , Filter=null, )
-2021-01-22 13:11:39,484 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
-2021-01-22 13:11:39,484 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2021-01-22 13:11:39,485 main DEBUG PatternLayout$Builder(pattern="%d{ISO8601} %-5level [%thread] %logger %m%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
-2021-01-22 13:11:39,486 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
-2021-01-22 13:11:39,487 main DEBUG createPolicy(interval="null", modulate="null")
-2021-01-22 13:11:39,487 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
-2021-01-22 13:11:39,487 main DEBUG createPolicy(size="1m")
-2021-01-22 13:11:39,490 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
-2021-01-22 13:11:39,493 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)})
-2021-01-22 13:11:39,493 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
-2021-01-22 13:11:39,494 main DEBUG RollingFileAppender$Builder(fileName="target/log/blog.log", filePattern="target/log/blog.%d{yyyy-MM-dd}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%d{ISO8601} %-5level [%thread] %logger %m%n), name="FILE", , Filter=null, )
-2021-01-22 13:11:39,495 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:11:39.495, freq=DAILY
-2021-01-22 13:11:39,497 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:11:39.497, freq=DAILY
-2021-01-22 13:11:39,502 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:11:39.502, freq=DAILY
-2021-01-22 13:11:39,502 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:11:39.502, freq=DAILY
-2021-01-22 13:11:39,502 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
-2021-01-22 13:11:39,503 main DEBUG createAppenders(={CONSOLE, FILE})
-2021-01-22 13:11:39,503 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
-2021-01-22 13:11:39,503 main DEBUG createLogger(additivity="true", level="DEBUG", name="com.github.gquintana.logging", includeLocation="null", ={}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
-2021-01-22 13:11:39,504 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2021-01-22 13:11:39,504 main DEBUG createAppenderRef(ref="CONSOLE", level="null", Filter=null)
-2021-01-22 13:11:39,505 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2021-01-22 13:11:39,505 main DEBUG createAppenderRef(ref="FILE", level="null", Filter=null)
-2021-01-22 13:11:39,505 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
-2021-01-22 13:11:39,506 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={CONSOLE, FILE}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
-2021-01-22 13:11:39,506 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
-2021-01-22 13:11:39,507 main DEBUG createLoggers(={com.github.gquintana.logging, root})
-2021-01-22 13:11:39,507 main DEBUG Configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] initialized
-2021-01-22 13:11:39,507 main DEBUG Starting configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
-2021-01-22 13:11:39,507 main DEBUG Started configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] OK.
-2021-01-22 13:11:39,508 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@31887330...
-2021-01-22 13:11:39,508 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
-2021-01-22 13:11:39,508 main TRACE DefaultConfiguration stopping root LoggerConfig.
-2021-01-22 13:11:39,508 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
-2021-01-22 13:11:39,508 main TRACE DefaultConfiguration stopping remaining Appenders.
-2021-01-22 13:11:39,509 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-2
-2021-01-22 13:11:39,509 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-2, all resources released: true
-2021-01-22 13:11:39,509 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
-2021-01-22 13:11:39,509 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
-2021-01-22 13:11:39,509 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@31887330 OK
-2021-01-22 13:11:39,510 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@b1f36e5
-2021-01-22 13:11:39,510 main TRACE Reregistering context (1/1): '26ba2a48' org.apache.logging.log4j.core.LoggerContext@52afcdd8
-2021-01-22 13:11:39,511 main TRACE Unregistering 1 MBeans: [org.apache.logging.log4j2:type=26ba2a48]
-2021-01-22 13:11:39,512 main TRACE Unregistering 1 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger]
-2021-01-22 13:11:39,514 main TRACE Unregistering 1 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector]
-2021-01-22 13:11:39,517 main TRACE Unregistering 2 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging, org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=]
-2021-01-22 13:11:39,518 main TRACE Unregistering 2 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE, org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE]
-2021-01-22 13:11:39,518 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncAppenders,name=*'
-2021-01-22 13:11:39,518 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncLoggerRingBuffer'
-2021-01-22 13:11:39,519 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*,subtype=RingBuffer'
-2021-01-22 13:11:39,519 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48
-2021-01-22 13:11:39,519 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger
-2021-01-22 13:11:39,520 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector
-2021-01-22 13:11:39,520 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=
-2021-01-22 13:11:39,521 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging
-2021-01-22 13:11:39,522 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE
-2021-01-22 13:11:39,523 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE
-2021-01-22 13:11:39,524 main TRACE Using DummyNanoClock for nanosecond timestamps.
-2021-01-22 13:11:39,524 main DEBUG Reconfiguration complete for context[name=Default] at URI E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@65528bcf) with optional ClassLoader: null
-2021-01-22 13:11:39,525 main DEBUG Shutdown hook enabled. Registering a new one.
-2021-01-22 13:11:39,525 main DEBUG LoggerContext[name=Default, org.apache.logging.log4j.core.LoggerContext@65528bcf] started OK.
+13:16:50.722 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.722 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,9,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.723 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.724 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.724 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.725 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.725 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.725 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.726 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.727 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,4,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.727 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.728 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,4,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.728 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.729 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,4,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.729 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.730 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.730 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.730 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,9,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.730 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.731 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,9,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.731 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.732 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,9,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.732 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.733 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.734 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:16:50.734 INFO  [main] SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@5643052d[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:16:50.734 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+2021-01-22 13:16:50,793 main DEBUG Not in a ServletContext environment, thus not loading WebLookup plugin.
+2021-01-22 13:16:50,793 main DEBUG PluginManager 'Converter' found 41 plugins
+2021-01-22 13:16:50,794 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
+2021-01-22 13:16:50,795 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false-2
+2021-01-22 13:16:50,796 main DEBUG Starting LoggerContext[name=Default, org.apache.logging.log4j.core.LoggerContext@65528bcf]...
+2021-01-22 13:16:50,796 main DEBUG Reconfiguration started for context[name=Default] at URI null (org.apache.logging.log4j.core.LoggerContext@65528bcf) with optional ClassLoader: null
+2021-01-22 13:16:50,796 main DEBUG Using configurationFactory org.apache.logging.log4j.core.config.ConfigurationFactory$Factory@7bb4f09d
+2021-01-22 13:16:50,797 main TRACE Trying to find [log4j2-testDefault.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,798 main TRACE Trying to find [log4j2-testDefault.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,798 main TRACE Trying to find [log4j2-testDefault.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,798 main TRACE Trying to find [log4j2-testDefault.properties] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,799 main TRACE Trying to find [log4j2-testDefault.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,800 main TRACE Trying to find [log4j2-testDefault.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,800 main TRACE Trying to find [log4j2-testDefault.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,804 main TRACE Trying to find [log4j2-testDefault.yml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,804 main TRACE Trying to find [log4j2-testDefault.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,805 main TRACE Trying to find [log4j2-testDefault.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,805 main TRACE Trying to find [log4j2-testDefault.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,806 main TRACE Trying to find [log4j2-testDefault.yaml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,807 main TRACE Trying to find [log4j2-testDefault.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,808 main TRACE Trying to find [log4j2-testDefault.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,808 main TRACE Trying to find [log4j2-testDefault.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,808 main TRACE Trying to find [log4j2-testDefault.json] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,809 main TRACE Trying to find [log4j2-testDefault.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,810 main TRACE Trying to find [log4j2-testDefault.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,811 main TRACE Trying to find [log4j2-testDefault.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,811 main TRACE Trying to find [log4j2-testDefault.jsn] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,812 main TRACE Trying to find [log4j2-testDefault.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,813 main TRACE Trying to find [log4j2-testDefault.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,813 main TRACE Trying to find [log4j2-testDefault.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,813 main TRACE Trying to find [log4j2-testDefault.xml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,814 main TRACE Trying to find [log4j2-test.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,815 main TRACE Trying to find [log4j2-test.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,815 main TRACE Trying to find [log4j2-test.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,816 main TRACE Trying to find [log4j2-test.properties] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,816 main TRACE Trying to find [log4j2-test.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,817 main TRACE Trying to find [log4j2-test.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,817 main TRACE Trying to find [log4j2-test.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,818 main TRACE Trying to find [log4j2-test.yml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,818 main TRACE Trying to find [log4j2-test.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,818 main TRACE Trying to find [log4j2-test.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,818 main TRACE Trying to find [log4j2-test.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,819 main TRACE Trying to find [log4j2-test.yaml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,819 main TRACE Trying to find [log4j2-test.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,820 main TRACE Trying to find [log4j2-test.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,820 main TRACE Trying to find [log4j2-test.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,821 main TRACE Trying to find [log4j2-test.json] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,822 main TRACE Trying to find [log4j2-test.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,822 main TRACE Trying to find [log4j2-test.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,822 main TRACE Trying to find [log4j2-test.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,823 main TRACE Trying to find [log4j2-test.jsn] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,823 main TRACE Trying to find [log4j2-test.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,823 main TRACE Trying to find [log4j2-test.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,823 main TRACE Trying to find [log4j2-test.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,824 main TRACE Trying to find [log4j2-test.xml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,824 main TRACE Trying to find [log4j2Default.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,825 main TRACE Trying to find [log4j2Default.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,825 main TRACE Trying to find [log4j2Default.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,825 main TRACE Trying to find [log4j2Default.properties] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,826 main TRACE Trying to find [log4j2Default.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,826 main TRACE Trying to find [log4j2Default.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,826 main TRACE Trying to find [log4j2Default.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,827 main TRACE Trying to find [log4j2Default.yml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,827 main TRACE Trying to find [log4j2Default.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,828 main TRACE Trying to find [log4j2Default.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,828 main TRACE Trying to find [log4j2Default.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,828 main TRACE Trying to find [log4j2Default.yaml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,829 main TRACE Trying to find [log4j2Default.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,829 main TRACE Trying to find [log4j2Default.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,829 main TRACE Trying to find [log4j2Default.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,830 main TRACE Trying to find [log4j2Default.json] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,830 main TRACE Trying to find [log4j2Default.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,831 main TRACE Trying to find [log4j2Default.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,831 main TRACE Trying to find [log4j2Default.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,831 main TRACE Trying to find [log4j2Default.jsn] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,832 main TRACE Trying to find [log4j2Default.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,833 main TRACE Trying to find [log4j2Default.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,833 main TRACE Trying to find [log4j2Default.xml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,833 main TRACE Trying to find [log4j2Default.xml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,833 main TRACE Trying to find [log4j2.properties] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,834 main TRACE Trying to find [log4j2.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,834 main TRACE Trying to find [log4j2.properties] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,834 main TRACE Trying to find [log4j2.properties] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,835 main TRACE Trying to find [log4j2.yml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,836 main TRACE Trying to find [log4j2.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,836 main TRACE Trying to find [log4j2.yml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,837 main TRACE Trying to find [log4j2.yml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,837 main TRACE Trying to find [log4j2.yaml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,837 main TRACE Trying to find [log4j2.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,838 main TRACE Trying to find [log4j2.yaml] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,838 main TRACE Trying to find [log4j2.yaml] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,838 main TRACE Trying to find [log4j2.json] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,838 main TRACE Trying to find [log4j2.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,839 main TRACE Trying to find [log4j2.json] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,839 main TRACE Trying to find [log4j2.json] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,839 main TRACE Trying to find [log4j2.jsn] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,839 main TRACE Trying to find [log4j2.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,840 main TRACE Trying to find [log4j2.jsn] using jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48 class loader.
+2021-01-22 13:16:50,844 main TRACE Trying to find [log4j2.jsn] using ClassLoader.getSystemResource().
+2021-01-22 13:16:50,844 main TRACE Trying to find [log4j2.xml] using context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@26ba2a48.
+2021-01-22 13:16:50,845 main DEBUG Not in a ServletContext environment, thus not loading WebLookup plugin.
+2021-01-22 13:16:50,849 main DEBUG Initializing configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
+2021-01-22 13:16:50,850 main DEBUG Installed script engines
+2021-01-22 13:16:50,860 main DEBUG Oracle Nashorn Version: 14.0.2, Language: ECMAScript, Threading: Not Thread Safe, Compile: true, Names: {nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript}
+2021-01-22 13:16:50,860 main DEBUG PluginManager 'Core' found 107 plugins
+2021-01-22 13:16:50,861 main DEBUG PluginManager 'Level' found 0 plugins
+2021-01-22 13:16:50,862 main ERROR Error processing element Strategies ([RollingFile: null]): CLASS_NOT_FOUND
+2021-01-22 13:16:50,862 main DEBUG Log4j2 ConfigurationScheduler: No scheduled items
+2021-01-22 13:16:50,862 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
+2021-01-22 13:16:50,863 main DEBUG createProperty(name="logDir", value="target/log")
+2021-01-22 13:16:50,864 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
+2021-01-22 13:16:50,864 main DEBUG configureSubstitutor(={logDir=target/log}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml))
+2021-01-22 13:16:50,865 main DEBUG PluginManager 'Lookup' found 13 plugins
+2021-01-22 13:16:50,865 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-01-22 13:16:50,865 main DEBUG PatternLayout$Builder(pattern="%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
+2021-01-22 13:16:50,866 main DEBUG PluginManager 'Converter' found 41 plugins
+2021-01-22 13:16:50,866 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2021-01-22 13:16:50,867 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n), name="CONSOLE", , Filter=null, )
+2021-01-22 13:16:50,867 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
+2021-01-22 13:16:50,868 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-01-22 13:16:50,868 main DEBUG PatternLayout$Builder(pattern="%d{ISO8601} %-5level [%thread] %logger %m%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
+2021-01-22 13:16:50,869 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
+2021-01-22 13:16:50,869 main DEBUG createPolicy(interval="null", modulate="null")
+2021-01-22 13:16:50,870 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2021-01-22 13:16:50,870 main DEBUG createPolicy(size="1m")
+2021-01-22 13:16:50,870 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
+2021-01-22 13:16:50,871 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)})
+2021-01-22 13:16:50,871 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2021-01-22 13:16:50,872 main DEBUG RollingFileAppender$Builder(fileName="target/log/blog.log", filePattern="target/log/blog.%d{yyyy-MM-dd}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%d{ISO8601} %-5level [%thread] %logger %m%n), name="FILE", , Filter=null, )
+2021-01-22 13:16:50,873 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:16:50.873, freq=DAILY
+2021-01-22 13:16:50,873 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:16:50.873, freq=DAILY
+2021-01-22 13:16:50,874 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:16:50.874, freq=DAILY
+2021-01-22 13:16:50,875 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:16:50.875, freq=DAILY
+2021-01-22 13:16:50,876 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2021-01-22 13:16:50,876 main DEBUG createAppenders(={CONSOLE, FILE})
+2021-01-22 13:16:50,876 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2021-01-22 13:16:50,877 main DEBUG createLogger(additivity="true", level="DEBUG", name="com.github.gquintana.logging", includeLocation="null", ={}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
+2021-01-22 13:16:50,877 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-01-22 13:16:50,878 main DEBUG createAppenderRef(ref="CONSOLE", level="null", Filter=null)
+2021-01-22 13:16:50,879 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-01-22 13:16:50,879 main DEBUG createAppenderRef(ref="FILE", level="null", Filter=null)
+2021-01-22 13:16:50,880 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2021-01-22 13:16:50,881 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={CONSOLE, FILE}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
+2021-01-22 13:16:50,882 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2021-01-22 13:16:50,883 main DEBUG createLoggers(={com.github.gquintana.logging, root})
+2021-01-22 13:16:50,885 main DEBUG Configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] initialized
+2021-01-22 13:16:50,885 main DEBUG Starting configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
+2021-01-22 13:16:50,901 main DEBUG Started configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] OK.
+2021-01-22 13:16:50,903 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@31887330...
+2021-01-22 13:16:50,903 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
+2021-01-22 13:16:50,904 main TRACE DefaultConfiguration stopping root LoggerConfig.
+2021-01-22 13:16:50,908 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
+2021-01-22 13:16:50,908 main TRACE DefaultConfiguration stopping remaining Appenders.
+2021-01-22 13:16:50,909 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-2
+2021-01-22 13:16:50,911 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-2, all resources released: true
+2021-01-22 13:16:50,911 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
+2021-01-22 13:16:50,912 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
+2021-01-22 13:16:50,912 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@31887330 OK
+2021-01-22 13:16:50,912 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@b1f36e5
+2021-01-22 13:16:50,914 main TRACE Reregistering context (1/1): '26ba2a48' org.apache.logging.log4j.core.LoggerContext@52afcdd8
+2021-01-22 13:16:50,916 main TRACE Unregistering 1 MBeans: [org.apache.logging.log4j2:type=26ba2a48]
+2021-01-22 13:16:50,918 main TRACE Unregistering 1 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger]
+2021-01-22 13:16:50,919 main TRACE Unregistering 1 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector]
+2021-01-22 13:16:50,923 main TRACE Unregistering 2 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging, org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=]
+2021-01-22 13:16:50,924 main TRACE Unregistering 2 MBeans: [org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE, org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE]
+2021-01-22 13:16:50,928 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncAppenders,name=*'
+2021-01-22 13:16:50,928 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncLoggerRingBuffer'
+2021-01-22 13:16:50,929 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*,subtype=RingBuffer'
+2021-01-22 13:16:50,929 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48
+2021-01-22 13:16:50,930 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger
+2021-01-22 13:16:50,930 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector
+2021-01-22 13:16:50,930 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=
+2021-01-22 13:16:50,931 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging
+2021-01-22 13:16:50,931 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE
+2021-01-22 13:16:50,931 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE
+2021-01-22 13:16:50,932 main TRACE Using DummyNanoClock for nanosecond timestamps.
+2021-01-22 13:16:50,932 main DEBUG Reconfiguration complete for context[name=Default] at URI E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@65528bcf) with optional ClassLoader: null
+2021-01-22 13:16:50,932 main DEBUG Shutdown hook enabled. Registering a new one.
+2021-01-22 13:16:50,932 main DEBUG LoggerContext[name=Default, org.apache.logging.log4j.core.LoggerContext@65528bcf] started OK.
 sudoku.model.SudokuBoard@518ed9b4[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@5e0b7f58
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,4,1,9,3,7,5},{1,3,9,5,7,6,2,4,8},{5,7,4,3,2,8,9,1,6}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,4,9,8,2,1,7,5},{9,7,1,4,6,5,3,2,8}}
 ]
 sudoku.model.SudokuBoard@6ce1cc03[
   size=9
   solver=sudoku.model.BacktrackingSudokuSolver@b1e63b5
-  board={{2,9,1,6,3,5,7,8,4},{3,4,7,1,8,2,5,6,9},{8,5,6,9,4,7,1,2,3},{4,6,2,7,5,3,8,9,1},{9,8,3,2,6,1,4,5,7},{7,1,5,8,9,4,6,3,2},{6,2,8,4,1,9,3,7,5},{1,3,9,5,7,6,2,4,8},{5,7,4,3,2,8,9,1,6}}
+  board={{6,9,2,3,5,1,4,8,7},{7,4,3,6,2,8,5,9,1},{8,1,5,7,4,9,2,6,3},{5,2,9,8,1,6,7,3,4},{1,3,7,2,9,4,8,5,6},{4,8,6,5,3,7,9,1,2},{2,5,8,1,7,3,6,4,9},{3,6,4,9,8,2,1,7,5},{9,7,1,4,6,5,3,2,8}}
 ]
 ]]></system-out>
     <system-err><![CDATA[Warning: Nashorn engine is planned to be removed from a future JDK release
