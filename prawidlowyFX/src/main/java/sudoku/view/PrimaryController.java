@@ -10,6 +10,8 @@ import sudoku.model.Dao;
 import sudoku.model.StreamSudokuBoardFactory;
 import sudoku.model.SudokuBoard;
 import sudoku.model.SudokuBoardDaoFactory;
+import sudoku.view.exception.LanguageChoiceException;
+import sudoku.view.exception.LevelChoiceException;
 
 import java.io.File;
 import java.io.IOException;
@@ -69,7 +71,8 @@ public class PrimaryController {
     }
 
     @FXML
-    public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonStartGame(ActionEvent actionEvent)
+            throws IOException, LevelChoiceException {
         try {
            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
            SecondaryController secondaryController = new SecondaryController();
@@ -79,20 +82,21 @@ public class PrimaryController {
         } catch (NullPointerException e) {
           popOutWindow.messageBox(bundle.getString("error_title"),
                 bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
+          throw new LevelChoiceException(bundle.getString("exception_level_choice"), e);
         }
     }
 
     @FXML
-    public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
+    public void onActionButtonChangeLanguage(ActionEvent actionEvent)
+            throws LanguageChoiceException {
         try {
             String lang =
                     comboBoxLanguageSetting.getSelectionModel().getSelectedItem().toString();
                     changeLanguage(lang);
-
         } catch (NullPointerException e) {
-            e.printStackTrace();
             popOutWindow.messageBox(bundle.getString("error_title"),
                     bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
+            throw new LanguageChoiceException(bundle.getString("exception_language_choice"), e);
         }
     }
 
