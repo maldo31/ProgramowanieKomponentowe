@@ -1,23 +1,26 @@
 package sudoku.model;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
 
     public transient IntegerProperty value = new SimpleIntegerProperty();
 
     private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
+    public Logger logger=LoggerFactory.getLogger(SudokuField.class);
 
     public IntegerProperty getValueProperty() {
         return value;
@@ -103,7 +106,7 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
             this.value.setValue(value);
             changes.firePropertyChange("value",oldValue,value);
         } else {
-            System.out.print("Błąd, value musi być w zakresie <-1;9>,"
+            logger.info("Błąd, value musi być w zakresie <-1;9>,"
                     + " a jego wartość to=" + value + "\n");
         }
     }

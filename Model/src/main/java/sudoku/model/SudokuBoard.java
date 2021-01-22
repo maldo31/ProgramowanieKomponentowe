@@ -23,9 +23,10 @@ import java.util.List;
 
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
-    public  Logger logger = LoggerFactory.getLogger("SampleLogger");
+    private static final  Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     public final int size = 9;
     private SudokuSolver solver;
+
 
     private List<List<SudokuField>> board;
 
@@ -210,7 +211,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     void printMessenge(int index) {
-        System.out.println("Bład w kwadracie " + index + "\n" + toString());
+        logger.info("Bład w kwadracie " + index + "\n" + toString());
     }
 
     public boolean checkBoardTest() {
@@ -223,7 +224,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
         public void propertyChange(PropertyChangeEvent evt) {
 
             if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
-                System.out.println("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
+                logger.info("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
 
             }
         }
