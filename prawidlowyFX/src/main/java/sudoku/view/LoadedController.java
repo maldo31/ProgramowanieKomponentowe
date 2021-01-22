@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
 import sudoku.model.*;
+import sudoku.model.exception.SudokuIOException;
 
 import java.io.File;
 import java.io.IOException;
@@ -109,7 +110,11 @@ public class LoadedController implements Initializable {
         SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
         Dao<SudokuBoard> sudokuBoardDaoFile;
         sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
-        sudokuBoardDaoFile.write(sudokuBoard);
+        try {
+            sudokuBoardDaoFile.write(sudokuBoard);
+        } catch (SudokuIOException e) {
+            e.printStackTrace();
+        }
 
     }
 }

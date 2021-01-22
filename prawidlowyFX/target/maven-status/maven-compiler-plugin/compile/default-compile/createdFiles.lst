@@ -1,5 +1,7 @@
+sudoku\view\exception\LevelChoiceException.class
 sudoku\view\LoadedController.class
 sudoku\view\bundle\Authors_en_US.class
+sudoku\view\exception\SceneLoadException.class
 sudoku\view\PopOutWindow.class
 sudoku\view\SecondaryController.class
 sudoku\view\bundle\Authors_pl_PL.class
@@ -9,5 +11,6 @@ module-info.class
 sudoku\view\CellXY.class
 sudoku\view\bundle\Authors_es_ES.class
 sudoku\view\EmptyBoardException.class
+sudoku\view\exception\LanguageChoiceException.class
 sudoku\view\App.class
 sudoku\view\ChoosedLevel.class

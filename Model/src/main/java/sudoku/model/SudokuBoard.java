@@ -1,4 +1,5 @@
 package sudoku.model;
+
 import javafx.beans.property.IntegerProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -13,6 +14,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
     //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
@@ -23,9 +25,10 @@ import java.util.List;
 
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
-    public  Logger logger = LoggerFactory.getLogger("SampleLogger");
+    private static final  Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     public final int size = 9;
     private SudokuSolver solver;
+
 
     private List<List<SudokuField>> board;
 
@@ -124,22 +127,22 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
         int subcol = column - column % 3;
         for (int i = 0; i < size; i++) {
             if (value == board.get(row).get(i).getFieldValue()) {
-                    return false;
+                return false;
             }
         }
         for (int i = 0; i < size; i++) {
             if (value == board.get(i).get(column).getFieldValue()) {
-                    return false;
+                return false;
             }
         }
-       for (int i = 0; i < 3; i++) {
-           for (int j = 0;j < 3; j++) {
-               if (value == board.get(subrow + i).get(subcol + j).getFieldValue()) {
-                           return false;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0;j < 3; j++) {
+                if (value == board.get(subrow + i).get(subcol + j).getFieldValue()) {
+                    return false;
 
-                   }
-               }
-           }
+                }
+            }
+        }
 
         return true;
     }
@@ -210,7 +213,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     void printMessenge(int index) {
-        System.out.println("Bład w kwadracie " + index + "\n" + toString());
+        logger.info("Bład w kwadracie " + index + "\n" + toString());
     }
 
     public boolean checkBoardTest() {
@@ -219,14 +222,14 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
 
-        @Override
-        public void propertyChange(PropertyChangeEvent evt) {
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
 
-            if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
-                System.out.println("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
+        if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
+            logger.info("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
 
-            }
         }
+    }
 
     @Override
     protected Object clone() {

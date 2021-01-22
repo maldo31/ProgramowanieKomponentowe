@@ -1,5 +1,7 @@
 package sudoku.model;
 
+import sudoku.model.exception.SudokuIOException;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,22 +10,22 @@ import java.io.ObjectOutputStream;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
-private String fileName;
-private ObjectOutputStream outputStream;
-private FileInputStream fis;
-private ObjectInputStream ois;
+    private String fileName;
+    private ObjectOutputStream outputStream;
+    private FileInputStream fis;
+    private ObjectInputStream ois;
 
     public FileSudokuBoardDao(String fileName) {
         this.fileName = fileName;
     }
 
-    public void write(SudokuBoard object) {
+    public void write(SudokuBoard object) throws SudokuIOException {
         try {
             this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
             outputStream.writeObject(object);
             outputStream.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new SudokuIOException();
         }
 
     }
@@ -48,14 +50,14 @@ private ObjectInputStream ois;
             if (ois != null) {
                 ois.close();
                 ois = null;
-                }
+            }
             if (fis != null) {
                 fis.close();
                 fis = null;
-                }
+            }
             if (outputStream != null) {
                 outputStream.close();
-                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,9 +68,9 @@ private ObjectInputStream ois;
     @Override
     public void finalize() {
         try {
-        close();
-            } catch (Throwable e) {
+            close();
+        } catch (Throwable e) {
             e.printStackTrace();
-                            }
         }
+    }
 }
