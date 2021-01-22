@@ -1,7 +1,6 @@
 package sudoku.model;
 
 import org.junit.jupiter.api.Test;
-import sudoku.model.exception.SudokuIOException;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -14,7 +13,7 @@ class FileSudokuBoardDaoTest {
     private SudokuBoard testSudokuBoard = new SudokuBoard();
 
     @Test
-    public void writeReadTest() throws SudokuIOException {
+    public void writeReadTest(){
         sudokuBoard.solveGame();
         sudokuBoardDaoFile = factory.getFileDao("test");
         sudokuBoardDaoFile.write(sudokuBoard);

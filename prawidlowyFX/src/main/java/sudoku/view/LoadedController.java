@@ -1,6 +1,5 @@
 package sudoku.view;
 
-import exception.SceneLoadException;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,9 +15,7 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
 import sudoku.model.*;
-import sudoku.model.exception.SudokuIOException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -27,7 +24,7 @@ import java.util.ResourceBundle;
 
 public class LoadedController implements Initializable {
     private Stage thisStage;
-    private static final  Logger logger = LoggerFactory.getLogger(LoadedController.class);
+
     @FXML
 
     private GridPane sudokuBoardGrid;
@@ -36,7 +33,7 @@ public class LoadedController implements Initializable {
     private PopOutWindow popOutWindow = new PopOutWindow();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
-    private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+
 
     private static String language = App.getLanguage();
 
@@ -45,7 +42,7 @@ public class LoadedController implements Initializable {
     private FileChooser fileChooser;
     private File file;
 
-    public LoadedController(SudokuBoard sudokuBoard) throws  SceneLoadException {
+    public LoadedController(SudokuBoard sudokuBoard) {
 
         thisStage = new Stage();
         this.sudokuBoard = sudokuBoard;
@@ -61,7 +58,7 @@ public class LoadedController implements Initializable {
             thisStage.setTitle(bundle.getString("application_title"));
 
         } catch (IOException e) {
-            throw new SceneLoadException(bundle.getString("exception_scene_load"),e);
+            e.printStackTrace();
         }
     }
 
@@ -87,7 +84,7 @@ public class LoadedController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         fillGrid();
-        textArea.appendText((bundle.getString("game_check")));
+        textArea.appendText("Sprawdz Uklad");
 
     }
 
@@ -99,26 +96,21 @@ public class LoadedController implements Initializable {
     public void onActionButtonCheck(ActionEvent actionEvent) throws IOException {
         if (sudokuBoard.checkBoard() == true) {
             textArea.clear();
-            textArea.appendText((bundle.getString("arrangement_true")));
+            textArea.appendText("Układ Prawidłowy");
         } else {
             textArea.clear();
-            textArea.appendText((bundle.getString("arrangement_false")));
+            textArea.appendText("Układ Nieprawidłowy");
         }
     }
 
     @FXML
     public void onActionButtonSaveGame(ActionEvent actionEvent)  {
-
-        try {
-            fileChooser = new FileChooser();
-            file = fileChooser.showSaveDialog(thisStage);
-            SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
-            Dao<SudokuBoard> sudokuBoardDaoFile;
-            sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
-            sudokuBoardDaoFile.write(sudokuBoard);
-        } catch (SudokuIOException e) {
-            logger.warn("Error saving file");
-        }
+        fileChooser = new FileChooser();
+        file = fileChooser.showSaveDialog(thisStage);
+        SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
+        Dao<SudokuBoard> sudokuBoardDaoFile;
+        sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
+        sudokuBoardDaoFile.write(sudokuBoard);
 
     }
 }

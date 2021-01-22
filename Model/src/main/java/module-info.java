@@ -5,5 +5,4 @@ module ModelProject {
     requires org.slf4j;
     opens sudoku.model;
     exports sudoku.model;
-    exports sudoku.model.exception;
 }

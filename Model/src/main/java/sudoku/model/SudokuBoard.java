@@ -1,11 +1,4 @@
 package sudoku.model;
-
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import javafx.beans.property.IntegerProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -14,6 +7,12 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 /*
     //Sprawdzanie czy wtyczka checkstyle działa
     //Po odkomentowaniu checkstyle informuje o braku spacji między znakami
@@ -24,10 +23,9 @@ import org.slf4j.LoggerFactory;
 
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
 
-    private static final  Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
+    public  Logger logger = LoggerFactory.getLogger("SampleLogger");
     public final int size = 9;
     private SudokuSolver solver;
-
 
     private List<List<SudokuField>> board;
 
@@ -212,7 +210,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     void printMessenge(int index) {
-        logger.info("Bład w kwadracie " + index + "\n" + toString());
+        System.out.println("Bład w kwadracie " + index + "\n" + toString());
     }
 
     public boolean checkBoardTest() {
@@ -225,7 +223,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
         public void propertyChange(PropertyChangeEvent evt) {
 
             if ((int)(evt.getOldValue()) != 0 && !checkBoardTest()) {
-                logger.info("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
+                System.out.println("Wartość " + evt.getNewValue() + " wstawiona nieprawidłowo");
 
             }
         }

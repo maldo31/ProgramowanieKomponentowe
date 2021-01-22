@@ -1,8 +1,5 @@
 package sudoku.view;
 
-import exception.LanguageChoiceException;
-import exception.LevelChoiceException;
-import exception.SceneLoadException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -42,27 +39,15 @@ public class PrimaryController {
         switch (lang) {
             case "Polish": case "Polski": case "Polaco":
                 App.setLocale(new Locale("pl","PL"));
-                try {
-                    App.setLanguage("pl_PL");
-                } catch (SceneLoadException e) {
-                    e.printStackTrace();
-                }
+                App.setLanguage("pl_PL");
                 break;
             case "English": case "Angielski": case "Inglés":
                 App.setLocale(new Locale("en","US"));
-                try {
-                    App.setLanguage("en_US");
-                } catch (SceneLoadException e) {
-                    e.printStackTrace();
-                }
+                App.setLanguage("en_US");
                 break;
             case "Spanish": case "Hiszpański": case "Español":
                 App.setLocale(new Locale("es","ES"));
-                try {
-                    App.setLanguage("es_ES");
-                } catch (SceneLoadException e) {
-                    e.printStackTrace();
-                }
+                App.setLanguage("es_ES");
                 break;
             default:
                 break;
@@ -84,48 +69,35 @@ public class PrimaryController {
     }
 
     @FXML
-    public void onActionButtonStartGame(ActionEvent actionEvent)
-            throws IOException, LevelChoiceException {
+    public void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
         try {
            this.level = comboBoxSystemDifficult.getSelectionModel().getSelectedItem().toString();
-            SecondaryController secondaryController = null;
-            try {
-                secondaryController = new SecondaryController();
-            } catch (SceneLoadException e) {
-                e.printStackTrace();
-            }
+           SecondaryController secondaryController = new SecondaryController();
 
-            secondaryController.showStage();
+           secondaryController.showStage();
 
         } catch (NullPointerException e) {
-            throw new LevelChoiceException(bundle.getString("exception_level_choice"),e);
-            /*
           popOutWindow.messageBox(bundle.getString("error_title"),
                 bundle.getString("error_level_choice"), Alert.AlertType.WARNING);
-
-             */
         }
     }
 
     @FXML
-    public void onActionButtonChangeLanguage(ActionEvent actionEvent)
-            throws LanguageChoiceException {
+    public void onActionButtonChangeLanguage(ActionEvent actionEvent) {
         try {
             String lang =
                     comboBoxLanguageSetting.getSelectionModel().getSelectedItem().toString();
                     changeLanguage(lang);
 
         } catch (NullPointerException e) {
-            throw new LanguageChoiceException(bundle.getString("exception_language_choice"),e);
-            /*e.printStackTrace();
+            e.printStackTrace();
             popOutWindow.messageBox(bundle.getString("error_title"),
                     bundle.getString("error_language_choice"), Alert.AlertType.WARNING);
-             */
         }
     }
 
     @FXML
-    public void onActionButtonLoad(ActionEvent actionEvent) throws IOException, SceneLoadException {
+    public void onActionButtonLoad(ActionEvent actionEvent) throws IOException {
         fileChooser = new FileChooser();
         file = fileChooser.showOpenDialog(thisStage);
         SudokuBoard sudokuBoard;

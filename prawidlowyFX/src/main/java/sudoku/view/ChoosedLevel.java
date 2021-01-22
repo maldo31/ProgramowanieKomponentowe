@@ -1,19 +1,18 @@
 package sudoku.view;
 
+import sudoku.model.SudokuBoard;
+
 import java.util.HashSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.Set;
-import sudoku.model.SudokuBoard;
 
 public enum ChoosedLevel {
     EASY(1),MEDIUM(51),HARD(58);
     int fieldsToRemove;
-
     ChoosedLevel(int fieldsToRemove) {
         this.fieldsToRemove = fieldsToRemove;
     }
-
     private Random rand = new Random();
     private Set<CellXY> randomPositions = new HashSet<>();
 
@@ -30,7 +29,6 @@ public enum ChoosedLevel {
             }
         }
     }
-
     public SudokuBoard chooseLevel(SudokuBoard sudokuBoard)
             throws EmptyBoardException {
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");

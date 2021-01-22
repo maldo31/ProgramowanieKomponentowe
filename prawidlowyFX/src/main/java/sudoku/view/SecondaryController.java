@@ -1,6 +1,5 @@
 package sudoku.view;
 
-import exception.SceneLoadException;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,10 +15,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import sudoku.model.*;
-import sudoku.model.exception.SudokuIOException;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,10 +24,9 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ResourceBundle;
 
-
 public class SecondaryController implements Initializable {
     private Stage thisStage;
-    private static final Logger logger = LoggerFactory.getLogger(LoadedController.class);
+
     @FXML
     private GridPane sudokuBoardGrid;
 
@@ -46,7 +41,7 @@ public class SecondaryController implements Initializable {
     private File file;
     private ChoosedLevel choosedLevel;
 
-    public SecondaryController() throws SceneLoadException {
+    public SecondaryController() {
 
         thisStage = new Stage();
 
@@ -62,7 +57,7 @@ public class SecondaryController implements Initializable {
             thisStage.setTitle(bundle.getString("application_title"));
 
         } catch (IOException e) {
-            throw new SceneLoadException(bundle.getString("exception_scene_load"),e);
+            e.printStackTrace();
         }
     }
 
@@ -163,17 +158,12 @@ public class SecondaryController implements Initializable {
 
     @FXML
     public void onActionButtonSaveGame(ActionEvent actionEvent)  {
-
-        try {
-            fileChooser = new FileChooser();
-            file = fileChooser.showSaveDialog(thisStage);
-            SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
-            Dao<SudokuBoard> sudokuBoardDaoFile;
-            sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
-            sudokuBoardDaoFile.write(sudokuBoard);
-        } catch (SudokuIOException e) {
-            logger.warn("Error saving file");
-        }
+        fileChooser = new FileChooser();
+        file = fileChooser.showSaveDialog(thisStage);
+        SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
+        Dao<SudokuBoard> sudokuBoardDaoFile;
+        sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
+        sudokuBoardDaoFile.write(sudokuBoard);
 
     }
 }

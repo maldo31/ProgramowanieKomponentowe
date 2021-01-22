@@ -1,15 +1,14 @@
 package sudoku.view;
 
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
-
-import exception.SceneLoadException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /*
  * JavaFX App
@@ -34,15 +33,15 @@ public class App extends Application {
         return App.locale;
     }
 
-    public static void setLanguage(String language) throws SceneLoadException {
+    public static void setLanguage(String language) {
         App.language = language;
-        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+
         try {
             scene = new Scene(load_fxml("primary"), 640, 480);
         } catch (IOException e) {
-            throw new SceneLoadException(bundle.getString("exception_scene_load"),e);
+            e.printStackTrace();
         }
-
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
         stage.setTitle(bundle.getString("application_board_title"));
         stage.setScene(scene);
         stage.show();
