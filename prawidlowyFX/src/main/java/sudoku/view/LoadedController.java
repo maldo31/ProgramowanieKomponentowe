@@ -1,5 +1,10 @@
 package sudoku.view;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,13 +19,10 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import sudoku.model.BacktrackingSudokuSolver;
+import sudoku.model.Dao;
+import sudoku.model.SudokuBoard;
+import sudoku.model.SudokuBoardDaoFactory;
 
 public class LoadedController implements Initializable {
     private Stage thisStage;
