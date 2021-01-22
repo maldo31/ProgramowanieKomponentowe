@@ -1,0 +1,105 @@
+165  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+168  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+169  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+171  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+172  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,2,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+173  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+173  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+174  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+174  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+174  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+176  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,7,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+176  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+177  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+178  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+179  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+179  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+180  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+180  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+181  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,8,3,7,6},{6,8,3,2,5,7,9,1,4},{8,3,6,5,7,9,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+181  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+182  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,8,3,7,6},{6,8,3,2,5,7,9,1,4},{8,3,6,5,7,9,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+182  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+182  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,8,3,7,6},{6,8,3,2,5,7,9,1,4},{8,3,6,5,7,9,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+182  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+183  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,8,3,7,6},{6,8,3,2,5,7,9,1,4},{8,3,6,5,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+183  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+184  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,1,2,4,9,8,3,7,6},{6,8,3,2,5,7,9,1,4},{8,3,6,5,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+184  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+186  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 1
+sudoku.model.SudokuBoard@72d60575[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@434361e0
+  board={{1,2,8,9,6,3,4,5,7},{9,7,5,8,1,4,2,6,3},{3,6,4,7,2,5,8,9,1},{7,4,9,1,3,6,5,8,2},{5,0,2,4,9,8,3,7,6},{6,8,3,2,5,7,9,1,4},{8,3,6,5,7,2,1,4,9},{2,5,1,6,4,9,7,3,8},{4,9,7,3,8,1,6,2,5}}
+]
+186  [JavaFX Application Thread] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
