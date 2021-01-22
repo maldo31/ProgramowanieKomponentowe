@@ -1,6 +1,7 @@
 package sudoku.model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import sudoku.model.exception.WrongFieldValueException;
 
 import java.util.List;
 
@@ -21,7 +22,12 @@ public class SudokuBoardTest {
     public void checkFillBoardTest() {
         sudokuBoard.solveGame();
 
-        List<List<SudokuField>> testBoard = sudokuBoard.getCopyOfBoard();
+        List<List<SudokuField>> testBoard = null;
+        try {
+            testBoard = sudokuBoard.getCopyOfBoard();
+        } catch (WrongFieldValueException e) {
+            e.printStackTrace();
+        }
 
 
         boolean flaga = true;
@@ -83,7 +89,7 @@ public class SudokuBoardTest {
 
     //Test sprawdzający czy inny układ liczb na planszy po każdym uruchomieniu fillBoard jest inny
     @Test
-    public void repeatFillBoardTest() {
+    public void repeatFillBoardTest() throws WrongFieldValueException {
         List<List<SudokuField>> testBoard1;
         List<List<SudokuField>> testBoard2;
 

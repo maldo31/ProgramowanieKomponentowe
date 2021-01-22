@@ -15,6 +15,7 @@ import sudoku.model.SudokuBoardDaoFactory;
 import sudoku.model.exception.SudokuFileException;
 import sudoku.view.exception.LanguageChoiceException;
 import sudoku.view.exception.LevelChoiceException;
+import sudoku.view.exception.PathNotSpecifed;
 
 import java.io.File;
 import java.io.IOException;
@@ -104,7 +105,7 @@ public class PrimaryController {
     }
 
     @FXML
-    public void onActionButtonLoad(ActionEvent actionEvent) {
+    public void onActionButtonLoad(ActionEvent actionEvent) throws PathNotSpecifed {
         fileChooser = new FileChooser();
         file = fileChooser.showOpenDialog(thisStage);
         SudokuBoard sudokuBoard;
@@ -118,7 +119,12 @@ public class PrimaryController {
             ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
             LoadedController loaderController = new LoadedController(sudokuBoard);
             loaderController.showStage();
-        } catch (SudokuFileException | NullPointerException e) {
+
+        }
+        catch(NullPointerException npe){
+            throw new PathNotSpecifed(bundle.getString("empty_name"),npe);
+
+        }catch (SudokuFileException e) {
             e.printStackTrace();
         }
 

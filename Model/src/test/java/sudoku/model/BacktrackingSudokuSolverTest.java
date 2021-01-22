@@ -2,9 +2,7 @@ package sudoku.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sudoku.model.BacktrackingSudokuSolver;
-import sudoku.model.SudokuBoard;
-import sudoku.model.SudokuField;
+import sudoku.model.exception.WrongFieldValueException;
 
 import java.util.List;
 
@@ -23,11 +21,15 @@ class BacktrackingSudokuSolverTest {
     void solve() {
 
         solver.solve(sudokuBoard);
-        List<List<SudokuField>> testBoard = sudokuBoard.getCopyOfBoard();
+        List<List<SudokuField>> testBoard = null;
+        try {
+            testBoard = sudokuBoard.getCopyOfBoard();
+        } catch (WrongFieldValueException e) {
+            e.printStackTrace();
+        }
 
 
-
-            boolean flaga = true;
+        boolean flaga = true;
 
             //Sprawdz wiersze
             for (int i = 0; i < 9; i++) {

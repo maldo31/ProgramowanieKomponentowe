@@ -7,6 +7,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sudoku.model.exception.WrongFieldValueException;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -102,7 +103,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
 
     }
 
-    public List<List<SudokuField>> getCopyOfBoard() {
+    public List<List<SudokuField>> getCopyOfBoard() throws WrongFieldValueException {
         List<List<SudokuField>> copiedBoard = new ArrayList<List<SudokuField>>();
         copiedBoard = Arrays.asList(new List[size]);
         for (int i = 0; i < size; i++) {
@@ -156,7 +157,12 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     public void set(int row, int column, int value) {
-        this.board.get(row).get(column).setFieldValue(value);
+        try {
+            this.board.get(row).get(column).setFieldValue(value);
+        } catch (WrongFieldValueException e) {
+            logger.error("wrong value set",e);
+            ;
+        }
 
     }
 

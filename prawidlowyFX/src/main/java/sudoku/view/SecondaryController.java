@@ -19,6 +19,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.*;
 import sudoku.model.exception.SudokuFileException;
+import sudoku.model.exception.WrongFieldValueException;
+import sudoku.view.exception.EmptyBoardException;
+import sudoku.view.exception.PathNotSpecifed;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,10 +75,7 @@ public class SecondaryController implements Initializable {
                 try {
                     //Kontrola czy wprowadzona wartość jest w zakresie 1-9
                     if (Integer.parseInt(var1) > 9 || Integer.parseInt(var1) < 1) {
-                        popOutWindow.messageBox(bundle.getString("wrong_value"),
-                                (bundle.getString("wrong_value_info")),
-                                Alert.AlertType.ERROR);
-                        var1 = "0";
+                        throw new WrongFieldValueException();
                     }
                     if (var1 == null) {
                         return null;
@@ -88,12 +88,22 @@ public class SecondaryController implements Initializable {
                             return var2.parse(var1);
                         }
                     }
-                } catch (ParseException | NumberFormatException var3) {
+                }
+                catch (WrongFieldValueException e){
+                    popOutWindow.messageBox(bundle.getString("wrong_value"),
+                            (bundle.getString("wrong_value_info")),
+                            Alert.AlertType.ERROR);
+                    logger.warn(bundle.getString("wrong_value_info"));
+                    throw new RuntimeException(e);
+                }
+                catch (ParseException | NumberFormatException var3) {
                     popOutWindow.messageBox(bundle.getString("wrong_type"),
                             (bundle.getString("wrong_type_info")),
                             Alert.AlertType.ERROR);
+                    logger.warn(bundle.getString("wrong_type_info"));
                     throw new RuntimeException(var3);
                 }
+
             }
         };
         for (int i = 0; i < 9; i++) {
@@ -161,7 +171,7 @@ public class SecondaryController implements Initializable {
     }
 
     @FXML
-    public void onActionButtonSaveGame(ActionEvent actionEvent)  {
+    public void onActionButtonSaveGame(ActionEvent actionEvent) throws PathNotSpecifed {
 
         try {
             fileChooser = new FileChooser();
@@ -170,7 +180,11 @@ public class SecondaryController implements Initializable {
             Dao<SudokuBoard> sudokuBoardDaoFile;
             sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
             sudokuBoardDaoFile.write(sudokuBoard);
-        } catch (SudokuFileException | NullPointerException e) {
+
+        }
+        catch(NullPointerException npe) {
+            throw new PathNotSpecifed(bundle.getString("empty_name"), npe);
+        }catch (SudokuFileException e) {
             e.printStackTrace();
             logger.warn("Error saving file");
         }

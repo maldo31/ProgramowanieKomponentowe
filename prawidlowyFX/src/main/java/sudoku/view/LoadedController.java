@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -16,10 +17,13 @@ import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
 import sudoku.model.*;
 import sudoku.model.exception.SudokuFileException;
+import sudoku.model.exception.WrongFieldValueException;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -63,7 +67,42 @@ public class LoadedController implements Initializable {
     }
 
     private void fillGrid() {
-        StringConverter<Number> converter = new NumberStringConverter();
+        StringConverter<Number> converter = new NumberStringConverter() {
+            //Nadpisanie konwertera w celu kontroli wprowadzanych wartości
+            @Override
+            public Number fromString(String var1) {
+                try {
+                    //Kontrola czy wprowadzona wartość jest w zakresie 1-9
+                    if (Integer.parseInt(var1) > 9 || Integer.parseInt(var1) < 1) {
+                        throw new WrongFieldValueException();
+                    }
+                    if (var1 == null) {
+                        return null;
+                    } else {
+                        var1 = var1.trim();
+                        if (var1.length() < 1) {
+                            return null;
+                        } else {
+                            NumberFormat var2 = this.getNumberFormat();
+                            return var2.parse(var1);
+                        }
+                    }
+                }
+                catch (WrongFieldValueException e){
+                    popOutWindow.messageBox(bundle.getString("wrong_value"),
+                            (bundle.getString("wrong_value_info")),
+                            Alert.AlertType.ERROR);
+                    throw new RuntimeException(e);
+                }
+                catch (ParseException | NumberFormatException var3) {
+                    popOutWindow.messageBox(bundle.getString("wrong_type"),
+                            (bundle.getString("wrong_type_info")),
+                            Alert.AlertType.ERROR);
+                    throw new RuntimeException(var3);
+                }
+
+            }
+        };
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 TextField textField = new TextField();

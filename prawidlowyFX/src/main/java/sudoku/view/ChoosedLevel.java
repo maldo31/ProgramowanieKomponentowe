@@ -1,6 +1,7 @@
 package sudoku.view;
 
 import sudoku.model.SudokuBoard;
+import sudoku.view.exception.EmptyBoardException;
 
 import java.util.HashSet;
 import java.util.Random;

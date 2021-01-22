@@ -2,11 +2,10 @@ package sudoku.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sudoku.model.SudokuBoard;
-import sudoku.model.SudokuField;
+import sudoku.model.exception.WrongFieldValueException;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SudokuFieldTest {
 
@@ -17,24 +16,32 @@ class SudokuFieldTest {
     }
 
     @Test
-    void setFieldValue() {
+    void setFieldValue(){
        SudokuField field = new SudokuField(11);
        int value;
        value=field.getFieldValue();
-       field.setFieldValue(12);
-       assertTrue(value==field.getFieldValue());
+        try {
+            field.setFieldValue(12);
+        } catch (WrongFieldValueException e) {
+            e.printStackTrace();
+        }
+        assertTrue(value==field.getFieldValue());
     }
     @Test
     void setFieldValueNegative() {
         SudokuField field = new SudokuField(11);
         int value;
         value = field.getFieldValue();
-        field.setFieldValue(-100);
+        try {
+            field.setFieldValue(-100);
+        } catch (WrongFieldValueException e) {
+            e.printStackTrace();
+        }
         assertTrue(value == field.getFieldValue());
     }
 
     @Test
-    void testToString() {
+    void testToString() throws WrongFieldValueException {
         SudokuField field = new SudokuField(5);
         field.setFieldValue(5);
         System.out.println(field.toString());
