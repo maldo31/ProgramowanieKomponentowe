@@ -21,6 +21,7 @@ import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
 import sudoku.model.BacktrackingSudokuSolver;
 import sudoku.model.Dao;
+import sudoku.model.StreamSudokuBoardFactory;
 import sudoku.model.SudokuBoard;
 import sudoku.model.SudokuBoardDaoFactory;
 
