@@ -1,8 +1,10 @@
 package sudoku.model;
 
+import sudoku.model.exception.SudokuIOException;
+
 public interface Dao<T> {
 
-    void write(T object);
+    void write(T object) throws SudokuIOException;
 
     T read();
 

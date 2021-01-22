@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.SudokuFieldTest" time="0.033" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.SudokuFieldTest" time="0.019" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire3192260619021255246 2021-01-22T11-44-17_810-jvmRun1 surefire2419015856789288737tmp surefire_010788176191117048568tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire14755239823800611696 2021-01-22T13-11-35_856-jvmRun1 surefire15633114169736248232tmp surefire_016007825221227272403tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -57,25 +57,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="testEqualsFalse" classname="sudoku.model.SudokuFieldTest" time="0.002"/>
+  <testcase name="testEqualsFalse" classname="sudoku.model.SudokuFieldTest" time="0"/>
   <testcase name="listenerTest" classname="sudoku.model.SudokuFieldTest" time="0.002"/>
   <testcase name="testToString" classname="sudoku.model.SudokuFieldTest" time="0.001">
     <system-out><![CDATA[5
 ]]></system-out>
   </testcase>
-  <testcase name="cloneTest" classname="sudoku.model.SudokuFieldTest" time="0.002"/>
-  <testcase name="testListeners" classname="sudoku.model.SudokuFieldTest" time="0.004"/>
-  <testcase name="testEqualsDiffrentClass" classname="sudoku.model.SudokuFieldTest" time="0.002"/>
-  <testcase name="testEqualsNull" classname="sudoku.model.SudokuFieldTest" time="0.006"/>
-  <testcase name="testEqualsSame" classname="sudoku.model.SudokuFieldTest" time="0.003"/>
+  <testcase name="cloneTest" classname="sudoku.model.SudokuFieldTest" time="0.001"/>
+  <testcase name="testListeners" classname="sudoku.model.SudokuFieldTest" time="0.002"/>
+  <testcase name="testEqualsDiffrentClass" classname="sudoku.model.SudokuFieldTest" time="0.003"/>
+  <testcase name="testEqualsNull" classname="sudoku.model.SudokuFieldTest" time="0"/>
+  <testcase name="testEqualsSame" classname="sudoku.model.SudokuFieldTest" time="0"/>
   <testcase name="setFieldValue" classname="sudoku.model.SudokuFieldTest" time="0.001">
-    <system-out><![CDATA[11:44:23.146 INFO  [main] SudokuField - Błąd, value musi być w zakresie <-1;9>, a jego wartość to=12
+    <system-out><![CDATA[13:11:40.186 INFO  [main] SudokuField - Błąd, value musi być w zakresie <-1;9>, a jego wartość to=12
 
 ]]></system-out>
   </testcase>
-  <testcase name="testEquals" classname="sudoku.model.SudokuFieldTest" time="0.001"/>
+  <testcase name="testEquals" classname="sudoku.model.SudokuFieldTest" time="0"/>
   <testcase name="setFieldValueNegative" classname="sudoku.model.SudokuFieldTest" time="0">
-    <system-out><![CDATA[11:44:23.148 INFO  [main] SudokuField - Błąd, value musi być w zakresie <-1;9>, a jego wartość to=-100
+    <system-out><![CDATA[13:11:40.188 INFO  [main] SudokuField - Błąd, value musi być w zakresie <-1;9>, a jego wartość to=-100
 
 ]]></system-out>
   </testcase>

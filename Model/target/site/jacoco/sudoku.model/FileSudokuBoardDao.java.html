@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileSudokuBoardDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ModelProject</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">FileSudokuBoardDao.java</span></div><h1>FileSudokuBoardDao.java</h1><pre class="source lang-java linenums">package sudoku.model;
 
+import sudoku.model.exception.SudokuIOException;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,63 +15,63 @@ private ObjectOutputStream outputStream;
 private FileInputStream fis;
 private ObjectInputStream ois;
 
-<span class="fc" id="L16">    public FileSudokuBoardDao(String fileName) {</span>
-<span class="fc" id="L17">        this.fileName = fileName;</span>
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L18">    public FileSudokuBoardDao(String fileName) {</span>
+<span class="fc" id="L19">        this.fileName = fileName;</span>
+<span class="fc" id="L20">    }</span>
 
-    public void write(SudokuBoard object) {
+    public void write(SudokuBoard object) throws SudokuIOException {
         try {
-<span class="fc" id="L22">            this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));</span>
-<span class="fc" id="L23">            outputStream.writeObject(object);</span>
-<span class="fc" id="L24">            outputStream.close();</span>
-<span class="nc" id="L25">        } catch (IOException e) {</span>
-<span class="nc" id="L26">            e.printStackTrace();</span>
-<span class="fc" id="L27">        }</span>
+<span class="fc" id="L24">            this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));</span>
+<span class="fc" id="L25">            outputStream.writeObject(object);</span>
+<span class="fc" id="L26">            outputStream.close();</span>
+<span class="nc" id="L27">        } catch (IOException e) {</span>
+<span class="nc" id="L28">            throw new SudokuIOException();</span>
+<span class="fc" id="L29">        }</span>
 
-<span class="fc" id="L29">    }</span>
+<span class="fc" id="L31">    }</span>
 
     public SudokuBoard read() {
-<span class="fc" id="L32">        SudokuBoard object = null;</span>
+<span class="fc" id="L34">        SudokuBoard object = null;</span>
         try {
-<span class="fc" id="L34">            fis = new FileInputStream(fileName);</span>
-<span class="fc" id="L35">            ois = new ObjectInputStream(fis);</span>
-<span class="fc" id="L36">            object = (SudokuBoard) ois.readObject();</span>
-<span class="fc" id="L37">            ois.close();</span>
-<span class="nc" id="L38">        } catch (IOException | ClassNotFoundException e) {</span>
-<span class="nc" id="L39">            e.printStackTrace();</span>
-<span class="fc" id="L40">        }</span>
-<span class="fc" id="L41">        return object;</span>
+<span class="fc" id="L36">            fis = new FileInputStream(fileName);</span>
+<span class="fc" id="L37">            ois = new ObjectInputStream(fis);</span>
+<span class="fc" id="L38">            object = (SudokuBoard) ois.readObject();</span>
+<span class="fc" id="L39">            ois.close();</span>
+<span class="nc" id="L40">        } catch (IOException | ClassNotFoundException e) {</span>
+<span class="nc" id="L41">            e.printStackTrace();</span>
+<span class="fc" id="L42">        }</span>
+<span class="fc" id="L43">        return object;</span>
     }
 
     //Close próbuje zamknąć strumienie gdyby któryś nadal pozostawał otwarty
     @Override
     public void close() {
         try {
-<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (ois != null) {</span>
-<span class="fc" id="L49">                ois.close();</span>
-<span class="fc" id="L50">                ois = null;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            if (ois != null) {</span>
+<span class="fc" id="L51">                ois.close();</span>
+<span class="fc" id="L52">                ois = null;</span>
                 }
-<span class="fc bfc" id="L52" title="All 2 branches covered.">            if (fis != null) {</span>
-<span class="fc" id="L53">                fis.close();</span>
-<span class="fc" id="L54">                fis = null;</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            if (fis != null) {</span>
+<span class="fc" id="L55">                fis.close();</span>
+<span class="fc" id="L56">                fis = null;</span>
                 }
-<span class="fc bfc" id="L56" title="All 2 branches covered.">            if (outputStream != null) {</span>
-<span class="fc" id="L57">                outputStream.close();</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">            if (outputStream != null) {</span>
+<span class="fc" id="L59">                outputStream.close();</span>
                 }
-<span class="nc" id="L59">        } catch (IOException e) {</span>
-<span class="nc" id="L60">            e.printStackTrace();</span>
-<span class="fc" id="L61">        }</span>
+<span class="nc" id="L61">        } catch (IOException e) {</span>
+<span class="nc" id="L62">            e.printStackTrace();</span>
+<span class="fc" id="L63">        }</span>
 
-<span class="fc" id="L63">    }</span>
+<span class="fc" id="L65">    }</span>
 
     // Metoda wywołuje się gdy GC napotka obiekt, i stwierdzi brak referencji do niego
     @Override
     public void finalize() {
         try {
-<span class="fc" id="L69">        close();</span>
-<span class="nc" id="L70">            } catch (Throwable e) {</span>
-<span class="nc" id="L71">            e.printStackTrace();</span>
-<span class="fc" id="L72">                            }</span>
-<span class="fc" id="L73">        }</span>
+<span class="fc" id="L71">        close();</span>
+<span class="nc" id="L72">            } catch (Throwable e) {</span>
+<span class="nc" id="L73">            e.printStackTrace();</span>
+<span class="fc" id="L74">                            }</span>
+<span class="fc" id="L75">        }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

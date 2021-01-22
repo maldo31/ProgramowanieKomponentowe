@@ -1,10 +1,5 @@
 package sudoku.view;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,15 +14,19 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import sudoku.model.BacktrackingSudokuSolver;
-import sudoku.model.Dao;
-import sudoku.model.StreamSudokuBoardFactory;
-import sudoku.model.SudokuBoard;
-import sudoku.model.SudokuBoardDaoFactory;
+import sudoku.model.*;
+import sudoku.model.exception.SudokuIOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class LoadedController implements Initializable {
     private Stage thisStage;
-
+    private static final  Logger logger = LoggerFactory.getLogger(LoadedController.class);
     @FXML
 
     private GridPane sudokuBoardGrid;
@@ -108,12 +107,17 @@ public class LoadedController implements Initializable {
 
     @FXML
     public void onActionButtonSaveGame(ActionEvent actionEvent)  {
-        fileChooser = new FileChooser();
-        file = fileChooser.showSaveDialog(thisStage);
-        SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
-        Dao<SudokuBoard> sudokuBoardDaoFile;
-        sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
-        sudokuBoardDaoFile.write(sudokuBoard);
+
+        try {
+            fileChooser = new FileChooser();
+            file = fileChooser.showSaveDialog(thisStage);
+            SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
+            Dao<SudokuBoard> sudokuBoardDaoFile;
+            sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
+            sudokuBoardDaoFile.write(sudokuBoard);
+        } catch (SudokuIOException e) {
+            logger.warn("Error saving file");
+        }
 
     }
 }

@@ -1,5 +1,7 @@
 package sudoku.model;
 
+import sudoku.model.exception.SudokuIOException;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,13 +19,13 @@ private ObjectInputStream ois;
         this.fileName = fileName;
     }
 
-    public void write(SudokuBoard object) {
+    public void write(SudokuBoard object) throws SudokuIOException {
         try {
             this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
             outputStream.writeObject(object);
             outputStream.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new SudokuIOException();
         }
 
     }
