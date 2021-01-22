@@ -6,10 +6,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sudoku.model.Dao;
 import sudoku.model.StreamSudokuBoardFactory;
 import sudoku.model.SudokuBoard;
 import sudoku.model.SudokuBoardDaoFactory;
+import sudoku.model.exception.SudokuFileException;
 import sudoku.view.exception.LanguageChoiceException;
 import sudoku.view.exception.LevelChoiceException;
 
@@ -19,7 +22,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class PrimaryController {
-
+    private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     private Stage thisStage;
 
     private static String level;
@@ -101,18 +104,24 @@ public class PrimaryController {
     }
 
     @FXML
-    public void onActionButtonLoad(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonLoad(ActionEvent actionEvent) {
         fileChooser = new FileChooser();
         file = fileChooser.showOpenDialog(thisStage);
         SudokuBoard sudokuBoard;
         SudokuBoardDaoFactory factory = new StreamSudokuBoardFactory();
         Dao<SudokuBoard> sudokuBoardDaoFile;
-        sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
-        sudokuBoard = sudokuBoardDaoFile.read();
-        Locale.setDefault(new Locale(language));
-        ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
-        LoadedController loaderController = new LoadedController(sudokuBoard);
-        loaderController.showStage();
+
+        try {
+            sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
+            sudokuBoard = sudokuBoardDaoFile.read();
+            Locale.setDefault(new Locale(language));
+            ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
+            LoadedController loaderController = new LoadedController(sudokuBoard);
+            loaderController.showStage();
+        } catch (SudokuFileException | NullPointerException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @FXML

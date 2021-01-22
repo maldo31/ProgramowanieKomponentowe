@@ -18,7 +18,7 @@ import javafx.util.converter.NumberStringConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.*;
-import sudoku.model.exception.SudokuIOException;
+import sudoku.model.exception.SudokuFileException;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +34,7 @@ public class SecondaryController implements Initializable {
     private GridPane sudokuBoardGrid;
 
     private PopOutWindow popOutWindow = new PopOutWindow();
-    private SudokuBoard sudokuBoard = new SudokuBoard();
+    private SudokuBoard sudokuBoard;
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
     private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
@@ -115,6 +115,7 @@ public class SecondaryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        sudokuBoard = new SudokuBoard();
         solver.solve(sudokuBoard);
         try {
             switch (PrimaryController.getLevel()) {
@@ -169,7 +170,8 @@ public class SecondaryController implements Initializable {
             Dao<SudokuBoard> sudokuBoardDaoFile;
             sudokuBoardDaoFile = factory.getFileDao(file.getAbsolutePath());
             sudokuBoardDaoFile.write(sudokuBoard);
-        } catch (SudokuIOException e) {
+        } catch (SudokuFileException | NullPointerException e) {
+            e.printStackTrace();
             logger.warn("Error saving file");
         }
 

@@ -14,10 +14,11 @@ public enum ChoosedLevel {
         this.fieldsToRemove = fieldsToRemove;
     }
     private Random rand = new Random();
-    private Set<CellXY> randomPositions = new HashSet<>();
+    private Set<CellXY> randomPositions;
 
 
     private void fillRandomPositionsList(int capacity) {
+        randomPositions = new HashSet<>();
         for (int i = 0; i < capacity; i++) {
             boolean isElementAdded = false;
 

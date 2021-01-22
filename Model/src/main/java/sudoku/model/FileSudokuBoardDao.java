@@ -1,5 +1,7 @@
 package sudoku.model;
 
+import sudoku.model.exception.SudokuFileException;
+import sudoku.model.exception.SudokuFinalizeException;
 import sudoku.model.exception.SudokuIOException;
 
 import java.io.FileInputStream;
@@ -19,18 +21,18 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
         this.fileName = fileName;
     }
 
-    public void write(SudokuBoard object) throws SudokuIOException {
+    public void write(SudokuBoard object) throws SudokuFileException {
         try {
             this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
             outputStream.writeObject(object);
             outputStream.close();
         } catch (IOException e) {
-            throw new SudokuIOException();
+            throw new SudokuFileException("Name of file not specified",e);
         }
 
     }
 
-    public SudokuBoard read() {
+    public SudokuBoard read() throws SudokuFileException {
         SudokuBoard object = null;
         try {
             fis = new FileInputStream(fileName);
@@ -38,14 +40,14 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
             object = (SudokuBoard) ois.readObject();
             ois.close();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new SudokuFileException("No such file: "+fileName,e);
         }
         return object;
     }
 
     //Close próbuje zamknąć strumienie gdyby któryś nadal pozostawał otwarty
     @Override
-    public void close() {
+    public void close() throws SudokuIOException {
         try {
             if (ois != null) {
                 ois.close();
@@ -59,18 +61,18 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
                 outputStream.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new SudokuIOException("Cannot properly close streams",e);
         }
 
     }
 
     // Metoda wywołuje się gdy GC napotka obiekt, i stwierdzi brak referencji do niego
     @Override
-    public void finalize() {
+    public void finalize() throws SudokuFinalizeException {
         try {
             close();
         } catch (Throwable e) {
-            e.printStackTrace();
+            throw new SudokuFinalizeException("Cannot properly finalize objects", e);
         }
     }
 }
