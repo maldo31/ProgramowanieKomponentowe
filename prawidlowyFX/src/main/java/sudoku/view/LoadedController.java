@@ -35,7 +35,7 @@ public class LoadedController implements Initializable {
     private PopOutWindow popOutWindow = new PopOutWindow();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
-
+    private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
 
     private static String language = App.getLanguage();
 
@@ -86,7 +86,7 @@ public class LoadedController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         fillGrid();
-        textArea.appendText("Sprawdz Uklad");
+        textArea.appendText((bundle.getString("game_check")));
 
     }
 
@@ -98,10 +98,10 @@ public class LoadedController implements Initializable {
     public void onActionButtonCheck(ActionEvent actionEvent) throws IOException {
         if (sudokuBoard.checkBoard() == true) {
             textArea.clear();
-            textArea.appendText("Układ Prawidłowy");
+            textArea.appendText((bundle.getString("arrangement_true")));
         } else {
             textArea.clear();
-            textArea.appendText("Układ Nieprawidłowy");
+            textArea.appendText((bundle.getString("arrangement_false")));
         }
     }
 

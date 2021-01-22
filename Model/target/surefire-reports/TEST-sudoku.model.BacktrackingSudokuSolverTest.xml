@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.BacktrackingSudokuSolverTest" time="1.375" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.BacktrackingSudokuSolverTest" time="3.204" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
-    <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\New\an_pn_1145_03\Model\target\test-classes;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -13,253 +13,2115 @@
     <property name="os.name" value="Windows 10"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="PL"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire5211077315331427388 2021-01-22T13-16-47_239-jvmRun1 surefire13811956982792174622tmp surefire_02222479295765617022tmp"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="D:\openjdk\jdk-14.0.2\bin"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\MaciekDate\AppData\Local\Temp\surefire16352485278135371266 2021-01-22T13-21-11_034-jvmRun1 surefire16514077660849095522tmp surefire_01228458859756668441tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
+    <property name="surefire.test.class.path" value="D:\New\an_pn_1145_03\Model\target\test-classes;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\maldo"/>
-    <property name="user.language" value="pl"/>
+    <property name="user.home" value="C:\Users\MaciekDate"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="jdk.module.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes;C:\Users\maldo\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\maldo\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar"/>
+    <property name="jdk.module.path" value="D:\New\an_pn_1145_03\Model\target\classes;C:\Users\MaciekDate\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\MaciekDate\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar"/>
     <property name="java.version.date" value="2020-07-14"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
+    <property name="java.home" value="D:\openjdk\jdk-14.0.2"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model"/>
+    <property name="basedir" value="D:\New\an_pn_1145_03\Model"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M5\surefire-booter-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-api\3.0.0-M5\surefire-api-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.0.0-M5\surefire-logger-api-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.0.0-M4\surefire-shared-utils-3.0.0-M4.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.0.0-M5\surefire-extensions-spi-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\maldo\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.0.0-M5\surefire-junit-platform-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\common-java5\3.0.0-M5\common-java5-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-launcher\1.6.2\junit-platform-launcher-1.6.2.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M5\surefire-booter-3.0.0-M5.jar;C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\surefire-api\3.0.0-M5\surefire-api-3.0.0-M5.jar;C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.0.0-M5\surefire-logger-api-3.0.0-M5.jar;C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.0.0-M4\surefire-shared-utils-3.0.0-M4.jar;C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.0.0-M5\surefire-extensions-spi-3.0.0-M5.jar;D:\New\an_pn_1145_03\Model\target\test-classes;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-api\2.7\log4j-api-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-core\2.7\log4j-core-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.7\log4j-slf4j-impl-2.7.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\MaciekDate\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.0.0-M5\surefire-junit-platform-3.0.0-M5.jar;C:\Users\MaciekDate\.m2\repository\org\apache\maven\surefire\common-java5\3.0.0-M5\common-java5-3.0.0-M5.jar;C:\Users\MaciekDate\.m2\repository\org\junit\platform\junit-platform-launcher\1.6.2\junit-platform-launcher-1.6.2.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
-    <property name="user.name" value="maldo"/>
+    <property name="user.name" value="MaciekDate"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="file.encoding" value="Cp1250"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\maldo\.m2\repository"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\MaciekDate\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\maldo\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2020.2.3"/>
+    <property name="java.io.tmpdir" value="C:\Users\MACIEK~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2020.3"/>
     <property name="java.version" value="14.0.2"/>
-    <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model"/>
+    <property name="user.dir" value="D:\New\an_pn_1145_03\Model"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Python\Scripts\;C:\Python\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\maldo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\MKVToolNix;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\apache-maven-3.6.3\bin;C:\msys64\usr\bin;C:\Program Files\Java\jdk-14.0.2\bin;C:\Program Files (x86)\Calibre2\;C:\Users\maldo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\JetBrains\CLion 2019.3.3\bin;;C:\Users\maldo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\maldo\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.library.path" value="D:\openjdk\jdk-14.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\program files\python39\scripts\;c:\program files\python39\;c:\programdata\oracle\java\javapath;c:\program files (x86)\common files\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\windows\system32\openssh\;c:\program files\nvidia corporation\nvidia nvdlisr;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Live\Shared;C:\Users\MaciekDate\AppData\Local\Microsoft\WindowsApps;C:\Users\MaciekDate\AppData\Local\GitHubDesktop\bin;D:\Programs\PyCharm 2020.2.3\bin;;D:\Programs\CLion 2020.2.4\bin;;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="solve" classname="sudoku.model.BacktrackingSudokuSolverTest" time="1.338">
-    <system-out><![CDATA[2021-01-22 13:16:49,845 main DEBUG Initializing configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
-2021-01-22 13:16:49,861 main DEBUG Installed script engines
-2021-01-22 13:16:50,327 main DEBUG Oracle Nashorn Version: 14.0.2, Language: ECMAScript, Threading: Not Thread Safe, Compile: true, Names: {nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript}
-2021-01-22 13:16:50,327 main DEBUG PluginManager 'Core' found 107 plugins
-2021-01-22 13:16:50,327 main DEBUG PluginManager 'Level' found 0 plugins
-2021-01-22 13:16:50,331 main ERROR Error processing element Strategies ([RollingFile: null]): CLASS_NOT_FOUND
-2021-01-22 13:16:50,335 main DEBUG Log4j2 ConfigurationScheduler: No scheduled items
-2021-01-22 13:16:50,338 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
-2021-01-22 13:16:50,349 main TRACE TypeConverterRegistry initializing.
-2021-01-22 13:16:50,349 main DEBUG PluginManager 'TypeConverter' found 23 plugins
-2021-01-22 13:16:50,361 main DEBUG createProperty(name="logDir", value="target/log")
-2021-01-22 13:16:50,361 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
-2021-01-22 13:16:50,370 main DEBUG configureSubstitutor(={logDir=target/log}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml))
-2021-01-22 13:16:50,370 main DEBUG PluginManager 'Lookup' found 13 plugins
-2021-01-22 13:16:50,371 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2021-01-22 13:16:50,378 main DEBUG PatternLayout$Builder(pattern="%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
-2021-01-22 13:16:50,378 main DEBUG PluginManager 'Converter' found 41 plugins
-2021-01-22 13:16:50,379 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
-2021-01-22 13:16:50,387 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n), name="CONSOLE", , Filter=null, )
-2021-01-22 13:16:50,388 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
-2021-01-22 13:16:50,388 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
-2021-01-22 13:16:50,388 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
-2021-01-22 13:16:50,389 main DEBUG PatternLayout$Builder(pattern="%d{ISO8601} %-5level [%thread] %logger %m%n", PatternSelector=null, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
-2021-01-22 13:16:50,406 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
-2021-01-22 13:16:50,408 main DEBUG createPolicy(interval="null", modulate="null")
-2021-01-22 13:16:50,409 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
-2021-01-22 13:16:50,410 main DEBUG createPolicy(size="1m")
-2021-01-22 13:16:50,412 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
-2021-01-22 13:16:50,413 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)})
-2021-01-22 13:16:50,414 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
-2021-01-22 13:16:50,419 main DEBUG RollingFileAppender$Builder(fileName="target/log/blog.log", filePattern="target/log/blog.%d{yyyy-MM-dd}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%d{ISO8601} %-5level [%thread] %logger %m%n), name="FILE", , Filter=null, )
-2021-01-22 13:16:50,425 main TRACE New file 'target/log/blog.log' created = false
-2021-01-22 13:16:50,425 main DEBUG Starting RollingFileManager target/log/blog.log
-2021-01-22 13:16:50,426 main DEBUG PluginManager 'FileConverter' found 2 plugins
-2021-01-22 13:16:50,428 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=1970/01/01-01:00:00.000, current=2021/01/22-13:16:50.428, freq=DAILY
-2021-01-22 13:16:50,429 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:16:50.429, freq=DAILY
-2021-01-22 13:16:50,429 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
-2021-01-22 13:16:50,430 main DEBUG createAppenders(={CONSOLE, FILE})
-2021-01-22 13:16:50,430 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
-2021-01-22 13:16:50,432 main DEBUG createLogger(additivity="true", level="DEBUG", name="com.github.gquintana.logging", includeLocation="null", ={}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
-2021-01-22 13:16:50,436 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2021-01-22 13:16:50,437 main DEBUG createAppenderRef(ref="CONSOLE", level="null", Filter=null)
-2021-01-22 13:16:50,437 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
-2021-01-22 13:16:50,438 main DEBUG createAppenderRef(ref="FILE", level="null", Filter=null)
-2021-01-22 13:16:50,438 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
-2021-01-22 13:16:50,439 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={CONSOLE, FILE}, ={}, Configuration(E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
-2021-01-22 13:16:50,441 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
-2021-01-22 13:16:50,442 main DEBUG createLoggers(={com.github.gquintana.logging, root})
-2021-01-22 13:16:50,444 main DEBUG Configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] initialized
-2021-01-22 13:16:50,444 main DEBUG Starting configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml]
-2021-01-22 13:16:50,445 main DEBUG Started configuration XmlConfiguration[location=E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml] OK.
-2021-01-22 13:16:50,445 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@6a12c7a8...
-2021-01-22 13:16:50,446 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
-2021-01-22 13:16:50,446 main TRACE DefaultConfiguration stopping root LoggerConfig.
-2021-01-22 13:16:50,446 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
-2021-01-22 13:16:50,446 main TRACE DefaultConfiguration stopping remaining Appenders.
-2021-01-22 13:16:50,447 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
-2021-01-22 13:16:50,447 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
-2021-01-22 13:16:50,447 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
-2021-01-22 13:16:50,447 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
-2021-01-22 13:16:50,448 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@6a12c7a8 OK
-2021-01-22 13:16:50,508 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@b1f36e5
-2021-01-22 13:16:50,508 main TRACE Reregistering context (1/1): '26ba2a48' org.apache.logging.log4j.core.LoggerContext@52afcdd8
-2021-01-22 13:16:50,509 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48'
-2021-01-22 13:16:50,509 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger'
-2021-01-22 13:16:50,510 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector'
-2021-01-22 13:16:50,510 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*'
-2021-01-22 13:16:50,511 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=*'
-2021-01-22 13:16:50,513 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncAppenders,name=*'
-2021-01-22 13:16:50,513 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=AsyncLoggerRingBuffer'
-2021-01-22 13:16:50,515 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=*,subtype=RingBuffer'
-2021-01-22 13:16:50,517 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48
-2021-01-22 13:16:50,522 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=StatusLogger
-2021-01-22 13:16:50,524 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=ContextSelector
-2021-01-22 13:16:50,526 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=
-2021-01-22 13:16:50,526 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Loggers,name=com.github.gquintana.logging
-2021-01-22 13:16:50,528 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=FILE
-2021-01-22 13:16:50,533 main DEBUG Registering MBean org.apache.logging.log4j2:type=26ba2a48,component=Appenders,name=CONSOLE
-2021-01-22 13:16:50,537 main TRACE Using default SystemClock for timestamps.
-2021-01-22 13:16:50,537 main TRACE Using DummyNanoClock for nanosecond timestamps.
-2021-01-22 13:16:50,538 main DEBUG Reconfiguration complete for context[name=26ba2a48] at URI E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@52afcdd8) with optional ClassLoader: null
-2021-01-22 13:16:50,538 main DEBUG Shutdown hook enabled. Registering a new one.
-2021-01-22 13:16:50,539 main DEBUG LoggerContext[name=26ba2a48, org.apache.logging.log4j.core.LoggerContext@52afcdd8] started OK.
-13:16:50.623 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+  <testcase name="solve" classname="sudoku.model.BacktrackingSudokuSolverTest" time="3.151">
+    <system-out><![CDATA[2021-01-22 13:21:14,339 main DEBUG Initializing configuration XmlConfiguration[location=D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml]
+2021-01-22 13:21:14,365 main DEBUG Installed script engines
+2021-01-22 13:21:15,600 main DEBUG Oracle Nashorn Version: 14.0.2, Language: ECMAScript, Threading: Not Thread Safe, Compile: true, Names: {nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript}
+2021-01-22 13:21:15,600 main DEBUG PluginManager 'Core' found 107 plugins
+2021-01-22 13:21:15,601 main DEBUG PluginManager 'Level' found 0 plugins
+2021-01-22 13:21:15,608 main ERROR Error processing element Strategies ([RollingFile: null]): CLASS_NOT_FOUND
+2021-01-22 13:21:15,613 main DEBUG Log4j2 ConfigurationScheduler: No scheduled items
+2021-01-22 13:21:15,616 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
+2021-01-22 13:21:15,638 main TRACE TypeConverterRegistry initializing.
+2021-01-22 13:21:15,639 main DEBUG PluginManager 'TypeConverter' found 23 plugins
+2021-01-22 13:21:15,659 main DEBUG createProperty(name="logDir", value="target/log")
+2021-01-22 13:21:15,660 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
+2021-01-22 13:21:15,666 main DEBUG configureSubstitutor(={logDir=target/log}, Configuration(D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml))
+2021-01-22 13:21:15,667 main DEBUG PluginManager 'Lookup' found 13 plugins
+2021-01-22 13:21:15,670 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-01-22 13:21:15,683 main DEBUG PatternLayout$Builder(pattern="%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n", PatternSelector=null, Configuration(D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
+2021-01-22 13:21:15,688 main DEBUG PluginManager 'Converter' found 41 plugins
+2021-01-22 13:21:15,689 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2021-01-22 13:21:15,731 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%date{HH:mm:ss.SSS} %-5level [%thread] %logger{1} - %msg%n), name="CONSOLE", , Filter=null, )
+2021-01-22 13:21:15,732 main DEBUG Jansi is not installed, cannot find org.fusesource.jansi.WindowsAnsiOutputStream
+2021-01-22 13:21:15,732 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2021-01-22 13:21:15,733 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-01-22 13:21:15,734 main DEBUG PatternLayout$Builder(pattern="%d{ISO8601} %-5level [%thread] %logger %m%n", PatternSelector=null, Configuration(D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null", header="null", footer="null", )
+2021-01-22 13:21:15,763 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
+2021-01-22 13:21:15,772 main DEBUG createPolicy(interval="null", modulate="null")
+2021-01-22 13:21:15,773 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2021-01-22 13:21:15,774 main DEBUG createPolicy(size="1m")
+2021-01-22 13:21:15,778 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
+2021-01-22 13:21:15,778 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)})
+2021-01-22 13:21:15,779 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2021-01-22 13:21:15,783 main DEBUG RollingFileAppender$Builder(fileName="target/log/blog.log", filePattern="target/log/blog.%d{yyyy-MM-dd}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=1048576)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", Configuration(D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml), , bufferedIo="null", bufferSize="null", immediateFlush="null", , ignoreExceptions="null", PatternLayout(%d{ISO8601} %-5level [%thread] %logger %m%n), name="FILE", , Filter=null, )
+2021-01-22 13:21:15,798 main TRACE New file 'target/log/blog.log' created = false
+2021-01-22 13:21:15,799 main DEBUG Starting RollingFileManager target/log/blog.log
+2021-01-22 13:21:15,800 main DEBUG PluginManager 'FileConverter' found 2 plugins
+2021-01-22 13:21:15,805 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=1970/01/01-01:00:00.000, current=2021/01/22-13:21:15.805, freq=DAILY
+2021-01-22 13:21:15,807 main TRACE PatternProcessor.getNextTime returning 2021/01/23-00:00:00.000, nextFileTime=2021/01/22-00:00:00.000, prevFileTime=2021/01/22-00:00:00.000, current=2021/01/22-13:21:15.806, freq=DAILY
+2021-01-22 13:21:15,807 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2021-01-22 13:21:15,809 main DEBUG createAppenders(={CONSOLE, FILE})
+2021-01-22 13:21:15,809 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2021-01-22 13:21:15,813 main DEBUG createLogger(additivity="true", level="DEBUG", name="com.github.gquintana.logging", includeLocation="null", ={}, ={}, Configuration(D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
+2021-01-22 13:21:15,819 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-01-22 13:21:15,820 main DEBUG createAppenderRef(ref="CONSOLE", level="null", Filter=null)
+2021-01-22 13:21:15,821 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-01-22 13:21:15,821 main DEBUG createAppenderRef(ref="FILE", level="null", Filter=null)
+2021-01-22 13:21:15,822 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2021-01-22 13:21:15,823 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={CONSOLE, FILE}, ={}, Configuration(D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml), Filter=null)
+2021-01-22 13:21:15,825 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2021-01-22 13:21:15,827 main DEBUG createLoggers(={com.github.gquintana.logging, root})
+2021-01-22 13:21:15,829 main DEBUG Configuration XmlConfiguration[location=D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml] initialized
+2021-01-22 13:21:15,831 main DEBUG Starting configuration XmlConfiguration[location=D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml]
+2021-01-22 13:21:15,831 main DEBUG Started configuration XmlConfiguration[location=D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml] OK.
+2021-01-22 13:21:15,832 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@2f7efd0b...
+2021-01-22 13:21:15,833 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
+2021-01-22 13:21:15,833 main TRACE DefaultConfiguration stopping root LoggerConfig.
+2021-01-22 13:21:15,833 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
+2021-01-22 13:21:15,833 main TRACE DefaultConfiguration stopping remaining Appenders.
+2021-01-22 13:21:15,834 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2021-01-22 13:21:15,834 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2021-01-22 13:21:15,834 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
+2021-01-22 13:21:15,834 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
+2021-01-22 13:21:15,835 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@2f7efd0b OK
+2021-01-22 13:21:15,920 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@136690b1
+2021-01-22 13:21:15,921 main TRACE Reregistering context (1/1): '7a5d012c' org.apache.logging.log4j.core.LoggerContext@39007725
+2021-01-22 13:21:15,922 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c'
+2021-01-22 13:21:15,925 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=StatusLogger'
+2021-01-22 13:21:15,926 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=ContextSelector'
+2021-01-22 13:21:15,927 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=Loggers,name=*'
+2021-01-22 13:21:15,929 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=Appenders,name=*'
+2021-01-22 13:21:15,933 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=AsyncAppenders,name=*'
+2021-01-22 13:21:15,935 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=AsyncLoggerRingBuffer'
+2021-01-22 13:21:15,942 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=7a5d012c,component=Loggers,name=*,subtype=RingBuffer'
+2021-01-22 13:21:15,952 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c
+2021-01-22 13:21:15,960 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c,component=StatusLogger
+2021-01-22 13:21:15,965 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c,component=ContextSelector
+2021-01-22 13:21:15,968 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c,component=Loggers,name=
+2021-01-22 13:21:15,970 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c,component=Loggers,name=com.github.gquintana.logging
+2021-01-22 13:21:15,973 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c,component=Appenders,name=FILE
+2021-01-22 13:21:15,978 main DEBUG Registering MBean org.apache.logging.log4j2:type=7a5d012c,component=Appenders,name=CONSOLE
+2021-01-22 13:21:15,983 main TRACE Using default SystemClock for timestamps.
+2021-01-22 13:21:15,984 main TRACE Using DummyNanoClock for nanosecond timestamps.
+2021-01-22 13:21:15,984 main DEBUG Reconfiguration complete for context[name=7a5d012c] at URI D:\New\an_pn_1145_03\Model\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@39007725) with optional ClassLoader: null
+2021-01-22 13:21:15,985 main DEBUG Shutdown hook enabled. Registering a new one.
+2021-01-22 13:21:15,992 main DEBUG LoggerContext[name=7a5d012c, org.apache.logging.log4j.core.LoggerContext@39007725] started OK.
+13:21:16.091 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,2,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.625 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.626 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.097 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.100 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,2,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.627 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.628 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.101 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.103 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,2,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.629 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.631 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.104 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.106 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,3,7,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.631 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.637 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.106 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.109 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,3,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.637 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.638 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.110 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.112 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,4,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,3,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.638 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.639 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.113 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.115 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.639 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.640 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.116 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.123 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,2,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,3,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.641 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.642 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.124 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.126 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.643 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.644 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.126 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.128 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,3,7,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.645 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.645 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.129 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.130 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,3,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,8,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.646 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.646 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.130 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.131 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,9,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,7,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.646 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.647 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.131 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.132 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.648 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.648 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.132 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.133 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,8,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,2,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.649 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.649 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.133 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.134 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.650 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.651 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.134 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.137 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,9,5,4,2,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.651 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:16:50.652 INFO  [main] SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@46f041cb[
+13:21:16.138 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.139 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@46baac0d
-  board={{7,9,1,2,3,5,8,4,6},{6,3,4,8,7,9,5,1,2},{2,8,5,6,1,4,3,7,9},{8,5,6,4,2,7,9,3,1},{9,1,2,3,5,8,4,6,7},{3,4,7,9,6,1,2,8,5},{5,2,3,7,8,6,1,9,4},{1,6,9,5,4,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:16:50.653 INFO  [main] SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+13:21:16.139 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.141 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.141 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.142 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,3,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.143 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.144 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.144 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.145 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,3,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.145 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.146 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,3,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.147 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.148 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.148 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.149 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.149 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.150 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.150 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.151 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.151 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.154 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.154 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.157 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.157 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.159 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.159 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.161 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,5,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.161 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.162 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.163 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.164 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.164 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.166 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,6,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.166 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.167 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.167 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.169 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.169 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.180 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.181 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.183 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.184 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.187 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.187 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.195 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.197 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.209 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.210 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.229 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,4,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.230 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.232 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.232 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.236 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.243 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.244 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,6,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.245 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.245 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.246 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.247 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.247 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.248 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.248 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.249 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,4,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.249 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.250 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.250 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.251 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.251 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.251 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,5,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.251 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.252 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.252 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.253 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.253 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.254 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.254 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.255 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.255 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.256 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.256 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.257 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.257 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.257 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.258 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.258 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.258 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.259 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.259 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.259 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.260 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.260 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.260 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.261 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.261 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.262 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.262 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.263 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.263 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.264 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,6,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.265 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.267 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,6,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.270 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.271 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.271 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.274 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.275 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.280 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,8,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.280 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.281 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.282 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.282 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,8,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.283 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.286 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.289 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.291 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,8,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.292 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.293 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.293 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.294 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.295 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.295 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,3,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.296 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.296 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.297 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.297 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,3,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.297 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.298 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.298 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.299 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,3,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.299 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.299 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.300 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.301 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.301 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.302 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,4,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.303 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.308 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,4,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.309 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.311 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.311 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.312 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,4,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.313 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.314 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,4,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.315 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.317 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.318 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.320 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.320 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.321 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,5,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.321 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.322 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,5,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.322 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.323 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.323 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.324 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.324 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.325 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.325 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.326 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.327 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.327 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.328 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.328 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.328 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.329 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.329 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.330 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.330 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.331 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.331 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.332 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.332 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.332 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.333 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.333 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,6,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.334 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.338 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.338 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.339 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.339 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.340 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.340 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.340 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.341 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.342 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,5,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.342 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.342 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.343 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.343 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,4,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.343 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.344 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.344 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.344 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,4,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.345 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.345 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.345 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.346 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.346 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.347 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,6,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.347 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.348 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.348 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.349 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.349 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.350 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.350 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.350 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.351 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.351 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.352 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.353 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.353 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.355 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.355 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.357 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,4,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.357 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.358 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,4,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.358 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.359 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.362 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.363 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,5,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.364 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.365 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.365 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.366 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.366 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.367 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.367 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.368 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.369 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.370 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.370 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.371 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.371 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.372 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.372 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.372 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.372 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.373 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.373 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.373 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.374 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.374 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.374 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.375 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.375 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.375 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.375 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.377 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.377 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.377 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.378 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.378 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.378 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.379 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.379 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.380 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.380 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.380 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.381 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.381 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.381 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.381 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.382 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.382 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.382 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.383 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.383 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.383 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.384 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.384 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.384 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.385 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{1,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.385 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.385 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,3},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.385 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.387 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,1,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.387 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.390 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.390 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.391 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.391 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.391 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.391 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.392 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.392 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.392 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.393 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.393 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.394 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.395 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.395 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.395 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.396 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.396 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.396 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.397 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.397 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.397 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.398 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.398 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.398 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.399 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{1,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.399 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.399 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.399 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.400 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.400 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.400 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.401 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.403 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.403 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.404 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.404 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.406 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.406 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.407 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.408 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.408 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.409 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.409 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.409 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.409 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.419 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.420 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.421 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.421 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,8},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.421 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.423 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,1,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.423 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.423 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.424 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.424 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.425 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.425 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.425 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.426 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.426 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.428 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.439 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.445 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.445 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.445 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.446 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.447 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.447 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.450 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.451 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.451 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.452 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.452 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.453 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.453 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.453 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.454 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.454 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.454 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{1,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.455 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.455 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.455 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.456 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.456 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.457 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.457 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.462 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.462 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.462 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.462 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.463 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.463 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.463 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.463 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.463 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.465 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.465 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.465 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.466 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.466 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.466 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.466 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.466 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,3},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.467 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.467 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,1,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.467 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.467 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.468 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.468 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.468 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.469 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.469 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.469 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.469 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.470 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.470 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.470 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.470 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.471 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.471 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.471 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.471 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.472 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.472 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.472 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.472 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.473 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,5,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.473 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.473 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.473 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.474 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{1,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.474 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.474 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.474 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.474 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.475 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.475 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.475 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.475 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.476 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.477 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.477 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.477 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.479 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.479 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.480 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.480 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.480 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.480 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,1,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.481 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.481 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,6,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.481 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.481 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.481 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.482 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,8},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.482 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.482 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,1,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.482 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.495 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.497 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.497 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.497 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.498 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,6,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.498 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.498 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.498 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.499 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,5,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.502 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.503 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.503 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.503 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.503 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.504 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.504 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.504 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.504 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.504 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,6,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.505 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.505 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.505 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.505 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.506 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.506 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.506 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.507 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,5,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.507 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.507 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.507 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.508 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.508 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.508 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.508 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.508 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,6,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.509 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.509 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.509 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.509 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.509 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.510 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.510 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.512 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,7,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.516 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.516 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.517 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.517 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.518 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.518 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.519 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.520 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,5,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.520 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.520 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.520 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.521 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.521 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.521 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,6,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.521 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.522 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,6,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.525 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.525 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.525 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.525 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.526 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.526 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,7,3,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.526 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.526 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.526 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.527 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.527 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.527 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.527 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.529 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,2,8,5,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.529 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.529 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,2,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.529 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.529 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,2,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.530 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.530 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,2,6,5,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.530 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.532 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,2,6,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.532 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.532 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,2,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.532 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.532 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.533 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.533 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,3,6,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.533 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.533 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.533 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.533 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,3,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.534 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.534 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.534 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.534 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,7,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.534 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
+13:21:16.535 INFO  [main] SudokuBoard - B?ad w kwadracie 0
+sudoku.model.SudokuBoard@6c120b00[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@d8a2b1b
+  board={{6,7,8,4,9,1,2,3,5},{4,5,9,6,2,3,7,8,1},{3,1,2,5,7,8,9,4,6},{7,8,3,9,1,2,5,6,4},{9,2,4,8,5,6,1,7,3},{5,6,1,7,3,4,8,9,2},{8,3,5,1,4,9,6,2,7},{1,4,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+13:21:16.535 INFO  [main] SudokuBoard - Warto?? 0 wstawiona nieprawid?owo
 Nie wykryto bledu]]></system-out>
     <system-err><![CDATA[Warning: Nashorn engine is planned to be removed from a future JDK release
 ]]></system-err>

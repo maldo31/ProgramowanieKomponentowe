@@ -1,17 +1,17 @@
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\WrongFieldValueException.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\SudokuIOException.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuBoard.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuField.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\SudokuFileException.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuBox.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuColumn.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\Dao.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\Series.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\SudokuBoardException.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\module-info.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\StreamSudokuBoardFactory.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\BacktrackingSudokuSolver.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\FileSudokuBoardDao.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuBoardDaoFactory.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuRow.java
-E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuSolver.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuColumn.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuField.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuBoard.java
+D:\New\an_pn_1145_03\Model\src\main\java\module-info.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\SudokuIOException.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\FileSudokuBoardDao.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\Series.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\SudokuBoardException.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\SudokuFileException.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\BacktrackingSudokuSolver.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\exception\WrongFieldValueException.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuBox.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\Dao.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuSolver.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuRow.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\SudokuBoardDaoFactory.java
+D:\New\an_pn_1145_03\Model\src\main\java\sudoku\model\StreamSudokuBoardFactory.java
