@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.exception.WrongFieldValueException;
 
-
+import javax.persistence.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
@@ -24,16 +24,18 @@ import java.util.List;
     System.out.print("Test");
     }
 */
-
+@Entity
+@Table
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
-
+    @Id
+    @GeneratedValue
     private Long id;
 
     private static final  Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     public final int size = 9;
     private SudokuSolver solver;
 
-
+    @OneToMany(mappedBy = "SudokuBoard", cascade = CascadeType.ALL)
     private List<List<SudokuField>> board;
 
     public SudokuBoard() {

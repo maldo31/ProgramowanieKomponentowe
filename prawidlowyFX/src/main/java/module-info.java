@@ -1,7 +1,7 @@
 module sudoku.view {
     requires javafx.controls;
     requires javafx.fxml;
-    requires ModelProject;
+    requires sudoku.model;
     requires org.apache.commons.lang3;
     requires org.slf4j;
 

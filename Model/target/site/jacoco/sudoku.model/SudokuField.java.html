@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuField.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ModelProject</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">SudokuField.java</span></div><h1>SudokuField.java</h1><pre class="source lang-java linenums">package sudoku.model;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SudokuField.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Model</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">SudokuField.java</span></div><h1>SudokuField.java</h1><pre class="source lang-java linenums">package sudoku.model;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.exception.WrongFieldValueException;
 
-
+import javax.persistence.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.IOException;
@@ -18,119 +18,122 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-
+@Entity
+@Table
 public class SudokuField implements Serializable, Cloneable, Comparable&lt;SudokuField&gt; {
-<span class="fc" id="L23">    private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);</span>
-<span class="fc" id="L24">    public transient IntegerProperty value = new SimpleIntegerProperty();</span>
-
+<span class="fc" id="L24">    private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);</span>
+<span class="fc" id="L25">    public transient IntegerProperty value = new SimpleIntegerProperty();</span>
+    @Id
+    @GeneratedValue
     private Long id;
 
+<span class="fc" id="L30">    @ManyToOne</span>
+    @JoinColumn(name=&quot;author_id&quot;)
 
-
-<span class="fc" id="L30">    private  PropertyChangeSupport changes = new PropertyChangeSupport(this);</span>
+    private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
 
     public IntegerProperty getValueProperty() {
-<span class="nc" id="L33">        return value;</span>
+<span class="nc" id="L36">        return value;</span>
     }
 
     private void writeObject(ObjectOutputStream out)
             throws IOException {
 
-<span class="fc" id="L39">        out.defaultWriteObject();   // always call this first</span>
+<span class="fc" id="L42">        out.defaultWriteObject();   // always call this first</span>
 
-<span class="fc" id="L41">        out.writeObject(value.get());</span>
+<span class="fc" id="L44">        out.writeObject(value.get());</span>
 
-<span class="fc" id="L43">    }</span>
+<span class="fc" id="L46">    }</span>
 
     private void readObject(ObjectInputStream in)
             throws IOException,
             ClassNotFoundException {
 
-<span class="fc" id="L49">        in.defaultReadObject();    // always call this first</span>
+<span class="fc" id="L52">        in.defaultReadObject();    // always call this first</span>
 
-<span class="fc" id="L51">        value = new SimpleIntegerProperty((Integer) in.readObject());</span>
-<span class="fc" id="L52">    }</span>
+<span class="fc" id="L54">        value = new SimpleIntegerProperty((Integer) in.readObject());</span>
+<span class="fc" id="L55">    }</span>
 
     @Override
     public String toString() {
-<span class="fc" id="L56">        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)</span>
-<span class="fc" id="L57">                .append(&quot;value&quot;, value.getValue())</span>
-<span class="fc" id="L58">                .toString();</span>
+<span class="fc" id="L59">        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE)</span>
+<span class="fc" id="L60">                .append(&quot;value&quot;, value.getValue())</span>
+<span class="fc" id="L61">                .toString();</span>
     }
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (this == o) {</span>
-<span class="fc" id="L64">            return true;</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L67">            return true;</span>
         }
 
-<span class="fc bfc" id="L67" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="fc" id="L68">            return false;</span>
+<span class="fc bfc" id="L70" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L71">            return false;</span>
         }
 
-<span class="fc" id="L71">        SudokuField that = (SudokuField) o;</span>
+<span class="fc" id="L74">        SudokuField that = (SudokuField) o;</span>
 
-<span class="fc" id="L73">        return new EqualsBuilder()</span>
-<span class="fc" id="L74">                .append(value.get(), that.value.get())</span>
-<span class="fc" id="L75">                .isEquals();</span>
+<span class="fc" id="L76">        return new EqualsBuilder()</span>
+<span class="fc" id="L77">                .append(value.get(), that.value.get())</span>
+<span class="fc" id="L78">                .isEquals();</span>
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L80">        return new HashCodeBuilder(17, 37)</span>
-<span class="fc" id="L81">                .append(value.get())</span>
-<span class="fc" id="L82">                .toHashCode();</span>
+<span class="fc" id="L83">        return new HashCodeBuilder(17, 37)</span>
+<span class="fc" id="L84">                .append(value.get())</span>
+<span class="fc" id="L85">                .toHashCode();</span>
     }
 
-<span class="fc" id="L85">    public SudokuField() {</span>
-<span class="fc" id="L86">    }</span>
+<span class="fc" id="L88">    public SudokuField() {</span>
+<span class="fc" id="L89">    }</span>
 
-<span class="fc" id="L88">    public SudokuField(int value) {</span>
-<span class="fc" id="L89">        this.value.setValue(value);</span>
-<span class="fc" id="L90">    }</span>
+<span class="fc" id="L91">    public SudokuField(int value) {</span>
+<span class="fc" id="L92">        this.value.setValue(value);</span>
+<span class="fc" id="L93">    }</span>
 
-<span class="fc" id="L92">    public SudokuField(PropertyChangeListener listener) {</span>
-<span class="fc" id="L93">        this.addPropertyChangeListener(listener);</span>
-<span class="fc" id="L94">    }</span>
+<span class="fc" id="L95">    public SudokuField(PropertyChangeListener listener) {</span>
+<span class="fc" id="L96">        this.addPropertyChangeListener(listener);</span>
+<span class="fc" id="L97">    }</span>
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
-<span class="fc" id="L97">        changes.addPropertyChangeListener(listener);</span>
-<span class="fc" id="L98">    }</span>
+<span class="fc" id="L100">        changes.addPropertyChangeListener(listener);</span>
+<span class="fc" id="L101">    }</span>
 
     public void removePropertyChangeListener(PropertyChangeListener listener) {
-<span class="fc" id="L101">        changes.removePropertyChangeListener(listener);</span>
-<span class="fc" id="L102">    }</span>
+<span class="fc" id="L104">        changes.removePropertyChangeListener(listener);</span>
+<span class="fc" id="L105">    }</span>
 
     public int getFieldValue() {
-<span class="fc" id="L105">        return value.get();</span>
+<span class="fc" id="L108">        return value.get();</span>
     }
 
 
 
     public void setFieldValue(int value) throws WrongFieldValueException {
-<span class="fc bfc" id="L111" title="All 4 branches covered.">        if (value &gt;= -1 &amp;&amp; value &lt; 10) {</span>
-<span class="fc" id="L112">            int oldValue = this.value.getValue();</span>
-<span class="fc" id="L113">            this.value.setValue(value);</span>
-<span class="fc" id="L114">            changes.firePropertyChange(&quot;value&quot;,oldValue,value);</span>
-<span class="fc" id="L115">        } else {throw new WrongFieldValueException();</span>
+<span class="fc bfc" id="L114" title="All 4 branches covered.">        if (value &gt;= -1 &amp;&amp; value &lt; 10) {</span>
+<span class="fc" id="L115">            int oldValue = this.value.getValue();</span>
+<span class="fc" id="L116">            this.value.setValue(value);</span>
+<span class="fc" id="L117">            changes.firePropertyChange(&quot;value&quot;,oldValue,value);</span>
+<span class="fc" id="L118">        } else {throw new WrongFieldValueException();</span>
         }
-<span class="fc" id="L117">    }</span>
+<span class="fc" id="L120">    }</span>
 
     public int compareTo(SudokuField o) {
-<span class="nc bnc" id="L120" title="All 2 branches missed.">        if (this.getFieldValue() == o.getFieldValue()) {</span>
-<span class="nc" id="L121">            return 0;</span>
-<span class="nc bnc" id="L122" title="All 2 branches missed.">        } else if (this.getFieldValue() &gt; o.getFieldValue()) {</span>
-<span class="nc" id="L123">            return 1;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        if (this.getFieldValue() == o.getFieldValue()) {</span>
+<span class="nc" id="L124">            return 0;</span>
+<span class="nc bnc" id="L125" title="All 2 branches missed.">        } else if (this.getFieldValue() &gt; o.getFieldValue()) {</span>
+<span class="nc" id="L126">            return 1;</span>
         } else {
-<span class="nc" id="L125">            return -1;</span>
+<span class="nc" id="L128">            return -1;</span>
         }
     }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-<span class="fc" id="L131">        SudokuField sudokuField = new SudokuField();</span>
-<span class="fc" id="L132">        sudokuField.value = this.value;</span>
-<span class="fc" id="L133">        return sudokuField;</span>
+<span class="fc" id="L134">        SudokuField sudokuField = new SudokuField();</span>
+<span class="fc" id="L135">        sudokuField.value = this.value;</span>
+<span class="fc" id="L136">        return sudokuField;</span>
     }
 
 }

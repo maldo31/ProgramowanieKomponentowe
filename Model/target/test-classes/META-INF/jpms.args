@@ -1,4 +1,4 @@
 --patch-module
-ModelProject=_
+sudoku.model=_
 --add-reads
-ModelProject=ALL-UNNAMED
+sudoku.model=ALL-UNNAMED
