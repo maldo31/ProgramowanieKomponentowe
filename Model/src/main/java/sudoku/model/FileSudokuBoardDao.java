@@ -4,12 +4,7 @@ import sudoku.model.exception.SudokuFileException;
 import sudoku.model.exception.SudokuFinalizeException;
 import sudoku.model.exception.SudokuIOException;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ResourceBundle;
+import java.io.*;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
@@ -17,7 +12,6 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
     private ObjectOutputStream outputStream;
     private FileInputStream fis;
     private ObjectInputStream ois;
-    private ResourceBundle bundle = ResourceBundle.getBundle("bundles.languages");
     public FileSudokuBoardDao(String fileName) {
         this.fileName = fileName;
     }
@@ -28,7 +22,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
             outputStream.writeObject(object);
             outputStream.close();
         } catch (IOException e) {
-            throw new SudokuFileException(bundle.getString("empty_name"),e);
+            throw new SudokuFileException("Name not specified",e);
         }
 
     }

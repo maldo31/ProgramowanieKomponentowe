@@ -9,7 +9,7 @@ ModelProject,sudoku.model,SudokuBoard,15,587,1,65,3,107,2,51,1,19
 ModelProject,sudoku.model,Series,4,111,0,12,1,30,1,12,1,6
 ModelProject,sudoku.model,SudokuField,19,179,4,10,6,45,4,19,2,14
 ModelProject,sudoku.model,BacktrackingSudokuSolver,0,88,0,16,0,21,0,11,0,3
-ModelProject,sudoku.model,FileSudokuBoardDao,33,86,0,6,8,29,0,8,0,5
+ModelProject,sudoku.model,FileSudokuBoardDao,30,82,0,6,8,28,0,8,0,5
 ModelProject,sudoku.model,SudokuBoardDaoFactory,0,17,0,2,0,4,0,3,0,2
 ModelProject,sudoku.model,SudokuRow,11,4,0,0,2,2,1,1,1,1
 ModelProject,sudoku.model,StreamSudokuBoardFactory,0,8,0,0,0,2,0,2,0,2

@@ -1,14 +1,17 @@
 sudoku\view\exception\LevelChoiceException.class
+sudoku\view\exception\EmptyBoardException.class
 sudoku\view\LoadedController.class
 sudoku\view\SecondaryController.class
 sudoku\view\bundle\Authors_pl_PL.class
 module-info.class
 sudoku\view\bundle\Authors_es_ES.class
+sudoku\view\exception\SudokuGUIException.class
 sudoku\view\bundle\Authors_en_US.class
 sudoku\view\exception\SceneLoadException.class
 sudoku\view\PopOutWindow.class
 sudoku\view\PrimaryController.class
 sudoku\view\SecondaryController$1.class
+sudoku\view\exception\PathNotSpecifed.class
 sudoku\view\LoadedController$1.class
 sudoku\view\CellXY.class
 sudoku\view\exception\LanguageChoiceException.class

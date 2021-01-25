@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.exception.WrongFieldValueException;
 
-import javax.persistence.*;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.IOException;
@@ -18,17 +18,14 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-@Entity
-@Table
+
 public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
     private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     public transient IntegerProperty value = new SimpleIntegerProperty();
-    @Id
-    @GeneratedValue
+
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name="author_id")
+
 
     private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
 

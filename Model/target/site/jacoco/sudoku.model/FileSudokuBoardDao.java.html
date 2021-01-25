@@ -4,12 +4,7 @@ import sudoku.model.exception.SudokuFileException;
 import sudoku.model.exception.SudokuFinalizeException;
 import sudoku.model.exception.SudokuIOException;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ResourceBundle;
+import java.io.*;
 
 public class FileSudokuBoardDao implements Dao&lt;SudokuBoard&gt;, AutoCloseable {
 
@@ -17,64 +12,63 @@ public class FileSudokuBoardDao implements Dao&lt;SudokuBoard&gt;, AutoCloseable
     private ObjectOutputStream outputStream;
     private FileInputStream fis;
     private ObjectInputStream ois;
-<span class="fc" id="L20">    private ResourceBundle bundle = ResourceBundle.getBundle(&quot;bundles.languages&quot;);</span>
-<span class="fc" id="L21">    public FileSudokuBoardDao(String fileName) {</span>
-<span class="fc" id="L22">        this.fileName = fileName;</span>
-<span class="fc" id="L23">    }</span>
+<span class="fc" id="L15">    public FileSudokuBoardDao(String fileName) {</span>
+<span class="fc" id="L16">        this.fileName = fileName;</span>
+<span class="fc" id="L17">    }</span>
 
     public void write(SudokuBoard object) throws SudokuFileException {
         try {
-<span class="fc" id="L27">            this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));</span>
-<span class="fc" id="L28">            outputStream.writeObject(object);</span>
-<span class="fc" id="L29">            outputStream.close();</span>
-<span class="nc" id="L30">        } catch (IOException e) {</span>
-<span class="nc" id="L31">            throw new SudokuFileException(bundle.getString(&quot;empty_name&quot;),e);</span>
-<span class="fc" id="L32">        }</span>
+<span class="fc" id="L21">            this.outputStream = new ObjectOutputStream(new FileOutputStream(fileName));</span>
+<span class="fc" id="L22">            outputStream.writeObject(object);</span>
+<span class="fc" id="L23">            outputStream.close();</span>
+<span class="nc" id="L24">        } catch (IOException e) {</span>
+<span class="nc" id="L25">            throw new SudokuFileException(&quot;Name not specified&quot;,e);</span>
+<span class="fc" id="L26">        }</span>
 
-<span class="fc" id="L34">    }</span>
+<span class="fc" id="L28">    }</span>
 
     public SudokuBoard read() throws SudokuFileException {
-<span class="fc" id="L37">        SudokuBoard object = null;</span>
+<span class="fc" id="L31">        SudokuBoard object = null;</span>
         try {
-<span class="fc" id="L39">            fis = new FileInputStream(fileName);</span>
-<span class="fc" id="L40">            ois = new ObjectInputStream(fis);</span>
-<span class="fc" id="L41">            object = (SudokuBoard) ois.readObject();</span>
-<span class="fc" id="L42">            ois.close();</span>
-<span class="nc" id="L43">        } catch (IOException | ClassNotFoundException e) {</span>
-<span class="nc" id="L44">            throw new SudokuFileException(&quot;No such file: &quot;+fileName,e);</span>
-<span class="fc" id="L45">        }</span>
-<span class="fc" id="L46">        return object;</span>
+<span class="fc" id="L33">            fis = new FileInputStream(fileName);</span>
+<span class="fc" id="L34">            ois = new ObjectInputStream(fis);</span>
+<span class="fc" id="L35">            object = (SudokuBoard) ois.readObject();</span>
+<span class="fc" id="L36">            ois.close();</span>
+<span class="nc" id="L37">        } catch (IOException | ClassNotFoundException e) {</span>
+<span class="nc" id="L38">            throw new SudokuFileException(&quot;No such file: &quot;+fileName,e);</span>
+<span class="fc" id="L39">        }</span>
+<span class="fc" id="L40">        return object;</span>
     }
 
     //Close próbuje zamknąć strumienie gdyby któryś nadal pozostawał otwarty
     @Override
     public void close() throws SudokuIOException {
         try {
-<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (ois != null) {</span>
-<span class="fc" id="L54">                ois.close();</span>
-<span class="fc" id="L55">                ois = null;</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (ois != null) {</span>
+<span class="fc" id="L48">                ois.close();</span>
+<span class="fc" id="L49">                ois = null;</span>
             }
-<span class="fc bfc" id="L57" title="All 2 branches covered.">            if (fis != null) {</span>
-<span class="fc" id="L58">                fis.close();</span>
-<span class="fc" id="L59">                fis = null;</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">            if (fis != null) {</span>
+<span class="fc" id="L52">                fis.close();</span>
+<span class="fc" id="L53">                fis = null;</span>
             }
-<span class="fc bfc" id="L61" title="All 2 branches covered.">            if (outputStream != null) {</span>
-<span class="fc" id="L62">                outputStream.close();</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            if (outputStream != null) {</span>
+<span class="fc" id="L56">                outputStream.close();</span>
             }
-<span class="nc" id="L64">        } catch (IOException e) {</span>
-<span class="nc" id="L65">            throw new SudokuIOException(&quot;Cannot properly close streams&quot;,e);</span>
-<span class="fc" id="L66">        }</span>
+<span class="nc" id="L58">        } catch (IOException e) {</span>
+<span class="nc" id="L59">            throw new SudokuIOException(&quot;Cannot properly close streams&quot;,e);</span>
+<span class="fc" id="L60">        }</span>
 
-<span class="fc" id="L68">    }</span>
+<span class="fc" id="L62">    }</span>
 
     // Metoda wywołuje się gdy GC napotka obiekt, i stwierdzi brak referencji do niego
     @Override
     public void finalize() throws SudokuFinalizeException {
         try {
-<span class="fc" id="L74">            close();</span>
-<span class="nc" id="L75">        } catch (Throwable e) {</span>
-<span class="nc" id="L76">            throw new SudokuFinalizeException(&quot;Cannot properly finalize objects&quot;, e);</span>
-<span class="fc" id="L77">        }</span>
-<span class="fc" id="L78">    }</span>
+<span class="fc" id="L68">            close();</span>
+<span class="nc" id="L69">        } catch (Throwable e) {</span>
+<span class="nc" id="L70">            throw new SudokuFinalizeException(&quot;Cannot properly finalize objects&quot;, e);</span>
+<span class="fc" id="L71">        }</span>
+<span class="fc" id="L72">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
