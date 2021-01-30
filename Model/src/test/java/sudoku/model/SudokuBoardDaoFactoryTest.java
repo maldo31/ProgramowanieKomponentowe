@@ -1,8 +1,6 @@
 package sudoku.model;
 
 import org.junit.jupiter.api.Test;
-import sudoku.model.StreamSudokuBoardFactory;
-import sudoku.model.SudokuBoardDaoFactory;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;

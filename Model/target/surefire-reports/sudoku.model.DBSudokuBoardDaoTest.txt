@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: sudoku.model.DBSudokuBoardDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.294 s <<< FAILURE! - in sudoku.model.DBSudokuBoardDaoTest
+sudoku.model.DBSudokuBoardDaoTest.writeReadTest  Time elapsed: 0.282 s  <<< ERROR!
+java.lang.NullPointerException
+	at sudoku.model@2.0-SNAPSHOT/sudoku.model.DBSudokuBoardDaoTest.writeReadTest(DBSudokuBoardDaoTest.java:24)
+

@@ -2,5 +2,6 @@ sudoku\model\SudokuBoardDaoFactoryTest.class
 sudoku\model\FileSudokuBoardDaoTest.class
 sudoku\model\BacktrackingSudokuSolverTest.class
 sudoku\model\SeriesTest.class
+sudoku\model\DBSudokuBoardDaoTest.class
 sudoku\model\SudokuFieldTest.class
 sudoku\model\SudokuBoardTest.class

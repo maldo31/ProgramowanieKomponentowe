@@ -9,6 +9,7 @@ module sudoku.model {
     requires hibernate.entitymanager;
     requires org.hibernate.commons.annotations;
     requires java.persistence;
+    requires java.sql;
 
 
     opens sudoku.model;

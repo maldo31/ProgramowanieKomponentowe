@@ -3,7 +3,7 @@ package sudoku.model;
 import sudoku.model.exception.SudokuFileException;
 import sudoku.model.exception.SudokuFinalizeException;
 
-public interface Dao<T> {
+public interface Dao<T> extends AutoCloseable {
 
     void write(T object) throws SudokuFileException;
 
