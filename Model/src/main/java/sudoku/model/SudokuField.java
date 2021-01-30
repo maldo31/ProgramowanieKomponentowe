@@ -20,7 +20,7 @@ import java.io.Serializable;
 
 @Entity
 @Table
-public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
+public class  SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
     private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     public transient IntegerProperty value = new SimpleIntegerProperty();
     @Id
@@ -28,7 +28,7 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="author_id")
+    @JoinColumn(name="board_id")
 
     private  PropertyChangeSupport changes = new PropertyChangeSupport(this);
 

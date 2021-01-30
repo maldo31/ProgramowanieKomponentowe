@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.FileSudokuBoardDaoTest" time="0.103" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sudoku.model.FileSudokuBoardDaoTest" time="0.625" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\antlr\antlr\2.7.7\antlr-2.7.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\h2database\h2\1.4.200\h2-1.4.200.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\jaxb-runtime\3.0.0\jaxb-runtime-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\txw2\3.0.0\txw2-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\sun\istack\istack-commons-runtime\4.0.0\istack-commons-runtime-4.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\ch\qos\logback\logback-classic\1.1.7\logback-classic-1.1.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\ch\qos\logback\logback-core\1.1.7\logback-core-1.1.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-controls\13\javafx-controls-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-base\13\javafx-base-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
+    <property name="java.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;C:\Users\maldo\.m2\repository\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;C:\Users\maldo\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\maldo\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\maldo\.m2\repository\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;C:\Users\maldo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\maldo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\maldo\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\maldo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\maldo\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\maldo\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\maldo\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\maldo\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\maldo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;C:\Users\maldo\.m2\repository\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\3.0.0\jaxb-runtime-3.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\txw2\3.0.0\txw2-3.0.0.jar;C:\Users\maldo\.m2\repository\com\sun\istack\istack-commons-runtime\4.0.0\istack-commons-runtime-4.0.0.jar;C:\Users\maldo\.m2\repository\ch\qos\logback\logback-classic\1.1.7\logback-classic-1.1.7.jar;C:\Users\maldo\.m2\repository\ch\qos\logback\logback-core\1.1.7\logback-core-1.1.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,14 +15,14 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire3046397512356889653 2021-01-25T13-19-09_875-jvmRun1 surefire14311975682698004921tmp surefire_016868164260762344545tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\maldo\AppData\Local\Temp\surefire14573791560388020930 2021-01-30T14-29-35_748-jvmRun1 surefire15519588808954748322tmp surefire_017571856067337991104tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\antlr\antlr\2.7.7\antlr-2.7.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\h2database\h2\1.4.200\h2-1.4.200.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\jaxb-runtime\3.0.0\jaxb-runtime-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\txw2\3.0.0\txw2-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\sun\istack\istack-commons-runtime\4.0.0\istack-commons-runtime-4.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\ch\qos\logback\logback-classic\1.1.7\logback-classic-1.1.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\ch\qos\logback\logback-core\1.1.7\logback-core-1.1.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-controls\13\javafx-controls-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-base\13\javafx-base-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
+    <property name="surefire.test.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;C:\Users\maldo\.m2\repository\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;C:\Users\maldo\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\maldo\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\maldo\.m2\repository\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;C:\Users\maldo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\maldo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\maldo\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\maldo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\maldo\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\maldo\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\maldo\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\maldo\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\maldo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;C:\Users\maldo\.m2\repository\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\3.0.0\jaxb-runtime-3.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\txw2\3.0.0\txw2-3.0.0.jar;C:\Users\maldo\.m2\repository\com\sun\istack\istack-commons-runtime\4.0.0\istack-commons-runtime-4.0.0.jar;C:\Users\maldo\.m2\repository\ch\qos\logback\logback-classic\1.1.7\logback-classic-1.1.7.jar;C:\Users\maldo\.m2\repository\ch\qos\logback\logback-core\1.1.7\logback-core-1.1.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\maldo"/>
     <property name="user.language" value="pl"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="jdk.module.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\hibernate\hibernate-entitymanager\5.4.27.Final\hibernate-entitymanager-5.4.27.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-base\13\javafx-base-13-win.jar"/>
+    <property name="jdk.module.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\classes;C:\Users\maldo\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\maldo\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\maldo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\maldo\.m2\repository\org\hibernate\hibernate-entitymanager\5.4.27.Final\hibernate-entitymanager-5.4.27.Final.jar;C:\Users\maldo\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar"/>
     <property name="java.version.date" value="2020-07-14"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
     <property name="file.separator" value="\"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\surefire-booter\3.0.0-M5\surefire-booter-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\surefire-api\3.0.0-M5\surefire-api-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\surefire-logger-api\3.0.0-M5\surefire-logger-api-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\surefire-shared-utils\3.0.0-M4\surefire-shared-utils-3.0.0-M4.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\surefire-extensions-spi\3.0.0-M5\surefire-extensions-spi-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\antlr\antlr\2.7.7\antlr-2.7.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\h2database\h2\1.4.200\h2-1.4.200.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\jaxb-runtime\3.0.0\jaxb-runtime-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\glassfish\jaxb\txw2\3.0.0\txw2-3.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\com\sun\istack\istack-commons-runtime\4.0.0\istack-commons-runtime-4.0.0.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\ch\qos\logback\logback-classic\1.1.7\logback-classic-1.1.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\ch\qos\logback\logback-core\1.1.7\logback-core-1.1.7.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-controls\13\javafx-controls-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-base\13\javafx-base-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\surefire-junit-platform\3.0.0-M5\surefire-junit-platform-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\apache\maven\surefire\common-java5\3.0.0-M5\common-java5-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1\org\junit\platform\junit-platform-launcher\1.6.2\junit-platform-launcher-1.6.2.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M5\surefire-booter-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-api\3.0.0-M5\surefire-api-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.0.0-M5\surefire-logger-api-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.0.0-M4\surefire-shared-utils-3.0.0-M4.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.0.0-M5\surefire-extensions-spi-3.0.0-M5.jar;E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model\target\test-classes;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\maldo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\maldo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\maldo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\maldo\.m2\repository\org\projectlombok\lombok\1.18.16\lombok-1.18.16.jar;C:\Users\maldo\.m2\repository\org\hibernate\hibernate-core\5.4.27.Final\hibernate-core-5.4.27.Final.jar;C:\Users\maldo\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\maldo\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\maldo\.m2\repository\net\bytebuddy\byte-buddy\1.10.17\byte-buddy-1.10.17.jar;C:\Users\maldo\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\maldo\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\maldo\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\maldo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\maldo\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\maldo\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\maldo\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\maldo\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\maldo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;C:\Users\maldo\.m2\repository\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\3.0.0\jaxb-runtime-3.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;C:\Users\maldo\.m2\repository\org\glassfish\jaxb\txw2\3.0.0\txw2-3.0.0.jar;C:\Users\maldo\.m2\repository\com\sun\istack\istack-commons-runtime\4.0.0\istack-commons-runtime-4.0.0.jar;C:\Users\maldo\.m2\repository\ch\qos\logback\logback-classic\1.1.7\logback-classic-1.1.7.jar;C:\Users\maldo\.m2\repository\ch\qos\logback\logback-core\1.1.7\logback-core-1.1.7.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\maldo\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.0.0-M5\surefire-junit-platform-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\apache\maven\surefire\common-java5\3.0.0-M5\common-java5-3.0.0-M5.jar;C:\Users\maldo\.m2\repository\org\junit\platform\junit-platform-launcher\1.6.2\junit-platform-launcher-1.6.2.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -41,9 +41,10 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1250"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\Projekty\Projektnr1"/>
+    <property name="localRepository" value="C:\Users\maldo\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\maldo\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2020.2.3"/>
     <property name="java.version" value="14.0.2"/>
     <property name="user.dir" value="E:\studia\Sem-3\Programowanie komponentowe (07 72 3060 19)_pliki\ProjektKompo\an_pn_1145_03\Model"/>
     <property name="os.arch" value="amd64"/>
@@ -57,65 +58,1010 @@
     <property name="java.class.version" value="58.0"/>
   </properties>
   <testcase name="finalizeTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.003"/>
-  <testcase name="writeReadTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.097">
-    <system-out><![CDATA[13:19:12.148 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+  <testcase name="writeReadTest" classname="sudoku.model.FileSudokuBoardDaoTest" time="0.614">
+    <system-out><![CDATA[14:29:39.271 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,5,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.148 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:19:12.149 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+14:29:39.272 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.273 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,7,8,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.149 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:19:12.149 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+14:29:39.274 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.275 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,5,1,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.150 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:19:12.150 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+14:29:39.275 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.275 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,5,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.150 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:19:12.151 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+14:29:39.276 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.276 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,9,6,7,8},{8,9,6,4,7,2,5,1,3},{9,8,7,3,2,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.151 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:19:12.152 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+14:29:39.276 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.277 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,9,6,7,8},{8,9,6,4,7,2,5,1,3},{9,8,7,3,2,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.152 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-13:19:12.153 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
-sudoku.model.SudokuBoard@5bfc79cb[
+14:29:39.278 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.278 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,9,6,7,8},{8,9,6,4,7,2,5,1,3},{9,8,7,3,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-13:19:12.153 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
-sudoku.model.SudokuBoard@48e41b5d[
+14:29:39.279 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.279 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@27ec8754
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,9,6,7,8},{8,9,6,4,7,2,5,1,3},{9,8,7,3,5,1,2,6,4},{3,6,1,8,2,4,9,5,7},{5,4,2,9,6,7,8,3,1}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
 ]
-sudoku.model.SudokuBoard@6321a5aa[
+14:29:39.280 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.280 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
   size=9
-  solver=sudoku.model.BacktrackingSudokuSolver@1c7f9861
-  board={{7,1,8,2,9,6,3,4,5},{4,5,9,7,3,8,1,2,6},{6,2,3,1,4,5,7,8,9},{1,7,5,6,8,3,4,9,2},{2,3,4,5,1,9,6,7,8},{8,9,6,4,7,2,5,1,3},{9,8,7,3,5,1,2,6,4},{3,6,1,8,2,4,9,5,7},{5,4,2,9,6,7,8,3,1}}
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.280 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.281 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.281 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.293 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.293 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.294 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.294 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.296 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.300 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.301 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.304 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.305 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.305 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.306 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.306 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.307 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.307 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.308 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.308 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.310 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.312 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.315 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.315 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.316 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.316 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.317 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.317 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.317 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.318 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.319 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.320 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.320 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.320 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.321 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.322 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.323 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.324 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.324 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.324 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.324 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.325 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.325 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.327 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.328 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.330 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.331 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.332 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.332 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,5,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.333 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.333 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{3,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.334 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.334 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.335 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.335 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.336 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.336 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.336 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.337 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.337 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.337 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.337 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.338 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.338 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.339 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.339 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.339 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.339 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.340 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.340 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.340 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.340 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.341 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.341 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.341 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.342 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.343 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.343 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.343 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.343 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.344 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.344 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.344 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.344 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.344 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.345 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.345 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.345 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.345 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.346 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.346 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.346 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.346 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.346 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.347 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.347 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.348 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.348 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.348 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.348 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.349 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.349 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.349 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.349 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.399 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,3,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.400 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.401 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,9,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.401 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.402 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.402 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.402 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,2},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.403 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.403 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,3,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.403 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.404 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,5,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.404 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.405 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.407 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.414 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.414 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.414 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.414 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.415 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.415 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.416 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.416 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.416 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.416 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.417 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.417 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.417 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.418 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.418 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.418 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.419 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.419 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.420 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.420 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.421 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.421 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.422 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.422 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.423 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.424 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.424 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.425 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.425 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.425 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.425 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.426 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.427 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.432 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.433 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.433 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.434 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.434 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.434 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.434 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.434 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.438 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.439 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.439 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.439 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.439 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.440 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.440 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.440 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.532 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.544 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.546 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.553 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,9,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.553 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.553 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,5,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.554 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.562 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{3,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.564 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.565 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.566 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.569 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.570 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.570 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.571 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.577 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.578 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.579 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.579 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.579 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.580 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.580 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.580 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.582 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.582 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.582 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.583 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.583 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.585 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.585 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,1,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.585 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.586 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.586 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.587 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,8,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.588 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.589 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.589 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.589 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.599 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.600 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,6,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.600 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.600 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.600 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.600 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.600 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.602 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,7,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.603 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.603 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.603 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.605 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.606 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.607 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,4,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.607 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.609 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,2,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.609 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.609 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,8,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.609 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.610 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.611 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.614 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.614 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.614 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,3,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.614 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.615 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,9,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.616 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.617 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{5,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.626 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.626 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,5},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.626 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.627 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,3,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.627 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.628 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,2,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.629 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.630 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.631 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.631 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.632 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.633 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,2,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.635 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.636 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,2,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.639 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.642 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.647 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.647 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,1,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.647 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.647 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,1,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.647 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.648 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,1,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.648 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.648 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.648 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.648 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,5,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.648 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.649 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,5,8,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.649 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.649 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,5,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.649 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.649 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,2,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.649 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+14:29:39.650 [main] INFO  sudoku.model.SudokuBoard - Bład w kwadracie 0
+sudoku.model.SudokuBoard@21e5f0b6[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}}
+]
+14:29:39.650 [main] INFO  sudoku.model.SudokuBoard - Wartość 0 wstawiona nieprawidłowo
+sudoku.model.SudokuBoard@1693ff90[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@93bf0e0
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,3,5,8,4,2,1,9},{8,9,2,1,6,3,7,4,5}}
+]
+sudoku.model.SudokuBoard@3dfd7eaa[
+  size=9
+  solver=sudoku.model.BacktrackingSudokuSolver@7c9beb51
+  board={{9,3,5,4,7,1,8,2,6},{4,2,6,9,3,8,1,5,7},{7,1,8,2,5,6,3,9,4},{2,6,7,3,4,5,9,8,1},{1,8,4,6,9,2,5,7,3},{3,5,9,8,1,7,4,6,2},{5,4,1,7,2,9,6,3,8},{6,7,3,5,8,4,2,1,9},{8,9,2,1,6,3,7,4,5}}
 ]
 ]]></system-out>
   </testcase>
