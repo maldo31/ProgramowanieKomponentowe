@@ -24,7 +24,7 @@ public class DB {
     }
 
     public void insert(final String tableName, final Integer value, int id) {
-        String sql = "INSERT INTO " + tableName + "(id,wartosc) VALUES(?,?)";
+        String sql = "INSERT INTO " + tableName + " (id,wartosc) VALUES(?,?)";
         //String sql = "INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);";
         try {
             Connection conn = this.connect();
@@ -57,7 +57,7 @@ public class DB {
                 + " id INT PRIMARY KEY,\n"
                 + " wartosc INT\n"
                 + ");";
-
+        //String drop = "DROP TABLE IF EXISTS"+ tableName;
         /*String sql = "CREATE TABLE IF NOT EXISTS sudokuBoard (\n"
                 + " id INT PRIMARY KEY,\n"
                 + " wartosc INT\n"
@@ -66,6 +66,7 @@ public class DB {
         try {
             Connection conn = this.connect();
             Statement stmt = conn.createStatement();
+            //stmt.execute(drop);
             stmt.execute(sql);
         } catch (SQLException e) {
             System.out.println(e.getMessage());

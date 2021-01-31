@@ -22,7 +22,6 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 try {
-                    System.out.println(fileName);
                     sudokuBoard.set(i, j, db.select(fileName, i, j));
                     //sudokuBoard.set(i, j, db.select("sudokuBoard", i, j));
                 } catch (SudokuBoardException e) {
