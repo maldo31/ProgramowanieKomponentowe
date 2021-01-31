@@ -1,14 +1,15 @@
 package sudoku.model;
-
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.exception.SudokuFileException;
-import sudoku.model.exception.SudokuIOException;
+
+import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DBSudokuBoardDaoTest {
+    Date date= new Date();
     private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
     private SudokuBoardDaoFactory factory = new DBSudokuBoardFactory();
     private SudokuBoard sudokuBoard = new SudokuBoard();
@@ -17,11 +18,13 @@ class DBSudokuBoardDaoTest {
     private SudokuBoard testSudokuBoard = new SudokuBoard();
 
     @Test
-    public void writeReadTest() throws SudokuIOException {
+    public void writeReadTest() {
+        String timestamp = String.valueOf(date.getTime());
         sudokuBoard.solveGame();
-        sudokuBoardDao = factory.getFileDao("test");
+        sudokuBoardDao = factory.getFileDao("test2");
         try {
             sudokuBoardDao.write(sudokuBoard);
+            System.out.println("Utworzono tablice");
         } catch (SudokuFileException e) {
             e.printStackTrace();
         }

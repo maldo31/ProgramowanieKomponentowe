@@ -6,11 +6,12 @@ import sudoku.model.exception.SudokuFinalizeException;
 import java.time.LocalDateTime;
 
 public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
-
+    private String fileName;
     DB db;
     String tmp = LocalDateTime.now().toString();
 
-    public JdbcSudokuBoardDao() {
+    public JdbcSudokuBoardDao(String fileName) {
+        this.fileName = fileName;
         db = new DB();
         db.createNewDatabase();
     }
@@ -21,7 +22,8 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 try {
-                    sudokuBoard.set(i, j, db.select("SudokuBoard" + tmp, i, j));
+                    System.out.println(fileName);
+                    sudokuBoard.set(i, j, db.select(fileName, i, j));
                     //sudokuBoard.set(i, j, db.select("sudokuBoard", i, j));
                 } catch (SudokuBoardException e) {
                     e.printStackTrace();
@@ -33,11 +35,11 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
     @Override
     public void  write(final SudokuBoard sudokuBoard) {
-        db.createTable("SudokuBoard" + tmp);
+        db.createTable(fileName);
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 Integer id = i * 9 + j + 1;
-                db.insert("sudokuBoard", sudokuBoard.get(i, j), id);
+                db.insert(fileName, sudokuBoard.get(i, j), id);
             }
         }
 

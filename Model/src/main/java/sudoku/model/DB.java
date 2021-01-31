@@ -13,8 +13,7 @@ import java.sql.ResultSet;
 public class DB {
 
     private Connection connect() {
-        // SQLite connection string
-        String url = "jdbc:sqlite:C://sqlite/sudokuBoards";
+        String url = "jdbc:sqlite:C://sqlite/sudokuBoard";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
@@ -25,8 +24,8 @@ public class DB {
     }
 
     public void insert(final String tableName, final Integer value, int id) {
-        //String sql = "INSERT INTO " + tableName + "(id,wartosc) VALUES(?,?)";
-        String sql = "INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);";
+        String sql = "INSERT INTO " + tableName + "(id,wartosc) VALUES(?,?)";
+        //String sql = "INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);";
         try {
             Connection conn = this.connect();
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -54,15 +53,15 @@ public class DB {
     public void createTable(final String tableName) {
 
         // SQL statement for creating a new table
-        /*String sql = "CREATE TABLE IF NOT EXISTS " + tableName + " (\n"
-                + " id INT PRIMARY KEY,\n"
-                + " wartosc INT\n"
-                + ");";*/
-
-        String sql = "CREATE TABLE IF NOT EXISTS sudokuBoard (\n"
+        String sql = "CREATE TABLE IF NOT EXISTS " + tableName + " (\n"
                 + " id INT PRIMARY KEY,\n"
                 + " wartosc INT\n"
                 + ");";
+
+        /*String sql = "CREATE TABLE IF NOT EXISTS sudokuBoard (\n"
+                + " id INT PRIMARY KEY,\n"
+                + " wartosc INT\n"
+                + ");";*/
 
         try {
             Connection conn = this.connect();
@@ -80,8 +79,8 @@ public class DB {
         }
         Integer tmp = 9 * x + y + 1;
         String strId = tmp.toString();
-        //String sql = "SELECT wartosc FROM " + tableName + " WHERE id=" + strId + ";";
-        String sql = "SELECT wartosc FROM sudokuBoard WHERE id=" + strId + ";";
+        String sql = "SELECT wartosc FROM " + tableName + " WHERE id=" + strId + ";";
+        //String sql = "SELECT wartosc FROM sudokuBoard WHERE id=" + strId + ";";
 
         try {
             Connection conn = this.connect();
