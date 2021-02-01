@@ -23,7 +23,6 @@ public class DB {
 
     public void insert(final String tableName, final Integer value, int id) throws SudokuDataBaseException {
         String sql = "INSERT INTO " + tableName + " (id,wartosc) VALUES(?,?)";
-        //String sql = "INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);";
         try {
             Connection conn = this.connect();
             conn.setAutoCommit(false);
