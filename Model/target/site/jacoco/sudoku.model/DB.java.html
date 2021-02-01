@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DB.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Model</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">DB.java</span></div><h1>DB.java</h1><pre class="source lang-java linenums">package sudoku.model;
+
+import sudoku.model.exception.SudokuBoardException;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
+public class DB {
+
+    private Connection connect() {
+<span class="fc" id="L16">        String url = &quot;jdbc:sqlite:C://sqlite/sudokuBoard&quot;;</span>
+<span class="fc" id="L17">        Connection conn = null;</span>
+        try {
+<span class="fc" id="L19">            conn = DriverManager.getConnection(url);</span>
+<span class="nc" id="L20">        } catch (SQLException e) {</span>
+<span class="nc" id="L21">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L22">        }</span>
+<span class="fc" id="L23">        return conn;</span>
+    }
+
+    public void insert(final String tableName, final Integer value, int id) {
+<span class="fc" id="L27">        String sql = &quot;INSERT INTO &quot; + tableName + &quot; (id,wartosc) VALUES(?,?)&quot;;</span>
+        //String sql = &quot;INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);&quot;;
+        try {
+<span class="fc" id="L30">            Connection conn = this.connect();</span>
+<span class="fc" id="L31">            PreparedStatement pstmt = conn.prepareStatement(sql);</span>
+<span class="fc" id="L32">            pstmt.setInt(1, id);</span>
+<span class="fc" id="L33">            pstmt.setInt(2, value);</span>
+<span class="fc" id="L34">            pstmt.executeUpdate();</span>
+<span class="nc" id="L35">        } catch (SQLException e) {</span>
+<span class="nc" id="L36">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L37">        }</span>
+<span class="fc" id="L38">    }</span>
+
+    public void createNewDatabase() {
+
+        try {
+<span class="fc" id="L43">            Connection conn = this.connect();</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">            if (conn != null) {</span>
+<span class="fc" id="L45">                DatabaseMetaData meta = conn.getMetaData();</span>
+<span class="fc" id="L46">                System.out.println(&quot;A new database has been created.&quot;);</span>
+            }
+
+<span class="nc" id="L49">        } catch (SQLException e) {</span>
+<span class="nc" id="L50">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L51">        }</span>
+<span class="fc" id="L52">    }</span>
+    public void createTable(final String tableName) {
+
+        // SQL statement for creating a new table
+<span class="fc" id="L56">        String sql = &quot;CREATE TABLE IF NOT EXISTS &quot; + tableName + &quot; (\n&quot;</span>
+                + &quot; id INT PRIMARY KEY,\n&quot;
+                + &quot; wartosc INT\n&quot;
+                + &quot;);&quot;;
+        //String drop = &quot;DROP TABLE IF EXISTS&quot;+ tableName;
+        /*String sql = &quot;CREATE TABLE IF NOT EXISTS sudokuBoard (\n&quot;
+                + &quot; id INT PRIMARY KEY,\n&quot;
+                + &quot; wartosc INT\n&quot;
+                + &quot;);&quot;;*/
+
+        try {
+<span class="fc" id="L67">            Connection conn = this.connect();</span>
+<span class="fc" id="L68">            Statement stmt = conn.createStatement();</span>
+            //stmt.execute(drop);
+<span class="fc" id="L70">            stmt.execute(sql);</span>
+<span class="nc" id="L71">        } catch (SQLException e) {</span>
+<span class="nc" id="L72">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L73">        }</span>
+<span class="fc" id="L74">    }</span>
+    public Integer select(final String tableName, final int x, final int y) throws SudokuBoardException {
+        try {
+<span class="fc" id="L77">            Class.forName(&quot;org.sqlite.JDBC&quot;);</span>
+<span class="nc" id="L78">        } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L79">            throw new SudokuBoardException(e.toString());</span>
+<span class="fc" id="L80">        }</span>
+<span class="fc" id="L81">        Integer tmp = 9 * x + y + 1;</span>
+<span class="fc" id="L82">        String strId = tmp.toString();</span>
+<span class="fc" id="L83">        String sql = &quot;SELECT wartosc FROM &quot; + tableName + &quot; WHERE id=&quot; + strId + &quot;;&quot;;</span>
+        //String sql = &quot;SELECT wartosc FROM sudokuBoard WHERE id=&quot; + strId + &quot;;&quot;;
+
+        try {
+<span class="fc" id="L87">            Connection conn = this.connect();</span>
+<span class="fc" id="L88">            Statement stmt  = conn.createStatement();</span>
+<span class="fc" id="L89">            ResultSet rs    = stmt.executeQuery(sql);</span>
+<span class="fc" id="L90">            return rs.getInt(&quot;wartosc&quot;);</span>
+
+<span class="nc" id="L92">        } catch (SQLException e) {</span>
+<span class="nc" id="L93">            System.out.println(e.getMessage());</span>
+<span class="nc" id="L94">            return null;</span>
+        }
+    }
+
+<span class="fc" id="L98">    public DB() {</span>
+
+<span class="fc" id="L100">    }</span>
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

@@ -17,6 +17,7 @@ public class DB {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -28,10 +29,14 @@ public class DB {
         //String sql = "INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);";
         try {
             Connection conn = this.connect();
+            conn.setAutoCommit(false);
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, id);
             pstmt.setInt(2, value);
             pstmt.executeUpdate();
+            conn.commit();
+            conn.close();
+            pstmt.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -68,6 +73,7 @@ public class DB {
             Statement stmt = conn.createStatement();
             //stmt.execute(drop);
             stmt.execute(sql);
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -85,9 +91,15 @@ public class DB {
 
         try {
             Connection conn = this.connect();
+            conn.setAutoCommit(false);
             Statement stmt  = conn.createStatement();
             ResultSet rs    = stmt.executeQuery(sql);
-            return rs.getInt("wartosc");
+            int value = rs.getInt("wartosc");
+            conn.commit();
+            stmt.close();
+            rs.close();
+            conn.close();
+            return value;
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());

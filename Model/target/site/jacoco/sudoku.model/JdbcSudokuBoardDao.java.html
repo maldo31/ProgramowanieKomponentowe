@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JdbcSudokuBoardDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Model</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">JdbcSudokuBoardDao.java</span></div><h1>JdbcSudokuBoardDao.java</h1><pre class="source lang-java linenums">package sudoku.model;
+
+import sudoku.model.exception.SudokuBoardException;
+import sudoku.model.exception.SudokuFinalizeException;
+
+import java.time.LocalDateTime;
+
+public class JdbcSudokuBoardDao implements Dao&lt;SudokuBoard&gt;, AutoCloseable {
+    private String fileName;
+    DB db;
+<span class="fc" id="L11">    String tmp = LocalDateTime.now().toString();</span>
+
+<span class="fc" id="L13">    public JdbcSudokuBoardDao(String fileName) {</span>
+<span class="fc" id="L14">        this.fileName = fileName;</span>
+<span class="fc" id="L15">        db = new DB();</span>
+<span class="fc" id="L16">        db.createNewDatabase();</span>
+<span class="fc" id="L17">    }</span>
+
+    @Override
+    public SudokuBoard read() {
+<span class="fc" id="L21">        SudokuBoard sudokuBoard = new SudokuBoard();</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            for (int j = 0; j &lt; 9; j++) {</span>
+                try {
+<span class="fc" id="L25">                    sudokuBoard.set(i, j, db.select(fileName, i, j));</span>
+                    //sudokuBoard.set(i, j, db.select(&quot;sudokuBoard&quot;, i, j));
+<span class="nc" id="L27">                } catch (SudokuBoardException e) {</span>
+<span class="nc" id="L28">                    e.printStackTrace();</span>
+<span class="fc" id="L29">                }</span>
+            }
+        }
+<span class="fc" id="L32">        return sudokuBoard;</span>
+    }
+
+    @Override
+    public void  write(final SudokuBoard sudokuBoard) {
+<span class="fc" id="L37">        db.createTable(fileName);</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">            for (int j = 0; j &lt; 9; j++) {</span>
+<span class="fc" id="L40">                Integer id = i * 9 + j + 1;</span>
+<span class="fc" id="L41">                db.insert(fileName, sudokuBoard.get(i, j), id);</span>
+            }
+        }
+
+<span class="fc" id="L45">    }</span>
+
+    @Override
+    public void finalize() throws SudokuFinalizeException {
+        try {
+<span class="nc" id="L50">            close();</span>
+<span class="nc" id="L51">        } catch (Throwable e) {</span>
+<span class="nc" id="L52">            throw new SudokuFinalizeException(&quot;Cannot properly finalize objects&quot;, e);</span>
+<span class="nc" id="L53">        }</span>
+<span class="nc" id="L54">    }</span>
+
+    @Override
+    public void close() throws Exception {
+        try {
+            //reading.close();
+            //writing.close();
+        } catch (Exception e) {
+            // ...
+        }
+
+<span class="nc" id="L65">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
