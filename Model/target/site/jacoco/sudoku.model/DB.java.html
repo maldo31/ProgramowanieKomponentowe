@@ -1,103 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DB.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Model</a> &gt; <a href="index.source.html" class="el_package">sudoku.model</a> &gt; <span class="el_source">DB.java</span></div><h1>DB.java</h1><pre class="source lang-java linenums">package sudoku.model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sudoku.model.exception.SudokuBoardException;
+import sudoku.model.exception.SudokuDataBaseException;
 
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 public class DB {
-
-    private Connection connect() {
-<span class="fc" id="L16">        String url = &quot;jdbc:sqlite:C://sqlite/sudokuBoard&quot;;</span>
-<span class="fc" id="L17">        Connection conn = null;</span>
+<span class="fc" id="L11">    private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);</span>
+    private Connection connect() throws SudokuDataBaseException {
+<span class="fc" id="L13">        String url = &quot;jdbc:sqlite:C://sqlite/sudokuBoard&quot;;</span>
+<span class="fc" id="L14">        Connection conn = null;</span>
         try {
-<span class="fc" id="L19">            conn = DriverManager.getConnection(url);</span>
-<span class="nc" id="L20">        } catch (SQLException e) {</span>
-<span class="nc" id="L21">            System.out.println(e.getMessage());</span>
-<span class="fc" id="L22">        }</span>
-<span class="fc" id="L23">        return conn;</span>
+<span class="fc" id="L16">            conn = DriverManager.getConnection(url);</span>
+
+<span class="nc" id="L18">        } catch (SQLException e) {</span>
+<span class="nc" id="L19">            throw new SudokuDataBaseException(e.getMessage());</span>
+<span class="fc" id="L20">        }</span>
+<span class="fc" id="L21">        return conn;</span>
     }
 
-    public void insert(final String tableName, final Integer value, int id) {
-<span class="fc" id="L27">        String sql = &quot;INSERT INTO &quot; + tableName + &quot; (id,wartosc) VALUES(?,?)&quot;;</span>
+    public void insert(final String tableName, final Integer value, int id) throws SudokuDataBaseException {
+<span class="fc" id="L25">        String sql = &quot;INSERT INTO &quot; + tableName + &quot; (id,wartosc) VALUES(?,?)&quot;;</span>
         //String sql = &quot;INSERT INTO sudokuBoard (id,wartosc) VALUES(?,?);&quot;;
         try {
-<span class="fc" id="L30">            Connection conn = this.connect();</span>
-<span class="fc" id="L31">            PreparedStatement pstmt = conn.prepareStatement(sql);</span>
-<span class="fc" id="L32">            pstmt.setInt(1, id);</span>
-<span class="fc" id="L33">            pstmt.setInt(2, value);</span>
-<span class="fc" id="L34">            pstmt.executeUpdate();</span>
-<span class="nc" id="L35">        } catch (SQLException e) {</span>
-<span class="nc" id="L36">            System.out.println(e.getMessage());</span>
-<span class="fc" id="L37">        }</span>
-<span class="fc" id="L38">    }</span>
+<span class="fc" id="L28">            Connection conn = this.connect();</span>
+<span class="fc" id="L29">            conn.setAutoCommit(false);</span>
+<span class="fc" id="L30">            PreparedStatement pstmt = conn.prepareStatement(sql);</span>
+<span class="fc" id="L31">            pstmt.setInt(1, id);</span>
+<span class="fc" id="L32">            pstmt.setInt(2, value);</span>
+<span class="fc" id="L33">            pstmt.executeUpdate();</span>
+<span class="fc" id="L34">            conn.commit();</span>
+<span class="fc" id="L35">            conn.close();</span>
+<span class="fc" id="L36">            pstmt.close();</span>
+<span class="nc" id="L37">        } catch (SQLException e) {</span>
+<span class="nc" id="L38">            throw new SudokuDataBaseException(e.getMessage());</span>
+<span class="fc" id="L39">        }</span>
+<span class="fc" id="L40">    }</span>
 
-    public void createNewDatabase() {
+    public void createNewDatabase() throws SudokuDataBaseException {
 
         try {
-<span class="fc" id="L43">            Connection conn = this.connect();</span>
-<span class="pc bpc" id="L44" title="1 of 2 branches missed.">            if (conn != null) {</span>
-<span class="fc" id="L45">                DatabaseMetaData meta = conn.getMetaData();</span>
-<span class="fc" id="L46">                System.out.println(&quot;A new database has been created.&quot;);</span>
+<span class="fc" id="L45">            Connection conn = this.connect();</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">            if (conn != null) {</span>
+<span class="fc" id="L47">                DatabaseMetaData meta = conn.getMetaData();</span>
+<span class="fc" id="L48">                logger.info(&quot;Database created&quot;);</span>
             }
 
-<span class="nc" id="L49">        } catch (SQLException e) {</span>
-<span class="nc" id="L50">            System.out.println(e.getMessage());</span>
-<span class="fc" id="L51">        }</span>
-<span class="fc" id="L52">    }</span>
-    public void createTable(final String tableName) {
+<span class="nc" id="L51">        } catch (SQLException e) {</span>
+<span class="nc" id="L52">            throw new SudokuDataBaseException(e.getMessage());</span>
+<span class="fc" id="L53">        }</span>
+<span class="fc" id="L54">    }</span>
+    public void createTable(final String tableName) throws SudokuDataBaseException {
 
-        // SQL statement for creating a new table
-<span class="fc" id="L56">        String sql = &quot;CREATE TABLE IF NOT EXISTS &quot; + tableName + &quot; (\n&quot;</span>
+<span class="fc" id="L57">        String sql = &quot;CREATE TABLE IF NOT EXISTS &quot; + tableName + &quot; (\n&quot;</span>
                 + &quot; id INT PRIMARY KEY,\n&quot;
                 + &quot; wartosc INT\n&quot;
                 + &quot;);&quot;;
-        //String drop = &quot;DROP TABLE IF EXISTS&quot;+ tableName;
-        /*String sql = &quot;CREATE TABLE IF NOT EXISTS sudokuBoard (\n&quot;
-                + &quot; id INT PRIMARY KEY,\n&quot;
-                + &quot; wartosc INT\n&quot;
-                + &quot;);&quot;;*/
 
         try {
-<span class="fc" id="L67">            Connection conn = this.connect();</span>
-<span class="fc" id="L68">            Statement stmt = conn.createStatement();</span>
-            //stmt.execute(drop);
-<span class="fc" id="L70">            stmt.execute(sql);</span>
-<span class="nc" id="L71">        } catch (SQLException e) {</span>
-<span class="nc" id="L72">            System.out.println(e.getMessage());</span>
-<span class="fc" id="L73">        }</span>
-<span class="fc" id="L74">    }</span>
+<span class="fc" id="L63">            Connection conn = this.connect();</span>
+<span class="fc" id="L64">            Statement stmt = conn.createStatement();</span>
+<span class="fc" id="L65">            stmt.execute(sql);</span>
+
+<span class="nc" id="L67">        } catch (SQLException e) {</span>
+<span class="nc" id="L68">            throw  new SudokuDataBaseException(e.getMessage());</span>
+
+<span class="fc" id="L70">        }</span>
+<span class="fc" id="L71">    }</span>
     public Integer select(final String tableName, final int x, final int y) throws SudokuBoardException {
         try {
-<span class="fc" id="L77">            Class.forName(&quot;org.sqlite.JDBC&quot;);</span>
-<span class="nc" id="L78">        } catch (ClassNotFoundException e) {</span>
-<span class="nc" id="L79">            throw new SudokuBoardException(e.toString());</span>
-<span class="fc" id="L80">        }</span>
-<span class="fc" id="L81">        Integer tmp = 9 * x + y + 1;</span>
-<span class="fc" id="L82">        String strId = tmp.toString();</span>
-<span class="fc" id="L83">        String sql = &quot;SELECT wartosc FROM &quot; + tableName + &quot; WHERE id=&quot; + strId + &quot;;&quot;;</span>
-        //String sql = &quot;SELECT wartosc FROM sudokuBoard WHERE id=&quot; + strId + &quot;;&quot;;
+<span class="fc" id="L74">            Class.forName(&quot;org.sqlite.JDBC&quot;);</span>
+<span class="nc" id="L75">        } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L76">            throw new SudokuDataBaseException(e.toString());</span>
+<span class="fc" id="L77">        }</span>
+<span class="fc" id="L78">        Integer tmp = 9 * x + y + 1;</span>
+<span class="fc" id="L79">        String strId = tmp.toString();</span>
+<span class="fc" id="L80">        String sql = &quot;SELECT wartosc FROM &quot; + tableName + &quot; WHERE id=&quot; + strId + &quot;;&quot;;</span>
 
         try {
-<span class="fc" id="L87">            Connection conn = this.connect();</span>
-<span class="fc" id="L88">            Statement stmt  = conn.createStatement();</span>
-<span class="fc" id="L89">            ResultSet rs    = stmt.executeQuery(sql);</span>
-<span class="fc" id="L90">            return rs.getInt(&quot;wartosc&quot;);</span>
+<span class="fc" id="L83">            Connection conn = this.connect();</span>
+<span class="fc" id="L84">            conn.setAutoCommit(false);</span>
+<span class="fc" id="L85">            Statement stmt  = conn.createStatement();</span>
+<span class="fc" id="L86">            ResultSet rs    = stmt.executeQuery(sql);</span>
+<span class="fc" id="L87">            int value = rs.getInt(&quot;wartosc&quot;);</span>
+<span class="fc" id="L88">            conn.commit();</span>
+<span class="fc" id="L89">            stmt.close();</span>
+<span class="fc" id="L90">            rs.close();</span>
+<span class="fc" id="L91">            conn.close();</span>
+<span class="fc" id="L92">            return value;</span>
 
-<span class="nc" id="L92">        } catch (SQLException e) {</span>
-<span class="nc" id="L93">            System.out.println(e.getMessage());</span>
-<span class="nc" id="L94">            return null;</span>
+<span class="nc" id="L94">        } catch (SQLException e) {</span>
+<span class="nc" id="L95">            throw new SudokuDataBaseException(e.getMessage());</span>
         }
     }
+    public void close(){
+<span class="fc" id="L99">        Connection conn= null;</span>
+        try {
+<span class="fc" id="L101">            conn = this.connect();</span>
+<span class="nc" id="L102">        } catch (SudokuDataBaseException e) {</span>
+<span class="nc" id="L103">            e.printStackTrace();</span>
+<span class="fc" id="L104">        }</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">        if(conn!=null){</span>
+            try {
+<span class="fc" id="L107">                conn.close();</span>
+<span class="nc" id="L108">            } catch (SQLException throwables) {</span>
+<span class="nc" id="L109">                throwables.printStackTrace();</span>
+<span class="fc" id="L110">            }</span>
+        }
 
-<span class="fc" id="L98">    public DB() {</span>
+<span class="fc" id="L113">    }</span>
 
-<span class="fc" id="L100">    }</span>
+<span class="fc" id="L115">    public DB() {</span>
+
+<span class="fc" id="L117">    }</span>
 
 }
 

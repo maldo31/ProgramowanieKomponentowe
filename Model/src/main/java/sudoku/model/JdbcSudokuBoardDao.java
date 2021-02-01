@@ -1,19 +1,21 @@
 package sudoku.model;
 
 import sudoku.model.exception.SudokuBoardException;
+import sudoku.model.exception.SudokuDataBaseException;
 import sudoku.model.exception.SudokuFinalizeException;
-
-import java.time.LocalDateTime;
 
 public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
     private String fileName;
     DB db;
-    String tmp = LocalDateTime.now().toString();
 
     public JdbcSudokuBoardDao(String fileName) {
         this.fileName = fileName;
         db = new DB();
-        db.createNewDatabase();
+        try {
+            db.createNewDatabase();
+        } catch (SudokuDataBaseException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -23,7 +25,6 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
             for (int j = 0; j < 9; j++) {
                 try {
                     sudokuBoard.set(i, j, db.select(fileName, i, j));
-                    //sudokuBoard.set(i, j, db.select("sudokuBoard", i, j));
                 } catch (SudokuBoardException e) {
                     e.printStackTrace();
                 }
@@ -34,11 +35,19 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
     @Override
     public void  write(final SudokuBoard sudokuBoard) {
-        db.createTable(fileName);
+        try {
+            db.createTable(fileName);
+        } catch (SudokuDataBaseException e) {
+            e.printStackTrace();
+        }
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 Integer id = i * 9 + j + 1;
-                db.insert(fileName, sudokuBoard.get(i, j), id);
+                try {
+                    db.insert(fileName, sudokuBoard.get(i, j), id);
+                } catch (SudokuDataBaseException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
@@ -54,12 +63,11 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() throws SudokuDataBaseException {
         try {
-            //reading.close();
-            //writing.close();
+            db.close();
         } catch (Exception e) {
-            // ...
+            throw new SudokuDataBaseException(e.getMessage());
         }
 
     }

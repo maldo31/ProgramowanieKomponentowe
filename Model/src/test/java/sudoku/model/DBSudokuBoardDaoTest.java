@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sudoku.model.exception.SudokuFileException;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DBSudokuBoardDaoTest {
@@ -32,10 +33,8 @@ class DBSudokuBoardDaoTest {
         } catch (SudokuFileException e) {
             e.printStackTrace();
         }
-        System.out.println(sudokuBoard.toString());
-        System.out.println(testSudokuBoard.toString());
 
-
+        assertFalse(sudokuBoard==testSudokuBoard);
         assertTrue(sudokuBoard.equals(testSudokuBoard));
 
     }
